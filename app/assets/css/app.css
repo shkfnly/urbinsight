@@ -1,0 +1,210 @@
+   .brand-image{
+      margin-top: -15px;
+
+    }
+  .landing {background-color: rgba(0,0,0,0.0);
+            height: 550px;
+            width: 1039px;
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+    }
+  .landing-text {
+    position: relative;
+    color: #fff;
+    font-size: 60px;
+    padding-top: 0px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+  }
+  .landing-text-spacing {
+    padding-top: 330px;
+    padding-left: 30px;
+  }
+  .intro-text{
+    font-family: 'Lato', sans-serif;
+    padding: 15px 60px 0 60px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  .intro-text-frame{
+    background-color: #fff;
+    padding-top: 0px;
+    width: 100%;
+  }
+  #slide1 {
+        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide1.png');
+  }
+  #slide2 {
+        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide2.png');
+  }
+  #slide3{
+        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide3.png');
+  }
+   .pilotProcessTitle{
+      background-color: rgb(60,60,60);
+      margin: 0px;
+      height: 100px;
+
+    }
+    .pilotProcessTitle-text{
+      text-align: center;
+      color: rgb(200,200,200);
+      padding-top: 20px;
+      font-size: 48px;
+      font-family: 'Lato', sans-serif;
+    }
+    #pilotProcessMap{
+      height: 700px;
+      width: 100%;
+      margin: 0px;
+    }
+    #partner-process{
+      width: 100%;
+      height: 75px;
+      background-color: rgb(220,220,220);
+      margin: 0;
+      
+    }
+    #partner-process-text{
+      margin: 0;
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      font-size: 38px;
+      padding-top: 20px;
+      font-weight: 5px;
+          }
+    #process-intro{
+      background-color: rgba(160,206,226,0.3);
+      width: 100%;
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+    #process-intro-text{
+      margin: 0;
+      padding: 0 30px 0 30px;
+      text-align: justify;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    #process-list-title{
+      background-color: rgb(30,30,30);
+      margin: 0;
+
+    }
+    #process-list-title-text{
+      color: rgb(220,220,220);
+      font-family: "Lato", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    #process-list{
+      border-width: 4px;
+      border-style: solid;
+      border-color: rgb(30,30,30);
+    }
+    ul li{
+      font-family: "Lato", sans-serif;
+      padding-bottom: 10px;
+      font-size: 18px;
+    }
+        #data-viz-title{
+      height: 100px;
+      width: 100%;
+      background-color: rgb(80,98,49);
+      margin: 0;
+    }
+    #data-viz-title-text{
+      font-family: "Lato", sans-serif;
+      font-weight: 5px;
+      text-align: center;
+      color: rgb(240,240,240);
+      padding-top: 30px;
+      width: 100%;
+      margin: 0;
+    }
+    .pilot-city{
+      height: 300px;
+      width: 100%;
+      margin: 0;
+      
+    }
+    .pilot-city-text{
+      font-family: "Lato", sans-serif;
+      font-size: 36pt;
+      padding-top: 200px;
+      padding-left: 40px;
+      margin: 0;
+    }
+    .pilot-links{
+
+    }
+    #medellin{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/medellin.png')
+    }
+    #cairo{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/egypt.png')
+    }
+    #casablanca{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/casablanca.png')
+    }
+
+    a:link{
+      color: #fff;
+      text-decoration: none;
+    }
+    #compass-title{
+      background-color: #37b0c9;
+
+      width: 100%;
+      margin: 0px;
+    }
+    #compass-title-text{
+      padding-top: 20px;
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 10px;
+      color: rgb(40,40,40);
+      margin: 0;
+
+    }
+    #compass-title-description{
+      margin: 0;
+      font-size: 18px;
+      font-family: 'Lato', sans-serif;
+      padding: 10px 20px 20px 20px;
+      background-color: rgb(220,220,220);
+      color: rgb(0,0,0);
+    }
+    #one{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num1.png');        
+    }
+      #two{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num2.png');        
+    }
+      #three{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num3.png');        
+    }
+      #four{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num4.png');        
+    }
+      #five{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num5.png');        
+    }
+      #six{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num6.png');        
+    }
+      #seven{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num7.png');        
+    }
+      #eight{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num8.png');        
+    }
+
+    #panel-title-color{
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+    }
