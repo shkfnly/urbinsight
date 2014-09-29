@@ -171,7 +171,7 @@
   <h1 id="data-viz-title-text">Current Pilot Projects: Datasets & Spatial Visualizations</h1>
 </div>
 <a class="pilot-links" href="/modules/pilots/medellin/medellin.html">
-  <div class="pilot-city" id="medellin">
+  <div class="pilot-city medellin" id="medellin">
     <h1 class="pilot-city-text">Medellin</h1>
   </div>
 </a>
@@ -357,7 +357,20 @@
       </div>
     </div>
   </div>
-
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#medellin').hover(function(){
+    $(this).addClass('medellin-bright');
+    $(this).removeClass('medellin');
+    
+  },
+    function(){
+    $(this).addClass('medellin');
+    $(this).removeClass('medellin-bright');
+    });
+  });
+  
+  </script>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

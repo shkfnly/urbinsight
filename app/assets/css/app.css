@@ -5,9 +5,11 @@
   .landing {background-color: rgba(0,0,0,0.0);
             height: 550px;
             width: 1039px;
+            
             margin: auto;
             position: absolute;
             top: 0; left: 0; bottom: 0; right: 0;
+            margin-top: -30px;
     }
   .landing-text {
     position: relative;
@@ -101,9 +103,7 @@
       padding-bottom: 10px;
     }
     #process-list{
-      border-width: 4px;
-      border-style: solid;
-      border-color: rgb(30,30,30);
+      padding-top: 15px
     }
     ul li{
       font-family: "Lato", sans-serif;
@@ -113,7 +113,7 @@
         #data-viz-title{
       height: 100px;
       width: 100%;
-      background-color: rgb(80,98,49);
+      background-color: rgb(141,189,135);
       margin: 0;
     }
     #data-viz-title-text{
@@ -131,6 +131,7 @@
       margin: 0;
       
     }
+      
     .pilot-city-text{
       font-family: "Lato", sans-serif;
       font-size: 36pt;
@@ -141,8 +142,11 @@
     .pilot-links{
 
     }
-    #medellin{
+    .medellin{
       background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/medellin.png')
+    }
+    .medellin-bright{
+      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/medellin_bright.png')
     }
     #cairo{
       background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/egypt.png')
@@ -155,8 +159,14 @@
       color: #fff;
       text-decoration: none;
     }
+    a:hover{
+      color: #000;
+    }
+    a:visited{
+      color: #000;
+    }
     #compass-title{
-      background-color: #37b0c9;
+      background-color: rgba(55,176,201,.7);
 
       width: 100%;
       margin: 0px;
