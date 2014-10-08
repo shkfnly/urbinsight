@@ -1,7 +1,11 @@
    .brand-image{
-      margin-top: -15px;
+      margin-top: -15px;}
+    .navbar{
+      margin-bottom: 0px !important;
 
     }
+
+    
   .landing {background-color: rgba(0,0,0,0.0);
             height: 550px;
             width: 1039px;
@@ -35,13 +39,13 @@
     width: 100%;
   }
   #slide1 {
-        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide1.png');
+        background-image: url('../img/slide1.png');
   }
   #slide2 {
-        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide2.png');
+        background-image: url('../img/slide2.png');
   }
   #slide3{
-        background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/slide3.png');
+        background-image: url('../img/slide3.png');
   }
    .pilotProcessTitle{
       background-color: rgb(60,60,60);
@@ -84,6 +88,7 @@
     }
     #process-intro-text{
       margin: 0;
+      font-size: 22px;
       padding: 0 30px 0 30px;
       text-align: justify;
       padding-top: 10px;
@@ -111,17 +116,17 @@
       font-size: 18px;
     }
         #data-viz-title{
-      height: 100px;
       width: 100%;
       background-color: rgb(141,189,135);
       margin: 0;
     }
     #data-viz-title-text{
       font-family: "Lato", sans-serif;
-      font-weight: 5px;
+      font-weight: 10px;
       text-align: center;
       color: rgb(240,240,240);
       padding-top: 30px;
+      padding-bottom: 30px;
       width: 100%;
       margin: 0;
     }
@@ -143,28 +148,33 @@
 
     }
     .medellin{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/medellin.png')
+      background-image: url('../img/finalimg/medellinshadow.png')
     }
     .medellin-bright{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/medellin_bright.png')
+      background-image: url('../img/finalimg/medellin.png')
     }
-    #cairo{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/egypt.png')
+    .cairo{
+      background-image: url('../img/finalimg/cairoshadow.png')
     }
-    #casablanca{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/casablanca.png')
+    .cairo-bright{
+      background-image: url('../img/finalimg/cairo.png')
+    }
+    .casablanca{
+      background-image: url('../img/finalimg/casablancashadow.png')
+    }
+    .casablanca-bright{
+      background-image: url('../img/finalimg/casablanca.png')
     }
 
     a:link{
       color: #fff;
       text-decoration: none;
     }
-    a:hover{
-      color: #000;
+    body a:hover{
+      color: #fff;
+      text-decoration: none !important;
     }
-    a:visited{
-      color: #000;
-    }
+    
     #compass-title{
       background-color: rgba(55,176,201,.7);
 
@@ -188,30 +198,34 @@
       padding: 10px 20px 20px 20px;
       background-color: rgb(220,220,220);
       color: rgb(0,0,0);
+
+    }
+    .panel-group{
+      margin-bottom: 0px !important;
     }
     #one{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num1.png');        
+      background-image: url('../img/num1.png');        
     }
       #two{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num2.png');        
+      background-image: url('../img/num2.png');        
     }
       #three{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num3.png');        
+      background-image: url('../img/num3.png');        
     }
       #four{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num4.png');        
+      background-image: url('../img/num4.png');        
     }
       #five{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num5.png');        
+      background-image: url('../img/num5.png');        
     }
       #six{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num6.png');        
+      background-image: url('../img/num6.png');        
     }
       #seven{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num7.png');        
+      background-image: url('../img/num7.png');        
     }
       #eight{
-      background-image: url('/Users/ashokafinley/development/urbinsight/app/assets/img/num8.png');        
+      background-image: url('../img/num8.png');        
     }
 
     #panel-title-color{
