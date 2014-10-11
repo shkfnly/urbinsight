@@ -10,9 +10,7 @@ landing.html
 pilotProcess.js
 ==js in this file doesn't work, says L is not defined
 
-pilots.html
-==remove mask from image on hover
-
 
 index.html
 ==scripts are running at the bottom, remove internal div scripts
+==move relative css to its own file.

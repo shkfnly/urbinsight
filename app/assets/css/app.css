@@ -29,7 +29,7 @@
   }
   .intro-text{
     font-family: 'Lato', sans-serif;
-    padding: 15px 60px 0 60px;
+    padding: 40px 60px 30px 60px;
     margin: 0 auto;
     text-align: justify;
   }
@@ -57,6 +57,7 @@
       text-align: center;
       color: rgb(200,200,200);
       padding-top: 20px;
+      padding-bottom: 20px;
       font-size: 48px;
       font-family: 'Lato', sans-serif;
     }
@@ -89,14 +90,14 @@
     #process-intro-text{
       margin: 0;
       font-size: 22px;
-      padding: 0 30px 0 30px;
+      padding: 30px 50px 30px 50px;
       text-align: justify;
-      padding-top: 10px;
-      padding-bottom: 10px;
     }
     #process-list-title{
       background-color: rgb(30,30,30);
       margin: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
 
     }
     #process-list-title-text{
@@ -108,9 +109,10 @@
       padding-bottom: 10px;
     }
     #process-list{
-      padding-top: 15px
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
-    ul li{
+    #process-list-items > li{
       font-family: "Lato", sans-serif;
       padding-bottom: 10px;
       font-size: 18px;
@@ -195,13 +197,16 @@
       margin: 0;
       font-size: 18px;
       font-family: 'Lato', sans-serif;
-      padding: 10px 20px 20px 20px;
+      padding: 30px 30px 30px 30px;
       background-color: rgb(220,220,220);
       color: rgb(0,0,0);
 
     }
     .panel-group{
-      margin-bottom: 0px !important;
+      margin: -10px 0 0 0 !important;
+    }
+    .panel-default{
+      margin-top: 0px !important;
     }
     #one{
       background-image: url('../img/num1.png');        
@@ -232,3 +237,56 @@
       color: #fff;
       font-family: 'Lato', sans-serif;
     }
+    #layer-title{
+      margin: 0;
+      width: 100%;
+      background-color: rgb(255,159,71);
+          }
+    #layer-title-text{
+      font-size: 3em;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 10px;
+      margin: 0;
+    }
+    #layer-intro {
+      background-color: rgb(240,240,240);
+      width: 100%;
+      margin: 0;
+     }
+     #layer-intro-text{
+      font-family: "Lato", sans-serif;
+      font-size: 20px;
+      padding-top: 30px;
+      text-align: justify;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 30px;
+     }
+
+     .col-md-6{
+      font-family: "Lato" sans-serif
+     }  
+
+    .pill-title a{
+        color: rgb(70,70,70) !important;
+      }
+    .pane-row{
+      margin-bottom: 20px;
+    }
+ 
+    .pane-text-box{
+      padding-top: -15px;
+    }
+     .pane-img{
+      padding-top: 20px;
+      height: 100%;
+      width: 100%;
+  
+     }  
+     
+     .wrapping{
+      background-color: rgba(255,159,71,.3);
+     }
