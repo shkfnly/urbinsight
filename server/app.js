@@ -15,10 +15,10 @@ var router = express.Router();
 /**
 * Route Imports
 */
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var nodes = require('./routes/nodes');
-var signup = require('./routes/signup');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
+// var nodes = require('./routes/nodes');
+// var signup = require('./routes/signup');
 
 var app = express();
 
@@ -98,8 +98,9 @@ if (app.get('env') === 'production') {
 /**
  * Routes
 */
+var router = require('./router')(app);
 
-app.use('/signup', signup)
+
 
 // Error Handling
 app.use(function(err, req, res, next) {
