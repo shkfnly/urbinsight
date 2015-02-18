@@ -10,10 +10,15 @@ var methodOverride = require('method-override');
 //I'm not sure if I need this.
 var router = express.Router();
 
-// Probably don't need these
+
+
+/**
+* Route Imports
+*/
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var nodes = require('./routes/nodes');
+var signup = require('./routes/signup');
 
 var app = express();
 
@@ -90,6 +95,15 @@ if (app.get('env') === 'production') {
 
 }
 
+/**
+ * Routes
+*/
 
+app.use('/signup', signup)
+
+// Error Handling
+app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+});
 
 module.exports = app;
