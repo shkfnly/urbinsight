@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
+  <style>
+    .city-title{
+      width: 100%;
+      background-color: rgb(155,204,83);
+
+    }
+    .city-title-text{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 10px;
+      color: rgb(0,0,0);
+      margin: 0;
+    }
+    .city-title-description{
+      margin: 0;
+      font-size: 18px;
+      font-family: 'Lato', sans-serif;
+      padding: 20px 20px 20px 20px;
+      background-color: rgb(240,240,240);
+      color: rgb(0,0,0);
+
+    }
+    .layer-title{
+      text-align: center;
+      margin: 0;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      background-color: rgba(155,204,83,.6);
+      height: 60px;
+
+    }
+    .layer-title h3{
+       font-size: 2em;
+       margin: 0;
+
+    }
+    #map{
+      width: 100%;
+      height: 1000px;
+    }
+    .featured-datasets{
+      text-align: center;
+      background-color: rgba(155,204,83,.3);
+    }
+    .featured-datasets h1{
+      padding-bottom: 10px;
+    }
+    .dataset{
+      background-color: #000;
+      height: 100px;
+      margin-bottom: 30px;
+    }
+
+    .dataset h4{
+      padding-top: 15px;
+    }
+ 
+  </style>
+  </head>
+  <body>
+    <div class="city-title">
+      <h1 class="city-title-text">Medellin, Colombia</h1>
+      <div>
+        <h3 class="city-title-description">
+          Colombias second largest city, Medellin has transformed itself in recent years to become a model for social and sustainable urban development. Through collaborations between planners, designers, city officials, and residents that are focused on the poorest and most isolated neighborhoods, the city has successfully used urban planning as a tool to create a more equitable and ecologically balanced community.
+            <br>
+            <br>
+          By centering new construction around schools, libraries, public transit, parks, and cultural centers, Medellin has witnessed a significant reduction in crime and unemployment while improving the quality of life for all its citizens. This page provides a deeper, layered look at Medellin's many transformational projects, through GIS mapping and multimedia tools.
+        </h3>
+      </div>
+    </div>
+    <div class="layer-title">
+      <h3>Curated Layers
+    </div>
+
+    <div id='map'></div>
+
+    <script>
+      L.mapbox.accessToken = 'pk.eyJ1IjoidGhpc3NheXNub3RoaW5nIiwiYSI6IjFNbHllT2MifQ.5F7AhW2FxnpENc8eiE-HUA';
+      var map = L.mapbox.map('map', {zoomControl: false,
+                                    infoControl: true,
+                                    attributionControl: false
+
+      }).setView([6.2491,-75.5891], 12);
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      
+      L.control.layers({
+          'Base Map': L.mapbox.tileLayer('thissaysnothing.n0e2vs4i').addTo(map),
+          'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+      }),
+          'Watercolor Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+      })
+      }, {
+          
+          'Quality of Life': L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map),
+          'Geological Classification': L.mapbox.tileLayer('thissaysnothing.Layers'),
+          'Heart Disease per 100,000': L.mapbox.tileLayer('thissaysnothing.pjznz5mi'),
+          'Youth Population Change': L.mapbox.tileLayer('thissaysnothing.youth_population'),
+          'Youth Population Nominal': L.mapbox.tileLayer('thissaysnothing.8w06yldi'),
+          'Nominal Senior Population': L.mapbox.tileLayer('thissaysnothing.senior_population'),
+          'Water System': L.mapbox.tileLayer('thissaysnothing.water_system'),
+          'Structural Axes of Public Spaces': L.mapbox.tileLayer('thissaysnothing.46q7iudi'),
+          'Green Infrastructure': L.mapbox.tileLayer('thissaysnothing.5i0e8kt9')
+        
+      
+      }).addTo(map);/*
+      var qoltiles = L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map);
+      
+      var qolgrid = L.mapbox.gridLayer('thissaysnothing.y3cy2e29').addTo(map);
+          /*gcgrid = L.mapbox.gridLayer('thissaysnothing.Layers').addTo(map),
+          hdgrid = L.mapbox.gridLayer('thissaysnothing.pjznz5mi').addTo(map),
+          ypcgrid = L.mapbox.gridLayer('thissaysnothing.youth_population').addTo(map),
+          ypngrid = L.mapbox.gridLayer('thissaysnothing.8w06yldi').addTo(map),
+          nspgrid = L.mapbox.gridLayer('thissaysnothing.senior_population').addTo(map),
+          wsgrid = L.mapbox.gridLayer('thissaysnothing.water_system').addTo(map),
+          sapsgrid = L.mapbox.gridLayer('thissaysnothing.46q7iudi').addTo(map),
+          gigrid = L.mapbox.gridLayer('thissaysnothing.5i0e8kt9').addTo(map);
+
+      var qolcontrol = L.mapbox.gridControl(qolgrid).addTo(map);
+          gcontrol = L.mapbox.gridControl(gcgrid).addTo(map),
+          hdcontrol = L.mapbox.gridControl(hdgrid).addTo(map),
+          ypccontrol = L.mapbox.gridControl(ypcgrid).addTo(map),
+          ypncontrol = L.mapbox.gridControl(ypngrid).addTo(map),
+          nspcontrol = L.mapbox.gridControl(nspgrid).addTo(map),
+          wscontrol = L.mapbox.gridControl(wsgrid).addTo(map),
+          sapscontrol = L.mapbox.gridControl(sapsgrid).addTo(map),
+          gicontrol = L.mapbox.gridControl(gigrid).addTo(map);
+  */
+        
+
+    </script>
+
+    <div class="featured-datasets container-fluid">
+      <h1>Featured Datasets</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Water</h4></div>
+        </div>
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Air</h4></div>
+        </div>
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Energy</h4></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Demographics</h4></div>
+        </div>
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Administrative</h4></div>
+        </div>
+        <div class="col-md-4">
+          <div class="dataset well">
+          <h4>Economic</h4></div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
