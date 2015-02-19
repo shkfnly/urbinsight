@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 //I'm not sure if I need this.
-var router = express.Router();
+// var router = express.Router();
 
 
 
@@ -23,11 +23,9 @@ var router = express.Router();
 var app = express();
 
 
-// config files
-var db = require('./config/db').db
 
 // implement router
-app.use(router)
+// app.use(router)
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var url = require('url')
 
 router.get('/:id', function(req, res, next) {
   var url_parts = url.parse(req.url, true);
