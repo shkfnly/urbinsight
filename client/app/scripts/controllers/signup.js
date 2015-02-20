@@ -8,7 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('SignupCtrl', function ($scope, $http) {
+  .controller('SignupCtrl', function ($scope, $location, $http) {
     
     // Create local references
     var user, signup;
@@ -37,14 +37,13 @@ angular.module('clientApp')
         window.alert('Your passwords must match.');
         return false;
       }
-      //UNECESSARY
-      // console.log(user);
 
       // Make the server request
       var request = $http.post('/signup', user);
 
       request.success(function (data) {
-        console.log('success');
+        $location.path('/dashboard');
+        window.$rootScope.currentUser = data.client;
         console.log(data);
       });
 

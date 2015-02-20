@@ -8,32 +8,95 @@
  *
  * Main module of the application.
  */
-angular
+
+ var app = angular
   .module('clientApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
     'ngMessages',
     'ngResource',
-    'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  ]);
+
+  app.config(function ($stateProvider, $urlRouterProvider) {
+    // For any unmatched url, redirect to /
+    $urlRouterProvider.otherwise('/');
+
+    // Setup the states
+    $stateProvider
+      .state('main', {
+        abstract: true,
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        data: {
+          requireLogin: false
+        }
       })
-      .when('/about', {
+      .state('main.homepage', {
+        url: '/',
+        controller: 'MainCtrl',
+        views: {
+          'landing': {
+            templateUrl: 'views/homepage/landing.html'
+          },
+          'pilotProcess': {
+            templateUrl: 'views/homepage/pilotProcess.html',
+            controller: 'ProcessCtrl'
+          },
+          'pilots': {
+            templateUrl: 'views/homepage/pilots.html'
+          },
+          'layerIntro': {
+            templateUrl: 'views/homepage/layerIntro.html'
+          },
+          'compass': {
+            templateUrl: 'views/homepage/compass.html'
+          },
+          'contact': {
+            templateUrl: 'views/homepage/contact.html'
+          }
+        }
+      })
+
+      .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        data: {
+          requireLogin: false
+        }
       })
-      .when('/signup', {
+      .state('signup', {
+        url: '/signup',
         templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl'
+        controller: 'SignupCtrl',
+        data: {
+          requireLogin: false
+        }
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('app', {
+        abstract: true,
+        data: {
+          requireLogin: true // this property will apply to all children of 'app'
+        }
+      })
+      .state('app.dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
       });
+      
+  });
+
+  
+  app.run(function ($rootScope) {
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+      var requireLogin = toState.data.requireLogin;
+
+      if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+        event.preventDefault();
+      }
+    });
   });

@@ -1,0 +1,44 @@
+
+.landing {background-color: rgba(0,0,0,0.0);
+          margin: 0;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+          
+  }
+
+.slide {
+  img {
+    margin: 0;
+      max-height: 95vh !important;
+      min-height: 95vh !important;
+      min-width: 100vw !important;
+  }
+}
+
+
+
+
+.landing-text {
+  position: relative;
+  color: #fff;
+  font-size: 4em;
+  padding-top: 0px;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+.landing-text-spacing {
+  padding-top: 40vh;
+  padding-left: 20vw;
+}
+.intro-text{
+  font-family: 'Lato', sans-serif;
+  padding: 40px 60px 30px 60px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.intro-text-frame{
+  background-color: #fff;
+  padding-top: 0px;
+  width: 100%;
+}

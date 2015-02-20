@@ -38,7 +38,7 @@ router.post('/', function (req, res)  {
         email: body.email,
         password: body.password1
       });
-      newUser.save({username: body.username, email: body.email, password: body.password1}, function(err, savedUser) {
+      newUser.save( function(err, savedUser) {
         if (err) {
           console.log('Problem saving the user ' + color.yellow(body.email) + ' due to ' + err);
           res.status(500).json({
@@ -60,8 +60,6 @@ router.post('/', function (req, res)  {
       });
     }
   });
-  //UNNECESSARY
-  console.log(req.body);
 });
 
 

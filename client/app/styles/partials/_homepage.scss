@@ -1,0 +1,273 @@
+   .brand-image{
+      margin-top: -15px;}
+    .navbar{
+      margin-bottom: 0px !important;
+
+    }
+
+
+   .pilotProcessTitle{
+      background-color: rgb(60,60,60);
+      margin: 0px;
+      height: 100px;
+
+    }
+    .pilotProcessTitle-text{
+      text-align: center;
+      color: rgb(200,200,200);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 48px;
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+    }
+    #pilotProcessMap{
+      height: 600px;
+      width: 100%;
+      margin: 0px;
+    }
+    #partner-process{
+      width: 100%;
+      height: 75px;
+      background-color: rgb(220,220,220);
+      margin: 0;
+      
+    }
+    #partner-process-text{
+      margin: 0;
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      font-size: 38px;
+      padding-top: 20px;
+      font-weight: 5px;
+          }
+    #process-intro{
+      background-color: rgba(160,206,226,0.3);
+      width: 100%;
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+    #process-intro-text{
+      margin: 0;
+      font-size: 22px;
+      padding: 30px 50px 30px 50px;
+      text-align: justify;
+    }
+    #process-list-title{
+      background-color: rgb(30,30,30);
+      margin: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+    }
+    #process-list-title-text{
+      color: rgb(220,220,220);
+      font-family: "Lato", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    #process-list{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    #process-list-items > li{
+      font-family: "Lato", sans-serif;
+      padding-bottom: 10px;
+      font-size: 18px;
+    }
+        #data-viz-title{
+      width: 100%;
+      background-color: rgb(141,189,135);
+      margin: 0;
+    }
+    #data-viz-title-text{
+      font-family: "Lato", sans-serif;
+      font-weight: 10px;
+      text-align: center;
+      color: rgb(240,240,240);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      width: 100%;
+      margin: 0;
+    }
+    .pilot-city{
+      height: 300px;
+      width: 100%;
+      margin: 0;
+      
+    }
+      
+    .pilot-city-text{
+      font-family: "Lato", sans-serif;
+      font-size: 36pt;
+      padding-top: 200px;
+      padding-left: 40px;
+      margin: 0;
+    }
+    .pilot-links{
+
+    }
+    .medellin{
+      background-image: url('../images/pilots/medellinshadow.png')
+    }
+    .medellin-bright{
+      background-image: url('../images/pilots/medellin.png')
+    }
+    .cairo{
+      background-image: url('../images/pilots/cairoshadow.png')
+    }
+    .cairo-bright{
+      background-image: url('../images/pilots/cairo.png')
+    }
+    .casablanca{
+      background-image: url('../images/pilots/casablancashadow.png')
+    }
+    .casablanca-bright{
+      background-image: url('../images/pilots/casablanca.png')
+    }
+
+    a:link{
+      color: #fff;
+      text-decoration: none;
+    }
+    body a:hover{
+      color: #fff;
+      text-decoration: none !important;
+    }
+    
+    #compass-title{
+      background-color: rgba(55,176,201,.7);
+
+      width: 100%;
+      margin: 0px;
+    }
+    #compass-title-text{
+      padding-top: 20px;
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 10px;
+      color: rgb(40,40,40);
+      margin: 0;
+
+    }
+    #compass-title-description{
+      margin: 0;
+      font-size: 18px;
+      font-family: 'Lato', sans-serif;
+      padding: 30px 30px 30px 30px;
+      background-color: rgb(220,220,220);
+      color: rgb(0,0,0);
+
+    }
+    .panel-group{
+      margin: -10px 0 0 0 !important;
+    }
+    .panel-default{
+      margin-top: 0px !important;
+    }
+    #one{
+      background-image: url('../images/compass/num1.png');        
+    }
+      #two{
+      background-image: url('../images/compass/num2.png');        
+    }
+      #three{
+      background-image: url('../images/compass/num3.png');        
+    }
+      #four{
+      background-image: url('../images/compass/num4.png');        
+    }
+      #five{
+      background-image: url('../images/compass/num5.png');        
+    }
+      #six{
+      background-image: url('../images/compass/num6.png');        
+    }
+      #seven{
+      background-image: url('../images/compass/num7.png');        
+    }
+      #eight{
+      background-image: url('../images/compass/num8.png');        
+    }
+
+    #panel-title-color{
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .panel-body{
+      background-color: rgba(55,176,201,.1);
+    }
+    #layer-title{
+      margin: 0;
+      width: 100%;
+      background-color: rgb(255,159,71);
+          }
+    #layer-title-text{
+      font-size: 3em;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 10px;
+      margin: 0;
+    }
+    #layer-intro {
+      background-color: rgb(240,240,240);
+      width: 100%;
+      margin: 0;
+     }
+     #layer-intro-text{
+      font-family: "Lato", sans-serif;
+      font-size: 20px;
+      padding-top: 30px;
+      text-align: justify;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 30px;
+     }
+
+     .col-md-6{
+      font-family: "Lato" sans-serif
+     }  
+
+    .pill-title a{
+        color: rgb(70,70,70) !important;
+      }
+    .pane-row{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+ 
+    .pane-text-box{
+      padding-top: -15px;
+    }
+     .pane-img{
+      padding-top: 20px;
+      height: 100%;
+      width: 100%;
+  
+     }  
+     
+     .wrapping{
+      background-color: rgba(255,159,71,.3);
+     }
+
+     #contact
+     {
+      background-color: rgb(144,175,84);
+      width: 100%;
+      color: white;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+     }
+     #contact p {
+      color: white;
+     }
+     #contact a {
+      color: white;
+     }
