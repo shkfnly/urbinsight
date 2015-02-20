@@ -109,25 +109,20 @@
     .pilot-links{
 
     }
-    .medellin{
-      background-image: url('../images/pilots/medellinshadow.png')
-    }
     .medellin-bright{
       background-image: url('../images/pilots/medellin.png')
     }
-    .cairo{
-      background-image: url('../images/pilots/cairoshadow.png')
-    }
     .cairo-bright{
       background-image: url('../images/pilots/cairo.png')
-    }
-    .casablanca{
-      background-image: url('../images/pilots/casablancashadow.png')
     }
     .casablanca-bright{
       background-image: url('../images/pilots/casablanca.png')
     }
 
+    .darken {
+      -webkit-filter: saturate(0.02) contrast(0.85) brightness(0.5);
+      filter: saturate(0.02) contrast(0.85) brightness(0.5);
+    }
     a:link{
       color: #fff;
       text-decoration: none;
@@ -270,4 +265,8 @@
      }
      #contact a {
       color: white;
+     }
+
+     .pane-row {
+        margin-bottom: 0px !important;
      }

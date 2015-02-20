@@ -43,7 +43,7 @@ angular.module('clientApp')
 
       request.success(function (data) {
         $location.path('/dashboard');
-        window.$rootScope.currentUser = data.client;
+        // window.$rootScope.currentUser = data.client;
         console.log(data);
       });
 

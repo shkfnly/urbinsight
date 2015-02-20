@@ -46,7 +46,8 @@
             controller: 'ProcessCtrl'
           },
           'pilots': {
-            templateUrl: 'views/homepage/pilots.html'
+            templateUrl: 'views/homepage/pilots.html',
+            controller: 'PilotsCtrl'
           },
           'layerIntro': {
             templateUrl: 'views/homepage/layerIntro.html'
@@ -78,11 +79,12 @@
       })
       .state('app', {
         abstract: true,
+        url: '#',
         data: {
-          requireLogin: true // this property will apply to all children of 'app'
+          requireLogin: false// this property will apply to all children of 'app'
         }
       })
-      .state('app.dashboard', {
+      .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
@@ -91,12 +93,12 @@
   });
 
   
-  app.run(function ($rootScope) {
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
-      var requireLogin = toState.data.requireLogin;
+  // app.run(function ($rootScope) {
+  //   $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+  //     var requireLogin = toState.data.requireLogin;
 
-      if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
-        event.preventDefault();
-      }
-    });
-  });
+  //     if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+  //       event.preventDefault();
+  //     }
+  //   });
+  // });

@@ -8,6 +8,7 @@
 @import "partials/signup";
 @import "partials/homepage";
 @import "partials/homepage/landing";
+@import "partials/dashboard";
 
 .browsehappy {
   margin: 0.2em 0;
@@ -26,8 +27,6 @@ body > .container-fluid {
   padding-right: 0px !important;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -35,7 +34,7 @@ body > .container-fluid {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
@@ -58,9 +57,5 @@ body > .container-fluid {
     padding-left: 0;
     padding-right: 0;
   }
-  /* Space out the masthead */
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+
 }
