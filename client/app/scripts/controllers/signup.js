@@ -13,7 +13,7 @@ angular.module('clientApp')
     // Create local references
     var user, signup;
 
-    // Create a cope for the Signup page.
+    // Create a scope for the Signup page.
     $scope.signup = signup = {};
 
     // This is the model populated in signup.html

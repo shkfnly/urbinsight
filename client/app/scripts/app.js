@@ -23,6 +23,7 @@
 
   app.config(function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /
+
     $urlRouterProvider.otherwise('/');
 
     // Setup the states
@@ -88,6 +89,11 @@
         url: '/dashboard',
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
+      })
+      .state('vancouver', {
+        url: '/dashboard/vancouver',
+        templateUrl: 'views/cities/vancouver.html',
+        controller: 'CitiesCtrl'
       });
       
   });
