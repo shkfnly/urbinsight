@@ -26,7 +26,7 @@ module.exports = function (app) {
   app.use('/relation', require('./routes/relations'));
 
   // Label Route
-  app.use('/label', require('./routes/labels'));
+  app.use('/data/label', require('./routes/labels'));
 
   // Dashboard Route
   // app.use('/dashboard', require('.routes/dashboard'));

@@ -18,10 +18,6 @@ angular.module('clientApp')
 
     $scope.addMap();
     $scope.$stateParams = $stateParams;
-    $scope.goToCity = function(city){
-      var downcaseCityName = angular.lowercase(city);
-      $location.path('/dashboard/' + downcaseCityName);
-    };
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

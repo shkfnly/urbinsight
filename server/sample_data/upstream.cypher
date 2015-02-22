@@ -1,6 +1,6 @@
 
-LOAD CSV WITH HEADERS FROM "file:/Users/ashokafinley/development/idhack/data/upstream.csv" AS csvLine
-CREATE (:Upstream { geodb_subt: csvLine.GEODB_SUBT,
+LOAD CSV WITH HEADERS FROM "file:/Users/ashokafinley/development/urbinsight/server/sample_data/upstream.csv" AS csvLine
+CREATE (:vancouver:upstream { geodb_subt: csvLine.GEODB_SUBT,
                     geodb_oid: csvLine.GEODB_OID,
                     object_id: csvLine.OBJECTID,
                     asset_id: csvLine.ASSET_ID,
@@ -25,6 +25,7 @@ CREATE (:Upstream { geodb_subt: csvLine.GEODB_SUBT,
                     ancillar00: csvLine.ANCILLAR00,
                     global_id: csvLine.GLOBALID,
                     lat: csvLine.YCOORD,
-                    lng: csvLine.XCOORD
+                    lng: csvLine.XCOORD,
+                    city: 'vancouver'
 
                     });
