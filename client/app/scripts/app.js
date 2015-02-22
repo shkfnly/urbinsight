@@ -94,6 +94,11 @@
         url: '/dashboard/vancouver',
         templateUrl: 'views/cities/vancouver.html',
         controller: 'CitiesCtrl'
+      })
+      .state('medellin', {
+        url: '/dashboard/medellin',
+        templateUrl: 'views/cities/vancouver.html',
+        controller: 'CitiesCtrl'
       });
       
   });

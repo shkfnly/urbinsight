@@ -18,11 +18,13 @@
 }
 
 #cityMap {
-  margin-top: 50px;
-  min-height: 100vh;
+
+  min-height: 90vh;
   min-width: 100vw;
 }
-
+#citiesNav a{
+  color: #000;
+}
 body {
   padding: 0;
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<!--   <head>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
-  <style>
+ -->  <style>
     .city-title{
       width: 100%;
       background-color: rgb(155,204,83);
@@ -88,40 +88,40 @@
     <div id='map'></div>
 
     <script>
-      L.mapbox.accessToken = 'pk.eyJ1IjoidGhpc3NheXNub3RoaW5nIiwiYSI6IjFNbHllT2MifQ.5F7AhW2FxnpENc8eiE-HUA';
-      var map = L.mapbox.map('map', {zoomControl: false,
-                                    infoControl: true,
-                                    attributionControl: false
+      // L.mapbox.accessToken = 'pk.eyJ1IjoidGhpc3NheXNub3RoaW5nIiwiYSI6IjFNbHllT2MifQ.5F7AhW2FxnpENc8eiE-HUA';
+      // var map = L.mapbox.map('map', {zoomControl: false,
+      //                               infoControl: true,
+      //                               attributionControl: false
 
-      }).setView([6.2491,-75.5891], 12);
-      map.doubleClickZoom.disable();
-      map.scrollWheelZoom.disable();
+      // }).setView([6.2491,-75.5891], 12);
+      // map.doubleClickZoom.disable();
+      // map.scrollWheelZoom.disable();
       
-      L.control.layers({
-          'Base Map': L.mapbox.tileLayer('thissaysnothing.n0e2vs4i').addTo(map),
-          'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-      }),
-          'Watercolor Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-      })
-      }, {
+      // L.control.layers({
+      //     'Base Map': L.mapbox.tileLayer('thissaysnothing.n0e2vs4i').addTo(map),
+      //     'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
+      //   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+      // }),
+      //     'Watercolor Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
+      //   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+      // })
+      // }, {
           
-          'Quality of Life': L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map),
-          'Geological Classification': L.mapbox.tileLayer('thissaysnothing.Layers'),
-          'Heart Disease per 100,000': L.mapbox.tileLayer('thissaysnothing.pjznz5mi'),
-          'Youth Population Change': L.mapbox.tileLayer('thissaysnothing.youth_population'),
-          'Youth Population Nominal': L.mapbox.tileLayer('thissaysnothing.8w06yldi'),
-          'Nominal Senior Population': L.mapbox.tileLayer('thissaysnothing.senior_population'),
-          'Water System': L.mapbox.tileLayer('thissaysnothing.water_system'),
-          'Structural Axes of Public Spaces': L.mapbox.tileLayer('thissaysnothing.46q7iudi'),
-          'Green Infrastructure': L.mapbox.tileLayer('thissaysnothing.5i0e8kt9')
+      //     'Quality of Life': L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map),
+      //     'Geological Classification': L.mapbox.tileLayer('thissaysnothing.Layers'),
+      //     'Heart Disease per 100,000': L.mapbox.tileLayer('thissaysnothing.pjznz5mi'),
+      //     'Youth Population Change': L.mapbox.tileLayer('thissaysnothing.youth_population'),
+      //     'Youth Population Nominal': L.mapbox.tileLayer('thissaysnothing.8w06yldi'),
+      //     'Nominal Senior Population': L.mapbox.tileLayer('thissaysnothing.senior_population'),
+      //     'Water System': L.mapbox.tileLayer('thissaysnothing.water_system'),
+      //     'Structural Axes of Public Spaces': L.mapbox.tileLayer('thissaysnothing.46q7iudi'),
+      //     'Green Infrastructure': L.mapbox.tileLayer('thissaysnothing.5i0e8kt9')
         
       
-      }).addTo(map);/*
-      var qoltiles = L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map);
+      // }).addTo(map);/*
+      // var qoltiles = L.mapbox.tileLayer('thissaysnothing.y3cy2e29').addTo(map);
       
-      var qolgrid = L.mapbox.gridLayer('thissaysnothing.y3cy2e29').addTo(map);
+      // var qolgrid = L.mapbox.gridLayer('thissaysnothing.y3cy2e29').addTo(map);
           /*gcgrid = L.mapbox.gridLayer('thissaysnothing.Layers').addTo(map),
           hdgrid = L.mapbox.gridLayer('thissaysnothing.pjznz5mi').addTo(map),
           ypcgrid = L.mapbox.gridLayer('thissaysnothing.youth_population').addTo(map),
