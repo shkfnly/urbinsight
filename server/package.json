@@ -32,5 +32,9 @@
     "shp2json": "^1.1.0",
     "underscore": "^1.7.0",
     "unzip": "^0.1.11"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-build-control": "^0.3.0"
   }
 }
