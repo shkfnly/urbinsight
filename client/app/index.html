@@ -12,10 +12,13 @@
     <title>Urbinsight</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/mapbox.js/mapbox.css" />
+<!--     <link rel="stylesheet" href="bower_components/mapbox.js/mapbox.css" /> -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -44,6 +47,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a ng-href="#/">Home</a></li>
+              <li><a ng-href="#/dashboard">Dashboard</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/pilots">Pilots</a></li>
               <li><a ng-href="#/compass">Compass</a></li>
@@ -103,7 +107,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/mapbox.js/mapbox.js"></script>
+<!--     <script src="bower_components/mapbox.js/mapbox.js"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
 
