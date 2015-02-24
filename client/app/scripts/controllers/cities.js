@@ -90,8 +90,11 @@ angular.module('clientApp')
 
         angular.forEach(data, function(type, key){
           angular.forEach(type, function(node){
+            console.log(node);
             var lat = parseFloat(node.lat);
             var lng = parseFloat(node.lng);
+            console.log(lat);
+            console.log(lng);
             scope.L.marker([lat, lng], {
               icon: scope.L.mapbox.marker.icon({
                 'marker-size' : 'small',
