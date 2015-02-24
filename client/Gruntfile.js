@@ -142,7 +142,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:gentle-dawn-7887.git',
+          remote: 'git@heroku.com:urbinsight.git',
           branch: 'master'
         }
       }

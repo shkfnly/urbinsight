@@ -23,7 +23,6 @@
 
   app.config(function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /
-
     $urlRouterProvider.otherwise('/');
 
     // Setup the states
@@ -53,9 +52,7 @@
           'layerIntro': {
             templateUrl: 'views/homepage/layerIntro.html'
           },
-          'compass': {
-            templateUrl: 'views/homepage/compass.html'
-          },
+
           'contact': {
             templateUrl: 'views/homepage/contact.html'
           }
@@ -89,6 +86,11 @@
         url: '/dashboard',
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
+      })
+      .state('compass', {
+        url: '/compass',
+        templateUrl: 'views/compass.html',
+        controller: 'CompassCtrl'
       })
       .state('vancouver', {
         url: '/dashboard/vancouver',
