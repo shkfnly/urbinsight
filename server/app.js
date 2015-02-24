@@ -1,4 +1,5 @@
 // modules ===========================================
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,6 +7,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+
 
 //I'm not sure if I need this.
 // var router = express.Router();
@@ -79,6 +81,7 @@ if (app.get('env') === 'development') {
 * Production Settings
 */
 if (app.get('env') === 'production') {
+    require('newrelic');
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
     // production error handler

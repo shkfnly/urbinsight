@@ -87,7 +87,7 @@ angular.module('clientApp')
       var request = $http.get('/data/label/' + cityString);
       var scope = $scope;
       request.success(function (data, status){
-
+        console.log(data)
         angular.forEach(data, function(type, key){
           angular.forEach(type, function(node){
             console.log(node);

@@ -25,6 +25,7 @@
     "moment": "^2.9.0",
     "mongoose": "^3.8.23",
     "morgan": "^1.5.1",
+    "newrelic": "^1.16.4",
     "ogr2ogr": "^0.5.1",
     "seraph": "^0.9.12",
     "seraph-model": "^0.6.18",
