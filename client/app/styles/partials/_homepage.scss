@@ -110,13 +110,13 @@
 
     }
     .medellin-bright{
-      background-image: url('../images/medellin.png')
+      background-image: image-url('medellin.png')
     }
     .cairo-bright{
-      background-image: url('../images/cairo.png')
+      background-image: image-url('cairo.png')
     }
     .casablanca-bright{
-      background-image: url('../images/casablanca.png')
+      background-image: image-url('casablanca.png')
     }
 
     .darken {
@@ -164,28 +164,28 @@
       margin-top: 0px !important;
     }
     #one{
-      background-image: url('../images/num1.png');        
+      background-image: image-url('num1.png');        
     }
       #two{
-      background-image: url('/images/num2.png');        
+      background-image: image-url('num2.png');        
     }
       #three{
-      background-image: url('/images/num3.png');        
+      background-image: image-url('num3.png');        
     }
       #four{
-      background-image: url('/images/num4.png');        
+      background-image: image-url('num4.png');        
     }
       #five{
-      background-image: url('/images/num5.png');        
+      background-image: image-url('num5.png');        
     }
       #six{
-      background-image: url('/images/num6.png');        
+      background-image: image-url('num6.png');        
     }
       #seven{
-      background-image: url('../images/num7.png');        
+      background-image: image-url('num7.png');        
     }
       #eight{
-      background-image: url('../images/num8.png');        
+      background-image: image-url('num8.png');        
     }
 
     #panel-title-color{
