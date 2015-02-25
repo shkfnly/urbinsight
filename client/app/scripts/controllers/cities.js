@@ -14,7 +14,12 @@ angular.module('clientApp')
       'vancouver' : {
         lat: '49.2496600',
         lon: '-123.1193400',
-        layers: {'Vancouver Water System' : 'urbinsight.vanwatersystem'}
+        layers: {'Water Mains' : 'urbinsight.vanWaterNetwork',
+                 'Sources' : 'urbinsight.vancouverwatersources',
+                 'Upstream' : 'urbinsight.vanupstream',
+                 'Parcels' : 'urbinsight.qmfmkj4i',
+                 'Downstream' : 'urbinsight.vandownstream',
+                 'Sinks' : 'urbinsight.larr7ldi'}
       },
       'medellin' : {
         lat: '6.2491',
@@ -42,12 +47,10 @@ angular.module('clientApp')
     };
 
     var L;
-
     $scope.L = L = window.L;
 
     var cityString = $location.path().split('/')[2];
     var city;
-
     $scope.$city = city = $scope.$cities[cityString];
 
     $scope.renderMap = function() {
@@ -87,14 +90,10 @@ angular.module('clientApp')
       var request = $http.get('/data/label/' + cityString);
       var scope = $scope;
       request.success(function (data, status){
-        console.log(data)
         angular.forEach(data, function(type, key){
           angular.forEach(type, function(node){
-            console.log(node);
             var lat = parseFloat(node.lat);
             var lng = parseFloat(node.lng);
-            console.log(lat);
-            console.log(lng);
             scope.L.marker([lat, lng], {
               icon: scope.L.mapbox.marker.icon({
                 'marker-size' : 'small',

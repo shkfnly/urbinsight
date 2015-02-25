@@ -1,5 +1,5 @@
 LOAD CSV WITH HEADERS FROM "file:/Users/ashokafinley/development/urbinsight/server/sample_data/demand.csv" AS csvLine
-CREATE (:vancouver:demand {     db_link: csvLine.DBLINK,
+CREATE (:demand:vancouver {     db_link: csvLine.DBLINK,
                     geodb_oid: csvLine.GEODB_OID,
                     object_id: csvLine.OBJECTID,
                     met_input: csvLine.MET_INPUT,
