@@ -99,12 +99,25 @@ angular.module('clientApp')
                 'marker-size' : 'small',
                 'marker-color' : scope.$colors[key]
               })
-            }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>').addTo(scope.map);
+            }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
+            .on('click', function(){drawFlows(node)})
+            .addTo(scope.map);
           });
         });
       });
     };
     $scope.fetchNodes();
+
+    $scope.drawFlows = function(node) {
+      var request = $http.get('/data/relation/' + node.id);
+      var scope = $scope;
+      var linesAdded = [];
+      request.success(function (data, status) {
+        angular.forEach(data, function(relation){
+          linesAdded.push(L.polyline(relation, {color: 'teal'}).addTo(scope.map));
+        })
+      })
+    }
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

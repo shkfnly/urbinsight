@@ -23,7 +23,7 @@ module.exports = function (app) {
   app.use('/nodes', require('./routes/nodes'));
 
   // Relation Route
-  app.use('/relation', require('./routes/relations'));
+  app.use('/data/relation', require('./routes/relations'));
 
   // Label Route
   app.use('/data/label', require('./routes/labels'));
