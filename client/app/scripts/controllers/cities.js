@@ -100,8 +100,8 @@ angular.module('clientApp')
                 'marker-color' : scope.$colors[key]
               })
             }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
-            .on('click', function(){drawFlows(node)})
-            .addTo(scope.map);
+            
+            .addTo(scope.map).on('click', function(){scope.drawFlows(node)});
           });
         });
       });
@@ -113,11 +113,17 @@ angular.module('clientApp')
       var scope = $scope;
       var linesAdded = [];
       request.success(function (data, status) {
+        debugger
         angular.forEach(data, function(relation){
           linesAdded.push(L.polyline(relation, {color: 'teal'}).addTo(scope.map));
-        })
-      })
-    }
+        });
+      });
+      request.error( function (data, status) {
+        console.log(data);
+        console.log(status);
+      });
+      console.log(request);
+    };
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

@@ -31,7 +31,7 @@
     "seraph-model": "^0.6.18",
     "serve-favicon": "~2.2.0",
     "shp2json": "^1.1.0",
-    "underscore": "^1.7.0",
+    "underscore": "^1.8.2",
     "unzip": "^0.1.11",
     "content-type": "^1.0.1",
     "type": "0.0.3"
