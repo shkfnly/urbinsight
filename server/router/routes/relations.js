@@ -3,79 +3,55 @@ var router = express.Router();
 var url = require('url');
 var _ = require('underscore');
 var db = require('../../database').nodeDB;
+var async = require('async')
 
 
-var addRelations = function(node_id){
-  var queue = [[node_id, 'out'], [node_id, 'in']];
+var addRelations = function(node_id, res){
   var relations = [];
+  // Read the first node from the database
   db.read(node_id, function(err, initNode){
-    while (queue.length > 0){
-      var IDandDir = queue.shift();
-      var id = IDandDir[0];
-      var dir = IDandDir[1];
-      db.read(id, function(err, node){
+    var queue = [[initNode, 'out'], [initNode, 'in']];
+    // Create a While loop to implement depth first search
+    async.whilst(
+      function () { 
+        return queue.length > 0},
+      function (callback) {
+        var NodeandDir = queue.shift();
+        var node = NodeandDir[0]
+        var dir = NodeandDir[1];
+        // Lookup the relationships for the node in each direction
         db.relationships(node.id, dir, 'flows_to', function(err, relationships){
+          //iterate through the relationships
           if(relationships.length === 0 && queue.length === 0){
-            return relations;
+            callback(err, relations)
           }
           _.each(relationships, function(relation){
             var node2id;
             relation.start === node.id ? node2id = relation.end : node2id = relation.start
+            //read the other endpoint
             db.read(node2id, function(err, node2){
+              // push the coordinates to relations
               relations.push([[node.lat, node.lng], [node2.lat, node2.lng]])
-              console.log("Relations")
-              console.log(relations)
+              //add the new node to the queue with the relationships
               queue.push([node2, dir])
-              console.log("queue")
-              console.log(queue)
             })
           })
         })
-      })
-    }
+      },
+      function(err, relations){
+        console.log('Final Relations');
+        console.log(relations);
+        res.send(relations);
+      }
+    )
   })
 }
 
-var flowMap;
 router.get('/:id', function(req, res, next) {
   var node_id = req.params.id;
-  flowMap = addRelations(node_id);
-  console.log(flowMap)
-  next();
-},
-function(req, res, next) {
-  res.send(flowMap);
+  addRelations(node_id, res);
 });
-  // var queue = [[node_id, 'out'], [node_id, 'in']];
-  // var relations = [];
-  // while (queue.length > 0){
-  //   var IDandDir = queue.shift();
-  //   var ID = IDandDir[0];
-  //   var Dir = IDandDir[1];
-  //   // Get the data of the clicked node from the database
-  //   db.read(ID, function(err, node){
-  //     // Get the relationships of the node in the right direction
-  //     db.relationships(node.id, Dir, 'flows_to', function(err, relationships){
-  //       // If the relationships length if === 0 and there are no nodes in queue the send the response
-  //       if(relationships.length === 0 && queue.length === 0){
-  //         console.log(relations);
-  //         res.send(relations[0]);
-  //       }
-  //       _.each(relationships, function(relation){
-  //         var node2id;
-  //         relation.start === node.id ? node2id = relation.end : node2id = relation.start
-  //         db.read(node2id, function(err, node2){
-  //           relations.push([[node.lat, node.lng], [node2.lat, node2.lng]]);
-  //           queue.push([node2.id, Dir])
-  //         })
-  //       })
-  //     })
-  //   })
-  // }
 
-  // db.relationships(node_id, direction, function(err, relationships){
-  //   res.send(relationships);
-  // });
 
 
 
