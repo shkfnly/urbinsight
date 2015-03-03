@@ -4,12 +4,20 @@
 */
 
 var mongoose = require('mongoose');
+// var pg = require('knex')({
+//   client: 'pg',
+//   connection: process.env.PG_CONNECTION_STRING
+// });
+// var bookshelf = require('bookshelf')(pg);
+
+
 // Schemas export models
 var UserModel = require('./schemas/user')
 
 
 // Connections
 var developmentDb = 'mongodb://localhost/test';
+
 var productionDb = 'ADD THIS HERE'
 var usedDb;
 

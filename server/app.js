@@ -11,6 +11,50 @@ var methodOverride = require('method-override');
 var app = express();
 
 
+var pg = require('pg')
+var http = require('http')
+var port = 5433;
+var host = '127.0.0.1';
+var server = http.createServer(function(req, res){
+if(req.method == 'POST') {
+insert_records(req,res);
+}
+else if(req.method == 'GET') {
+list_records(req,res);
+}
+else if(req.method == 'PUT') {
+update_record(req,res);
+}
+else if(req.method == 'DELETE') {
+delete_record(req,res);
+}
+})
+server.on('listening', function(){
+    console.log('ok, server is running');
+});
+
+server.listen(port,host);
+
+var conString = "pg://addisonlee:addisonlee@localhost:5432/urbinsight";
+var client = new pg.Client(conString);
+client.connect(function(err){
+    if(err == null){
+        console.log('Successful Connection')
+    } else {
+        console.log(err)
+    }
+});
+
+var insert_records = function(req, res){
+    //Drop table if it exists
+    client.query("CREATE TABLE users(firstname varchar(64), lastname varchar(64))");
+    client.query("INSERT INTO users(firstname, lastname) values($1, $2)", ['Ashoka', 'Finley']);
+    client.query("INSERT INTO users(firstname, lastname) values($1, $2)", ['Dave', 'Ron']);
+}
+
+
+
+
 
 // implement router
 // app.use(router)
