@@ -1,8 +1,14 @@
 #dashboardMap {
-  min-height: 100vh !important;
+  min-height: 87vh !important;
   padding-top: 100px;
 }
 
 #cities-nav {
-  margin-top: 50px;
+  padding-top: 50px;
+}
+
+#cities-nav > li {
+  
+  height: 40px;
+  padding: 0;
 }

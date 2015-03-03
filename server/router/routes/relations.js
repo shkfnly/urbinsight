@@ -7,10 +7,11 @@ var async = require('async')
 
 
 var addRelations = function(node_id, res){
-  var relations = [];
+  
   // Read the first node from the database
   db.read(node_id, function(err, initNode){
     var queue = [[initNode, 'out'], [initNode, 'in']];
+    var relations = [];
     // Create a While loop to implement depth first search
     async.whilst(
       function () { 
@@ -22,23 +23,21 @@ var addRelations = function(node_id, res){
         // Lookup the relationships for the node in each direction
         db.relationships(node.id, dir, 'flows_to', function(err, relationships){
           //iterate through the relationships
-          if(relationships.length === 0 && queue.length === 0){
-            callback(err, relations)
-          }
           _.each(relationships, function(relation){
             var node2id;
             relation.start === node.id ? node2id = relation.end : node2id = relation.start
             //read the other endpoint
             db.read(node2id, function(err, node2){
               // push the coordinates to relations
-              relations.push([[node.lat, node.lng], [node2.lat, node2.lng]])
+              relations.push([[parseFloat(node.lat), parseFloat(node.lng)], [parseFloat(node2.lat), parseFloat(node2.lng)]])
               //add the new node to the queue with the relationships
               queue.push([node2, dir])
             })
           })
+          callback(err)
         })
       },
-      function(err, relations){
+      function(err){
         console.log('Final Relations');
         console.log(relations);
         res.send(relations);

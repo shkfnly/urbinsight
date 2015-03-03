@@ -6,18 +6,13 @@
     }
 
 
-   .pilotProcessTitle{
-      background-color: rgb(60,60,60);
-      margin: 0px;
-      height: 100px;
-
-    }
     .pilotProcessTitle-text{
+          background-color: rgb(60,60,60);
       text-align: center;
       color: rgb(200,200,200);
       padding-top: 20px;
       padding-bottom: 20px;
-      font-size: 48px;
+      font-size: 2.5em;
       font-family: 'Lato', sans-serif;
       margin: 0;
     }
@@ -34,10 +29,11 @@
       
     }
     #partner-process-text{
+
       margin: 0;
       text-align: center;
       font-family: "Lato", sans-serif;
-      font-size: 38px;
+      font-size: 2.5em;
       padding-top: 20px;
       font-weight: 5px;
           }
@@ -48,6 +44,7 @@
       font-family: "Lato", sans-serif;
     }
     #process-intro-text{
+      background-image: image-url('imbaba-report2.png');
       margin: 0;
       font-size: 22px;
       padding: 30px 50px 30px 50px;
@@ -67,10 +64,14 @@
       margin: 0;
       padding-top: 10px;
       padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
     #process-list{
       padding-top: 30px;
       padding-bottom: 30px;
+      padding-right: 50px;
+      padding-left: 50px;
     }
     #process-list-items > li{
       font-family: "Lato", sans-serif;
@@ -84,11 +85,12 @@
     }
     #data-viz-title-text{
       font-family: "Lato", sans-serif;
+      font-size: 2.5em;
       font-weight: 10px;
       text-align: center;
       color: rgb(240,240,240);
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       width: 100%;
       margin: 0;
     }
@@ -202,7 +204,7 @@
       background-color: rgb(255,159,71);
           }
     #layer-title-text{
-      font-size: 3em;
+      font-size: 2.5em;
       padding-top: 20px;
       padding-bottom: 20px;
       text-align: center;
@@ -269,4 +271,9 @@
 
      .pane-row {
         margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important; 
+        padding-bottom: 20px !important;
      }

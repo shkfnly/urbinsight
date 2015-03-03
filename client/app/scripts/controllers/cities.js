@@ -61,6 +61,8 @@ angular.module('clientApp')
       // Create Layer Object for Layer Control
       var first = true;
       var additonalLayers = {};
+      additonalLayers.test = L.mapbox.tileLayer('urbinsight.68bb4ca5').addTo($scope.map);
+
 
       angular.forEach(city.layers, function(layer, name){
         if(first){
@@ -72,7 +74,7 @@ angular.module('clientApp')
       });
 
       L.control.layers({
-        'Base Map': L.mapbox.tileLayer('urbinsight.l906cd2j').addTo($scope.map),
+        'Base Map': L.mapbox.tileLayer('urbinsight.150c04d2').addTo($scope.map),
         'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
         }),
@@ -108,21 +110,21 @@ angular.module('clientApp')
     };
     $scope.fetchNodes();
 
+    $scope.linesAdded = [];
+
     $scope.drawFlows = function(node) {
       var request = $http.get('/data/relation/' + node.id);
       var scope = $scope;
-      var linesAdded = [];
       request.success(function (data, status) {
-        debugger
+        angular.forEach(scope.linesAdded, function(line){
+          scope.map.removeLayer(line);
+        });
         angular.forEach(data, function(relation){
-          linesAdded.push(L.polyline(relation, {color: 'teal'}).addTo(scope.map));
+          scope.linesAdded.push(L.polyline(relation, {color: 'teal', opacity: 1, weight: 10}).addTo(scope.map));
         });
       });
       request.error( function (data, status) {
-        console.log(data);
-        console.log(status);
       });
-      console.log(request);
     };
 
     $scope.awesomeThings = [
