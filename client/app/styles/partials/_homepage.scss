@@ -1,72 +1,81 @@
-   .brand-image{
-      margin-top: -15px;}
-    .navbar{
-      margin-bottom: 0px !important;
 
-    }
+// Header
+.brand-image{
+  margin-top: -15px;}
+.navbar{
+  margin-bottom: 0px !important;
 
+}
 
-    .pilotProcessTitle-text{
-          background-color: rgb(60,60,60);
-      text-align: center;
-      color: rgb(200,200,200);
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-size: 2.5em;
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-    }
-    #pilotProcessMap{
-      height: 600px;
-      width: 100%;
-      margin: 0px;
-    }
-    #partner-process{
-      width: 100%;
-      height: 75px;
-      background-color: rgb(220,220,220);
-      margin: 0;
-      
-    }
-    #partner-process-text{
+// Map Tile
+.pilotProcessTitle-text{
+  background-color: rgb(60,60,60);
+  text-align: center;
+  color: rgb(200,200,200);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 2.5em;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
 
-      margin: 0;
-      text-align: center;
-      font-family: "Lato", sans-serif;
-      font-size: 2.5em;
-      padding-top: 20px;
-      font-weight: 5px;
-          }
-    #process-intro{
-      background-color: rgba(160,206,226,0.3);
-      width: 100%;
-      margin: 0;
-      font-family: "Lato", sans-serif;
-    }
-    #process-intro-text{
-      background-image: image-url('imbaba-report2.png');
-      margin: 0;
-      font-size: 22px;
-      padding: 30px 50px 30px 50px;
-      text-align: justify;
-    }
-    #process-list-title{
-      background-color: rgb(30,30,30);
-      margin: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
+#pilotProcessMap{
+  height: 600px;
+  width: 100%;
+  margin: 0px;
+}
 
-    }
-    #process-list-title-text{
-      color: rgb(220,220,220);
-      font-family: "Lato", sans-serif;
-      text-align: center;
-      margin: 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+#partner-process{
+  width: 100%;
+  height: 75px;
+  background-color: rgb(220,220,220);
+  margin: 0; 
+}
+
+#partner-process-text{
+  margin: 0;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 2.5em;
+  padding-top: 20px;
+  font-weight: 5px;
+}
+    
+#process-intro{
+  background-color: rgba(160,206,226,0.3);
+  width: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+#process-intro-text{
+  background-image: image-url('imbaba-report2.png');
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  font-size: 22px;
+  padding: 135px 50px 135px 50px;
+  text-align: justify;
+}
+
+#process-list-title{
+  background-color: rgb(30,30,30);
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+#process-list-title-text{
+  color: rgb(220,220,220);
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
     #process-list{
       padding-top: 30px;
       padding-bottom: 30px;
@@ -130,74 +139,10 @@
       text-decoration: none;
     }
     body a:hover{
-      color: #fff;
       text-decoration: none !important;
     }
     
-    #compass-title{
-      background-color: rgba(55,176,201,.7);
-
-      width: 100%;
-      margin: 0px;
-    }
-    #compass-title-text{
-      padding-top: 20px;
-      font-size: 40px;
-      text-align: center;
-      font-family: 'Lato', sans-serif;
-      font-weight: 10px;
-      color: rgb(40,40,40);
-      margin: 0;
-
-    }
-    #compass-title-description{
-      margin: 0;
-      font-size: 18px;
-      font-family: 'Lato', sans-serif;
-      padding: 30px 30px 30px 30px;
-      background-color: rgb(220,220,220);
-      color: rgb(0,0,0);
-
-    }
-    .panel-group{
-      margin: -10px 0 0 0 !important;
-    }
-    .panel-default{
-      margin-top: 0px !important;
-    }
-    #one{
-      background-image: image-url('num1.png');        
-    }
-      #two{
-      background-image: image-url('num2.png');        
-    }
-      #three{
-      background-image: image-url('num3.png');        
-    }
-      #four{
-      background-image: image-url('num4.png');        
-    }
-      #five{
-      background-image: image-url('num5.png');        
-    }
-      #six{
-      background-image: image-url('num6.png');        
-    }
-      #seven{
-      background-image: image-url('num7.png');        
-    }
-      #eight{
-      background-image: image-url('num8.png');        
-    }
-
-    #panel-title-color{
-      color: #fff;
-      font-family: 'Lato', sans-serif;
-    }
-
-    .panel-body{
-      background-color: rgba(55,176,201,.1);
-    }
+    
     #layer-title{
       margin: 0;
       width: 100%;
@@ -253,8 +198,7 @@
       background-color: rgba(255,159,71,.3);
      }
 
-     #contact
-     {
+     #contact{
       background-color: rgb(144,175,84);
       width: 100%;
       color: white;

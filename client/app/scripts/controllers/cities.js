@@ -34,8 +34,18 @@ angular.module('clientApp')
                  'Structural Axes of Public Spaces' : 'thissaysnothing.46q7iudi',
                  'Green Infrastructure' : 'thissaysnothing.5i0e8kt9'}
       },
-      'cairo' : {},
-      'casablanca' : {}
+      'cairo' : {
+        lat: '30.0600',
+        lon: '31.2333'
+      },
+      'casablanca' : {
+        lat: '33.5333',
+        lon: '-7.5833'
+      },
+      'lima' : {
+        lat: '-12.0433',
+        lon: '-77.0283'
+      }
     };
 
     $scope.$colors = {
@@ -61,8 +71,6 @@ angular.module('clientApp')
       // Create Layer Object for Layer Control
       var first = true;
       var additonalLayers = {};
-      additonalLayers.test = L.mapbox.tileLayer('urbinsight.68bb4ca5').addTo($scope.map);
-
 
       angular.forEach(city.layers, function(layer, name){
         if(first){
@@ -103,7 +111,7 @@ angular.module('clientApp')
               })
             }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
             
-            .addTo(scope.map).on('click', function(){scope.drawFlows(node)});
+            .addTo(scope.map).on('click', function(){scope.drawFlows(node);});
           });
         });
       });

@@ -1,0 +1,73 @@
+#compass-title{
+  background-color: rgba(55,176,201,.7);
+  width: 100%;
+  margin: 0px;
+}
+
+#compass-title-text{
+  padding-top: 20px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 10px;
+  color: rgb(40,40,40);
+  margin: 0;
+}
+
+#compass-title-description{
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  padding: 30px 30px 30px 30px;
+  background-color: rgb(220,220,220);
+  color: rgb(0,0,0);
+}
+
+.panel-group{
+  margin: -10px 0 0 0 !important;
+}
+
+.panel-default{
+  margin-top: 0px !important;
+}
+
+#one{
+  background-image: image-url('num1.png');        
+}
+
+#two{
+  background-image: image-url('num2.png');        
+}
+
+#three{
+  background-image: image-url('num3.png');        
+}
+
+#four{
+  background-image: image-url('num4.png');        
+}
+
+#five{
+  background-image: image-url('num5.png');        
+}
+
+#six{
+  background-image: image-url('num6.png');        
+}
+
+#seven{
+  background-image: image-url('num7.png');        
+}
+
+#eight{
+  background-image: image-url('num8.png');        
+}
+
+#panel-title-color{
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.panel-body{
+  background-color: rgba(55,176,201,.1);
+}

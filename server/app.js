@@ -8,20 +8,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
-
-//I'm not sure if I need this.
-// var router = express.Router();
-
-
-
-/**
-* Route Imports
-*/
-// var routes = require('./routes/index');
-// var users = require('./routes/users');
-// var nodes = require('./routes/nodes');
-// var signup = require('./routes/signup');
-
 var app = express();
 
 

@@ -94,15 +94,29 @@
       })
       .state('vancouver', {
         url: '/dashboard/vancouver',
-        templateUrl: 'views/cities/vancouver.html',
+        templateUrl: 'views/cities/cityDefault.html',
         controller: 'CitiesCtrl'
       })
       .state('medellin', {
         url: '/dashboard/medellin',
-        templateUrl: 'views/cities/vancouver.html',
+        templateUrl: 'views/cities/cityDefault.html',
+        controller: 'CitiesCtrl'
+      })
+      .state('cairo', {
+        url: '/dashboard/cairo',
+        templateUrl: 'views/cities/cityDefault.html',
+        controller: 'CitiesCtrl'
+      })
+      .state('casablanca', {
+        url: '/dashboard/casablanca',
+        templateUrl: 'views/cities/cityDefault.html',
+        controller: 'CitiesCtrl'
+      })
+      .state('lima', {
+        url: '/dashboard/lima',
+        templateUrl: 'views/cities/cityDefault.html',
         controller: 'CitiesCtrl'
       });
-      
   });
 
   
