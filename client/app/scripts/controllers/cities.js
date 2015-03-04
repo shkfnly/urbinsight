@@ -36,7 +36,12 @@ angular.module('clientApp')
       },
       'cairo' : {
         lat: '30.0600',
-        lon: '31.2333'
+        lon: '31.2333',
+        layers: {'Unemployment Rate' : 'urbinsight.cairolaborpop',
+                 'Marital Rate' : 'urbinsight.cairomaritalpopulation',
+                 'School Enrollment Rate' : 'urbinsight.cairoschoolpop',
+                 'Youth Population Percentage' : 'urbinsight.youthpopforcairo',
+                 'Total Population' : 'urbinsight.cairototalpopulation'}
       },
       'casablanca' : {
         lat: '33.5333',
@@ -83,6 +88,7 @@ angular.module('clientApp')
 
       L.control.layers({
         'Base Map': L.mapbox.tileLayer('urbinsight.150c04d2').addTo($scope.map),
+        'Satellite Map' : L.mapbox.tileLayer('urbinsight.l906cd2j'),
         'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
         }),
