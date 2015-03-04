@@ -42,8 +42,13 @@ db.once('open', function callback () {
 
 
 
+if(process.env['GRAPHENEDB_URL']){
+  var nodeDB = require("seraph")(process.env['GRAPHENEDB_URL'])
+}
+else{
+  var nodeDB = require("seraph")('http://localhost:7474')
+}
 
-var nodeDB = require("seraph")({ server: process.env['GRAPHENEDB_URL'] || 'http://localhost:7474'});
 
 nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
   if (err) throw err;
