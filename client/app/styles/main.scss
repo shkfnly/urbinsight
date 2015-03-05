@@ -18,8 +18,36 @@
   padding: 0.2em 0;
 }
 
-#cityMap {
+#modalbar {
+  display: none;
+}
 
+.shown {
+  display: table !important;
+}
+
+#modalbar li{
+  display: inline;
+}
+
+
+#modal {
+  height: 50px;
+  width: 50px;
+  margin-top: 70vh;
+  position: absolute;
+  background-color: white;
+}
+
+.hoveredon {
+  margin-top: 40vh !important;
+  height: 300px !important;
+  width: 600px !important;
+}
+
+
+
+#cityMap {
   min-height: 87vh;
   min-width: 100vw;
 }

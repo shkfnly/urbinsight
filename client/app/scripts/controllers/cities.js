@@ -37,11 +37,14 @@ angular.module('clientApp')
       'cairo' : {
         lat: '30.0600',
         lon: '31.2333',
-        layers: {'Unemployment Rate' : 'urbinsight.cairolaborpop',
+        layers: {
+                 'Parcel Audit' : 'urbinsight.cairoparcelaudit',
+                 'Unemployment Rate' : 'urbinsight.cairolaborpop',
                  'Marital Rate' : 'urbinsight.cairomaritalpopulation',
                  'School Enrollment Rate' : 'urbinsight.cairoschoolpop',
                  'Youth Population Percentage' : 'urbinsight.youthpopforcairo',
-                 'Total Population' : 'urbinsight.cairototalpopulation'}
+                 'Total Population' : 'urbinsight.cairototalpopulation',
+                 }
       },
       'casablanca' : {
         lat: '33.5333',
@@ -80,6 +83,9 @@ angular.module('clientApp')
       angular.forEach(city.layers, function(layer, name){
         if(first){
           additonalLayers[name] = L.mapbox.tileLayer(layer).addTo($scope.map);
+          var gridLayer = L.mapbox.gridLayer(layer);
+          $scope.map.addLayer(gridLayer);
+          $scope.map.addControl(L.mapbox.gridControl(gridLayer));
           first = false;
         } else {
           additonalLayers[name] = L.mapbox.tileLayer(layer);
@@ -101,6 +107,13 @@ angular.module('clientApp')
     };
 
     $scope.renderMap();
+    
+    $('#cityMap').append("<div id='modal'  style='height: 50px; width: 50px; margin-top: 70vh; position: absolute;'><ul id='modalbar' class='nav nav-tabs nav-justified'><li role='presentation' class='active btn btn-default'>Layer Info</li><li role='presentation' class='btn btn-default'>Data</li><li role='presentation' class='btn btn-default'>Add Data</li></ul></div>")
+    $('#modal').on('click', function(event){
+      $(event.target).toggleClass('hoveredon');
+      $('#modalbar').toggleClass('shown');
+    });
+
 
     $scope.fetchNodes = function () {
       var request = $http.get('/data/label/' + cityString);
