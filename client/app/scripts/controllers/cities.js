@@ -38,7 +38,9 @@ angular.module('clientApp')
         lat: '30.0600',
         lon: '31.2333',
         layers: {
+                 'Water Quality' : 'urbinsight.cairowaterquality',
                  'Parcel Audit' : 'urbinsight.cairoparcelaudit',
+                 'Air Quality'  : 'urbinsight.cairoairquality',
                  'Unemployment Rate' : 'urbinsight.cairolaborpop',
                  'Marital Rate' : 'urbinsight.cairomaritalpopulation',
                  'School Enrollment Rate' : 'urbinsight.cairoschoolpop',
@@ -80,6 +82,7 @@ angular.module('clientApp')
       var first = true;
       var additonalLayers = {};
 
+      // Get rid of Redundancy
       angular.forEach(city.layers, function(layer, name){
         if(first){
           additonalLayers[name] = L.mapbox.tileLayer(layer).addTo($scope.map);
@@ -89,6 +92,9 @@ angular.module('clientApp')
           first = false;
         } else {
           additonalLayers[name] = L.mapbox.tileLayer(layer);
+          var gridLayer = L.mapbox.gridLayer(layer);
+          $scope.map.addLayer(gridLayer);
+          $scope.map.addControl(L.mapbox.gridControl(gridLayer));
         }
       });
 
@@ -108,9 +114,9 @@ angular.module('clientApp')
 
     $scope.renderMap();
     
-    $('#cityMap').append("<div id='modal'  style='height: 50px; width: 50px; margin-top: 70vh; position: absolute;'><ul id='modalbar' class='nav nav-tabs nav-justified'><li role='presentation' class='active btn btn-default'>Layer Info</li><li role='presentation' class='btn btn-default'>Data</li><li role='presentation' class='btn btn-default'>Add Data</li></ul></div>")
-    $('#modal').on('click', function(event){
-      $(event.target).toggleClass('hoveredon');
+    $('#cityMap').append("<div id='modal'><span id='plusclick' style='font-size: 4em; padding-left: 10px;' class='glyphicon glyphicon-plus'></span><ul id='modalbar' class='nav nav-tabs nav-justified'><li role='presentation' class='active btn btn-default'>Layer Info</li><li role='presentation' class='btn btn-default'>Data</li><li role='presentation' class='btn btn-default'>Add Data</li></ul></div>")
+    $('#plusclick').on('click', function(event){
+      $('#modal').toggleClass('hoveredon');
       $('#modalbar').toggleClass('shown');
     });
 
