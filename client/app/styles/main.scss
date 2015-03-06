@@ -18,18 +18,15 @@
   padding: 0.2em 0;
 }
 
-#modalbar {
+
+
+.shown {
   display: none;
 }
 
-.shown {
-  display: table !important;
+.opened {
+  float: right;
 }
-
-#modalbar li{
-  display: inline;
-}
-
 
 #mapModal {
   height: 50px;
@@ -46,6 +43,12 @@
   margin-top: 40vh !important;
   height: 300px !important;
   width: 600px !important;
+}
+
+#plusclick {
+  padding-left: 7.5px;
+  margin-top: -5px;
+  font-size: 4em;
 }
 
 

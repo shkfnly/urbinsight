@@ -11,10 +11,13 @@ angular.module('clientApp')
   .controller('MapModalCtrl', function ($scope) {
 
     $('#plusclick').on('click', function(event){
+      $('#plusclick').toggleClass('opened');
       $('#mapModal').toggleClass('hoveredon');
       $('#modalbar').toggleClass('shown');
     });
-    
+
+
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
