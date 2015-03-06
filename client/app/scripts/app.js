@@ -75,6 +75,7 @@
           requireLogin: false
         }
       })
+
       .state('app', {
         abstract: true,
         url: '#',
@@ -92,30 +93,21 @@
         templateUrl: 'views/compass.html',
         controller: 'CompassCtrl'
       })
-      .state('vancouver', {
-        url: '/dashboard/vancouver',
+
+
+      .state('city', {
         templateUrl: 'views/cities/cityDefault.html',
         controller: 'CitiesCtrl'
       })
-      .state('medellin', {
-        url: '/dashboard/medellin',
-        templateUrl: 'views/cities/cityDefault.html',
-        controller: 'CitiesCtrl'
-      })
-      .state('cairo', {
-        url: '/dashboard/cairo',
-        templateUrl: 'views/cities/cityDefault.html',
-        controller: 'CitiesCtrl'
-      })
-      .state('casablanca', {
-        url: '/dashboard/casablanca',
-        templateUrl: 'views/cities/cityDefault.html',
-        controller: 'CitiesCtrl'
-      })
-      .state('lima', {
-        url: '/dashboard/lima',
-        templateUrl: 'views/cities/cityDefault.html',
-        controller: 'CitiesCtrl'
+
+      .state('city.pilot', {
+        url: '/dashboard/:city_name',
+        views: {
+          'mapModal': {
+            templateUrl: 'views/cities/mapmodal.html',
+            controller: 'MapModalCtrl'
+          }
+        }
       });
   });
 

@@ -74,6 +74,7 @@ angular.module('clientApp')
     $scope.$city = city = $scope.$cities[cityString];
 
     $scope.renderMap = function() {
+      console.log('rendering');
       //Create Map
       L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
       $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
@@ -113,12 +114,7 @@ angular.module('clientApp')
     };
 
     $scope.renderMap();
-    
-    $('#cityMap').append("<div id='modal'><span id='plusclick' style='font-size: 4em; padding-left: 10px;' class='glyphicon glyphicon-plus'></span><ul id='modalbar' class='nav nav-tabs nav-justified'><li role='presentation' class='active btn btn-default'>Layer Info</li><li role='presentation' class='btn btn-default'>Data</li><li role='presentation' class='btn btn-default'>Add Data</li></ul></div>")
-    $('#plusclick').on('click', function(event){
-      $('#modal').toggleClass('hoveredon');
-      $('#modalbar').toggleClass('shown');
-    });
+
 
 
     $scope.fetchNodes = function () {
