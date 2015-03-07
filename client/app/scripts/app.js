@@ -18,7 +18,8 @@
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider) {

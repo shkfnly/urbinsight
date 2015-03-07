@@ -74,7 +74,6 @@ angular.module('clientApp')
     $scope.$city = city = $scope.$cities[cityString];
 
     $scope.renderMap = function() {
-      console.log('rendering');
       //Create Map
       L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
       $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
