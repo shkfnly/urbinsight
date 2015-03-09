@@ -28,14 +28,18 @@
 
     // Setup the states
     $stateProvider
-      .state('main', {
+      .state('app', {
         abstract: true,
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/app.html',
         data: {
-          requireLogin: false
+          requireLogin: false// this property will apply to all children of 'app'
         }
       })
-      .state('main.homepage', {
+      .state('app.main', {
+        abstract: true,
+        templateUrl: 'views/main.html',
+      })
+      .state('app.main.homepage', {
         url: '/',
         controller: 'MainCtrl',
         views: {
@@ -59,49 +63,26 @@
           }
         }
       })
-
-      .state('about', {
+      .state('app.about', {
         url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        data: {
-          requireLogin: false
-        }
       })
-      .state('signup', {
+      .state('app.signup', {
         url: '/signup',
         templateUrl: 'views/signup.html',
         controller: 'SignupCtrl',
-        data: {
-          requireLogin: false
-        }
       })
-
-      .state('app', {
-        abstract: true,
-        url: '#',
-        data: {
-          requireLogin: false// this property will apply to all children of 'app'
-        }
-      })
-      .state('dashboard', {
-        url: '/dashboard',
-        templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
-      })
-      .state('compass', {
+      .state('app.compass', {
         url: '/compass',
         templateUrl: 'views/compass.html',
         controller: 'CompassCtrl'
       })
-
-
-      .state('city', {
+      .state('app.city', {
         templateUrl: 'views/cities/cityDefault.html',
         controller: 'CitiesCtrl'
       })
-
-      .state('city.pilot', {
+      .state('app.city.pilot', {
         url: '/dashboard/:city_name',
         views: {
           'mapModal': {
@@ -109,6 +90,11 @@
             controller: 'MapModalCtrl'
           }
         }
+      })
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
       });
   });
 

@@ -48,8 +48,17 @@
               <li><a ng-href="#/">Home</a></li>
               <li><a ng-href="#/dashboard">Dashboard</a></li>
 <!--               <li><a ng-href="#/about">About</a></li> -->
-<!--               <li><a ng-href="#/pilots">Pilots</a></li> -->
               <li><a ng-href="#/compass">Compass</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pilots <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a ng-href="/#/dashboard/vancouver" style="color: black;">Vancouver</a></li>
+                  <li><a ng-href="/#/dashboard/medellin" style="color: black;">Medellin</a></li>
+                  <li><a ng-href="/#/dashboard/casablanca" style="color: black;">Casablanca</a></li>
+                  <li><a ng-href="/#/dashboard/cairo" style="color: black;">Cairo</a></li>
+                  <li><a ng-href="/#/dashboard/lima" style="color: black;">Lima</a></li>
+                </ul>
+              </li>
               <li><a ng-href="#/login">Login</a></li>
               <li><a ng-href="#/signup">Signup</a></li>
             </ul>

@@ -35,9 +35,6 @@ var City = require('../../database').cities
 
 router.get('/:city_name', function (req, res, next) {
   var cityName = req.params.city_name;
-  City.find(function(err, cities){
-    console.log(cities)
-  })
   City.findOne({ name : cityName }, function (err, city_result){
     if (err) {
       console.log('There has been and error');
