@@ -79,7 +79,6 @@ angular.module('clientApp')
     $scope.renderMap = function() {
       var request = $http.get('/data/city/' + cityString);
       request.success( function(city, status){
-        debugger
       //Create Map
       $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
       .setView([city.lat, city.lon], 12);
@@ -90,16 +89,14 @@ angular.module('clientApp')
       });
     };
 
-    $scope.createCity = function(){
-      debugger
-      var request = $http.post('/data/city/vancouver');
-      request.success( function(res, status){
-        console.log(city)
-        console.log(status)
-      })
-    }
+    // $scope.createCity = function(){
+    //   var request = $http.post('/data/city/vancouver');
+    //   request.success( function(res, status){
+    //     console.log(status)
+    //   })
+    // }
 
-    $scope.renderMap();
+    
 
 
     $scope.additonalLayers = function(cityLayers){
@@ -155,7 +152,8 @@ angular.module('clientApp')
         });
       });
     };
-    $scope.fetchNodes();
+
+    
 
     $scope.linesAdded = [];
 
@@ -173,6 +171,10 @@ angular.module('clientApp')
       request.error( function (data, status) {
       });
     };
+
+    // $scope.createCity();
+    $scope.renderMap();
+    $scope.fetchNodes();
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
