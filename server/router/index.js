@@ -28,6 +28,6 @@ module.exports = function (app) {
   // Label Route
   app.use('/data/label', require('./routes/labels'));
 
-  // Dashboard Route
-  // app.use('/dashboard', require('.routes/dashboard'));
+  // City Route
+  app.use('/data/city', require('./routes/cities'));
 }

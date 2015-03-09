@@ -1,34 +1,13 @@
 <span id='plusclick' class='glyphicon glyphicon-plus'></span>
-<!-- <ul id='modalbar' class='nav nav-tabs nav-justified shown'>
-  <li ><a href="#layerInfo" role="tab" data-toggle="tab">Layer Info</a></li>
-  <li class="active"><a href="#dataSources" role="tab" data-toggle="tab">Data</a></li>
-  <li ><a href="#layerInfo" role="tab" data-toggle="tab">Add Data</a></li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane active" id='layerInfo'>
-    <div class="row pane-row">
-      <div class="pane-text-box">
-        <ul>
-          <li>This is a test</li>
-          <li>Does it work</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane" id="dataSources">
-    <div class="row pane-row">
-      <div class="pane-text-box">
-        <ul>
-          <li>Does this show up</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
 
   <tabset justified="true" id='modalbar' class='shown'>
-    <tab heading="Layer Info" active='true'>I'm Layer Info</tab>
+    <tab heading="Layer Info" active='true'>
+      <ul>
+        <li ng-repeat="layer in layerDefs">
+          <span><strong>{{layer.name}}</strong> {{layer.description}}</span>
+        </li>
+      </ul>
+    </tab>
     <tab heading="Data">I'm the Data</tab>
     <tab heading="Add Data">I can add data.</tab>
     <!-- <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">

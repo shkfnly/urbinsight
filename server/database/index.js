@@ -6,10 +6,10 @@
 var mongoose = require('mongoose');
 // Schemas export models
 var UserModel = require('./schemas/user')
-
+var CityModel = require('./schemas/city')
 
 // Connections
-var developmentDb = 'mongodb://localhost/test';
+var developmentDb = 'mongodb://localhost/urbinsight';
 var productionDb = 'ADD THIS HERE'
 var usedDb;
 
@@ -64,3 +64,4 @@ else{
 exports.nodeDB = nodeDB;
 exports.db = db;
 exports.users = UserModel;
+exports.cities = CityModel;
