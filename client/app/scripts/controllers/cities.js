@@ -72,7 +72,8 @@ angular.module('clientApp')
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
 
-
+    $scope.gridLayers = [];
+    $scope.gridControls = [];
     var cityString = $location.path().split('/')[2];
     // $scope.$city = city = $scope.$cities[cityString];
 
@@ -80,15 +81,39 @@ angular.module('clientApp')
       var request = $http.get('/data/city/' + cityString);
       request.success( function(city, status){
       //Create Map
-      $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
-      .setView([city.lat, city.lon], 12);
-      
-      $scope.layerDefs = city.layerDefinitions;
-      $scope.addLayerControl($scope.additonalLayers(city.layers));
-
+        $scope.city = city;
+        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
+        .setView([city.lat, city.lon], 12);
+        
+        $scope.layerDefs = city.layerDefinitions;
+        $scope.addLayerControl($scope.additonalLayers(city.layers));
+        $scope.map.on('overlayadd', $scope.overlayAddCtrl);
+        $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
       });
     };
+    
+    $scope.overlayAddCtrl = function(e){
+      $scope.gridLayer = L.mapbox.gridLayer(e.layer._tilejson.id);
+      $scope.map.addLayer($scope.gridLayer);
+      $scope.gridControl = L.mapbox.gridControl($scope.gridLayer);
+      $scope.map.addControl($scope.gridControl);
+    };
 
+///REMOVING DOES NOT WORK FOR SOME REASON
+    $scope.overlayRmvCtrl = function(e){
+      for (var i = 0; i < $scope.gridLayers.length; i++){
+        debugger
+        if($scope.gridLayers[i]._tilejson.id === e.layer._tilejson.id){
+          $scope.map.removeLayer($scope.gridLayers[i]);
+          $scope.map.removeControl($scope.gridControls[i]);
+          $scope.gridLayers.splice(i, 1);
+          console.log($scope.gridLayers);
+          $scope.gridControls.splice(i, 1);
+          console.log($scope.gridControls)
+          break;
+        }
+      }
+    };
     // $scope.createCity = function(){
     //   var request = $http.post('/data/city/vancouver');
     //   request.success( function(res, status){
@@ -105,13 +130,17 @@ angular.module('clientApp')
       angular.forEach(cityLayers, function(layer, name){
         if(first){
           Layers[name] = L.mapbox.tileLayer(layer).addTo($scope.map);
+          $scope.gridLayer = L.mapbox.gridLayer(layer);
+          $scope.gridLayers.push($scope.gridLayer);
+          $scope.map.addLayer($scope.gridLayer);
+          $scope.gridControl = L.mapbox.gridControl($scope.gridLayer);
+          $scope.gridControls.push($scope.gridControl);
+          $scope.map.addControl($scope.gridControl);
+
           first = false;
         } else {
           Layers[name] = L.mapbox.tileLayer(layer);
         }
-        var gridLayer = L.mapbox.gridLayer(layer);
-        $scope.map.addLayer(gridLayer);
-        $scope.map.addControl(L.mapbox.gridControl(gridLayer));
       });
       return Layers;
     };
@@ -137,18 +166,30 @@ angular.module('clientApp')
       var scope = $scope;
       request.success(function (data, status){
         angular.forEach(data, function(type, key){
+          var markers = new L.MarkerClusterGroup({
+            iconCreateFunction: function(cluster) {
+              return L.mapbox.marker.icon({
+                'marker-symbol' : cluster.getChildCount(),
+                'marker-color' : scope.$colors[key]
+              });
+            }
+          });
           angular.forEach(type, function(node){
             var lat = parseFloat(node.lat);
             var lng = parseFloat(node.lng);
-            scope.L.marker([lat, lng], {
+            var mark = scope.L.marker([lat, lng], {
               icon: scope.L.mapbox.marker.icon({
                 'marker-size' : 'small',
                 'marker-color' : scope.$colors[key]
               })
             }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
-            
-            .addTo(scope.map).on('click', function(){scope.drawFlows(node);});
+            .on('click', function(){scope.drawFlows(node);});
+
+            markers.addLayer(mark);
+            $scope.markers = markers;
+            // .addTo(scope.map)
           });
+          scope.map.addLayer(markers);
         });
       });
     };
@@ -175,6 +216,7 @@ angular.module('clientApp')
     // $scope.createCity();
     $scope.renderMap();
     $scope.fetchNodes();
+
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
