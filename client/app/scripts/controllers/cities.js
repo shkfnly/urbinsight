@@ -82,13 +82,22 @@ angular.module('clientApp')
       request.success( function(city, status){
       //Create Map
         $scope.city = city;
-        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3})
+        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3, drawControl: true})
         .setView([city.lat, city.lon], 12);
-        
+          var featureGroup = L.featureGroup().addTo($scope.map);
         $scope.layerDefs = city.layerDefinitions;
         $scope.addLayerControl($scope.additonalLayers(city.layers));
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
+var drawControl = new L.Control.Draw({
+    edit: {
+      featureGroup: featureGroup
+    }
+  }).addTo($scope.map);
+
+  $scope.map.on('draw:created', function(e) {
+      featureGroup.addLayer(e.layer);
+  });
       });
     };
     
@@ -109,17 +118,17 @@ angular.module('clientApp')
           $scope.gridLayers.splice(i, 1);
           console.log($scope.gridLayers);
           $scope.gridControls.splice(i, 1);
-          console.log($scope.gridControls)
+          console.log($scope.gridControls);
           break;
         }
       }
     };
-    // $scope.createCity = function(){
-    //   var request = $http.post('/data/city/vancouver');
-    //   request.success( function(res, status){
-    //     console.log(status)
-    //   })
-    // }
+     $scope.createCity = function(){
+       var request = $http.post('/data/city/vancouver');
+       request.success( function(res, status){
+         console.log(status);
+       });
+    };
 
     
 
@@ -189,7 +198,7 @@ angular.module('clientApp')
             $scope.markers = markers;
             // .addTo(scope.map)
           });
-          scope.map.addLayer(markers);
+          $scope.map.addLayer(markers);
         });
       });
     };
@@ -213,7 +222,7 @@ angular.module('clientApp')
       });
     };
 
-    // $scope.createCity();
+    //$scope.createCity();
     $scope.renderMap();
     $scope.fetchNodes();
 
