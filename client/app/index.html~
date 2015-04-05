@@ -106,6 +106,12 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/leaflet.draw/dist/leaflet.draw-src.js"></script>
+    <link rel='stylesheet' href="bower_components/leaflet.draw/dist/leaflet.draw.css" />
+    <script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+    <link rel='stylesheet' href="MarkerCluster.css" />
+
+
     <!-- endbower -->
     <!-- endbuild -->
 
