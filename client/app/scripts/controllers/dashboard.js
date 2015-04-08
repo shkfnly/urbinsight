@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:DashboardCtrl
+ * @name urbinsight.controller:DashboardCtrl
  * @description
  * # DashboardCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('DashboardCtrl', function ($scope, $location, $stateParams) {
     $scope.addMap = function(){
     var L = window.L;

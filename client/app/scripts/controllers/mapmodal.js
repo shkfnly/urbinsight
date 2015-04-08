@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:MapModalCtrl
+ * @name urbinsight.controller:MapModalCtrl
  * @description
  * # MapModalCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('MapModalCtrl', function ($scope) {
 
     // $scope.layers = [

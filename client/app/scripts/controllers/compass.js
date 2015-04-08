@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:CompassCtrl
+ * @name urbinsight.controller:CompassCtrl
  * @description
  * # CompassCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('CompassCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

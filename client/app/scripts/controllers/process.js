@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:ProcessCtrl
+ * @name urbinsight.controller:ProcessCtrl
  * @description
  * # ProcessCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('ProcessCtrl', function ($scope) {
 
     $scope.addMap = function(){

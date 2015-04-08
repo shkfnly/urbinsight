@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:PilotsCtrl
+ * @name urbinsight.controller:PilotsCtrl
  * @description
  * # PilotsCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('PilotsCtrl', function ($scope) {
     $scope.imgLoader = function() {
       window.$(document).ready(function(){

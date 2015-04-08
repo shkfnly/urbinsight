@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:SignupCtrl
+ * @name urbinsight.controller:SignupCtrl
  * @description
  * # SignupCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('SignupCtrl', function ($scope, $location, $http) {
     
     // Create local references

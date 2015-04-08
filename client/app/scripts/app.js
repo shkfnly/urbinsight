@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name urbinsight
  * @description
- * # clientApp
+ * # urbinsight
  *
  * Main module of the application.
  */
 
  var app = angular
-  .module('clientApp', [
+  .module('urbinsight', [
     'ngAnimate',
     'ngAria',
     'ngCookies',

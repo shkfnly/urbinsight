@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:DashboardVancouverCtrl
+ * @name urbinsight.controller:DashboardVancouverCtrl
  * @description
  * # DashboardVancouverCtrl
- * Controller of the clientApp
+ * Controller of the urbinsight
  */
-angular.module('clientApp')
+angular.module('urbinsight')
   .controller('CitiesCtrl', function ($scope, $location, $http) {
 
     // $scope.$cities = {
