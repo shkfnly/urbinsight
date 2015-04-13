@@ -50,3 +50,7 @@
 2015-04-07T10:32:17.078-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
 2015-04-07T10:32:17.627-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
 2015-04-07T17:53:16.451-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 27ms
+2015-04-07T22:11:42.787-0700 I STORAGE  [DataFileSync] flushing mmaps took 6418918ms  for 2 files
+2015-04-08T00:36:19.376-0700 I STORAGE  [DataFileSync] flushing mmaps took 2036697ms  for 2 files
+2015-04-10T01:06:59.301-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 18ms
+2015-04-12T03:06:10.458-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 52453703ms
