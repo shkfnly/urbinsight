@@ -1,5 +1,5 @@
 
-LOAD CSV WITH HEADERS FROM "file:/Users/addisonlee/Development/urbinsight/server/sample_data/sink.csv" AS csvLine
+LOAD CSV WITH HEADERS FROM "file:/Users/ashokafinley/development/urbinsight/server/sample_data/sink.csv" AS csvLine
 CREATE (:sink:vancouver { geodb_subt: csvLine.GEODB_SUBT,
                     geodb_oid: csvLine.GEODB_OID,
                     object_id: csvLine.OBJECTID,

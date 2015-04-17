@@ -2,13 +2,14 @@
 
 /**
  * @ngdoc function
- * @name urbinsight.controller:DashboardVancouverCtrl
+ * @name urbinsight.controller:CitiesCtrl
  * @description
- * # DashboardVancouverCtrl
- * Controller of the urbinsight
+ * Controller of the individual Cities
+ * THIS NEEDS TO BE REFACTORED SO THAT THE REQUESTS FOR DATA ARE COMING FROM A FACTORY AND THIS
+ * IS SIMPLY MANIPULATING THEM INTO A TEMPLATE.
  */
 angular.module('urbinsight')
-  .controller('CitiesCtrl', function ($scope, $location, $http) {
+  .controller('CitiesCtrl', function ($scope, $location, $http, Cities) {
 
     // $scope.$cities = {
     //   'vancouver' : {
@@ -58,13 +59,13 @@ angular.module('urbinsight')
     //   }
     // };
 
-    $scope.$colors = {
-      'source': '#9c89cc',
-      'upstream' : '#7ec9b1',
-      'demand'  : '#3ca0d3',
-      'downstream' : '#fa946e',
-      'sink' : '#f1f075'
-    };
+    // $scope.$colors = {
+    //   'source': '#9c89cc',
+    //   'upstream' : '#7ec9b1',
+    //   'demand'  : '#3ca0d3',
+    //   'downstream' : '#fa946e',
+    //   'sink' : '#f1f075'
+    // };
 
 
 
@@ -74,32 +75,8 @@ angular.module('urbinsight')
 
     $scope.gridLayers = [];
     $scope.gridControls = [];
-    var cityString = $location.path().split('/')[2];
+    var cityName = $location.path().split('/')[2];
     // $scope.$city = city = $scope.$cities[cityString];
-
-    $scope.renderMap = function() {
-      var request = $http.get('/data/city/' + cityString);
-      request.success( function(city, status){
-      //Create Map
-        $scope.city = city;
-        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3, drawControl: true})
-        .setView([city.lat, city.lon], 12);
-          var featureGroup = L.featureGroup().addTo($scope.map);
-        $scope.layerDefs = city.layerDefinitions;
-        $scope.addLayerControl($scope.additonalLayers(city.layers));
-        $scope.map.on('overlayadd', $scope.overlayAddCtrl);
-        $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
-var drawControl = new L.Control.Draw({
-    edit: {
-      featureGroup: featureGroup
-    }
-  }).addTo($scope.map);
-
-  $scope.map.on('draw:created', function(e) {
-      featureGroup.addLayer(e.layer);
-  });
-      });
-    };
     
     $scope.overlayAddCtrl = function(e){
       $scope.gridLayer = L.mapbox.gridLayer(e.layer._tilejson.id);
@@ -111,27 +88,18 @@ var drawControl = new L.Control.Draw({
 ///REMOVING DOES NOT WORK FOR SOME REASON
     $scope.overlayRmvCtrl = function(e){
       for (var i = 0; i < $scope.gridLayers.length; i++){
-        debugger
+        debugger;
         if($scope.gridLayers[i]._tilejson.id === e.layer._tilejson.id){
           $scope.map.removeLayer($scope.gridLayers[i]);
           $scope.map.removeControl($scope.gridControls[i]);
           $scope.gridLayers.splice(i, 1);
-          console.log($scope.gridLayers);
+          // console.log($scope.gridLayers);
           $scope.gridControls.splice(i, 1);
           console.log($scope.gridControls);
           break;
         }
       }
     };
-     $scope.createCity = function(){
-       var request = $http.post('/data/city/vancouver');
-       request.success( function(res, status){
-         console.log(status);
-       });
-    };
-
-    
-
 
     $scope.additonalLayers = function(cityLayers){
       var first = true;
@@ -154,7 +122,6 @@ var drawControl = new L.Control.Draw({
       return Layers;
     };
 
-
     $scope.addLayerControl = function(addtLayers){
       L.control.layers({
         'Base Map': L.mapbox.tileLayer('urbinsight.150c04d2').addTo($scope.map),
@@ -170,40 +137,29 @@ var drawControl = new L.Control.Draw({
       ).addTo($scope.map);
     };
 
-    $scope.fetchNodes = function () {
-      var request = $http.get('/data/label/' + cityString);
-      var scope = $scope;
-      request.success(function (data, status){
-        angular.forEach(data, function(type, key){
-          var markers = new L.MarkerClusterGroup({
-            iconCreateFunction: function(cluster) {
-              return L.mapbox.marker.icon({
-                'marker-symbol' : cluster.getChildCount(),
-                'marker-color' : scope.$colors[key]
-              });
-            }
-          });
-          angular.forEach(type, function(node){
-            var lat = parseFloat(node.lat);
-            var lng = parseFloat(node.lng);
-            var mark = scope.L.marker([lat, lng], {
-              icon: scope.L.mapbox.marker.icon({
-                'marker-size' : 'small',
-                'marker-color' : scope.$colors[key]
-              })
-            }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
-            .on('click', function(){scope.drawFlows(node);});
-
-            markers.addLayer(mark);
-            $scope.markers = markers;
-            // .addTo(scope.map)
-          });
-          $scope.map.addLayer(markers);
+    $scope.renderMap = function(city) {
+      // var request = $http.get('/data/city/' + cityString);
+      // request.success( function(city, status){
+      // Create Map
+        console.log(city);
+        $scope.city = city;
+        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3, drawControl: true})
+        .setView([city.lat, city.lon], 12);
+        var featureGroup = L.featureGroup().addTo($scope.map);
+        $scope.layerDefs = city.layerDefinitions;
+        $scope.addLayerControl($scope.additonalLayers(city.layers));
+        $scope.map.on('overlayadd', $scope.overlayAddCtrl);
+        $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
+        var drawControl = new L.Control.Draw({
+          edit: {
+          featureGroup: featureGroup
+          }
+        }).addTo($scope.map);
+        $scope.map.on('draw:created', function(e) {
+          featureGroup.addLayer(e.layer);
         });
-      });
+      // });
     };
-
-    
 
     $scope.linesAdded = [];
 
@@ -222,14 +178,37 @@ var drawControl = new L.Control.Draw({
       });
     };
 
-    //$scope.createCity();
-    $scope.renderMap();
-    $scope.fetchNodes();
+    $scope.fetchNodes = function (scope, data) {
+      // var request = $http.get('/data/label/' + cityString);
+      // var scope = $scope;
+      angular.forEach(data, function(type, key){
+        var markers = new L.MarkerClusterGroup({
+          iconCreateFunction: function(cluster) {
+            return L.mapbox.marker.icon({
+              'marker-symbol' : cluster.getChildCount(),
+              'marker-color' : scope.$colors[key]
+            });
+          }
+        });
+        angular.forEach(type, function(node){
+          var lat = parseFloat(node.lat);
+          var lng = parseFloat(node.lng);
+          var mark = scope.L.marker([lat, lng], {
+            icon: scope.L.mapbox.marker.icon({
+              'marker-size' : 'small',
+              'marker-color' : scope.$colors[key]
+            })
+          }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
+          .on('click', function(){scope.drawFlows(node);});
+          markers.addLayer(mark);
+          $scope.markers = markers;
+        });
+        $scope.map.addLayer(markers);
+      });
+    };
 
+    Cities.fetchCity(cityName, $scope.renderMap);
+    Cities.getNodes(cityName, $scope, $scope.fetchNodes);
+    // Cities.createCity(cityName);
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

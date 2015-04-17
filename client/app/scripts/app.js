@@ -19,7 +19,8 @@
     'ui.router',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'urbinsight.services'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider) {
