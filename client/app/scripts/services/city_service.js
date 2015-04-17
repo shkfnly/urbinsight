@@ -28,11 +28,15 @@ angular.module('urbinsight.services', [])
       });
     },
 
-    getNodes: function(cityName, scope, callback){
+    getNodes: function(cityName, callback){
       var request = $http.get('/data/label/' + cityName);
       request.success(function (data, status){
-        return callback(scope, data);
+        return callback(data);
       });
+    },
+
+    allColors: function() {
+      return colors;
     }
 
   };

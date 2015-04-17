@@ -11,64 +11,6 @@
 angular.module('urbinsight')
   .controller('CitiesCtrl', function ($scope, $location, $http, Cities) {
 
-    // $scope.$cities = {
-    //   'vancouver' : {
-    //     lat: '49.2496600',
-    //     lon: '-123.1193400',
-    //     layers: {'Water Mains' : 'urbinsight.vanWaterNetwork',
-    //              'Sources' : 'urbinsight.vancouverwatersources',
-    //              'Upstream' : 'urbinsight.vanupstream',
-    //              'Parcels' : 'urbinsight.qmfmkj4i',
-    //              'Downstream' : 'urbinsight.vandownstream',
-    //              'Sinks' : 'urbinsight.larr7ldi'}
-    //   },
-    //   'medellin' : {
-    //     lat: '6.2491',
-    //     lon: '-75.5891',
-    //     layers: {'Quality of Life' : 'thissaysnothing.y3cy2e29',
-    //              'Geological Classification' : 'thissaysnothing.Layers',
-    //              'Heart Disease per 100,000' : 'thissaysnothing.pjznz5mi',
-    //              'Youth Population Change' : 'thissaysnothing.youth_population',
-    //              'Youth Population Nominal' : 'thissaysnothing.8w06yldi',
-    //              'Nominal Senior Population' : 'thissaysnothing.senior_population',
-    //              'Water System' : 'thissaysnothing.water_system',
-    //              'Structural Axes of Public Spaces' : 'thissaysnothing.46q7iudi',
-    //              'Green Infrastructure' : 'thissaysnothing.5i0e8kt9'}
-    //   },
-    //   'cairo' : {
-    //     lat: '30.0600',
-    //     lon: '31.2333',
-    //     layers: {
-    //              'Water Quality' : 'urbinsight.cairowaterquality',
-    //              'Parcel Audit' : 'urbinsight.cairoparcelaudit',
-    //              'Air Quality'  : 'urbinsight.cairoairquality',
-    //              'Unemployment Rate' : 'urbinsight.cairolaborpop',
-    //              'Marital Rate' : 'urbinsight.cairomaritalpopulation',
-    //              'School Enrollment Rate' : 'urbinsight.cairoschoolpop',
-    //              'Youth Population Percentage' : 'urbinsight.youthpopforcairo',
-    //              'Total Population' : 'urbinsight.cairototalpopulation',
-    //              }
-    //   },
-    //   'casablanca' : {
-    //     lat: '33.5333',
-    //     lon: '-7.5833'
-    //   },
-    //   'lima' : {
-    //     lat: '-12.0433',
-    //     lon: '-77.0283'
-    //   }
-    // };
-
-    // $scope.$colors = {
-    //   'source': '#9c89cc',
-    //   'upstream' : '#7ec9b1',
-    //   'demand'  : '#3ca0d3',
-    //   'downstream' : '#fa946e',
-    //   'sink' : '#f1f075'
-    // };
-
-
-
     var L;
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -138,10 +80,8 @@ angular.module('urbinsight')
     };
 
     $scope.renderMap = function(city) {
-      // var request = $http.get('/data/city/' + cityString);
-      // request.success( function(city, status){
       // Create Map
-        console.log(city);
+ 
         $scope.city = city;
         $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3, drawControl: true})
         .setView([city.lat, city.lon], 12);
@@ -158,7 +98,6 @@ angular.module('urbinsight')
         $scope.map.on('draw:created', function(e) {
           featureGroup.addLayer(e.layer);
         });
-      // });
     };
 
     $scope.linesAdded = [];
@@ -178,28 +117,26 @@ angular.module('urbinsight')
       });
     };
 
-    $scope.fetchNodes = function (scope, data) {
-      // var request = $http.get('/data/label/' + cityString);
-      // var scope = $scope;
+    $scope.renderNodes = function (data) {     
       angular.forEach(data, function(type, key){
         var markers = new L.MarkerClusterGroup({
           iconCreateFunction: function(cluster) {
             return L.mapbox.marker.icon({
               'marker-symbol' : cluster.getChildCount(),
-              'marker-color' : scope.$colors[key]
+              'marker-color' : Cities.allColors()[key]
             });
           }
         });
         angular.forEach(type, function(node){
           var lat = parseFloat(node.lat);
           var lng = parseFloat(node.lng);
-          var mark = scope.L.marker([lat, lng], {
-            icon: scope.L.mapbox.marker.icon({
+          var mark = $scope.L.marker([lat, lng], {
+            icon: $scope.L.mapbox.marker.icon({
               'marker-size' : 'small',
-              'marker-color' : scope.$colors[key]
+              'marker-color' : Cities.allColors()[key]
             })
           }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
-          .on('click', function(){scope.drawFlows(node);});
+          .on('click', function(){$scope.drawFlows(node);});
           markers.addLayer(mark);
           $scope.markers = markers;
         });
@@ -208,7 +145,7 @@ angular.module('urbinsight')
     };
 
     Cities.fetchCity(cityName, $scope.renderMap);
-    Cities.getNodes(cityName, $scope, $scope.fetchNodes);
+    Cities.getNodes(cityName, $scope.renderNodes);
     // Cities.createCity(cityName);
 
   });
