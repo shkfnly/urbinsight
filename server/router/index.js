@@ -30,4 +30,7 @@ module.exports = function (app) {
 
   // City Route
   app.use('/data/city', require('./routes/cities'));
+
+  //D3 Route
+  app.use('/data/d3', require('./routes/d3'));
 }

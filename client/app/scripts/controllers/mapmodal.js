@@ -10,7 +10,7 @@
 angular.module('urbinsight')
   .controller('MapModalCtrl', function ($scope) {
 
-    // $scope.layers = [
+//db.cities.update({name: 'medellin'}, {'$push': {'layerDefinitions': { $each:  [
     //   {'name': 'Ecocitizen Survey',
     //    'description': 'These data points represent how average citizens of Medellin feel about a range of issues. The questions are related to things such as economic opportunity and access to food. By clicking on each data point we are able to see the individual responses.',
     //    'attribution': 'Ecocity Builders'},
@@ -39,7 +39,7 @@ angular.module('urbinsight')
     //    'description': 'Quality of Life Indicator as defined by the Medellin Government. These numbers are at the level of the Comuna and Corregimiento, which are administrative divisions of the city of Medellin. These numbers are not absolute but simply represent the scale within Medellin.',
     //    'attribution': 'Department of Planning (Medellin, 2012)'}
 
-    //   ]
+ //]}}});
 
     $('#plusclick').on('click', function(event){
       $('#plusclick').toggleClass('opened');
@@ -47,11 +47,4 @@ angular.module('urbinsight')
       $('#modalbar').toggleClass('shown');
     });
 
-
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });
