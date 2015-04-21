@@ -10,7 +10,7 @@
 angular.module('urbinsight')
   .controller('MapModalCtrl', function ($scope) {
 
-    // $scope.layers = [
+//db.cities.update({name: 'medellin'}, {'$push': {'layerDefinitions': { $each:  [
     //   {'name': 'Ecocitizen Survey',
     //    'description': 'These data points represent how average citizens of Medellin feel about a range of issues. The questions are related to things such as economic opportunity and access to food. By clicking on each data point we are able to see the individual responses.',
     //    'attribution': 'Ecocity Builders'},
@@ -39,7 +39,64 @@ angular.module('urbinsight')
     //    'description': 'Quality of Life Indicator as defined by the Medellin Government. These numbers are at the level of the Comuna and Corregimiento, which are administrative divisions of the city of Medellin. These numbers are not absolute but simply represent the scale within Medellin.',
     //    'attribution': 'Department of Planning (Medellin, 2012)'}
 
-    //   ]
+ //]}}});
+
+    $scope.render = function(error, root) {
+               var partition = d3.layout.partition()
+                .sort(null)
+                .size([2 * Math.PI, radius * radius])
+                .value(function(d) { return 1; });
+
+                var arc = d3.svg.arc()
+                .startAngle(function(d) {return d.x; })
+                .endAngle(function(d) {return d.x + d.dx; })
+                .innerRadius(function(d) { return Math.sqrt(d.y); })
+                .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
+
+               var path = svg.datum(root).selectAll("path")
+                  .data(partition.nodes)
+                .enter().append("path")
+                  .attr("display", function(d) { return d.depth ? null: "none"; }) //hide inner ring
+                  .attr("d", arc)
+                  .style("stroke", "#fff")
+                  .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+                  .style("fill-rule", "evenodd")
+                  .each(stash);
+              d3.selectAll("input").on("change", function change() {
+                var value = this.value === "count"
+                    ? function() { return 1; }
+                    : function(d) { return d.size; };
+
+                path
+                    .data(partition.value(value).nodes)
+                  .transition()
+                    .duration(1500)
+                    .attrTween("d", arcTween);
+              });
+              var stash = function(d) {
+              d.x0 = d.x;
+              d.dx0 = d.dx;
+            }
+
+            var arcTween = function(a){
+              var i = d3.interpolate({x: a.x0, dx: a.dx0}, a);
+              return function(t) {
+                var b = i(t);
+                a.x0 = b.x;
+                a.dx0 = b.dx;
+                return arc(b);
+              };
+            }
+
+            d3.select(self.frameElement).style("height", height + "px");
+            };
+
+  $scope.fetchData = function(){
+          d3.json('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json', function(error, root){
+            $scope.data = root;
+          })
+        }
+ $scope.fetchData();
 
     $('#plusclick').on('click', function(event){
       $('#plusclick').toggleClass('opened');
@@ -47,11 +104,4 @@ angular.module('urbinsight')
       $('#modalbar').toggleClass('shown');
     });
 
-
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

@@ -189,3 +189,31 @@
 2015-04-17T14:13:55.437-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57919 #55 (4 connections now open)
 2015-04-17T14:13:55.466-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57920 #56 (5 connections now open)
 2015-04-17T14:13:55.466-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57921 #57 (6 connections now open)
+2015-04-17T15:09:10.333-0700 I QUERY    [conn56] query urbinsight.cities query: { name: "vancouver" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:3 keyUpdates:0 writeConflicts:0 numYields:1 nreturned:1 reslen:381 locks:{} 118ms
+2015-04-17T16:46:28.958-0700 E QUERY    [conn3] ReferenceError: medellin is not defined
+    at _funcs1 (_funcs1:1:30)
+2015-04-17T16:46:29.047-0700 I QUERY    [conn3] assertion 16722 ReferenceError: medellin is not defined
+    at _funcs1 (_funcs1:1:30) ns:urbinsight.cities query:{ $where: "medellin" }
+2015-04-17T16:46:29.049-0700 I QUERY    [conn3] query urbinsight.cities query: { $where: "medellin" } planSummary: COLLSCAN ntoreturn:0 keyUpdates:0 writeConflicts:0 exception: ReferenceError: medellin is not defined
+    at _funcs1 (_funcs1:1:30) code:16722 numYields:0 reslen:115 locks:{} 185ms
+2015-04-17T16:48:26.005-0700 I NETWORK  [conn3] end connection 127.0.0.1:50189 (5 connections now open)
+2015-04-17T16:48:28.246-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61040 #58 (6 connections now open)
+2015-04-17T16:51:25.591-0700 I WRITE    [conn58] insert urbinsight.cities.medellin query: { layerDefinitions: {}, _id: ObjectId('55319c7dd70faefea1b1990e') } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 4 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 733 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 2 } }, Metadata: { acquireCount: { W: 2 } } } 140ms
+2015-04-17T16:51:25.592-0700 I COMMAND  [conn58] command urbinsight.$cmd command: insert { insert: "cities.medellin", documents: [ { layerDefinitions: {}, _id: ObjectId('55319c7dd70faefea1b1990e') } ], ordered: true } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{} 184ms
+2015-04-17T17:03:28.511-0700 I NETWORK  [conn58] end connection 127.0.0.1:61040 (5 connections now open)
+2015-04-17T17:03:31.099-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61132 #59 (6 connections now open)
+2015-04-17T18:08:35.056-0700 I NETWORK  [conn59] end connection 127.0.0.1:61132 (5 connections now open)
+2015-04-17T18:53:42.028-0700 I QUERY    [conn53] query urbinsight.cities query: { name: "vancouver" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:3 keyUpdates:0 writeConflicts:0 numYields:1 nreturned:1 reslen:381 locks:{} 205ms
+2015-04-17T19:06:18.777-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63228 #60 (6 connections now open)
+2015-04-17T19:07:17.988-0700 I QUERY    [conn60] query urbinsight.cities planSummary: COLLSCAN ntoreturn:0 ntoskip:0 nscanned:0 nscannedObjects:5 keyUpdates:0 writeConflicts:0 numYields:1 nreturned:5 reslen:4587 locks:{} 102ms
+2015-04-17T19:09:09.658-0700 I COMMAND  [conn60] CMD: drop urbinsight.cities.medellin
+2015-04-17T19:13:33.124-0700 I NETWORK  [conn57] end connection 127.0.0.1:57921 (5 connections now open)
+2015-04-17T19:13:33.125-0700 I NETWORK  [conn56] end connection 127.0.0.1:57920 (5 connections now open)
+2015-04-17T19:13:33.125-0700 I NETWORK  [conn55] end connection 127.0.0.1:57919 (5 connections now open)
+2015-04-17T19:13:33.125-0700 I NETWORK  [conn54] end connection 127.0.0.1:57918 (5 connections now open)
+2015-04-17T19:13:33.125-0700 I NETWORK  [conn53] end connection 127.0.0.1:57916 (4 connections now open)
+2015-04-17T19:20:09.700-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63417 #61 (2 connections now open)
+2015-04-17T19:20:09.725-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63419 #62 (3 connections now open)
+2015-04-17T19:20:09.751-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63420 #63 (4 connections now open)
+2015-04-17T19:20:09.761-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63421 #64 (5 connections now open)
+2015-04-17T19:20:09.767-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63422 #65 (6 connections now open)
