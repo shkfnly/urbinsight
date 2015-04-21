@@ -10,13 +10,17 @@ var CityModel = require('./schemas/city')
 
 // Connections
 var developmentDb = 'mongodb://localhost/urbinsight';
-var productionDb = 'ADD THIS HERE'
+var productionDb = ' mongodb://heroku_app34283988:j6vcu0oo4229gsd581rm7u2meo@ds043991.mongolab.com:43991/heroku_app34283988'
+var developmentGraphDb = 'http://localhost:7474'
+var productionGraphDb = 'http://app34283988:WhOYge9xK8B8QrmgFB7J@app34283988.sb02.stations.graphenedb.com:24789'
 var usedDb;
+var nodeDB;
 
 // If we're in development...
 if (process.env.NODE_ENV === 'development') {
   // set our database to the development one
   usedDb = developmentDb;
+  nodeDB = require("seraph")(developmentGraphDb);
   // connect to it via mongoose
   mongoose.connect(usedDb);
 }
@@ -25,6 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 if (process.env.NODE_ENV === 'production') {
   // set our database to the production one
   usedDb = productionDb;
+  nodeDB = require("seraph")(productionGraphDb);
   // connect to it via mongoose
   mongoose.connect(usedDb);
 }
@@ -42,23 +47,23 @@ db.once('open', function callback () {
 
 
 
-if(process.env['GRAPHENEDB_URL']){
-  var nodeDB = require("seraph")(process.env['GRAPHENEDB_URL'])
-}
-else{
-  var nodeDB = require("seraph")('http://localhost:7474')
-}
+// if(process.env['GRAPHENEDB_URL']){
+//   var nodeDB = require("seraph")(process.env['GRAPHENEDB_URL'])
+// }
+// else{
+//   var nodeDB = require("seraph")('http://localhost:7474')
+// }
 
 
-nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
-  if (err) throw err;
-  console.log("Test-Man inserted.");
+// nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
+//   if (err) throw err;
+//   console.log("Test-Man inserted.");
 
-  nodeDB.delete(node, function(err) {
-    if (err) throw err;
-    console.log("Test-Man away!");
-  });
-});
+//   nodeDB.delete(node, function(err) {
+//     if (err) throw err;
+//     console.log("Test-Man away!");
+//   });
+// });
 
 
 exports.nodeDB = nodeDB;

@@ -1,5 +1,9 @@
-<span id="plusclick" style="font-size: 4em; padding-left: 10px" class="glyphicon glyphicon-plus"></span> <!-- <ul id='modalbar' class='nav nav-tabs nav-justified'>
-  <li role='presentation' class='active btn btn-default'>Layer Info</li>
-  <li role='presentation' class='btn btn-default'>Data</li>
-  <li role='presentation' class='btn btn-default'>Add Data</li>
-</ul> -->
+<span id="plusclick" class="glyphicon glyphicon-plus"></span> <tabset justified="true" id="modalbar" class="shown"> <tab heading="Resource Flows"> <tabset justified="true" id="resourceType" type="pills"> <tab heading="ENERGY"></tab> <tab heading="WATER"> <div id="viz"> <pie-chart val="data"></pie-chart> </div> <div style="height: 50%">This is archetype information</div> </tab> <tab heading="MATERIALS"></tab> <tab heading="FOOD"></tab> <tab heading="MOBILITY"></tab> </tabset> </tab> <tab heading="Citizen Surveys">I'm the Data</tab> <tab heading="Environmental"></tab> <tab heading="Socioeconomic"></tab> <tab heading="EcoProjects"></tab> <!--     <tab heading="Layer Info" active='true'>
+        <ul style="overflow-y: scroll; max-height: 250px !important;">
+        <li ng-repeat="layer in layerDefs" style="padding-left: 20px; padding-right: 20px; margin-top: 15px padding-bottom: 15px;">
+          <strong>{{layer.name}}</strong> {{layer.description}}
+        </li>
+        </ul>
+    </tab> --> <!-- <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+      {{tab.content}}
+    </tab> --> </tabset>
