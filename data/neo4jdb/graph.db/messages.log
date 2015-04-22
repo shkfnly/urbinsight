@@ -2185,3 +2185,13 @@ java.lang.IllegalStateException: Cannot apply update with given version 57 when 
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:620) [jetty-util-9.2.4.v20141103.jar:9.2.4.v20141103]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:540) [jetty-util-9.2.4.v20141103.jar:9.2.4.v20141103]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_05]
+2015-04-21 11:19:32.802+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 62276ms.
+2015-04-21 18:33:20.056+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 3424587ms.
+2015-04-21 20:04:37.950+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 73225ms.
+2015-04-21 22:10:36.105+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 67437ms.
+2015-04-21 22:12:23.269+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 67589ms.
+2015-04-21 22:19:51.123+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 62474ms.
+2015-04-21 22:42:42.156+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 1370932ms.
+2015-04-21 23:15:43.722+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 62257ms.
+2015-04-22 17:42:54.007+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 60989ms.
+2015-04-22 18:03:50.156+0000 WARN  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for 62346ms.

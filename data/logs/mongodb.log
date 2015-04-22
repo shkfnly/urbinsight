@@ -373,3 +373,30 @@
 2015-04-21T03:57:21.326-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55609 #65 (4 connections now open)
 2015-04-21T03:57:21.336-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55610 #66 (5 connections now open)
 2015-04-21T03:57:21.346-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55611 #67 (6 connections now open)
+2015-04-21T04:04:41.845-0700 I NETWORK  [conn66] end connection 127.0.0.1:55610 (5 connections now open)
+2015-04-21T04:04:41.845-0700 I NETWORK  [conn67] end connection 127.0.0.1:55611 (5 connections now open)
+2015-04-21T04:04:41.845-0700 I NETWORK  [conn65] end connection 127.0.0.1:55609 (5 connections now open)
+2015-04-21T04:04:41.845-0700 I NETWORK  [conn64] end connection 127.0.0.1:55608 (5 connections now open)
+2015-04-21T04:04:41.845-0700 I NETWORK  [conn63] end connection 127.0.0.1:55607 (5 connections now open)
+2015-04-21T04:04:43.322-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55808 #68 (2 connections now open)
+2015-04-21T04:04:43.332-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55809 #69 (3 connections now open)
+2015-04-21T04:04:43.342-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55810 #70 (4 connections now open)
+2015-04-21T04:04:43.353-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55811 #71 (5 connections now open)
+2015-04-21T04:04:43.363-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55812 #72 (6 connections now open)
+2015-04-21T09:26:46.224-0700 I STORAGE  [DataFileSync] flushing mmaps took 18433433ms  for 4 files
+2015-04-21T14:42:54.206-0700 I STORAGE  [DataFileSync] flushing mmaps took 5896256ms  for 4 files
+2015-04-21T15:10:36.123-0700 I STORAGE  [DataFileSync] flushing mmaps took 889629ms  for 4 files
+2015-04-21T15:13:57.108-0700 I STORAGE  [DataFileSync] flushing mmaps took 93788ms  for 4 files
+2015-04-21T16:19:40.284-0700 I STORAGE  [DataFileSync] flushing mmaps took 236606ms  for 4 files
+2015-04-22T10:42:54.216-0700 I STORAGE  [DataFileSync] flushing mmaps took 65709879ms  for 4 files
+2015-04-22T12:04:37.767-0700 I NETWORK  [conn72] end connection 127.0.0.1:55812 (5 connections now open)
+2015-04-22T12:04:37.767-0700 I NETWORK  [conn71] end connection 127.0.0.1:55811 (5 connections now open)
+2015-04-22T12:04:37.767-0700 I NETWORK  [conn70] end connection 127.0.0.1:55810 (5 connections now open)
+2015-04-22T12:04:37.767-0700 I NETWORK  [conn69] end connection 127.0.0.1:55809 (5 connections now open)
+2015-04-22T12:04:37.768-0700 I NETWORK  [conn68] end connection 127.0.0.1:55808 (5 connections now open)
+2015-04-22T12:04:37.903-0700 I NETWORK  [conn22] end connection 127.0.0.1:53985 (0 connections now open)
+2015-04-22T13:05:41.397-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63986 #73 (1 connection now open)
+2015-04-22T13:05:41.422-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63987 #74 (2 connections now open)
+2015-04-22T13:05:41.423-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63988 #75 (3 connections now open)
+2015-04-22T13:05:41.423-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63989 #76 (4 connections now open)
+2015-04-22T13:05:41.423-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:63990 #77 (5 connections now open)

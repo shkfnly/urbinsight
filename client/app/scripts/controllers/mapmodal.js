@@ -41,7 +41,18 @@ angular.module('urbinsight')
 
  //]}}});
 
-    $scope.render = function(error, root) {
+    $scope.render = function(root) {
+
+              var width = 200,
+              height = 200,
+              radius = Math.min(width, height) / 2,
+              color = d3.scale.category10();
+              var svg = d3.select('#viz').append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", "translate(" + width / 2 + "," + height * .52 + ")");
+
                var partition = d3.layout.partition()
                 .sort(null)
                 .size([2 * Math.PI, radius * radius])
@@ -94,6 +105,7 @@ angular.module('urbinsight')
   $scope.fetchData = function(){
           d3.json('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json', function(error, root){
             $scope.data = root;
+            $scope.render(root);
           })
         }
  $scope.fetchData();
