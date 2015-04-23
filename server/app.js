@@ -10,11 +10,6 @@ var methodOverride = require('method-override');
 
 var app = express();
 
-
-
-// implement router
-// app.use(router)
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -86,8 +81,6 @@ if (app.get('env') === 'production') {
  * Routes
 */
 var router = require('./router')(app);
-
-
 
 // Error Handling
 app.use(function(err, req, res, next) {

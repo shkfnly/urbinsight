@@ -55,15 +55,15 @@ db.once('open', function callback () {
 // }
 
 
-// nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
-//   if (err) throw err;
-//   console.log("Test-Man inserted.");
+nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
+  if (err) throw err;
+  console.log("Test-Man inserted.");
 
-//   nodeDB.delete(node, function(err) {
-//     if (err) throw err;
-//     console.log("Test-Man away!");
-//   });
-// });
+  nodeDB.delete(node, function(err) {
+    if (err) throw err;
+    console.log("Test-Man away!");
+  });
+});
 
 
 exports.nodeDB = nodeDB;

@@ -12,18 +12,17 @@
     <title>Urbinsight</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-
-    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js" charset="utf-8"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/leaflet-dist/leaflet.css" />
-        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
     <link rel="stylesheet" href="bower_components/leaflet.draw/dist/leaflet.draw.css" />
     <!-- endbower -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
     <!-- endbuild -->
+    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -110,9 +109,14 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/leaflet-dist/leaflet.js"></script>
     <script src="bower_components/leaflet.draw/dist/leaflet.draw-src.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <script src="bower_components/leaflet.draw/dist/leaflet.draw.js"></script>
+    <script src='bower_components/leaflet.markercluster/dist/leaflet.markercluster.js'></script>
+
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -126,7 +130,7 @@
         <script src="scripts/controllers/compass.js"></script>
         <script src="scripts/controllers/mapmodal.js"></script>
         <script src="scripts/services/city_service.js"></script>
-        <script src="scripts/directives/pieChart2.js"></script>
+<!--         <script src="scripts/directives/pieChart2.js"></script> -->
         <!-- endbuild -->
 </body>
 </html>

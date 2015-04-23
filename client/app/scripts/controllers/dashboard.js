@@ -18,10 +18,4 @@ angular.module('urbinsight')
 
     $scope.addMap();
     $scope.$stateParams = $stateParams;
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

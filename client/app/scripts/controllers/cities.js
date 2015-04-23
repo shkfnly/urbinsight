@@ -36,7 +36,6 @@ angular.module('urbinsight')
           $scope.gridLayers.splice(i, 1);
           // console.log($scope.gridLayers);
           $scope.gridControls.splice(i, 1);
-          console.log($scope.gridControls);
           break;
         }
       }

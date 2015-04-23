@@ -24,11 +24,36 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   display: none;
 }
 
-#viz {
+#viz{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
   position: relative;
   width: 200px;
+  float: right;
+  margin-right: 100px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#line {
+  font: 10px sans-serif;
+  width: 430px;
+  float: left;
+  margin: 0 0 0 50px;
 }
 
 .opened {
