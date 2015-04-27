@@ -43,6 +43,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   display: none;
 }
 
+.axis text {
+  margin: 0px 10px 0px 10px;
+}
+
 .line {
   fill: none;
   stroke: steelblue;

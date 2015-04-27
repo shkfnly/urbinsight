@@ -129,7 +129,7 @@ angular.module('urbinsight')
             .attr("dy", ".35em")
             .text(function(d) { return d.name; });
     }
-    $scope.render = function(root) {
+    $scope.renderPie = function(root) {
               var stash = function(d) {
                            d.x0 = d.x;
                            d.dx0 = d.dx;
@@ -173,34 +173,34 @@ angular.module('urbinsight')
                   .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
                   .style("fill-rule", "evenodd")
                   .each(stash);
-              d3.selectAll("input").on("change", function change() {
-                var value = this.value === "count"
-                    ? function() { return 1; }
-                    : function(d) { return d.size; };
+              // d3.selectAll("input").on("change", function change() {
+              //   var value = this.value === "count"
+              //       ? function() { return 1; }
+              //       : function(d) { return d.size; };
 
-                path
-                    .data(partition.value(value).nodes)
-                  .transition()
-                    .duration(1500)
-                    .attrTween("d", arcTween);
-              });
+              //   path
+              //       .data(partition.value(value).nodes)
+              //     .transition()
+              //       .duration(1500)
+              //       .attrTween("d", arcTween);
+              // });
             d3.select(self.frameElement).style("height", height + "px");
             };
 
-  $scope.fetchPieData = function(){
-          d3.json('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json', function(error, root){
+  $scope.fetchPieData = function(resourceUrl){
+          d3.json(resourceUrl, function(error, root){
             $scope.data = root;
-            $scope.render(root);
+            $scope.renderPie(root);
           });
         }
-  $scope.fetchLineData = function(){
-   d3.tsv('https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv', function(error, data){
+  $scope.fetchLineData = function(resourceUrl){
+   d3.tsv(resourceUrl, function(error, data){
      $scope.data = data;
      $scope.renderLine(data)
    });
   }
-$scope.fetchLineData(); 
-$scope.fetchPieData();
+$scope.fetchLineData('https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv'); 
+$scope.fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
 
 
     $('#plusclick').on('click', function(event){

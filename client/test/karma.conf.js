@@ -34,7 +34,6 @@ module.exports = function(config) {
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/leaflet-dist/leaflet.js',
       'bower_components/leaflet.draw/dist/leaflet.draw-src.js',
-      'bower_components/mapbox.js/mapbox.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

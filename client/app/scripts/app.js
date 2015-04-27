@@ -89,6 +89,10 @@
           'mapModal': {
             templateUrl: 'views/cities/mapmodal.html',
             controller: 'MapModalCtrl'
+          },
+          'resourceTab': {
+            templateUrl: 'views/cities/resourceTab.html',
+            controller: 'ResourceTabCtrl'
           }
         }
       })
