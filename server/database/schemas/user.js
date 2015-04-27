@@ -15,41 +15,41 @@ var userSchema = new Schema({
   profile: {} // for extra information
 })
 
-// A method that's called every time a document is saved..
-userSchema.pre('save', function(next){
-  var user = this;
+// // A method that's called every time a document is saved..
+// userSchema.pre('save', function(next){
+//   var user = this;
 
-  if (!user.isModified('password')) {
-    return next();
-  }
+//   if (!user.isModified('password')) {
+//     return next();
+//   }
 
-// generate salt
-  bcrypt.genSalt(10, function(err, salt){
+// // generate salt
+//   bcrypt.genSalt(10, function(err, salt){
 
-    if (err) {
-      return next(err);
-    }
+//     if (err) {
+//       return next(err);
+//     }
 
-    // Create a Hash and store it
-    bcrypt.hash(user.password, salt, function(err, hash){
-      if (err) {
-        return next(err);
-      }
-      user.password = hash;
-      // Why the call to the next
-      next();
-    });
-  });
-});
+//     // Create a Hash and store it
+//     bcrypt.hash(user.password, salt, function(err, hash){
+//       if (err) {
+//         return next(err);
+//       }
+//       user.password = hash;
+//       // Why the call to the next
+//       next();
+//     });
+//   });
+// });
 
-userSchema.methods.comparePassword = function(triedPassword, cb) {
-  bcrypt.compare(triedPassword, this.password, function(err, isMatch){
-    if(err){
-      return cb.err;
-    }
-    cb(null, isMatch);
-  });
-};
+// userSchema.methods.comparePassword = function(triedPassword, cb) {
+//   bcrypt.compare(triedPassword, this.password, function(err, isMatch){
+//     if(err){
+//       return cb.err;
+//     }
+//     cb(null, isMatch);
+//   });
+// };
 
 // The primary user model
 

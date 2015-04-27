@@ -477,3 +477,37 @@
 2015-04-24T23:02:40.119-0700 I NETWORK  [conn111] end connection 127.0.0.1:62745 (4 connections now open)
 2015-04-24T23:02:40.119-0700 I NETWORK  [conn110] end connection 127.0.0.1:62744 (4 connections now open)
 2015-04-24T23:02:40.119-0700 I NETWORK  [conn109] end connection 127.0.0.1:62743 (4 connections now open)
+2015-04-26T20:08:57.367-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-04-26T20:08:57.547-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-04-26T20:08:57.582-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-04-26T20:08:57.583-0700 I JOURNAL  [initandlisten] recover begin
+2015-04-26T20:08:57.588-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2015-04-26T20:08:57.588-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-04-26T20:08:58.140-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-04-26T20:08:58.141-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-04-26T20:08:58.178-0700 I JOURNAL  [initandlisten] recover done
+2015-04-26T20:08:58.251-0700 I JOURNAL  [durability] Durability thread started
+2015-04-26T20:08:58.251-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-04-26T20:08:58.254-0700 I CONTROL  [initandlisten] MongoDB starting : pid=14220 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-04-26T20:08:58.255-0700 I CONTROL  [initandlisten] db version v3.0.2
+2015-04-26T20:08:58.255-0700 I CONTROL  [initandlisten] git version: nogitversion
+2015-04-26T20:08:58.255-0700 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-04-26T20:08:58.255-0700 I CONTROL  [initandlisten] allocator: system
+2015-04-26T20:08:58.255-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-04-26T20:08:59.840-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-04-26T20:09:37.616-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61530 #1 (1 connection now open)
+2015-04-26T20:09:37.633-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61532 #2 (2 connections now open)
+2015-04-26T20:09:37.633-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61533 #3 (3 connections now open)
+2015-04-26T20:09:37.633-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61534 #4 (4 connections now open)
+2015-04-26T20:09:37.633-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61535 #5 (5 connections now open)
+2015-04-26T20:09:56.845-0700 I QUERY    [conn2] query urbinsight.cities query: { name: "vancouver" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:3 keyUpdates:0 writeConflicts:0 numYields:0 nreturned:1 reslen:381 locks:{ Global: { acquireCount: { r: 1 } }, MMAPV1Journal: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { R: 1 } } } 309ms
+2015-04-26T20:12:59.204-0700 I NETWORK  [conn5] end connection 127.0.0.1:61535 (4 connections now open)
+2015-04-26T20:12:59.205-0700 I NETWORK  [conn2] end connection 127.0.0.1:61532 (3 connections now open)
+2015-04-26T20:12:59.208-0700 I NETWORK  [conn3] end connection 127.0.0.1:61533 (2 connections now open)
+2015-04-26T20:12:59.208-0700 I NETWORK  [conn1] end connection 127.0.0.1:61530 (1 connection now open)
+2015-04-26T20:12:59.217-0700 I NETWORK  [conn4] end connection 127.0.0.1:61534 (0 connections now open)
+2015-04-26T20:13:02.308-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61634 #6 (1 connection now open)
+2015-04-26T20:13:02.322-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61636 #7 (2 connections now open)
+2015-04-26T20:13:02.329-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61637 #8 (3 connections now open)
+2015-04-26T20:13:02.339-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61638 #9 (4 connections now open)
+2015-04-26T20:13:02.350-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61639 #10 (5 connections now open)
