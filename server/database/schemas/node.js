@@ -4,8 +4,8 @@ var model = require("seraph-model");
 var Node = model(db, 'Node');
 
 Node.schema = {
-  lat: { type: Number},
-  lon: { type: Number}
+  lat: { type: Number, required: true},
+  lon: { type: Number, required: true}
 }
 
 // define a source model

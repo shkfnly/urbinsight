@@ -12,7 +12,6 @@ angular.module('urbinsight')
 
     $scope.addMap = function(){
       var L = window.L;
-      console.log(L.mapbox)
       L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
       var map = L.mapbox.map('pilotProcessMap', 'urbinsight.jh7lje5c', {zoomControl: false})
       .setView([0,0], 2);
