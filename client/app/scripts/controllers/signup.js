@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('SignupCtrl', function ($scope, $location, $http, AuthFactory) {
+  .controller('SignupCtrl', function ($scope, $location, $http, AuthFactory, $rootScope) {
     
     // Create local references
     var user, signup;

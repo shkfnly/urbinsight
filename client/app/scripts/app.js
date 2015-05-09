@@ -23,22 +23,28 @@
     'urbinsight.services'
   ]);
 
-  app.config(function ($stateProvider, $urlRouterProvider) {
+  app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/');
-
+    $httpProvider.interceptors.push('TokenIntercept');
     // Setup the states
     $stateProvider
       .state('app', {
-        abstract: true,
-        templateUrl: 'views/app.html',
-        data: {
-          requireLogin: false// this property will apply to all children of 'app'
+        url: '',
+        views: {
+          'header': {
+                templateUrl: 'views/partials/_header.html',
+                controller: 'HeaderCtrl'
+          }
         }
       })
       .state('app.main', {
         abstract: true,
-        templateUrl: 'views/main.html',
+        views: {
+          'container@': {
+            templateUrl: 'views/main.html'
+          }
+        }
       })
       .state('app.main.homepage', {
         url: '/',
@@ -66,22 +72,41 @@
       })
       .state('app.about', {
         url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
+        views: {
+          'container@' : {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
+          }
+        }
       })
       .state('app.signup', {
         url: '/signup',
-        templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl',
+        views: {
+          'container@' : {
+            templateUrl: 'views/signup.html',
+            controller: 'SignupCtrl'
+          }
+        }
       })
       .state('app.compass', {
         url: '/compass',
-        templateUrl: 'views/compass.html',
-        controller: 'CompassCtrl'
+        views: {
+          'container@' : {
+            templateUrl: 'views/compass.html',
+            controller: 'CompassCtrl'
+          }
+        },
+        access: {
+          requiredLogin: true
+        }
       })
       .state('app.city', {
-        templateUrl: 'views/cities/cityDefault.html',
-        controller: 'CitiesCtrl'
+        views: {
+          'container@' : {
+            templateUrl: 'views/cities/cityDefault.html',
+            controller: 'CitiesCtrl'
+          }
+        }
       })
       .state('app.city.pilot', {
         url: '/dashboard/:city_name',
@@ -96,20 +121,44 @@
           }
         }
       })
-      .state('dashboard', {
+      .state('app.dashboard', {
         url: '/dashboard',
-        templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
+        views: {
+          'container@' : {
+            templateUrl: 'views/dashboard.html',
+            controller: 'DashboardCtrl'  
+          }
+        }
+      })
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'container@' : {
+            templateUrl: 'views/login.html',
+            controller: 'LoginCtrl'
+          }
+        }
       });
+  })
+
+.run(function($rootScope, $window, $location, AuthFactory) {
+  AuthFactory.check();
+
+  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+    if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
+      $location.path('/login');
+    } else {
+      if (!AuthFactory.user) { AuthFactory.user = $window.sessionStorage.user;}
+      if (!AuthFactory.userRole) { AuthFactory.userRole = $window.sessionStorage.userRole;}
+    }
   });
 
-  
-  // app.run(function ($rootScope) {
-  //   $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
-  //     var requireLogin = toState.data.requireLogin;
+  $rootScope.$on('$routeChangeSuccess', function(event, nextRoute, currentRoute) {
+    $rootScope.showMenu = AuthFactory.loggedStatus();
+    $rootScope.role = AuthFactory.userRole;
 
-  //     if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
-  //       event.preventDefault();
-  //     }
-  //   });
-  // });
+    if (AuthFactory.isLogged === true && $location.path() === '/login') {
+      $location.path('/');
+    }
+  });
+});

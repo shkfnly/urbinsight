@@ -27,7 +27,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-
 app.all('/*', function(req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
@@ -52,39 +51,38 @@ app.all('/api/v1/*', [require('./middlewares/validateRequest')]);
 */
 // will print stacktrace
 if (app.get('env') === 'development') {
-    // This will change in production since we'll be using the dist folder    
-    app.use(express.static(path.join(__dirname, '../client')));
-    // This covers serving up the index page
-    app.use(express.static(path.join(__dirname, '../client/.tmp')));
-    app.use(express.static(path.join(__dirname, '../client/app')));
+  // This will change in production since we'll be using the dist folder    
+  app.use(express.static(path.join(__dirname, '../client')));
+  // This covers serving up the index page
+  app.use(express.static(path.join(__dirname, '../client/.tmp')));
+  app.use(express.static(path.join(__dirname, '../client/app')));
 
-    // Error Handling
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
+  // Error Handling
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
     });
+  });
 }
 
 /**
 * Production Settings
 */
 if (app.get('env') === 'production') {
-    require('newrelic');
-    // changes it to use the optimized version for production
-    app.use(express.static(path.join(__dirname, '/dist')));
-    // production error handler
-    // no stacktraces leaked to user
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: {}
+  require('newrelic');
+  // changes it to use the optimized version for production
+  app.use(express.static(path.join(__dirname, '/dist')));
+  // production error handler
+  // no stacktraces leaked to user
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
     });
-});
-
+  });
 }
 
 /**
@@ -94,14 +92,14 @@ var router = require('./router')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // Error Handling
 app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
+  res.status(err.status || 500);
 });
 
 module.exports = app;

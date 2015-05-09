@@ -21,9 +21,8 @@ var auth = {
     }
 
   // Fire a query to your DB and check if the credentials are valid
-  var dbUserObj = auth.validate(username, password, function (param){
+  auth.validate(username, password, function (param){
     if(!param){
-      console.log(dbUserObj)
         res.status(401);
         res.json({
          "status": 401,
@@ -32,7 +31,8 @@ var auth = {
       return;
     }
     if(param){
-      res.json(genToken(dbUserObj));
+      res.json(genToken(param));
+      return;
     }
   });
 

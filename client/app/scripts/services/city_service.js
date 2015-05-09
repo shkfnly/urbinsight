@@ -18,7 +18,7 @@ angular.module('urbinsight.services', [])
       var request = $http.get('/data/city/' + cityName);
       request.success(function(data, status){
         return callback(data);
-      })
+      });
     },
 
     createCity: function(cityName){
@@ -40,4 +40,4 @@ angular.module('urbinsight.services', [])
     }
 
   };
- })
+ });
