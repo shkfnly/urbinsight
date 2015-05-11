@@ -26,7 +26,6 @@ angular.module('urbinsight')
         UserAuthFactory.login(username, password).success(function(data) {
           
           $rootScope.showMenu = true
-          // AuthFactory.isLogged = true;
           AuthFactory.changeLoggedStatus();
           AuthFactory.user = data.user.username;
           AuthFactory.userRole = data.user.role;

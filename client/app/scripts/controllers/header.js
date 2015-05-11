@@ -15,20 +15,13 @@ angular.module('urbinsight')
       $rootScope.$broadcast('loginStateChange');
       $location.path('/');
     };
-
-    $scope.showMenu = AuthFactory.loggedStatus();
-
+    // $rootScope.showMenu = AuthFactory.loggedStatus();
+    // 
     $rootScope.$on('loginStateChange', function(){
-      console.log($scope.showMenu)
-      $scope.showMenu = AuthFactory.loggedStatus(); 
-      console.log($scope.showMenu)
+      $rootScope.showMenu = AuthFactory.loggedStatus(); 
     })
   })
 
-  // $scope.AuthFactory = AuthFactory;
-  // $scope.$watch('AuthFactory.loggedStatus()', function(newVal, oldVal){
-  //   $scope.showMenu = newVal;
-  // })
 
 //   .directive('urbHeader', function() {
 //   return {
