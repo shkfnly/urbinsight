@@ -1332,3 +1332,92 @@
 2015-05-07T17:18:27.107-0700 I STORAGE  [DataFileSync] flushing mmaps took 2443660ms  for 4 files
 2015-05-08T01:55:41.245-0700 I QUERY    [conn410] query urbinsight.cities query: { name: "medellin" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:5 keyUpdates:0 writeConflicts:0 numYields:2 nreturned:1 reslen:3488 locks:{ Global: { acquireCount: { r: 3 } }, MMAPV1Journal: { acquireCount: { r: 3 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { R: 3 } } } 176ms
 2015-05-09T00:17:15.165-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 24ms
+2015-05-11T16:37:59.972-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-05-11T16:38:00.091-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-05-11T16:38:00.115-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-05-11T16:38:00.127-0700 I JOURNAL  [initandlisten] recover begin
+2015-05-11T16:38:00.147-0700 I JOURNAL  [initandlisten] recover lsn: 154617650
+2015-05-11T16:38:00.147-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-05-11T16:38:00.173-0700 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:154617650
+2015-05-11T16:38:00.173-0700 I JOURNAL  [initandlisten] recover skipping application of section seq:106996900 < lsn:154617650
+2015-05-11T16:38:00.173-0700 I JOURNAL  [initandlisten] recover skipping application of section seq:107151360 < lsn:154617650
+2015-05-11T16:38:00.515-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-05-11T16:38:00.516-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-05-11T16:38:00.520-0700 I JOURNAL  [initandlisten] recover done
+2015-05-11T16:38:00.606-0700 I JOURNAL  [durability] Durability thread started
+2015-05-11T16:38:00.606-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] MongoDB starting : pid=5813 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] db version v3.0.2
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] git version: nogitversion
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] allocator: system
+2015-05-11T16:38:00.608-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-05-11T16:38:01.935-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-05-11T16:38:36.678-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57379 #1 (1 connection now open)
+2015-05-11T16:38:36.691-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57381 #2 (2 connections now open)
+2015-05-11T16:38:36.701-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57382 #3 (3 connections now open)
+2015-05-11T16:38:36.714-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57383 #4 (4 connections now open)
+2015-05-11T16:38:36.722-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57384 #5 (5 connections now open)
+2015-05-11T16:39:01.947-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 12ms
+2015-05-15T10:20:09.708-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-05-15T10:20:13.569-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-05-15T10:20:13.716-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-05-15T10:20:13.855-0700 I JOURNAL  [initandlisten] recover begin
+2015-05-15T10:20:13.855-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2015-05-15T10:20:13.855-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-05-15T10:20:17.823-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-05-15T10:20:17.823-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-05-15T10:20:20.934-0700 I JOURNAL  [initandlisten] recover done
+2015-05-15T10:20:32.293-0700 I JOURNAL  [initandlisten] preallocateIsFaster=true 150.22
+2015-05-15T10:20:43.419-0700 I JOURNAL  [initandlisten] preallocateIsFaster check took 22.339 secs
+2015-05-15T10:20:43.651-0700 I JOURNAL  [durability] Durability thread started
+2015-05-15T10:20:43.651-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1906 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] db version v3.0.2
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] git version: nogitversion
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] allocator: system
+2015-05-15T10:20:44.044-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-05-15T10:20:50.526-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-05-15T10:27:32.977-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49424 #1 (1 connection now open)
+2015-05-15T10:27:32.987-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49426 #2 (2 connections now open)
+2015-05-15T10:27:32.997-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49427 #3 (3 connections now open)
+2015-05-15T10:27:32.997-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49428 #4 (4 connections now open)
+2015-05-15T10:27:32.997-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49429 #5 (5 connections now open)
+2015-05-17T00:32:49.021-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 106ms
+2015-05-17T02:38:26.541-0700 I NETWORK  [conn4] end connection 127.0.0.1:49428 (4 connections now open)
+2015-05-17T02:38:26.541-0700 I NETWORK  [conn1] end connection 127.0.0.1:49424 (4 connections now open)
+2015-05-17T02:38:26.541-0700 I NETWORK  [conn3] end connection 127.0.0.1:49427 (4 connections now open)
+2015-05-17T02:38:26.542-0700 I NETWORK  [conn5] end connection 127.0.0.1:49429 (4 connections now open)
+2015-05-17T02:38:26.542-0700 I NETWORK  [conn2] end connection 127.0.0.1:49426 (4 connections now open)
+2015-05-19T12:55:11.614-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-05-19T12:55:12.456-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-05-19T12:55:12.506-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-05-19T12:55:12.507-0700 I JOURNAL  [initandlisten] recover begin
+2015-05-19T12:55:12.540-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2015-05-19T12:55:12.540-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-05-19T12:55:14.965-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-05-19T12:55:14.965-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-05-19T12:55:15.007-0700 I JOURNAL  [initandlisten] recover done
+2015-05-19T12:55:15.960-0700 I JOURNAL  [durability] Durability thread started
+2015-05-19T12:55:15.961-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] MongoDB starting : pid=9494 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] db version v3.0.2
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] git version: nogitversion
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] allocator: system
+2015-05-19T12:55:16.087-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-05-19T12:55:19.940-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-05-19T12:55:58.689-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65295 #1 (1 connection now open)
+2015-05-19T12:55:58.714-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65297 #2 (2 connections now open)
+2015-05-19T12:55:58.724-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65298 #3 (3 connections now open)
+2015-05-19T12:55:58.735-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65299 #4 (4 connections now open)
+2015-05-19T12:55:58.745-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65300 #5 (5 connections now open)
+2015-05-19T12:55:59.039-0700 I COMMAND  [conn1] command urbinsight.$cmd command: isMaster { ismaster: 1 } keyUpdates:0 writeConflicts:0 numYields:0 reslen:178 locks:{} 178ms
+2015-05-19T12:56:19.851-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 37ms
+2015-05-19T18:43:16.421-0700 I STORAGE  [DataFileSync] flushing mmaps took 19707664ms  for 4 files
+2015-05-19T20:08:15.782-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 9ms
+2015-05-20T13:31:58.094-0700 I STORAGE  [DataFileSync] flushing mmaps took 5020101ms  for 4 files
+2015-05-20T17:10:30.232-0700 I STORAGE  [DataFileSync] flushing mmaps took 1307319ms  for 4 files
+2015-05-20T20:56:36.070-0700 I STORAGE  [DataFileSync] flushing mmaps took 13204943ms  for 4 files
+2015-05-21T00:12:50.532-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 8469044ms

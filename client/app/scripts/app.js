@@ -114,13 +114,105 @@
           'mapModal': {
             templateUrl: 'views/cities/mapmodal.html',
             controller: 'MapModalCtrl'
-          },
-          'resourceTab': {
-            templateUrl: 'views/cities/resourceTab.html',
-            controller: 'ResourceTabCtrl'
           }
         }
       })
+      .state('app.city.pilot.umis', {
+        views: {
+          'umisTabs': {
+            templateUrl: 'views/cities/umisTabs.html'
+          }
+        },
+      })
+
+      .state('app.city.pilot.umis.energy', {
+        views: {
+          'energy': {
+            templateUrl: 'views/cities/umisResource.html',
+            controller: 'umisResourceCtrl'
+          }
+        },
+        params: {
+          type: 'energy'
+        }
+      })
+      .state('app.city.pilot.umis.water', {
+        views: {
+          'water': {
+            templateUrl: 'views/cities/umisResource.html',
+            controller: 'umisResourceCtrl'
+          }
+        },
+        params: {
+          type: 'water'
+        }
+      })
+      .state('app.city.pilot.umis.materials', {
+        views: {
+          'materials': {
+            templateUrl: 'views/cities/umisResource.html',
+            controller: 'umisResourceCtrl'
+          }
+        },
+        params: {
+          type: 'materials'
+        }
+      })
+      .state('app.city.pilot.umis.mobility', {
+        views: {
+          'mobility': {
+            templateUrl: 'views/cities/umisResource.html',
+            controller: 'umisResourceCtrl'
+          }
+        },
+        params: {
+          type: 'mobility'
+        }
+      })
+      .state('app.city.pilot.survey', {
+        views: {
+          'survey': {
+            templateUrl: 'views/cities/survey.html'
+          }
+        }
+      })
+      .state('app.city.pilot.assessments', {
+        views: {
+          'assessments': {
+            templateUrl: 'views/cities/assessments/assessments.html'
+          }
+        }
+      })
+      .state('app.city.pilot.assessments.air', {
+        views: {
+          'air' : { 
+            templateUrl: 'views/cities/assessments/air.html'
+          }
+        }
+      })
+      .state('app.city.pilot.assessments.water', {
+        views: {
+          'water' : { 
+            templateUrl: 'views/cities/assessments/water.html'
+          }
+        }
+      })
+      .state('app.city.pilot.assessments.soil', {
+        views: {
+          'soil' : { 
+            templateUrl: 'views/cities/assessments/soil.html'
+          }
+        }
+      })
+      .state('app.city.pilot.basedata', {
+        views: {
+          'basedata': {
+            templateUrl: 'views/cities/basedata.html'
+          }
+        }
+      })
+
+
       .state('app.dashboard', {
         url: '/dashboard',
         views: {
@@ -145,6 +237,10 @@
   AuthFactory.check();
 
   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+    console.log('nextRoute:' + nextRoute)
+    console.log('currentRoute:' + currentRoute)
+    console.log('nextRoute.access:' + nextRoute.access)
+    console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin)
     if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
       $location.path('/login');
     } else {
