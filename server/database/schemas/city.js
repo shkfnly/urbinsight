@@ -2,7 +2,6 @@
   *Schema for Cities
 */
 
-
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -13,13 +12,6 @@ var citySchema = new Schema({
   layers: {},
   layerDefinitions: []
 })
-
-
-
-
-
-
-
 
 var City = mongoose.model('City', citySchema);
 

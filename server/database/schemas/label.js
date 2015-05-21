@@ -2,7 +2,7 @@ var database = require('../../database').db
 var db = database.db;
 var model = require("seraph-model");
 
-Schema example
+// Schema example
 // var User = model(db, 'User');
 
 // User.schema = {

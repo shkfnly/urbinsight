@@ -116,6 +116,7 @@ angular.module('urbinsight')
     };
 
     $scope.renderNodes = function (data) {     
+      var map = $scope.map;
       angular.forEach(data, function(type, key){
         var markers = new L.MarkerClusterGroup({
           iconCreateFunction: function(cluster) {
@@ -138,6 +139,7 @@ angular.module('urbinsight')
           markers.addLayer(mark);
           $scope.markers = markers;
         });
+         
         $scope.map.addLayer(markers);
       });
     };
