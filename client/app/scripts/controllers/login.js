@@ -30,7 +30,7 @@ angular.module('urbinsight')
           AuthFactory.user = data.user.username;
           AuthFactory.userRole = data.user.role;
 
-          $rootScope.$broadcast('loginStateChange');
+          // $rootScope.$broadcast('loginStateChange');
 
           $window.sessionStorage.token = data.token;
           $window.sessionStorage.user = data.user.username;
