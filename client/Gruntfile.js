@@ -359,6 +359,15 @@ module.exports = function (grunt) {
         }]
       }
     },
+    react: {
+      files: {
+        expand: true,
+        cwd: '<%= yeoman.app %>/jsx',
+        src: ['**/*.jsx'],
+        dest: '.tmp/jsx',
+        ext: '.js'
+      }
+    },
 
     // ng-annotate tries to make the code safe for minification automatically
     // by using the Angular long form for dependency injection.
@@ -486,6 +495,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
+    'react',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
@@ -507,4 +517,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy', ['buildcontrol']);
+
+
 };
