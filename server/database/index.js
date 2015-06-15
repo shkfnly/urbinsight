@@ -20,7 +20,10 @@ var nodeDB;
 if (process.env.NODE_ENV === 'development') {
   // set our database to the development one
   usedDb = developmentDb;
-  nodeDB = require("seraph")(developmentGraphDb);
+  nodeDB = require("seraph")({  server: 'http://localhost:7474',
+                                endpoint: '/db/data',
+                                user: 'neo4j',
+                                pass: 'password'});
   // connect to it via mongoose
   mongoose.connect(usedDb);
 }
@@ -30,6 +33,7 @@ if (process.env.NODE_ENV === 'production') {
   // set our database to the production one
   usedDb = productionDb;
   nodeDB = require("seraph")(productionGraphDb);
+  console.log(nodeDB)
   // connect to it via mongoose
   mongoose.connect(usedDb);
 }
@@ -55,12 +59,15 @@ db.once('open', function callback () {
 // }
 
 
-nodeDB.save({ name: "Test-Man", age: 40 }, function(err, node) {
-  if (err) throw err;
+nodeDB.save({ name: "Test-Man", age: 40 }, 'Person', function(err, node) {
+  if (err) {
+    console.log(err)
+    console.log(node);
+  };
   console.log("Test-Man inserted.");
 
   nodeDB.delete(node, function(err) {
-    if (err) throw err;
+    if (err) console.log(err);
     console.log("Test-Man away!");
   });
 });

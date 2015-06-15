@@ -20,17 +20,17 @@
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'urbinsight.services'
+    'urbinsight.services',
+    'urbinsight.directives'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     // For any unmatched url, redirect to /
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/#');
     $httpProvider.interceptors.push('TokenIntercept');
     // Setup the states
     $stateProvider
       .state('app', {
-        url: '',
         views: {
           'header': {
                 templateUrl: 'views/partials/_header.html',
@@ -207,7 +207,7 @@
       .state('app.city.pilot.basedata', {
         views: {
           'basedata': {
-            templateUrl: 'views/cities/basedata.html'
+            templateUrl: 'views/cities/basedata.html',
           }
         }
       })
@@ -237,10 +237,10 @@
   AuthFactory.check();
 
   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
-    console.log('nextRoute:' + nextRoute)
-    console.log('currentRoute:' + currentRoute)
-    console.log('nextRoute.access:' + nextRoute.access)
-    console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin)
+    console.log('nextRoute:' + nextRoute);
+    console.log('currentRoute:' + currentRoute);
+    console.log('nextRoute.access:' + nextRoute.access);
+    console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin);
     if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
       $location.path('/login');
     } else {

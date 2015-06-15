@@ -62,4 +62,4 @@ angular.module('urbinsight.services')
         return response || $q.when(response);
       }
     };
-  })
+  });

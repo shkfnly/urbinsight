@@ -1,0 +1,140 @@
+
+> urbinsight@0.0.0 test /Users/ashokafinley/development/urbinsight/server
+> NODE_ENV=development nodemon ./bin/www
+
+2 Jun 23:28:23 - [33m[nodemon] v1.3.7[39m
+2 Jun 23:28:23 - [33m[nodemon] to restart at any time, enter `rs`[39m
+2 Jun 23:28:23 - [33m[nodemon] watching: *.*[39m
+2 Jun 23:28:23 - [32m[nodemon] starting `node ./bin/www`[39m
+[33m
+##############################################################
+#
+#   !!! MONGOOSE WARNING !!!
+#
+#   This is an UNSTABLE release of Mongoose.
+#   Unstable releases are available for preview/testing only.
+#   DO NOT run this in production.
+#
+##############################################################
+[0m
+Database Connection Successfully Opened at mongodb://localhost/urbinsight
+[0mGET / [32m200 [0m17.185 ms - 5458[0m
+[0mGET / [36m304 [0m4.785 ms - -[0m
+[0mGET /bower_components/leaflet-dist/leaflet.css [32m200 [0m9.498 ms - 10161[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.css [32m200 [0m5.115 ms - 6612[0m
+[0mGET /bower_components/leaflet.markercluster/dist/MarkerCluster.css [32m200 [0m4.874 ms - 366[0m
+[0mGET /bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js [32m200 [0m16.009 ms - 67546[0m
+[0mGET /styles/main.css [32m200 [0m21.433 ms - 313957[0m
+[0mGET /bower_components/jquery/dist/jquery.js [32m200 [0m21.511 ms - 247597[0m
+[0mGET /bower_components/angular-animate/angular-animate.js [32m200 [0m25.232 ms - 133756[0m
+[0mGET /bower_components/angular-aria/angular-aria.js [32m200 [0m30.184 ms - 13471[0m
+[0mGET /bower_components/angular-cookies/angular-cookies.js [32m200 [0m5.137 ms - 9675[0m
+[0mGET /bower_components/angular-messages/angular-messages.js [32m200 [0m2.973 ms - 25332[0m
+[0mGET /bower_components/angular-resource/angular-resource.js [32m200 [0m4.483 ms - 26833[0m
+[0mGET /bower_components/angular-sanitize/angular-sanitize.js [32m200 [0m4.088 ms - 24529[0m
+[0mGET /bower_components/angular-touch/angular-touch.js [32m200 [0m10.908 ms - 23093[0m
+[0mGET /bower_components/angular-route/angular-route.js [32m200 [0m13.432 ms - 35914[0m
+[0mGET /bower_components/angular-ui-router/release/angular-ui-router.js [32m200 [0m13.382 ms - 162905[0m
+[0mGET /bower_components/leaflet-dist/leaflet.js [32m200 [0m8.117 ms - 125206[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.js [32m200 [0m5.369 ms - 45304[0m
+[0mGET /bower_components/angular-bootstrap/ui-bootstrap-tpls.js [32m200 [0m12.542 ms - 163279[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw-src.js [32m200 [0m9.494 ms - 72316[0m
+[0mGET /bower_components/leaflet.markercluster/dist/leaflet.markercluster.js [32m200 [0m7.942 ms - 28286[0m
+[0mGET /scripts/app.js [32m200 [0m15.291 ms - 6576[0m
+[0mGET /scripts/controllers/about.js [32m200 [0m10.991 ms - 324[0m
+[0mGET /scripts/controllers/main.js [32m200 [0m12.833 ms - 327[0m
+[0mGET /bower_components/react/react.js [32m200 [0m38.529 ms - 600572[0m
+[0mGET /scripts/controllers/signup.js [32m200 [0m15.576 ms - 1448[0m
+[0mGET /scripts/controllers/dashboard.js [32m200 [0m17.586 ms - 618[0m
+[0mGET /scripts/controllers/cities.js [32m200 [0m7.156 ms - 6159[0m
+[0mGET /scripts/controllers/pilots.js [32m200 [0m19.480 ms - 924[0m
+[0mGET /scripts/controllers/process.js [32m200 [0m20.578 ms - 739[0m
+[0mGET /scripts/controllers/compass.js [32m200 [0m167.997 ms - 330[0m
+[0mGET /bower_components/angular/angular.js [32m200 [0m352.468 ms - 1032467[0m
+[0mGET /scripts/controllers/mapmodal.js [32m200 [0m169.342 ms - 3616[0m
+[0mGET /scripts/services/city_service.js [32m200 [0m172.286 ms - 1046[0m
+[0mGET /scripts/controllers/resourcetab.js [32m200 [0m168.421 ms - 6934[0m
+[0mGET /scripts/services/authfactory.js [32m200 [0m6.950 ms - 1729[0m
+[0mGET /scripts/controllers/login.js [32m200 [0m12.545 ms - 1372[0m
+[0mGET /scripts/controllers/header.js [32m200 [0m14.848 ms - 678[0m
+[0mGET /scripts/controllers/umisresource.js [32m200 [0m15.287 ms - 6949[0m
+[0mGET /views/partials/_header.html [32m200 [0m1.834 ms - 1981[0m
+[0mGET /images/urbinsight_logo_v1.png [32m200 [0m6.894 ms - 7599[0m
+[0mGET / [36m304 [0m1.551 ms - -[0m
+[0mGET /bower_components/leaflet-dist/leaflet.css [36m304 [0m5.640 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.css [36m304 [0m4.880 ms - -[0m
+[0mGET /bower_components/leaflet.markercluster/dist/MarkerCluster.css [36m304 [0m4.697 ms - -[0m
+[0mGET /bower_components/jquery/dist/jquery.js [36m304 [0m4.980 ms - -[0m
+[0mGET /bower_components/angular/angular.js [36m304 [0m5.471 ms - -[0m
+[0mGET /bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js [36m304 [0m5.072 ms - -[0m
+[0mGET /bower_components/angular-animate/angular-animate.js [36m304 [0m6.279 ms - -[0m
+[0mGET /bower_components/angular-aria/angular-aria.js [36m304 [0m6.464 ms - -[0m
+[0mGET /bower_components/angular-cookies/angular-cookies.js [36m304 [0m6.593 ms - -[0m
+[0mGET /bower_components/angular-messages/angular-messages.js [36m304 [0m9.024 ms - -[0m
+[0mGET /bower_components/angular-resource/angular-resource.js [36m304 [0m5.510 ms - -[0m
+[0mGET /bower_components/angular-route/angular-route.js [36m304 [0m12.061 ms - -[0m
+[0mGET /bower_components/angular-sanitize/angular-sanitize.js [36m304 [0m18.996 ms - -[0m
+[0mGET /bower_components/angular-touch/angular-touch.js [36m304 [0m18.106 ms - -[0m
+[0mGET /bower_components/angular-ui-router/release/angular-ui-router.js [36m304 [0m20.144 ms - -[0m
+[0mGET /bower_components/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m3.856 ms - -[0m
+[0mGET /bower_components/leaflet-dist/leaflet.js [36m304 [0m4.528 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw-src.js [36m304 [0m5.323 ms - -[0m
+[0mGET /bower_components/react/react.js [36m304 [0m5.832 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.js [36m304 [0m6.757 ms - -[0m
+[0mGET /bower_components/leaflet.markercluster/dist/leaflet.markercluster.js [36m304 [0m4.941 ms - -[0m
+[0mGET /scripts/app.js [36m304 [0m7.831 ms - -[0m
+[0mGET /scripts/controllers/main.js [36m304 [0m18.930 ms - -[0m
+[0mGET /scripts/controllers/about.js [36m304 [0m19.938 ms - -[0m
+[0mGET /scripts/controllers/signup.js [36m304 [0m21.970 ms - -[0m
+[0mGET /scripts/controllers/dashboard.js [36m304 [0m18.436 ms - -[0m
+[0mGET /styles/main.css [32m200 [0m88.519 ms - 308675[0m
+[0mGET /scripts/controllers/process.js [36m304 [0m9.681 ms - -[0m
+[0mGET /scripts/controllers/pilots.js [36m304 [0m9.422 ms - -[0m
+[0mGET /scripts/controllers/cities.js [36m304 [0m10.864 ms - -[0m
+[0mGET /scripts/controllers/compass.js [36m304 [0m11.245 ms - -[0m
+[0mGET /scripts/controllers/mapmodal.js [36m304 [0m10.273 ms - -[0m
+[0mGET /scripts/services/city_service.js [36m304 [0m8.347 ms - -[0m
+[0mGET /scripts/controllers/resourcetab.js [36m304 [0m10.627 ms - -[0m
+[0mGET /scripts/services/authfactory.js [36m304 [0m13.236 ms - -[0m
+[0mGET /scripts/controllers/login.js [36m304 [0m11.269 ms - -[0m
+[0mGET /scripts/controllers/header.js [36m304 [0m11.739 ms - -[0m
+[0mGET /scripts/controllers/umisresource.js [36m304 [0m11.561 ms - -[0m
+[0mGET / [36m304 [0m4.261 ms - -[0m
+[0mGET /bower_components/leaflet-dist/leaflet.css [36m304 [0m28.356 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.css [36m304 [0m28.197 ms - -[0m
+[0mGET /bower_components/leaflet.markercluster/dist/MarkerCluster.css [36m304 [0m28.160 ms - -[0m
+[0mGET /bower_components/jquery/dist/jquery.js [36m304 [0m29.202 ms - -[0m
+[0mGET /bower_components/angular/angular.js [36m304 [0m29.403 ms - -[0m
+[0mGET /bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js [36m304 [0m4.374 ms - -[0m
+[0mGET /bower_components/angular-animate/angular-animate.js [36m304 [0m2.277 ms - -[0m
+[0mGET /bower_components/angular-aria/angular-aria.js [36m304 [0m2.265 ms - -[0m
+[0mGET /bower_components/angular-cookies/angular-cookies.js [36m304 [0m4.496 ms - -[0m
+[0mGET /bower_components/angular-messages/angular-messages.js [36m304 [0m4.545 ms - -[0m
+[0mGET /bower_components/angular-resource/angular-resource.js [36m304 [0m4.521 ms - -[0m
+[0mGET /bower_components/angular-route/angular-route.js [36m304 [0m0.661 ms - -[0m
+[0mGET /bower_components/angular-sanitize/angular-sanitize.js [36m304 [0m1.085 ms - -[0m
+[0mGET /bower_components/angular-touch/angular-touch.js [36m304 [0m2.483 ms - -[0m
+[0mGET /bower_components/angular-ui-router/release/angular-ui-router.js [36m304 [0m2.403 ms - -[0m
+[0mGET /bower_components/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m2.390 ms - -[0m
+[0mGET /bower_components/leaflet-dist/leaflet.js [36m304 [0m2.479 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw-src.js [36m304 [0m2.514 ms - -[0m
+[0mGET /bower_components/react/react.js [36m304 [0m2.428 ms - -[0m
+[0mGET /bower_components/leaflet.draw/dist/leaflet.draw.js [36m304 [0m1.909 ms - -[0m
+[0mGET /bower_components/leaflet.markercluster/dist/leaflet.markercluster.js [36m304 [0m1.945 ms - -[0m
+[0mGET /scripts/app.js [36m304 [0m6.371 ms - -[0m
+[0mGET /scripts/controllers/main.js [36m304 [0m6.452 ms - -[0m
+[0mGET /scripts/controllers/about.js [36m304 [0m8.513 ms - -[0m
+[0mGET /scripts/controllers/signup.js [36m304 [0m8.567 ms - -[0m
+[0mGET /scripts/controllers/dashboard.js [36m304 [0m6.386 ms - -[0m
+[0mGET /scripts/controllers/process.js [36m304 [0m8.286 ms - -[0m
+[0mGET /scripts/controllers/pilots.js [36m304 [0m5.729 ms - -[0m
+[0mGET /scripts/controllers/cities.js [36m304 [0m6.136 ms - -[0m
+[0mGET /scripts/controllers/compass.js [36m304 [0m7.553 ms - -[0m
+[0mGET /scripts/controllers/mapmodal.js [36m304 [0m4.983 ms - -[0m
+[0mGET /scripts/services/city_service.js [36m304 [0m9.525 ms - -[0m
+[0mGET /scripts/controllers/resourcetab.js [36m304 [0m9.658 ms - -[0m
+[0mGET /scripts/services/authfactory.js [36m304 [0m19.903 ms - -[0m
+[0mGET /scripts/controllers/login.js [36m304 [0m21.210 ms - -[0m
+[0mGET /scripts/controllers/header.js [36m304 [0m21.734 ms - -[0m
+[0mGET /scripts/controllers/umisresource.js [36m304 [0m19.929 ms - -[0m
+2 Jun 23:34:30 - [31m[nodemon] app crashed - waiting for file changes before starting...[39m

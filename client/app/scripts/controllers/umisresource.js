@@ -162,13 +162,13 @@ angular.module('urbinsight')
                 $scope.data = root;
                 $scope.renderPie(root);
               });
-            }
+            };
       $scope.fetchLineData = function(resourceUrl){
        d3.tsv(resourceUrl, function(error, data){
          $scope.data = data;
          $scope.renderLine(data);
        });
-      }
+      };
     $scope.fetchLineData('https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv'); 
     $scope.fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
     $scope.awesomeThings = [

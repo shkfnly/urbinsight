@@ -1,0 +1,60 @@
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+
+
+Execution Time (2015-06-03 03:26:23 UTC)
+wiredep:app        344ms  ▇ 2%
+wiredep:test       216ms  ▇ 1%
+concurrent:server    19s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 19.6s
+
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+Unable to find any JVMs matching version "1.7".
+Another server-process is running with [25330], cannot start a new one. Exiting.
+    
+    [4mRunning "compass:server" (compass) task[24m
+    [32mdirectory[0m .tmp/styles
+    [32m    write[0m .tmp/styles/main.css (26.583s)
+    [32m    write[0m .tmp/styles/main.css.map
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2015-06-03 03:28:13 UTC)
+    compass:server  36.8s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 100%
+    Total 36.8s
+    
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://localhost:9000
+
+[4mRunning "watch" task[24m
+Waiting...
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.001s at Tue Jun 02 2015 23:32:56 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.000s at Tue Jun 02 2015 23:33:08 GMT-0400 (EDT)[39m - Waiting...

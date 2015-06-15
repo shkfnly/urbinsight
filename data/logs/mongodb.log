@@ -1421,3 +1421,269 @@
 2015-05-20T17:10:30.232-0700 I STORAGE  [DataFileSync] flushing mmaps took 1307319ms  for 4 files
 2015-05-20T20:56:36.070-0700 I STORAGE  [DataFileSync] flushing mmaps took 13204943ms  for 4 files
 2015-05-21T00:12:50.532-0700 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 8469044ms
+2015-06-02T23:28:15.210-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-02T23:28:15.553-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-06-02T23:28:15.662-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-02T23:28:15.663-0400 I JOURNAL  [initandlisten] recover begin
+2015-06-02T23:28:15.684-0400 I JOURNAL  [initandlisten] recover lsn: 37216591
+2015-06-02T23:28:15.684-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-06-02T23:28:15.690-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:37216591
+2015-06-02T23:28:15.732-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-06-02T23:28:15.732-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-06-02T23:28:15.796-0400 I JOURNAL  [initandlisten] recover done
+2015-06-02T23:28:15.914-0400 I JOURNAL  [durability] Durability thread started
+2015-06-02T23:28:15.914-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] MongoDB starting : pid=25558 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-02T23:28:15.958-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-02T23:28:19.091-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-02T23:28:33.245-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54252 #1 (1 connection now open)
+2015-06-02T23:28:33.313-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54253 #2 (2 connections now open)
+2015-06-02T23:28:33.313-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54254 #3 (3 connections now open)
+2015-06-02T23:28:33.324-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54255 #4 (4 connections now open)
+2015-06-02T23:28:33.325-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54256 #5 (5 connections now open)
+2015-06-02T23:29:19.098-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 34ms
+2015-06-02T23:34:30.613-0400 I NETWORK  [conn5] end connection 127.0.0.1:54256 (4 connections now open)
+2015-06-02T23:34:30.614-0400 I NETWORK  [conn4] end connection 127.0.0.1:54255 (4 connections now open)
+2015-06-02T23:34:30.614-0400 I NETWORK  [conn2] end connection 127.0.0.1:54253 (4 connections now open)
+2015-06-02T23:34:30.614-0400 I NETWORK  [conn3] end connection 127.0.0.1:54254 (4 connections now open)
+2015-06-02T23:34:30.614-0400 I NETWORK  [conn1] end connection 127.0.0.1:54252 (4 connections now open)
+2015-06-02T23:34:42.359-0400 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2015-06-02T23:34:42.403-0400 I CONTROL  [signalProcessingThread] now exiting
+2015-06-02T23:34:42.403-0400 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-06-02T23:34:42.403-0400 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-06-02T23:34:42.404-0400 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2015-06-02T23:34:42.404-0400 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-06-02T23:34:42.407-0400 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-06-02T23:34:42.407-0400 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-06-02T23:34:42.407-0400 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-06-02T23:34:42.409-0400 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-06-02T23:34:42.434-0400 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-06-02T23:34:42.434-0400 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-06-02T23:34:42.439-0400 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-06-02T23:34:42.524-0400 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-06-02T23:34:42.524-0400 I JOURNAL  [durability] Durability thread stopped
+2015-06-02T23:34:42.524-0400 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-06-02T23:34:42.528-0400 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-06-02T23:34:42.528-0400 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-06-02T23:34:42.537-0400 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-06-02T23:41:33.546-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-02T23:41:33.775-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-02T23:41:33.813-0400 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-06-02T23:41:33.922-0400 I JOURNAL  [durability] Durability thread started
+2015-06-02T23:41:33.923-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] MongoDB starting : pid=27194 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-02T23:41:33.924-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-02T23:41:35.368-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-02T23:41:51.937-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56002 #1 (1 connection now open)
+2015-06-02T23:41:51.946-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56003 #2 (2 connections now open)
+2015-06-02T23:41:51.946-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56004 #3 (3 connections now open)
+2015-06-02T23:41:51.946-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56005 #4 (4 connections now open)
+2015-06-02T23:41:51.946-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56006 #5 (5 connections now open)
+2015-06-02T23:42:35.374-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 7ms
+2015-06-03T01:59:22.110-0400 I STORAGE  [DataFileSync] flushing mmaps took 2559643ms  for 4 files
+2015-06-03T16:26:52.076-0400 I STORAGE  [DataFileSync] flushing mmaps took 9914019ms  for 4 files
+2015-06-03T17:40:21.086-0400 I STORAGE  [DataFileSync] flushing mmaps took 2881154ms  for 4 files
+2015-06-04T00:15:40.463-0400 I NETWORK  [conn3] end connection 127.0.0.1:56004 (4 connections now open)
+2015-06-04T00:15:40.463-0400 I NETWORK  [conn2] end connection 127.0.0.1:56003 (4 connections now open)
+2015-06-04T00:15:40.463-0400 I NETWORK  [conn5] end connection 127.0.0.1:56006 (4 connections now open)
+2015-06-04T00:15:40.463-0400 I NETWORK  [conn4] end connection 127.0.0.1:56005 (4 connections now open)
+2015-06-04T00:15:40.463-0400 I NETWORK  [conn1] end connection 127.0.0.1:56002 (4 connections now open)
+2015-06-04T12:56:01.061-0400 I STORAGE  [DataFileSync] flushing mmaps took 8318230ms  for 4 files
+2015-06-08T12:52:10.348-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-08T12:52:10.524-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-06-08T12:52:10.544-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-08T12:52:10.544-0400 I JOURNAL  [initandlisten] recover begin
+2015-06-08T12:52:10.545-0400 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2015-06-08T12:52:10.545-0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-06-08T12:52:10.545-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-06-08T12:52:11.090-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-06-08T12:52:11.090-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-06-08T12:52:11.155-0400 I JOURNAL  [initandlisten] recover done
+2015-06-08T12:52:11.236-0400 I JOURNAL  [durability] Durability thread started
+2015-06-08T12:52:11.237-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] MongoDB starting : pid=2620 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-08T12:52:11.247-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-08T12:52:12.340-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-08T12:53:12.383-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 40ms
+2015-06-08T12:55:31.876-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61114 #1 (1 connection now open)
+2015-06-08T12:55:31.878-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61115 #2 (2 connections now open)
+2015-06-08T12:55:31.879-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61116 #3 (3 connections now open)
+2015-06-08T12:55:31.880-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61117 #4 (4 connections now open)
+2015-06-08T12:55:31.880-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61118 #5 (5 connections now open)
+2015-06-08T12:59:04.566-0400 I NETWORK  [conn1] end connection 127.0.0.1:61114 (4 connections now open)
+2015-06-08T12:59:04.566-0400 I NETWORK  [conn2] end connection 127.0.0.1:61115 (4 connections now open)
+2015-06-08T12:59:04.566-0400 I NETWORK  [conn3] end connection 127.0.0.1:61116 (4 connections now open)
+2015-06-08T12:59:04.566-0400 I NETWORK  [conn4] end connection 127.0.0.1:61117 (4 connections now open)
+2015-06-08T12:59:04.566-0400 I NETWORK  [conn5] end connection 127.0.0.1:61118 (4 connections now open)
+2015-06-08T12:59:05.961-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61167 #6 (1 connection now open)
+2015-06-08T12:59:05.963-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61168 #7 (2 connections now open)
+2015-06-08T12:59:05.963-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61169 #8 (3 connections now open)
+2015-06-08T12:59:05.964-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61170 #9 (4 connections now open)
+2015-06-08T12:59:05.965-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61171 #10 (5 connections now open)
+2015-06-08T12:59:16.843-0400 I NETWORK  [conn10] end connection 127.0.0.1:61171 (4 connections now open)
+2015-06-08T12:59:16.847-0400 I NETWORK  [conn9] end connection 127.0.0.1:61170 (3 connections now open)
+2015-06-08T12:59:16.847-0400 I NETWORK  [conn8] end connection 127.0.0.1:61169 (2 connections now open)
+2015-06-08T12:59:16.847-0400 I NETWORK  [conn7] end connection 127.0.0.1:61168 (1 connection now open)
+2015-06-08T12:59:16.848-0400 I NETWORK  [conn6] end connection 127.0.0.1:61167 (1 connection now open)
+2015-06-08T12:59:18.212-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61173 #11 (1 connection now open)
+2015-06-08T12:59:18.220-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61175 #12 (2 connections now open)
+2015-06-08T12:59:18.223-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61176 #13 (3 connections now open)
+2015-06-08T12:59:18.240-0400 I NETWORK  [conn13] end connection 127.0.0.1:61176 (2 connections now open)
+2015-06-08T12:59:18.243-0400 I NETWORK  [conn12] end connection 127.0.0.1:61175 (1 connection now open)
+2015-06-08T12:59:18.244-0400 I NETWORK  [conn11] end connection 127.0.0.1:61173 (0 connections now open)
+2015-06-08T13:01:43.300-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61282 #14 (1 connection now open)
+2015-06-08T13:01:43.325-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61284 #15 (2 connections now open)
+2015-06-08T13:01:43.325-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61285 #16 (3 connections now open)
+2015-06-08T13:01:43.333-0400 I NETWORK  [conn16] end connection 127.0.0.1:61285 (2 connections now open)
+2015-06-08T13:01:43.334-0400 I NETWORK  [conn15] end connection 127.0.0.1:61284 (1 connection now open)
+2015-06-08T13:01:43.334-0400 I NETWORK  [conn14] end connection 127.0.0.1:61282 (0 connections now open)
+2015-06-08T13:02:16.515-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61290 #17 (1 connection now open)
+2015-06-08T13:02:16.534-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61292 #18 (2 connections now open)
+2015-06-08T13:02:16.554-0400 I NETWORK  [conn18] end connection 127.0.0.1:61292 (1 connection now open)
+2015-06-08T13:02:16.555-0400 I NETWORK  [conn17] end connection 127.0.0.1:61290 (0 connections now open)
+2015-06-08T13:02:34.642-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61298 #19 (1 connection now open)
+2015-06-08T13:02:34.649-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61300 #20 (2 connections now open)
+2015-06-08T13:02:34.667-0400 I NETWORK  [conn20] end connection 127.0.0.1:61300 (1 connection now open)
+2015-06-08T13:02:34.668-0400 I NETWORK  [conn19] end connection 127.0.0.1:61298 (0 connections now open)
+2015-06-08T13:03:01.392-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61303 #21 (1 connection now open)
+2015-06-08T13:03:01.394-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61304 #22 (2 connections now open)
+2015-06-08T13:03:01.395-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61305 #23 (3 connections now open)
+2015-06-08T13:03:01.395-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61306 #24 (4 connections now open)
+2015-06-08T13:03:01.396-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61307 #25 (5 connections now open)
+2015-06-08T13:03:16.503-0400 I NETWORK  [conn25] end connection 127.0.0.1:61307 (4 connections now open)
+2015-06-08T13:03:16.503-0400 I NETWORK  [conn24] end connection 127.0.0.1:61306 (4 connections now open)
+2015-06-08T13:03:16.503-0400 I NETWORK  [conn23] end connection 127.0.0.1:61305 (4 connections now open)
+2015-06-08T13:03:16.503-0400 I NETWORK  [conn22] end connection 127.0.0.1:61304 (4 connections now open)
+2015-06-08T13:03:16.503-0400 I NETWORK  [conn21] end connection 127.0.0.1:61303 (4 connections now open)
+2015-06-08T13:03:17.712-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61308 #26 (1 connection now open)
+2015-06-08T13:03:17.714-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61309 #27 (2 connections now open)
+2015-06-08T13:03:17.715-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61310 #28 (3 connections now open)
+2015-06-08T13:03:17.715-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61311 #29 (4 connections now open)
+2015-06-08T13:03:17.716-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61312 #30 (5 connections now open)
+2015-06-08T13:05:32.942-0400 I NETWORK  [conn30] end connection 127.0.0.1:61312 (4 connections now open)
+2015-06-08T13:05:32.942-0400 I NETWORK  [conn29] end connection 127.0.0.1:61311 (4 connections now open)
+2015-06-08T13:05:32.942-0400 I NETWORK  [conn28] end connection 127.0.0.1:61310 (4 connections now open)
+2015-06-08T13:05:32.942-0400 I NETWORK  [conn27] end connection 127.0.0.1:61309 (4 connections now open)
+2015-06-08T13:05:32.942-0400 I NETWORK  [conn26] end connection 127.0.0.1:61308 (4 connections now open)
+2015-06-08T13:05:34.639-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61320 #31 (1 connection now open)
+2015-06-08T13:05:34.646-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61322 #32 (2 connections now open)
+2015-06-08T13:05:34.660-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61323 #33 (3 connections now open)
+2015-06-08T13:05:34.662-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61324 #34 (4 connections now open)
+2015-06-08T13:05:34.662-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61325 #35 (5 connections now open)
+2015-06-08T13:09:23.245-0400 I NETWORK  [conn35] end connection 127.0.0.1:61325 (4 connections now open)
+2015-06-08T13:09:23.245-0400 I NETWORK  [conn34] end connection 127.0.0.1:61324 (4 connections now open)
+2015-06-08T13:09:23.245-0400 I NETWORK  [conn32] end connection 127.0.0.1:61322 (4 connections now open)
+2015-06-08T13:09:23.245-0400 I NETWORK  [conn33] end connection 127.0.0.1:61323 (4 connections now open)
+2015-06-08T13:09:23.245-0400 I NETWORK  [conn31] end connection 127.0.0.1:61320 (4 connections now open)
+2015-06-08T13:19:47.099-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61558 #36 (1 connection now open)
+2015-06-08T13:19:47.108-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61560 #37 (2 connections now open)
+2015-06-08T13:19:47.119-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61561 #38 (3 connections now open)
+2015-06-08T13:19:47.135-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61562 #39 (4 connections now open)
+2015-06-08T13:19:47.137-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61563 #40 (5 connections now open)
+2015-06-08T13:20:39.274-0400 I NETWORK  [conn40] end connection 127.0.0.1:61563 (4 connections now open)
+2015-06-08T13:20:39.274-0400 I NETWORK  [conn38] end connection 127.0.0.1:61561 (4 connections now open)
+2015-06-08T13:20:39.274-0400 I NETWORK  [conn37] end connection 127.0.0.1:61560 (4 connections now open)
+2015-06-08T13:20:39.274-0400 I NETWORK  [conn39] end connection 127.0.0.1:61562 (4 connections now open)
+2015-06-08T13:20:39.274-0400 I NETWORK  [conn36] end connection 127.0.0.1:61558 (4 connections now open)
+2015-06-08T13:20:40.698-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61588 #41 (1 connection now open)
+2015-06-08T13:20:40.709-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61590 #42 (2 connections now open)
+2015-06-08T13:20:40.736-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61591 #43 (3 connections now open)
+2015-06-08T13:20:40.738-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61592 #44 (4 connections now open)
+2015-06-08T13:20:40.738-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61593 #45 (5 connections now open)
+2015-06-08T13:21:14.124-0400 I NETWORK  [conn45] end connection 127.0.0.1:61593 (4 connections now open)
+2015-06-08T13:21:14.125-0400 I NETWORK  [conn44] end connection 127.0.0.1:61592 (3 connections now open)
+2015-06-08T13:21:14.125-0400 I NETWORK  [conn42] end connection 127.0.0.1:61590 (2 connections now open)
+2015-06-08T13:21:14.125-0400 I NETWORK  [conn43] end connection 127.0.0.1:61591 (1 connection now open)
+2015-06-08T13:21:14.125-0400 I NETWORK  [conn41] end connection 127.0.0.1:61588 (0 connections now open)
+2015-06-08T13:21:15.365-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61596 #46 (1 connection now open)
+2015-06-08T13:21:15.375-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61598 #47 (2 connections now open)
+2015-06-08T13:21:15.387-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61599 #48 (3 connections now open)
+2015-06-08T13:21:15.396-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61600 #49 (4 connections now open)
+2015-06-08T13:21:15.406-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61601 #50 (5 connections now open)
+2015-06-08T13:23:34.877-0400 I NETWORK  [conn50] end connection 127.0.0.1:61601 (4 connections now open)
+2015-06-08T13:23:34.877-0400 I NETWORK  [conn49] end connection 127.0.0.1:61600 (4 connections now open)
+2015-06-08T13:23:34.877-0400 I NETWORK  [conn47] end connection 127.0.0.1:61598 (4 connections now open)
+2015-06-08T13:23:34.877-0400 I NETWORK  [conn48] end connection 127.0.0.1:61599 (4 connections now open)
+2015-06-08T13:23:34.877-0400 I NETWORK  [conn46] end connection 127.0.0.1:61596 (4 connections now open)
+2015-06-08T13:23:36.342-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61633 #51 (1 connection now open)
+2015-06-08T13:23:36.349-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61635 #52 (2 connections now open)
+2015-06-08T13:23:36.368-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61636 #53 (3 connections now open)
+2015-06-08T13:23:36.375-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61637 #54 (4 connections now open)
+2015-06-08T13:23:36.375-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61638 #55 (5 connections now open)
+2015-06-08T13:26:09.683-0400 I NETWORK  [conn55] end connection 127.0.0.1:61638 (4 connections now open)
+2015-06-08T13:26:09.683-0400 I NETWORK  [conn54] end connection 127.0.0.1:61637 (4 connections now open)
+2015-06-08T13:26:09.683-0400 I NETWORK  [conn52] end connection 127.0.0.1:61635 (4 connections now open)
+2015-06-08T13:26:09.683-0400 I NETWORK  [conn53] end connection 127.0.0.1:61636 (4 connections now open)
+2015-06-08T13:26:09.683-0400 I NETWORK  [conn51] end connection 127.0.0.1:61633 (4 connections now open)
+2015-06-08T13:26:11.201-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61668 #56 (1 connection now open)
+2015-06-08T13:26:11.212-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61670 #57 (2 connections now open)
+2015-06-08T13:26:11.229-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61671 #58 (3 connections now open)
+2015-06-08T13:26:11.231-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61672 #59 (4 connections now open)
+2015-06-08T13:26:11.233-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61673 #60 (5 connections now open)
+2015-06-08T13:36:14.548-0400 I NETWORK  [conn60] end connection 127.0.0.1:61673 (4 connections now open)
+2015-06-08T13:36:14.548-0400 I NETWORK  [conn59] end connection 127.0.0.1:61672 (4 connections now open)
+2015-06-08T13:36:14.551-0400 I NETWORK  [conn57] end connection 127.0.0.1:61670 (4 connections now open)
+2015-06-08T13:36:14.551-0400 I NETWORK  [conn58] end connection 127.0.0.1:61671 (4 connections now open)
+2015-06-08T13:36:14.551-0400 I NETWORK  [conn56] end connection 127.0.0.1:61668 (4 connections now open)
+2015-06-08T13:36:19.483-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61886 #61 (1 connection now open)
+2015-06-08T13:36:19.495-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61888 #62 (2 connections now open)
+2015-06-08T13:36:19.506-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61889 #63 (3 connections now open)
+2015-06-08T13:36:19.517-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61890 #64 (4 connections now open)
+2015-06-08T13:36:19.528-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61891 #65 (5 connections now open)
+2015-06-08T13:47:33.100-0400 I NETWORK  [conn65] end connection 127.0.0.1:61891 (4 connections now open)
+2015-06-08T13:47:33.100-0400 I NETWORK  [conn64] end connection 127.0.0.1:61890 (4 connections now open)
+2015-06-08T13:47:33.100-0400 I NETWORK  [conn63] end connection 127.0.0.1:61889 (4 connections now open)
+2015-06-08T13:47:33.100-0400 I NETWORK  [conn62] end connection 127.0.0.1:61888 (4 connections now open)
+2015-06-08T13:47:33.100-0400 I NETWORK  [conn61] end connection 127.0.0.1:61886 (4 connections now open)
+2015-06-08T13:47:39.924-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62048 #66 (1 connection now open)
+2015-06-08T13:47:39.932-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62050 #67 (2 connections now open)
+2015-06-08T13:47:39.942-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62051 #68 (3 connections now open)
+2015-06-08T13:47:39.950-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62052 #69 (4 connections now open)
+2015-06-08T13:47:39.950-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62053 #70 (5 connections now open)
+2015-06-08T13:58:20.530-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62137 #71 (6 connections now open)
+2015-06-08T16:46:11.701-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 29ms
+2015-06-08T21:41:29.141-0400 I STORAGE  [DataFileSync] flushing mmaps took 13422183ms  for 4 files
+2015-06-09T01:34:37.523-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 12ms
+2015-06-09T02:12:29.062-0400 I STORAGE  [DataFileSync] flushing mmaps took 2271665ms  for 4 files
+2015-06-09T17:02:58.274-0400 I NETWORK  [conn66] end connection 127.0.0.1:62048 (5 connections now open)
+2015-06-09T17:02:58.274-0400 I NETWORK  [conn68] end connection 127.0.0.1:62051 (5 connections now open)
+2015-06-09T17:02:58.274-0400 I NETWORK  [conn67] end connection 127.0.0.1:62050 (5 connections now open)
+2015-06-09T17:02:58.274-0400 I NETWORK  [conn70] end connection 127.0.0.1:62053 (5 connections now open)
+2015-06-09T17:02:58.274-0400 I NETWORK  [conn69] end connection 127.0.0.1:62052 (5 connections now open)
+2015-06-09T17:02:59.298-0400 I COMMAND  [conn71] command urbinsight.$cmd command: isMaster { isMaster: 1.0, forShell: 1.0 } keyUpdates:0 writeConflicts:0 numYields:0 reslen:178 locks:{} 102ms
+2015-06-09T17:02:59.509-0400 I NETWORK  [conn71] end connection 127.0.0.1:62137 (0 connections now open)
+2015-06-10T17:39:55.587-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-10T17:39:55.753-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-06-10T17:39:55.774-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-10T17:39:55.774-0400 I JOURNAL  [initandlisten] recover begin
+2015-06-10T17:39:55.776-0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-06-10T17:39:55.776-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-06-10T17:39:56.026-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-06-10T17:39:56.026-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-06-10T17:39:56.053-0400 I JOURNAL  [initandlisten] recover done
+2015-06-10T17:39:56.139-0400 I JOURNAL  [durability] Durability thread started
+2015-06-10T17:39:56.139-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] MongoDB starting : pid=3238 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] 
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-10T17:39:56.140-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-10T17:39:57.114-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-10T17:40:05.483-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53719 #1 (1 connection now open)
+2015-06-11T13:11:54.028-0400 I STORAGE  [DataFileSync] flushing mmaps took 2664088ms  for 4 files
+2015-06-11T14:10:25.953-0400 I NETWORK  [conn1] end connection 127.0.0.1:53719 (0 connections now open)

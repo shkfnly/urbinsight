@@ -18,8 +18,8 @@ angular.module('urbinsight')
 
     $rootScope.$on('loginStateChange', function(){
       $rootScope.showMenu = AuthFactory.loggedStatus(); 
-    })
-  })
+    });
+  });
 
 
 //   .directive('urbHeader', function() {

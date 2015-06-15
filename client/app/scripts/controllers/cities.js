@@ -88,6 +88,17 @@ angular.module('urbinsight')
         $scope.addLayerControl($scope.additonalLayers(city.layers));
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
+        $scope.map.on('draw:created', function(e) {
+          var type = e.layerType,
+              layer = e.layer;
+              console.log(type);
+              console.log(layer);
+        });
+
+        $scope.map.on('dragend', function(e) {
+          console.log(e);
+        });
+
         var drawControl = new L.Control.Draw({
           edit: {
           featureGroup: featureGroup
@@ -147,5 +158,38 @@ angular.module('urbinsight')
     Cities.fetchCity(cityName, $scope.renderMap);
     Cities.getNodes(cityName, $scope.renderNodes);
     // Cities.createCity(cityName);
+
+    $scope.testLayers = {
+      'Region'  : {
+      },
+
+      'City'    : {
+        'Environmental' :  [
+          { 'name': 'Solid Waste Generation',
+            'mapboxID': 'placeholder'},
+          { 'name': 'Mining Concessions',
+            'mapboxID': 'placeholder'}
+        ]  
+      },
+
+      'Community'  : {
+        'Infrastructure' : [
+          { 'name': 'Community Resources',
+            'mapboxID': 'placeholder'},
+          { 'name': 'Jose Galvez - Zoning',
+            'mapboxID': 'placeholder'}
+        ],
+        'Social' : [
+          { 'name': 'Hillside Census',
+            'mapboxID': 'placeholder'},
+          { 'name': 'Public Health',
+            'mapboxID': 'placeholder'}
+        ],
+        'Geographic': [
+          { 'name': 'Topological',
+            'mapboxID': 'placeholder'}
+        ]
+      }
+    };
 
   });

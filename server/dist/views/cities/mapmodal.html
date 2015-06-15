@@ -1,9 +1,1 @@
-<span id="plusclick" class="glyphicon glyphicon-plus"></span> <tabset justified="true" id="modalbar" class="shown"> <tab heading="Resource Flows"> <tabset justified="true" id="resourceType" type="pills"> <tab heading="ENERGY"> </tab> <tab heading="WATER"> <div ui-view="resourceTab"></div> <div id="line" width="300px" height="200px"></div> <div id="viz" width="200px" height="200px"></div> <div style="height: 50%; clear: both">This is archetype information</div> </tab> <tab heading="MATERIALS"></tab> <tab heading="FOOD"></tab> <tab heading="MOBILITY"></tab> </tabset> </tab> <tab heading="Citizen Surveys">I'm the Data</tab> <tab heading="Environmental"></tab> <tab heading="Socioeconomic"></tab> <tab heading="EcoProjects"></tab> <!--     <tab heading="Layer Info" active='true'>
-        <ul style="overflow-y: scroll; max-height: 250px !important;">
-        <li ng-repeat="layer in layerDefs" style="padding-left: 20px; padding-right: 20px; margin-top: 15px padding-bottom: 15px;">
-          <strong>{{layer.name}}</strong> {{layer.description}}
-        </li>
-        </ul>
-    </tab> --> <!-- <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
-      {{tab.content}}
-    </tab> --> </tabset>
+<span id="plusclick" class="glyphicon glyphicon-plus" ui-sref=".umis.energy"></span> <tabset justified="true" id="modalbar" class="shown"> <tab ui-sref=".umis.energy" ui-sref-active="active" heading="UMIS"> <div ui-view="umisTabs"></div> </tab> <tab ui-sref=".survey" ui-sref-active="active" heading="Surveys"> <div ui-view="survey"></div> </tab> <tab ui-sref=".assessments.air" ui-sref-active="active" heading="Assesments"> <div ui-view="assessments"></div> </tab> <tab ui-sref=".basedata" ui-sref-active="active" heading="Base Data"> <div ui-view="basedata"></div> </tab> </tabset>

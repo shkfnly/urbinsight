@@ -11,6 +11,7 @@ angular.module('urbinsight')
   .controller('BasedataCtrl', function ($scope, $stateParams, Cities) {
 
     Cities.fetchCity($stateParams.city_name, function(data){
+      console.log('this got called');
       $scope.layerDefs = data.layerDefinitions;
     })
     $scope.awesomeThings = [
