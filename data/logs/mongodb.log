@@ -1687,3 +1687,58 @@
 2015-06-10T17:40:05.483-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53719 #1 (1 connection now open)
 2015-06-11T13:11:54.028-0400 I STORAGE  [DataFileSync] flushing mmaps took 2664088ms  for 4 files
 2015-06-11T14:10:25.953-0400 I NETWORK  [conn1] end connection 127.0.0.1:53719 (0 connections now open)
+2015-06-15T15:25:52.065-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-15T15:25:52.430-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-06-15T15:25:52.488-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-15T15:25:52.488-0400 I JOURNAL  [initandlisten] recover begin
+2015-06-15T15:25:52.564-0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-06-15T15:25:52.564-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-06-15T15:25:53.258-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-06-15T15:25:53.258-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-06-15T15:25:53.289-0400 I JOURNAL  [initandlisten] recover done
+2015-06-15T15:25:53.360-0400 I JOURNAL  [durability] Durability thread started
+2015-06-15T15:25:53.361-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-15T15:25:53.362-0400 I CONTROL  [initandlisten] MongoDB starting : pid=12828 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-15T15:25:53.362-0400 I CONTROL  [initandlisten] 
+2015-06-15T15:25:53.362-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-06-15T15:25:53.363-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-15T15:25:53.363-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-15T15:25:53.363-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-15T15:25:53.363-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-15T15:25:53.363-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-15T15:25:55.726-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-15T15:26:55.779-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 58ms
+2015-06-15T15:54:19.903-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50763 #1 (1 connection now open)
+2015-06-15T15:54:20.053-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50765 #2 (2 connections now open)
+2015-06-15T15:54:20.056-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50766 #3 (3 connections now open)
+2015-06-15T15:54:20.057-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50767 #4 (4 connections now open)
+2015-06-15T15:54:20.057-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50768 #5 (5 connections now open)
+2015-06-15T15:54:37.565-0400 I QUERY    [conn2] query urbinsight.cities query: { name: "medellin" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:5 keyUpdates:0 writeConflicts:0 numYields:2 nreturned:1 reslen:3488 locks:{ Global: { acquireCount: { r: 3 } }, MMAPV1Journal: { acquireCount: { r: 3 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { R: 3 } } } 181ms
+2015-06-15T15:54:43.751-0400 I NETWORK  [conn1] end connection 127.0.0.1:50763 (4 connections now open)
+2015-06-15T15:54:43.752-0400 I NETWORK  [conn4] end connection 127.0.0.1:50767 (3 connections now open)
+2015-06-15T15:54:43.752-0400 I NETWORK  [conn5] end connection 127.0.0.1:50768 (2 connections now open)
+2015-06-15T15:54:43.753-0400 I NETWORK  [conn3] end connection 127.0.0.1:50766 (1 connection now open)
+2015-06-15T15:54:43.753-0400 I NETWORK  [conn2] end connection 127.0.0.1:50765 (0 connections now open)
+2015-06-16T02:58:22.409-0400 I STORAGE  [DataFileSync] flushing mmaps took 130792ms  for 4 files
+2015-06-17T09:50:23.434-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 400ms
+2015-06-18T12:09:53.631-0400 I STORAGE  [DataFileSync] flushing mmaps took 9777475ms  for 4 files
+2015-06-24T17:24:10.842-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-06-24T17:24:11.148-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-06-24T17:24:11.169-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-06-24T17:24:11.170-0400 I JOURNAL  [initandlisten] recover begin
+2015-06-24T17:24:11.246-0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-06-24T17:24:11.246-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-06-24T17:24:11.400-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-06-24T17:24:11.400-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-06-24T17:24:11.431-0400 I JOURNAL  [initandlisten] recover done
+2015-06-24T17:24:11.550-0400 I JOURNAL  [durability] Durability thread started
+2015-06-24T17:24:11.550-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-06-24T17:24:11.551-0400 I CONTROL  [initandlisten] MongoDB starting : pid=18570 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-06-24T17:24:11.551-0400 I CONTROL  [initandlisten] 
+2015-06-24T17:24:11.551-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-06-24T17:24:11.551-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-06-24T17:24:11.551-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-06-24T17:24:11.552-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-06-24T17:24:11.552-0400 I CONTROL  [initandlisten] allocator: system
+2015-06-24T17:24:11.552-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-06-24T17:24:12.831-0400 I NETWORK  [initandlisten] waiting for connections on port 27017

@@ -159,37 +159,37 @@ angular.module('urbinsight')
     Cities.getNodes(cityName, $scope.renderNodes);
     // Cities.createCity(cityName);
 
-    $scope.testLayers = {
-      'Region'  : {
-      },
+    // $scope.testLayers = {
+    //   'Region'  : {
+    //   },
 
-      'City'    : {
-        'Environmental' :  [
-          { 'name': 'Solid Waste Generation',
-            'mapboxID': 'placeholder'},
-          { 'name': 'Mining Concessions',
-            'mapboxID': 'placeholder'}
-        ]  
-      },
+    //   'City'    : {
+    //     'Environmental' :  [
+    //       { 'name': 'Solid Waste Generation',
+    //         'mapboxID': 'placeholder'},
+    //       { 'name': 'Mining Concessions',
+    //         'mapboxID': 'placeholder'}
+    //     ]  
+    //   },
 
-      'Community'  : {
-        'Infrastructure' : [
-          { 'name': 'Community Resources',
-            'mapboxID': 'placeholder'},
-          { 'name': 'Jose Galvez - Zoning',
-            'mapboxID': 'placeholder'}
-        ],
-        'Social' : [
-          { 'name': 'Hillside Census',
-            'mapboxID': 'placeholder'},
-          { 'name': 'Public Health',
-            'mapboxID': 'placeholder'}
-        ],
-        'Geographic': [
-          { 'name': 'Topological',
-            'mapboxID': 'placeholder'}
-        ]
-      }
-    };
+    //   'Community'  : {
+    //     'Infrastructure' : [
+    //       { 'name': 'Community Resources',
+    //         'mapboxID': 'placeholder'},
+    //       { 'name': 'Jose Galvez - Zoning',
+    //         'mapboxID': 'placeholder'}
+    //     ],
+    //     'Social' : [
+    //       { 'name': 'Hillside Census',
+    //         'mapboxID': 'placeholder'},
+    //       { 'name': 'Public Health',
+    //         'mapboxID': 'placeholder'}
+    //     ],
+    //     'Geographic': [
+    //       { 'name': 'Topological',
+    //         'mapboxID': 'placeholder'}
+    //     ]
+    //   }
+    // };
 
   });

@@ -21,7 +21,7 @@
     'ngTouch',
     'ui.bootstrap',
     'urbinsight.services',
-    'urbinsight.directives'
+    // 'urbinsight.directives'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
