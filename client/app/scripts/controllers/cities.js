@@ -77,11 +77,13 @@ angular.module('urbinsight')
       ).addTo($scope.map);
     };
 
+
+
     $scope.renderMap = function(city) {
       // Create Map
  
         $scope.city = city;
-        $scope.map = L.mapbox.map('cityMap', {zoomControl: true, minZoom: 3, drawControl: true})
+        $scope.map = L.mapbox.map('cityMap')
         .setView([city.lat, city.lon], 12);
         var featureGroup = L.featureGroup().addTo($scope.map);
         $scope.layerDefs = city.layerDefinitions;

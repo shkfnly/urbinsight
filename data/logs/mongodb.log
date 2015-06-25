@@ -1747,3 +1747,15 @@
 2015-06-24T17:28:59.826-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56725 #3 (3 connections now open)
 2015-06-24T17:28:59.836-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56726 #4 (4 connections now open)
 2015-06-24T17:28:59.846-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56727 #5 (5 connections now open)
+2015-06-25T02:57:15.726-0400 I NETWORK  [conn5] end connection 127.0.0.1:56727 (4 connections now open)
+2015-06-25T02:57:15.726-0400 I NETWORK  [conn2] end connection 127.0.0.1:56724 (4 connections now open)
+2015-06-25T02:57:15.726-0400 I NETWORK  [conn4] end connection 127.0.0.1:56726 (4 connections now open)
+2015-06-25T02:57:15.726-0400 I NETWORK  [conn3] end connection 127.0.0.1:56725 (4 connections now open)
+2015-06-25T02:57:15.726-0400 I NETWORK  [conn1] end connection 127.0.0.1:56722 (4 connections now open)
+2015-06-25T02:57:55.100-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59751 #6 (1 connection now open)
+2015-06-25T02:57:55.134-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59753 #7 (2 connections now open)
+2015-06-25T02:57:55.134-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59754 #8 (3 connections now open)
+2015-06-25T02:57:55.134-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59755 #9 (4 connections now open)
+2015-06-25T02:57:55.135-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59756 #10 (5 connections now open)
+2015-06-25T03:00:14.386-0400 I QUERY    [conn7] query urbinsight.cities query: { name: "vancouver" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:3 keyUpdates:0 writeConflicts:0 numYields:2 nreturned:1 reslen:381 locks:{ Global: { acquireCount: { r: 3 } }, MMAPV1Journal: { acquireCount: { r: 3 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { R: 3 } } } 356ms
+2015-06-25T03:27:24.044-0400 I COMMAND  [conn9] command urbinsight.$cmd command: insert { insert: "users", writeConcern: { w: 1 }, ordered: true, documents: [ { username: "heregoesnothing", email: "heregoesnothing@gmail.com", password: "$2a$10$vxoDY1j5oD.HLzIcq/XwAOtzHRyhwISS.HktmkpFdQIVPWG2u.1Wu", _id: ObjectId('558bad5ba847b28c7b6779f0'), __v: 0 } ] } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 43247 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { W: 1 } } } 163ms
