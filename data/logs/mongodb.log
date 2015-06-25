@@ -1742,3 +1742,8 @@
 2015-06-24T17:24:11.552-0400 I CONTROL  [initandlisten] allocator: system
 2015-06-24T17:24:11.552-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
 2015-06-24T17:24:12.831-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-06-24T17:28:59.796-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56722 #1 (1 connection now open)
+2015-06-24T17:28:59.817-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56724 #2 (2 connections now open)
+2015-06-24T17:28:59.826-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56725 #3 (3 connections now open)
+2015-06-24T17:28:59.836-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56726 #4 (4 connections now open)
+2015-06-24T17:28:59.846-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56727 #5 (5 connections now open)
