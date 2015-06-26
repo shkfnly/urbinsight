@@ -75,16 +75,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 #mapModal {
   height: 50px;
   width: 50px;
-  margin-top: 70vh;
+  margin-top: 85vh;
   position: absolute;
   background-color: white;
-
   border-radius: 10px;
   opacity: 0.9;
 }
 
 .hoveredon {
-  margin-top: 30vh !important;
+  margin-top: 45vh !important;
   height: 50vh !important;
   width: 80vw !important;
 }
@@ -98,8 +97,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 
 #cityMap {
-  min-height: 92vh;
+  min-height: 95.5vh;
   min-width: 100vw;
+  margin-top: 4.5vh;
+
 }
 #citiesNav a{
   color: #000;

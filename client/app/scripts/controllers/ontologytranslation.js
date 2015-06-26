@@ -1,11 +1,14 @@
-var oneWorkbook = {
+write getters and setters for this model.
+
+
+var Parcel = {
   'author': string,
   'date': date(CalendarYear),
   'neighborhoodID': int(dropdown),
-  'subsystem': string(dropdown),
+  // 'subsystem': string(dropdown),
   'timeHorizon': int(CalendarYear),
-  'landUse': string(dropdown),
   'describeParcel': {
+
     'parcelIndetification': { 'parcelType': string(dropdown),
                               'designatedLandUse': string(dropdown),
                               'actualLandUse': string(dropdown),
@@ -21,9 +24,7 @@ var oneWorkbook = {
                       'separateDwellingUnits': int,
                       'foundationType': string(dropdown),
                       'wallType': string,
-                      'roofType': string},
-    
-
+                      'roofType': string },
     'demographics': {
       'seniorsRetired': {
         'livingWorking': int,
@@ -55,194 +56,205 @@ var oneWorkbook = {
 
 
 
-
-  'estimateDemand': {
-    'landCoverPreCalculation': {
-      'percentageOfParcelWithRainwaterCatchment': percentage,
-      'surfaceTypes': {
-        'turf(green)': { 
-          'effectivePermeability': float <= 1(.50),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
+  'workbooks' : {
+    'water': {
+      'estimateDemand': {
+        'landCoverPreCalculation': {
+          'percentageOfParcelWithRainwaterCatchment': percentage,
+          'surfaceTypes': {
+            'turf(green)': { 
+              'effectivePermeability': float <= 1(.50),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'perennialGrassesAndShrubs': { 
+              'effectivePermeability': float <= 1(.75),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'treeCanopyOverVegetatedGround': { 
+              'effectivePermeability': float <= 1(.90),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'treeCanopyOverSealedSurfaces': { 
+              'effectivePermeability': float <= 1(.25),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'wetOrDryPondsAndInfiltrationTrenches': { 
+              'effectivePermeability': float <= 1(100),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'vegetatedRoof': { 
+              'effectivePermeability': float <= 1(.8),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'mainRoof': { 
+              'effectivePermeability': float <= 1(0),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'secondaryRoof': { 
+              'effectivePermeability': float <= 1(0),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'openDecking': { 
+              'effectivePermeability': float <= 1(.75),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'sealedDecking': { 
+              'effectivePermeability': float <= 1(0),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'gravel': { 
+              'effectivePermeability': float <= 1(.60),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'bareEarth': { 
+              'effectivePermeability': float <= 1(.40),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'sealedPavement': { 
+              'effectivePermeability': float <= 1(0),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'paversAndBricks': { 
+              'effectivePermeability': float <= 1(.5),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'permeableAsphalt': { 
+              'effectivePermeability': float <= 1(.7),
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'turf(green)': { 
+              'effectivePermeability': float <= 1,
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+            'turf(green)': { 
+              'effectivePermeability': float <= 1,
+              'portionParcel': float <= 1,
+              'averagePermeability': effectivePermeability * portionParcel
+            },
+          }     
         },
-        'perennialGrassesAndShrubs': { 
-          'effectivePermeability': float <= 1(.75),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'treeCanopyOverVegetatedGround': { 
-          'effectivePermeability': float <= 1(.90),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'treeCanopyOverSealedSurfaces': { 
-          'effectivePermeability': float <= 1(.25),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'wetOrDryPondsAndInfiltrationTrenches': { 
-          'effectivePermeability': float <= 1(100),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'vegetatedRoof': { 
-          'effectivePermeability': float <= 1(.8),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'mainRoof': { 
-          'effectivePermeability': float <= 1(0),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'secondaryRoof': { 
-          'effectivePermeability': float <= 1(0),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'openDecking': { 
-          'effectivePermeability': float <= 1(.75),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'sealedDecking': { 
-          'effectivePermeability': float <= 1(0),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'gravel': { 
-          'effectivePermeability': float <= 1(.60),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'bareEarth': { 
-          'effectivePermeability': float <= 1(.40),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'sealedPavement': { 
-          'effectivePermeability': float <= 1(0),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'paversAndBricks': { 
-          'effectivePermeability': float <= 1(.5),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'permeableAsphalt': { 
-          'effectivePermeability': float <= 1(.7),
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'turf(green)': { 
-          'effectivePermeability': float <= 1,
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-        'turf(green)': { 
-          'effectivePermeability': float <= 1,
-          'portionParcel': float <= 1,
-          'averagePermeability': effectivePermeability * portionParcel
-        },
-      }     
-    },
-    //Can create an iterative function that creates these values on the fly, replacing them with defaults.
-    'demandJunctions':{
-      'toilets': {
-        // use form to create actual amount of components
-        'activeToilets': {
-          'regUsedToiletA': {
-            'flushVolume': int
+        //Can create an iterative function that creates these values on the fly, replacing them with defaults.
+        'demandJunctions':{
+          'toilets': {
+            // use form to create actual amount of components
+            'activeToilets': {
+              'regUsedToiletA': {
+                'flushVolume': int
+              },
+              'regUsedToiletB': {
+                'flushVolume': int
+              },
+              'infreqUsedToiletA': {
+                'flushVolume': int
+              },
+              'infreqUsedToiletB': {
+                'flushVolume': int
+              }
+            },
+            'numberOfPersonUsingToilets': int,
+            'dailyPerPersonUsage': int
           },
-          'regUsedToiletB': {
-            'flushVolume': int
+          'hygiene': {
+            'activeShowers': {
+              'showerA': {
+                'flow': int(liters/min),
+              }
+            },
+            'typicalShowerDuration': int,
+            'weeklyShowersPerPerson': int,
+            'bathVolume': int,
+            'bathsPerWeek': int,
+            'minutesOfTapFlowPerVisit': int,
+            'ablutionDuration': int,
+            'numOccupantsUsingWashrooms': int,
+            'numVisitsToWashroomPerOccupant': int
+                    
           },
-          'infreqUsedToiletA': {
-            'flushVolume': int
+          'kitchen': {
+            'quantityOfMealsPerDay': int,
+            'waterPerMeal': int,
+            'dishwashingWaterPerLoad': int,
+            'loadsOfDishesPerDay': int
+            'waterConsumtionPerMeal': int
           },
-          'infreqUsedToiletB': {
-            'flushVolume': int
-          }
-        },
-        'numberOfPersonUsingToilets': int,
-        'dailyPerPersonUsage': int
+          'laundry': {
+            //why not just ask how many loads a week
+            'personsUsingLaundry': int,
+            'loadsPerWeekPerPerson': int,
+            'waterConsumptionPerLoad': int
+
+          },
+          'drinking': {
+            'personsDrinkingWaterOnSite': int,
+            'avgQuantityOfDrink': int,
+            'avgDrinksPerDayPerPerson': int
+          },
+          // should generate this from weather data dynamically
+          'landscape': {
+            'weather': {
+              'seasonTotal': int,
+              'daysInSeason': int
+            },
+            'irrigation': {
+              'hoursPerWeek': int,
+              'avgFlowRate': int
+            },
+            // This doesn't seem finalized
+            'potsPools': {
+              'litersPerLocation': int,
+              'numPlantsPools': int
+            }
+
+          },
+          'surfaceCleaning': {
+            'freqOfInteriorSurfaceCleaning': int,
+            'quantityOfWaterUsedForSC': int,
+            'numTimesVehicleCleaned': int,
+            'quantityOfWaterUsedForVC': int
+          },
+          'evaporativeCooling': {
+            'hoursPerDayDuringHotSeason': int,
+            'litersConsumedPerHour': int
+          },
+          'waterCustomers': {
+            'excessCapacityPerDay': int,
+            'percentageOfExcessDistributed': int,
+          },
+          'spa' {}
+        }
+
+       
+
+
       },
-      'hygiene': {
-        'activeShowers': {
-          'showerA': {
-            'flow': int(liters/min),
-          }
-        },
-        'typicalShowerDuration': int,
-        'weeklyShowersPerPerson': int,
-        'bathVolume': int,
-        'bathsPerWeek': int,
-        'minutesOfTapFlowPerVisit': int,
-        'ablutionDuration': int,
-        'numOccupantsUsingWashrooms': int,
-        'numVisitsToWashroomPerOccupant': int
-                
-      },
-      'kitchen': {
-        'quantityOfMealsPerDay': int,
-        'waterPerMeal': int,
-        'dishwashingWaterPerLoad': int,
-        'loadsOfDishesPerDay': int
-        'waterConsumtionPerMeal': int
-      },
-      'Laundry': {},
-      'Drinking': {},
-      'Landscape': {},
-      'Surface Cleaning': {},
-      'Evaporative Cooling': {},
-      'Water Customers': {},
-      'Spa' {}
-    }
+      'connectJunctions': {},
+      'setLimits': {},
+      'estimateBypassFlows': {},
+      'kpi': {
+        'efficiencyIndicators': {
 
-    UMIS.Water.totalConsumption.Kitchen = function(workbook){
-      var obj = workbook.estimateDemand
-                        .demandJunctions
-                        .kitchen;
-      return obj.quantityOfMealsPerDay * obj.waterPerMeal + obj.dishwashingWaterPerLoad * loadsOfDishesPerDay;
-    }
-    UMIS.Water.totalConsumption.hygiene = function(workbook){
-      var obj = workbook.estimateDemand
-                        .demandJunctions
-                        .hygiene
-      return  ( UMIS.Water.totalConsumption.hygiene.avgShowerConsumption(workbook) * obj.objDuration *
-                obj.weeklyobjsPerPerson )+
-              ( obj.bathVolume * obj.bathsPerWeek ) / 7 + 
-              ( obj.minutesOfTapFlowPerVisit * obj.ablutionDuration * 
-                obj.numOccupantsUsingWashrooms * obj.numVisitsToWashroomPerOccupant )
-              
-    }
-
-
-    UMIS.Water.totalConsumption.hygiene.avgShowerConsumption = function(workbook){
-      var totalFlow = 0;
-      var count = 0;
-      workbook.estimateDemand
-              .demandJunctions
-              .hygiene
-              .activeShowers.forEach(function(shower){
-                totalFlow += shower.flow;
-                count++;
-              });
-      return totalFlow/count;
-    }
-
-
-
-  },
-  'connectJunctions': {},
-  'setLimits': {},
-  'estimateBypassFlows': {},
-  'kpi': {
-    'efficiencyIndicators': {
+        }
+      }
 
     }
   }
+
 }
 
 kpi.efficiencyIndicators
@@ -338,6 +350,117 @@ UMIS.Mobility = {};
 
 
 
+UMIS.Water.totalConsumption.landscape = function(workbook){
+  var obj = UMIS.Water.totalConsumption.landscape;
+  return obj.unmediatedRainfall + obj.totalIrrigation + obj.totalPotsPools
+}
+
+
+UMIS.Water.totalConsumption.landscape.totalPotsPools = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .landscape
+                    .potsPools;
+  return ( obj.litersPerLocation + obj.numPlantsPools ) / 7;
+}
+
+UMIS.Water.totalConsumption.landscape.totalIrrigation = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .landscape
+                    .irrigation;
+  return ( obj.hoursPerWeek * obj.avgFlowRate ) * 60 / 7;
+}
+UMIS.Water.runOffLitersPerDay = function(workbook){
+  return UMIS.Water.unmediatedRainfall(workbook) * 
+          UMIS.Water.totalAveragePermeability;
+};
+
+UMIS.Water.infiltrationPerDay = function(workbook){
+  UMIS.Water.unmediatedRainfall(workbook) *
+    (1 - UMIS.Water.totalAveragePermeability);
+};
+
+UMIS.Water.totalConsumption.landscape.unmediatedRainfall = function(workbook, parcel){
+  var obj1 = workbook.estimateDemand
+                     .demandJunctions
+                     .landscape;
+  var obj2 = parcel.describeParcel;
+  return ( obj1.weather.seasonTotal / obj1.weather.seasonLength ) *
+            obj2.parcelIndetification.landArea * 
+              workbook.estimateDemand
+                      .landCoverPreCalculation
+                      .percentageOfParcelWithRainwaterCatchment;
+
+};
+UMIS.Water.totalConsumption.waterCustomers = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .waterCustomers
+  return ( obj.excessCapacityPerDay * obj.percentageOfExcessDistributed ) * 1000; 
+};
+
+UMIS.Water.totalConsumption.evaporativeCooling = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .evaporativeCooling;
+  return ( obj.hoursPerDayDuringHotSeason * obj.litersConsumedPerHour );
+};
+UMIS.Water.totalConsumption.surfaceCleaning = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .surfaceCleaning;
+  return ( obj.freqOfInteriorSurfaceCleaning * obj.quantityOfWaterUsedForSC +
+            obj.numTimesVehicleCleaned * obj.quantityOfWaterUsedForVC );
+};
+
+UMIS.Water.totalConsumption.drinking = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .drinking;
+  return ( obj.personsDrinkingWaterOnSite * obj.avgQuantityOfDrink *
+            obj.avgDrinksPerDayPerPerson );
+};
+
+UMIS.Water.totalConsumption.laundry = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .laundry;
+  return ( obj.personsUsingLaundry * obj.loadsPerWeekPerPerson *
+            obj.waterConsumptionPerLoad ) / 7;
+};
+
+UMIS.Water.totalConsumption.kitchen = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .kitchen;
+  return obj.quantityOfMealsPerDay * obj.waterPerMeal + obj.dishwashingWaterPerLoad * loadsOfDishesPerDay;
+};
+UMIS.Water.totalConsumption.hygiene = function(workbook){
+  var obj = workbook.estimateDemand
+                    .demandJunctions
+                    .hygiene
+  return  ( UMIS.Water.totalConsumption.hygiene.avgShowerConsumption(workbook) * obj.objDuration *
+            obj.weeklyobjsPerPerson )+
+          ( obj.bathVolume * obj.bathsPerWeek ) / 7 + 
+          ( obj.minutesOfTapFlowPerVisit * obj.ablutionDuration * 
+            obj.numOccupantsUsingWashrooms * obj.numVisitsToWashroomPerOccupant )
+          
+};
+
+
+UMIS.Water.totalConsumption.hygiene.avgShowerConsumption = function(workbook){
+  var totalFlow = 0;
+  var count = 0;
+  workbook.estimateDemand
+          .demandJunctions
+          .hygiene
+          .activeShowers.forEach(function(shower){
+            totalFlow += shower.flow;
+            count++;
+          });
+  return totalFlow/count;
+};
 
 
 UMIS.Water.averagePermeability = function(workbook, surfaceType){
@@ -352,7 +475,7 @@ UMIS.Water.averagePermeability = function(workbook, surfaceType){
                   .portionParcel;
 }
 
-UMIS.Water.totalPermeability = function(workbook){
+UMIS.Water.totalAveragePermeability = function(workbook){
   var total = 0;
   workbook.estimateDemand
           .landCoverPreCalculation
@@ -393,19 +516,19 @@ UMIS.Water.totalConsumption.toilets = function(workbook){
           .toilets
           .dailyPerPersonUsage
 }
-UMIS.Calculations.effectiveOccupancyByAge = function(workbook, ageType){
+UMIS.Calculations.effectiveOccupancyByAge = function(parcel, ageType){
   var total = 0
-  workbook.describeParcel.demographics.ageType.forEach(function(key, value){
+  parcel.describeParcel.demographics.ageType.forEach(function(key, value){
     total += value;
   });
   return total;
 }
 
-UMIS.Calculations.totalEffectiveOccupancy = function(workbook){
+UMIS.Calculations.totalEffectiveOccupancy = function(parcel){
   var total = 0
   var ageTypes = ['seniorsRetired', 'youngAndMiddleAge', 'kids'];
   ageTypes.forEach(function(ageType){
-    total += UMIS.effectiveOccupancyByAge(workbook, ageType);
+    total += UMIS.effectiveOccupancyByAge(parcel, ageType);
   })
   return total;
 }
