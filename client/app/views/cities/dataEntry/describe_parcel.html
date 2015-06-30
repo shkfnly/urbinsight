@@ -1,0 +1,127 @@
+<form novalidate class="parcel-form form-horizontal" id="parcelForm" margin->
+  <!-- Add form authencity token -->
+  <h3>Source Information</h3>
+  <div class="form-group">
+    <label class="col-md-2 control-label" for="umis-form-author">Author: </label>
+    <div class="col-md-3">
+      <input type="text" id="umis-form-author" ng-model="parcel.author" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label" for="umis-form-date">Date: </label>
+    <div class="col-md-3">
+      <input type="date" id="umis-form-date"ng-model="parcel.date" />
+    </div>
+  </div>
+  <!-- These would be populated for valid values -->
+  Neighborhood ID: <input type="number" min='1' max='100' ng-model="parcel.neighborhoodID" /><br />
+
+  Time Horizon: <select ng-model="parcel.timeHorizon">
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                </select>
+  <br />
+  <h3>Describe Parcel</h3>
+  Parcel Type: <select ng-model="parcel.describeParcel.parcelIdentification.parcelType">
+                  <option value="Generic Parcel">Generic Parcel</option>
+               </select><br />
+  Designated Land Use: <select ng-model="parcel.describeParcel.parcelIdentification.designatedLandUse">
+                    <option selected="selected" value=""></option>
+                    <option value="Open Space">Open Space</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Informal">Informal</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Institutional">Institutional</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Municipal">Municipal</option>           
+                  </select><br />           
+  Acutal Land Use: <select ng-model="parcel.describeParcel.parcelIdentification.actualLandUse">
+                    <option selected="selected" value=""></option>
+                    <option value="Open Space">Open Space</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Informal">Informal</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Institutional">Institutional</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Municipal">Municipal</option>           
+                  </select><br />
+  <h4>GeoCoordinates:</h4>
+    Latitude: <input type="text" ng-model="parcel.describeParcel.parcelIdentification.geoCoordinates[0]" /><br />
+    Longitude: <input type="text" ng-model="parcel.describeParcel.parcelIdentification.geoCoordinates[1]" /><br />
+
+  Parcel Area (m<sup>2</sup>): <input type="number" ng-model="parcel.describeParcel.parcelIdentification.landArea" /><br />
+  Building Footprint (m<sup>2</sup>): <input type="number" ng-model="parcel.describeParcel.parcelIdentification.buildingFootprint" /><br />
+
+  <h3>Building Data</h3>
+  Building Attachment Type: <select ng-model="parcel.describeParcel.buildingData.buildingAttachmentType">
+                              <option selected="selected" value=""></option>
+                              <option value="No Building">No Building</option>
+                              <option value="Single Family">Single Family</option>
+                              <option value="Multi Family (Low Rise)">Multi Family (4 stories and under)</option>
+                              <option value="Multi Family (High Rise)">Multi Family (5 stories and over)</option>
+                              <option value="Row House">Row House</option>
+                              <option value="Mobile">Mobile</option>
+                            </select><br />
+
+  Number of Occupied Dwelling Units: <select ng-model="parcel.describeParcel.buildingData.numberOccupiedDwellingUnits">
+                                      <option selected="selected" value=""></option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                    </select><br />
+  Building Age: <input  type="number" ng-model="parcel.describeParcel.buildingData.buildingAge" /><br />
+  Above Ground Stories: <input type="number" ng-model="parcel.describeParcel.buildingData.aboveGroundStories" /><br />
+  Below Ground Stories: <input type="number" ng-model="parcel.describeParcel.buildingData.belowGroundStories" /><br />
+  Interior Floor Space: <input type="number" ng-model="parcel.describeParcel.buildingData.interiorFloorSpace" /><br />
+  Separate Dwelling Units: <input type="number" ng-model="parcel.describeParcel.buildingData.separateDwellingUnits" /><br />
+  Foundation Type:  <select ng-model="parcel.describeParcel.buildingData.foundationType">
+                      <option value="" selected="selected"></option>
+                      <option value="Slab-on-Grade">Slab-on-Grade</option>
+                      <option value="Crawl Space">Crawl Space</option>
+                      <option value="Earth Floor">Earth Floor</option>
+                      <option value="Unconditioned Parking">Unconditioned Parking</option>
+                      <option value="Full Basement">Full Basement</option>
+                    </select><br />
+  Wall Type:  <select ng-model="parcel.describeParcel.buildingData.wallType">
+                <option value="" selected="selected"></option>
+                <option value="Solid Masonry">Solid Masonry</option>
+                <option value="Concrete">Concrete</option>
+                <option value="Hollow Core Brick">Hollow Core Brick</option>
+                <option value="Steel Frame">Steel Frame</option>
+                <option value="Wood Frame">Wood Frame</option>
+                <option value="Mud">Mud</option>
+                <option value="Glass">Glass</option>
+              </select><br />
+  Roof Type:  <select ng-model="parcel.describeParcel.buildingData.roofType">
+                <option value="" selected="selected"></option>
+                <option value="Flat">Flat</option>
+                <option value="Peaked Hard Surface">Peaked Hard Surface</option>
+                <option value="Thatch">Thatch</option>
+              </select><br />
+ 
+ <h3>Demographics</h3>
+  <h5>List number of residents</h5>
+  <h4>Seniors and Retired</h4>
+    Living and Working on Parcel:<input type="number" ng-model="parcel.describeParcel.demographics.seniors.livingWorking" min="0"/><br />
+    Living on Parcel, Working/Studying Offsite:<input type="number" ng-model="parcel.describeParcel.demographics.seniors.livingOffWorking" min="0"/><br />
+    Visiting Parcel for Full-time Work:<input type="number" ng-model="parcel.describeParcel.demographics.seniors.visitingWork" min="0"/><br />
+    Visiting Parcel for Part-Time Work:<input type="number" ng-model="parcel.describeParcel.demographics.seniors.visitingPartTimeWork" min="0"/><br />
+  <h4>Adults</h4>
+    Living and Working on Parcel:<input type="number" ng-model="parcel.describeParcel.demographics.adults.livingWorking" min="0"/><br />
+    Living on Parcel, Working/Studying Offsite:<input type="number" ng-model="parcel.describeParcel.demographics.adults.livingOffWorking" min="0"/><br />
+    Visiting Parcel for Full-time Work:<input type="number" ng-model="parcel.describeParcel.demographics.adults.visitingWork" min="0"/><br />
+    Visiting Parcel for Part-Time Work:<input type="number" ng-model="parcel.describeParcel.demographics.adults.visitingPartTimeWork" min="0"/><br />
+  <h4>Youth</h4>
+    Living and Working on Parcel:<input type="number" ng-model="parcel.describeParcel.demographics.youth.livingWorking" min="0"/><br />
+    Living on Parcel, Working/Studying Offsite:<input type="number" ng-model="parcel.describeParcel.demographics.youth.livingOffWorking" min="0"/><br />
+    Visiting Parcel for Full-time Work:<input type="number" ng-model="parcel.describeParcel.demographics.youth.visitingWork" min="0"/><br />
+    Visiting Parcel for Part-Time Work:<input type="number" ng-model="parcel.describeParcel.demographics.youth.visitingPartTimeWork" min="0"/><br />
+</form>

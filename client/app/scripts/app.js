@@ -211,6 +211,48 @@
           }
         }
       })
+      .state('app.city.pilot.dataEntry', {
+        views: {
+          'dataEntry': {
+            templateUrl: 'views/cities/dataEntry.html'
+          }
+        }
+      })
+      .state('app.city.pilot.dataEntry.umis', {
+        views: {
+          'umisForm': {
+            templateUrl: 'views/cities/dataEntry/umis_form.html'
+          }
+        }
+      })
+      .state('app.city.pilot.dataEntry.umis.addparcel', {
+        controller: 'umisDataEntryCtrl',
+        views: {
+          'describeparcel': {
+            templateUrl: 'views/cities/dataEntry/describe_parcel.html',
+          },
+          'workbookwater':{
+            templateUrl: 'views/cities/dataEntry/workbooks/water.html'
+          }
+        }
+      })
+      // .state('app.city.pilot.dataEntry.umis.addparcel.water', {
+      //   views: {
+      //     // 'describeparcel': {
+      //     //   templateUrl: 'views/cities/dataEntry/describe_parcel.html',
+      //     // },
+      //     'workbookwater':{
+      //       templateUrl: 'views/cities/dataEntry/workbooks/water.html'
+      //     }
+      //   }
+      // })
+      .state('app.city.pilot.dataEntry.qol', {
+        views: {
+          'qol': {
+            templateUrl: 'views/cities/dataEntry/qol_form.html'
+          }
+        }
+      })
 
 
       .state('app.dashboard', {

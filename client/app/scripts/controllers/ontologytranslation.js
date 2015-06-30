@@ -26,19 +26,19 @@ var Parcel = {
                       'wallType': string,
                       'roofType': string },
     'demographics': {
-      'seniorsRetired': {
+      'seniors': {
         'livingWorking': int,
         'livingOffWorking': int,
         'visitingWork': int,
         'visitingPartTimeWork': int
       },
-      'youngAndMiddleAge': {
+      'adults': {
         'livingWorking': int,
         'livingOffWorking': int,
         'visitingWork': int,
         'visitingPartTimeWork': int
       },
-      'kids': {
+      'youth': {
         'livingWorking': int,
         'livingOffWorking': int,
         'visitingWork': int,
@@ -137,16 +137,6 @@ var Parcel = {
               'portionParcel': float <= 1,
               'averagePermeability': effectivePermeability * portionParcel
             },
-            'turf(green)': { 
-              'effectivePermeability': float <= 1,
-              'portionParcel': float <= 1,
-              'averagePermeability': effectivePermeability * portionParcel
-            },
-            'turf(green)': { 
-              'effectivePermeability': float <= 1,
-              'portionParcel': float <= 1,
-              'averagePermeability': effectivePermeability * portionParcel
-            },
           }     
         },
         //Can create an iterative function that creates these values on the fly, replacing them with defaults.
@@ -167,7 +157,7 @@ var Parcel = {
                 'flushVolume': int
               }
             },
-            'numberOfPersonUsingToilets': int,
+            'numPersonUsingToilets': int,
             'dailyPerPersonUsage': int
           },
           'hygiene': {

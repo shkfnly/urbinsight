@@ -1762,3 +1762,8 @@
 2015-06-25T11:29:44.047-0400 I STORAGE  [DataFileSync] flushing mmaps took 26190178ms  for 4 files
 2015-06-25T18:12:09.142-0400 I STORAGE  [DataFileSync] flushing mmaps took 21062803ms  for 4 files
 2015-06-26T15:20:39.673-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 4ms
+2015-06-27T12:06:28.085-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 46ms
+2015-06-28T18:23:12.631-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 52175244ms
+2015-06-28T18:25:33.184-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 200ms
+2015-06-28T18:26:35.778-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 808ms
+2015-06-29T15:42:23.107-0400 I QUERY    [conn9] query urbinsight.cities query: { name: "vancouver" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:3 keyUpdates:0 writeConflicts:0 numYields:2 nreturned:1 reslen:381 locks:{ Global: { acquireCount: { r: 3 } }, MMAPV1Journal: { acquireCount: { r: 3 } }, Database: { acquireCount: { r: 3 } }, Collection: { acquireCount: { R: 3 } } } 432ms
