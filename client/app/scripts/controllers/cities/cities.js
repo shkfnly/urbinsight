@@ -9,14 +9,17 @@
  * IS SIMPLY MANIPULATING THEM INTO A TEMPLATE.
  */
 angular.module('urbinsight')
-  .controller('CitiesCtrl', function ($scope, $location, $http, Cities) {
+  .controller('CitiesCtrl', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
 
     var L;
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
+    var map;
 
+    $scope.map = map = MapFactory.getMap();
     $scope.gridLayers = [];
     $scope.gridControls = [];
+    
     var cityName = $location.path().split('/')[2];
     // $scope.$city = city = $scope.$cities[cityString];
     
@@ -79,25 +82,28 @@ angular.module('urbinsight')
 
 
 
-    $scope.renderMap = function(city) {
+    $scope.renderMap = function(city, map) {
       // Create Map
  
         $scope.city = city;
-        $scope.map = L.mapbox.map('cityMap')
-        .setView([city.lat, city.lon], 12);
-        var featureGroup = L.featureGroup().addTo($scope.map);
+        
+        map.setView([city.lat, city.lon], 12);
+        var featureGroup = L.featureGroup().addTo(map);
         $scope.layerDefs = city.layerDefinitions;
         $scope.addLayerControl($scope.additonalLayers(city.layers));
-        $scope.map.on('overlayadd', $scope.overlayAddCtrl);
-        $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
-        $scope.map.on('draw:created', function(e) {
+        map.on('overlayadd', $scope.overlayAddCtrl);
+        map.on('overlayremove', $scope.overlayRmvCtrl);
+        map.on('click', function(e) {
+          var parcel = ParcelFactory.getCurrentParcel();
+          parcel.describeParcel.parcelIdentification.geoCoordinates = [e.latlng.lat, e.latlng.lng];
+        })
+        map.on('draw:created', function(e) {
           var type = e.layerType,
               layer = e.layer;
-              console.log(type);
               console.log(layer);
         });
 
-        $scope.map.on('dragend', function(e) {
+        map.on('dragend', function(e) {
           console.log(e);
         });
 
@@ -105,8 +111,8 @@ angular.module('urbinsight')
           edit: {
           featureGroup: featureGroup
           }
-        }).addTo($scope.map);
-        $scope.map.on('draw:created', function(e) {
+        }).addTo(map);
+        map.on('draw:created', function(e) {
           featureGroup.addLayer(e.layer);
         });
     };
@@ -157,7 +163,7 @@ angular.module('urbinsight')
       });
     };
 
-    Cities.fetchCity(cityName, $scope.renderMap);
+    Cities.fetchCity(cityName, map, $scope.renderMap);
     Cities.getNodes(cityName, $scope.renderNodes);
     // Cities.createCity(cityName);
 

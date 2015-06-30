@@ -2,11 +2,11 @@
 /**
   * Database Interface
 */
-
 var mongoose = require('mongoose');
 // Schemas export models
 var UserModel = require('./schemas/user')
 var CityModel = require('./schemas/city')
+var ParcelModel = require('./schemas/parcel')
 
 // Connections
 var developmentDb = 'mongodb://localhost/urbinsight';
@@ -77,3 +77,4 @@ exports.nodeDB = nodeDB;
 exports.db = db;
 exports.users = UserModel;
 exports.cities = CityModel;
+exports.parcels = ParcelModel

@@ -221,12 +221,12 @@
       .state('app.city.pilot.dataEntry.umis', {
         views: {
           'umisForm': {
-            templateUrl: 'views/cities/dataEntry/umis_form.html'
+            templateUrl: 'views/cities/dataEntry/umis_form.html',
+            controller: 'umisDataEntryCtrl'
           }
         }
       })
       .state('app.city.pilot.dataEntry.umis.addparcel', {
-        controller: 'umisDataEntryCtrl',
         views: {
           'describeparcel': {
             templateUrl: 'views/cities/dataEntry/describe_parcel.html',

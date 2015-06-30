@@ -1,7 +1,7 @@
 <!-- cities have parcels -->
-<!-- <div class="container"> -->
   <div class="row" style="margin-left: 30px; margin-right: 30px;">  
     <div ui-view="describeparcel" style="height: 40vh; overflow-y: scroll;"></div>
+    <button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
     <tabset justified="true" id="workbooks" style="height: 40vh; overflow-y: scroll;">
       <tab heading="Water" ui-sref-active="active" style="flex: 0 0 auto">
         <div ui-view="workbookwater" style="height: 40vh; overflow-y: scroll; background-color: #F8F8F8;"></div>
@@ -20,49 +20,3 @@
       </tab>
     </tabset>
   </div>
-
-<!--   <div class="row" style="display: flex; flex-direction: column">
-    <tabset justified="true" id="workbooks" style="height: 40vh; overflow-y: scroll;">
-      <tab heading="Water" ui-sref-active="active" style="flex: 0 0 auto">
-        <div ui-view="workbookwater" style="height: 40vh; flex: 1 1 auto; overflow: scroll"></div>
-      </tab>
-      <tab heading="Energy">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Materials">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Water">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Water">
-        <div ui-view="workbookWater"></div>
-      </tab>
-    </tabset>
-  </div> -->
-<!-- 
-<h3>Please Select Workbooks to Add</h3>
-  <label><input type="checkbox" ng-model="parcel.workbooks.water.name" ng-true-value="'water'"> Water</label><br />
-  <label><input type="checkbox" ng-model="parcel.workbooks.energy.name" ng-true-value="'energy'"> Energy</label><br />
-  <label><input type="checkbox" ng-model="parcel.workbooks.food.name" ng-true-value="'food'"> Food</label><br />
-  <label><input type="checkbox" ng-model="parcel.workbooks.materials.name" ng-true-value="'materials'"> Materials</label><br />
-  <label><input type="checkbox" ng-model="parcel.workbooks.mobility.name" ng-true-value="'mobility'"> Mobility</label><br />
-
-<button ng-click="whyy.submit()" class="btn btn-success btn-block">Add Parcel</button> -->
-<!-- <div ng-repeat="workbook in parcel.workbooks">
- <p>Hi I'm a {{ workbook.name }}</p>
-</div> -->
-  <!-- CREATE INTERACTION TO DYNAMICALLY ADD WORKBOOKS
-
-  <!--   Subsystem: <select ng-model="parcel.subsystem"> 
-                <option value='' selected="selected"></option>
-                <option value="water">Water</option>
-                <option value="energy">Energy</option>
-                <option value="materials">Materials</option>
-                <option value="food">Food</option>
-                <option value="mobility">Mobility</option>
-
-               </select> -->
-<!-- <div class="row" style="height: 40vh; overflow-y: scroll; background-color: blue;"> -->
-
-<!-- </div> -->

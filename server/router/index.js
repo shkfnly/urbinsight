@@ -34,6 +34,9 @@ module.exports = function (app) {
   // City Route
   app.use('/data/city', require('./routes/cities'));
 
+  // Parcel Route
+  app.use('/data/city/:city_name/parcels', require('./routes/parcels.js'));
+
   //D3 Route
   app.use('/data/d3', require('./routes/d3'));
 }
