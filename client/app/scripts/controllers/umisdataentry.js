@@ -8,9 +8,25 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('umisDataEntryCtrl', function ($scope, $http, $stateParams, ParcelFactory) {
+  .controller('umisDataEntryCtrl', function ($scope, $http, $stateParams, ParcelFactory, MapFactory) {
+
     var parcel;
     $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
+
+
+
+    MapFactory.getMap().on('click', function(e) {
+      $scope.parcel.describeParcel.parcelIdentification.geoCoordinates[0] = e.latlng.lat;
+      $scope.parcel.describeParcel.parcelIdentification.geoCoordinates[1] = e.latlng.lng
+    });
+
+    MapFactory.renderParcels($stateParams.city_name);
+
+    $scope.submit = function () {
+      ParcelFactory.saveParcel($stateParams.city_name, function(param){});
+      MapFactory.renderParcels($stateParams.city_name);
+    }
+
   //   {
   //     author: '',
   //     date: '01/01/2015',
@@ -255,10 +271,6 @@ angular.module('urbinsight')
 
   //   }
 
-    $scope.submit = function () {
-      console.log(parcel);
-      ParcelFactory.saveParcel($stateParams.city_name, function(param){});
-    }
 
 
     $scope.awesomeThings = [

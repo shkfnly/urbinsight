@@ -93,18 +93,15 @@ angular.module('urbinsight')
         $scope.addLayerControl($scope.additonalLayers(city.layers));
         map.on('overlayadd', $scope.overlayAddCtrl);
         map.on('overlayremove', $scope.overlayRmvCtrl);
-        map.on('click', function(e) {
-          var parcel = ParcelFactory.getCurrentParcel();
-          parcel.describeParcel.parcelIdentification.geoCoordinates = [e.latlng.lat, e.latlng.lng];
-        })
+
         map.on('draw:created', function(e) {
           var type = e.layerType,
               layer = e.layer;
-              console.log(layer);
+              // console.log(layer);
         });
 
         map.on('dragend', function(e) {
-          console.log(e);
+          // console.log(e);
         });
 
         var drawControl = new L.Control.Draw({

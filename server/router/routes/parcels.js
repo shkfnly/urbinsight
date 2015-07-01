@@ -8,12 +8,15 @@ router.post('/', function (req, res, next) {
   var parcel = new Parcel(req.body.parcel)
   parcel.save(function (err, parcel){
     if (err) return console.error(err);
-    console.log(parcel);
     res.send(parcel);
   });
 })
 
 router.get('/', function (req, res, next){
+  Parcel.find({}, function (err, docs){
+    if (err) return console.error(err);
+    res.send(docs);
+  })
 
 })
 module.exports = router;

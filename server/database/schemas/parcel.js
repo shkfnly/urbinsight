@@ -5,6 +5,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// {
+//         "0": { type: Number, default: 0 },
+//         "1": { type: Number, default: 0 },
+//       }
 var parcelSchema = new Schema({
   "author": String,
   "date": { type: Date, default: Date.now },
@@ -14,10 +18,7 @@ var parcelSchema = new Schema({
       "parcelType": { type: String, default: "Generic Parcel" },
       "designatedLandUse": { type: String, default: "Residential" },
       "actualLandUse": { type: String, default: "Residential" },
-      "geoCoordinates": {
-        "0": { type: Number, default: 0 },
-        "1": { type: Number, default: 0 },
-      },
+      "geoCoordinates": { type: Array, default: [0, 0]},
       "landArea": { type: Number, default: 0 },
       "buildingFootprint": { type: Number, default: 0 }
     },
