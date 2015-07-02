@@ -104,13 +104,16 @@
         views: {
           'container@' : {
             templateUrl: 'views/cities/cityDefault.html',
-            controller: 'CitiesCtrl'
           }
         }
       })
       .state('app.city.pilot', {
         url: '/dashboard/:city_name',
         views: {
+          'cityMap': {
+            templateUrl: 'views/cities/testing.html',
+            controller: 'CitiesCtrl'
+          },
           'mapModal': {
             templateUrl: 'views/cities/mapmodal.html',
             controller: 'MapModalCtrl'
