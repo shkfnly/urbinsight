@@ -218,6 +218,14 @@
           }
         }
       })
+      .state('app.city.pilot.dataEntry.qol', {
+        views: {
+          'qol': {
+            templateUrl: 'views/cities/dataEntry/qol_form.html',
+            controller: 'qolCtrl'
+          }
+        }
+      })
       .state('app.city.pilot.dataEntry.umis', {
         views: {
           'umisForm': {
@@ -236,25 +244,6 @@
           }
         }
       })
-      // .state('app.city.pilot.dataEntry.umis.addparcel.water', {
-      //   views: {
-      //     // 'describeparcel': {
-      //     //   templateUrl: 'views/cities/dataEntry/describe_parcel.html',
-      //     // },
-      //     'workbookwater':{
-      //       templateUrl: 'views/cities/dataEntry/workbooks/water.html'
-      //     }
-      //   }
-      // })
-      .state('app.city.pilot.dataEntry.qol', {
-        views: {
-          'qol': {
-            templateUrl: 'views/cities/dataEntry/qol_form.html'
-          }
-        }
-      })
-
-
       .state('app.dashboard', {
         url: '/dashboard',
         views: {

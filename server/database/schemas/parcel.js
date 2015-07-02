@@ -13,6 +13,7 @@ var parcelSchema = new Schema({
   "author": String,
   "date": { type: Date, default: Date.now },
   "timeHorizon": Number,
+  "cityName": String,
   "describeParcel": {
     "parcelIdentification": {
       "parcelType": { type: String, default: "Generic Parcel" },

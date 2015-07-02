@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var UserModel = require('./schemas/user')
 var CityModel = require('./schemas/city')
 var ParcelModel = require('./schemas/parcel')
-
+var QOLModel = require('./schemas/qol_survey')
 // Connections
 var developmentDb = 'mongodb://localhost/urbinsight';
 var productionDb = ' mongodb://heroku_app34283988:j6vcu0oo4229gsd581rm7u2meo@ds043991.mongolab.com:43991/heroku_app34283988'
@@ -77,4 +77,5 @@ exports.nodeDB = nodeDB;
 exports.db = db;
 exports.users = UserModel;
 exports.cities = CityModel;
-exports.parcels = ParcelModel
+exports.parcels = ParcelModel;
+exports.qol = QOLModel;

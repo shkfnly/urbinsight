@@ -12,12 +12,12 @@ angular.module('urbinsight')
 
     var parcel;
     $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
-
+    $scope.parcel.cityName = $stateParams.city_name;
 
 
     MapFactory.getMap().on('click', function(e) {
       $scope.parcel.describeParcel.parcelIdentification.geoCoordinates[0] = e.latlng.lat;
-      $scope.parcel.describeParcel.parcelIdentification.geoCoordinates[1] = e.latlng.lng
+      $scope.parcel.describeParcel.parcelIdentification.geoCoordinates[1] = e.latlng.lng;
     });
 
     MapFactory.renderParcels($stateParams.city_name);

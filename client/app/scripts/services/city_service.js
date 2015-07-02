@@ -14,10 +14,10 @@ angular.module('urbinsight.services', [])
   L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
 
   return {
-    fetchCity: function(cityName, map, callback){
+    fetchCity: function(cityName, callback){
       var request = $http.get('/data/city/' + cityName);
       request.success(function(data, status){
-        return callback(data, map);
+        return callback(data);
       });
     },
 

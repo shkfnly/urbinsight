@@ -60,6 +60,7 @@ router.post('/:city_name', function (req, res, next) {
 
 router.get('/:city_name', function (req, res, next) {
   var cityName = req.params.city_name;
+  console.log('yeah')
   City.findOne({ name : cityName }, function (err, city_result){
     if (err) {
       console.log('There has been and error');

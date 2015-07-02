@@ -6,10 +6,20 @@ angular.module('urbinsight.services')
     L = $window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
     
-    var map = L.mapbox.map('cityMap')
+    var map;
 
     return {
       getMap: function(){
+        return map;
+      },
+
+      setMap: function(newMap){
+        map = newMap;
+        return map;
+      },
+
+      createMap: function(){
+        map = L.mapbox.map('cityMap')
         return map;
       },
 
