@@ -10,7 +10,6 @@
  */
 angular.module('urbinsight')
   .controller('CitiesCtrl', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
-    alert('yay')
     var L;
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';

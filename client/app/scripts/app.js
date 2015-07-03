@@ -111,7 +111,7 @@
         url: '/dashboard/:city_name',
         views: {
           'cityMap': {
-            templateUrl: 'views/cities/testing.html',
+            templateUrl: 'views/cities/cityMap.html',
             controller: 'CitiesCtrl'
           },
           'mapModal': {
@@ -241,6 +241,7 @@
         views: {
           'describeparcel': {
             templateUrl: 'views/cities/dataEntry/describe_parcel.html',
+            controller: 'describeParcelCtrl'
           },
           'workbookwater':{
             templateUrl: 'views/cities/dataEntry/workbooks/water.html'

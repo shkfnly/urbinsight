@@ -1,22 +1,23 @@
 <!-- cities have parcels -->
-  <div class="row" style="margin-left: 30px; margin-right: 30px;">  
-    <div ui-view="describeparcel" style="height: 40vh; overflow-y: scroll;"></div>
-    <button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
-    <tabset justified="true" id="workbooks" style="height: 40vh; overflow-y: scroll;">
-      <tab heading="Water" ui-sref-active="active" style="flex: 0 0 auto">
-        <div ui-view="workbookwater" style="height: 40vh; overflow-y: scroll; background-color: #F8F8F8;"></div>
-      </tab>
-      <tab heading="Energy">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Materials">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Water">
-        <div ui-view="workbookWater"></div>
-      </tab>
-      <tab heading="Water">
-        <div ui-view="workbookWater"></div>
-      </tab>
-    </tabset>
-  </div>
+<div class="row" style="margin-left: 30px; margin-right: 30px;">  
+  <div ui-view="describeparcel" style="height: 40vh; overflow-y: scroll;"></div>
+  <button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
+  <tabset justified="true" id="workbooks" style="height: 40vh; overflow-y: scroll;">
+    <tab heading="Water" ui-sref-active="active" style="flex: 0 0 auto">
+      <div ui-view="workbookwater" style="height: 40vh; overflow-y: scroll; background-color: #F8F8F8;"></div>
+    </tab>
+    <tab heading="Energy" disable="true">
+      hello
+      <div ui-view="workbookWater"></div>
+    </tab>
+    <tab heading="Materials" disable="true">
+      <div ui-view="workbookWater"></div>
+    </tab>
+    <tab heading="Food" disable="true">
+      <div ui-view="workbookWater"></div>
+    </tab>
+    <tab heading="Mobility" disable="true">
+      <div ui-view="workbookWater"></div>
+    </tab>
+  </tabset>
+</div>

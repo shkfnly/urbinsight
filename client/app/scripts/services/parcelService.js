@@ -10,6 +10,8 @@ angular.module('urbinsight.services')
       }
     };
 
+    var currentMarker;
+
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -26,6 +28,11 @@ angular.module('urbinsight.services')
         return currentParcel;
       },
 
+      setGeoCoordinates: function(latlngObject) {
+        currentParcel.describeParcel.parcelIdentification.geoCoordinates = [latlngObject.lat, latlngObject.lng];
+        return currentParcel;
+      },
+
       saveParcel: function(cityName, callback){
         var that = this;
         $http.post('/data/city/' + cityName + '/parcels/', {parcel: that.getCurrentParcel()}).
@@ -37,6 +44,15 @@ angular.module('urbinsight.services')
           error(function(data, status, headers, config) {
 
           });
+      },
+
+      setCurrentMarker: function(marker){
+        currentMarker = marker;
+        return currentMarker;
+      },
+
+      getCurrentMarker: function(){
+        return currentMarker;
       }
     };
   });
