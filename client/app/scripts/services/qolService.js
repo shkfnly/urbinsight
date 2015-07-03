@@ -4,6 +4,8 @@ angular.module('urbinsight.services')
   .factory('QOLFactory', function ($http) {
     var qolSurvey = {};
 
+    var currentMarker;
+
     return {
       getCurrentSurvey: function(){
         return qolSurvey;
@@ -43,6 +45,15 @@ angular.module('urbinsight.services')
           }).
           error(function(data, status, headers, config){
           });
+      },
+
+      setCurrentMarker: function(marker){
+        currentMarker = marker;
+        return currentMarker;
+      },
+
+      getCurrentMarker: function(){
+        return currentMarker;
       }
     };
   })

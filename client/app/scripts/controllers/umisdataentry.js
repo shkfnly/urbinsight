@@ -19,7 +19,7 @@ angular.module('urbinsight')
 
     $scope.submit = function () {
       ParcelFactory.saveParcel($stateParams.city_name, function(param){});
-      MapFactory.getMap().removeLayer(MapFactory.getCurrentMarker());
+      MapFactory.getMap().removeLayer(ParcelFactory.getCurrentMarker());
       MapFactory.renderParcels($stateParams.city_name);
     }
 

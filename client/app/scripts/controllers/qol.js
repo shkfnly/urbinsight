@@ -33,7 +33,7 @@ angular.module('urbinsight')
         }),
         draggable: true
       })
-      MapFactory.setCurrentMarker($scope.marker);
+      QOLFactory.setCurrentMarker($scope.marker);
       $scope.marker.addTo(MapFactory.getMap())
       $scope.marker.on('move', function (e) {
         $scope.parcel = QOLFactory.setGeoCoordinates(e.latlng);
@@ -45,13 +45,13 @@ angular.module('urbinsight')
     
 
     $scope.submit = function(){
+
       QOLFactory.saveCurrentSurvey($scope.cityName, function(){});
 
       // MapFactory.removeCurrentMarker();
       //       debugger
       console.log($scope.marker)
-      MapFactory.getMap().removeLayer($scope.marker);
-      debugger
+      MapFactory.getMap().removeLayer(QOLFactory.getCurrentMarker());
       MapFactory.renderSurveys($stateParams.city_name);
     }
 
