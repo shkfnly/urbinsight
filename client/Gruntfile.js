@@ -498,15 +498,15 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    'concat',
+    // 'concat',
     'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',
-    'uglify',
+    // 'uglify',
     'filerev',
-    'usemin',
-    'htmlmin'
+    // 'usemin',
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
