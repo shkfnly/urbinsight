@@ -11,4 +11,12 @@ router.post('/', function (req, res, next) {
   });
 })
 
+router.get('/', function (req, res, next){
+  QOL.find({}, function (err, surveys){
+    if (err) return console.error(err);
+    console.log(surveys);
+    res.send(surveys);
+  })
+})
+
 module.exports = router;

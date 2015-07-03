@@ -10,7 +10,7 @@ var Schema = mongoose.Schema;
 
 var qolSchema = new Schema({
   "cityName": String,
-  "geoCoordinates": {type: Array, default: [0, 0]},
+  "geoCoordinates": { type: Array, default: [0, 0]},
   "employment": String,
   "healthcare": String,
   "family": String,

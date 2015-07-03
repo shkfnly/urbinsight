@@ -10,8 +10,6 @@ angular.module('urbinsight.services')
       }
     };
 
-    var currentMarker;
-
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -33,6 +31,15 @@ angular.module('urbinsight.services')
         return currentParcel;
       },
 
+      fetchParcels: function(cityName, callback) {
+        $http.get('/data/city/' + cityName + '/parcels/').
+          success(function(data, status, headers, config){
+            callback(data)
+          }).
+          error(function(data, status, headers, config){
+          });
+      },
+
       saveParcel: function(cityName, callback){
         var that = this;
         $http.post('/data/city/' + cityName + '/parcels/', {parcel: that.getCurrentParcel()}).
@@ -44,15 +51,8 @@ angular.module('urbinsight.services')
           error(function(data, status, headers, config) {
 
           });
-      },
-
-      setCurrentMarker: function(marker){
-        currentMarker = marker;
-        return currentMarker;
-      },
-
-      getCurrentMarker: function(){
-        return currentMarker;
       }
+
+
     };
   });

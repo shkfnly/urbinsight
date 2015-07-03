@@ -1,10 +1,10 @@
 <!-- cities have parcels -->
 <div class="row" style="margin-left: 30px; margin-right: 30px;">  
-  <div ui-view="describeparcel" style="height: 40vh; overflow-y: scroll;"></div>
+  <div ui-view="describeparcel" ></div>
   <button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
-  <tabset justified="true" id="workbooks" style="height: 40vh; overflow-y: scroll;">
-    <tab heading="Water" ui-sref-active="active" style="flex: 0 0 auto">
-      <div ui-view="workbookwater" style="height: 40vh; overflow-y: scroll; background-color: #F8F8F8;"></div>
+  <tabset justified="true" id="workbooks" >
+    <tab heading="Water" ui-sref-active="active">
+      <div ui-view="workbookwater" style="background-color: #F8F8F8;"></div>
     </tab>
     <tab heading="Energy" disable="true">
       hello

@@ -2,8 +2,13 @@
     .control-label {
       text-align: left;
     }
+    h3 {
+      text-align: center;
+    }
 
 </style>
+
+<h3>Click on map to place marker at location</h3>
 
 <form novalidate class="parcel-form form-horizontal" id="surveyForm">
   
@@ -284,5 +289,5 @@
       </select>
     </div>
   </div>
-  <button ng-click="submit(cityName)" class="btn btn-success btn-block">Add Survey</button>
+  <button ng-click="submit()" class="btn btn-success btn-block">Add Survey</button>
 </form>

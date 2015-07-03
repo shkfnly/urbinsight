@@ -84,8 +84,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .hoveredon {
   margin-top: 45vh !important;
-  height: 80vh !important;
+  min-height: 80vh !important;
   width: 80vw !important;
+  overflow: auto;
 }
 
 #plusclick {
@@ -96,8 +97,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 #parcelForm {
-  height: 40vh;
-  overflow-y: scroll;
+
 }
 
 #cityMap {
