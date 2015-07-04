@@ -10,10 +10,9 @@ var ParcelModel = require('./schemas/parcel')
 var QOLModel = require('./schemas/qol_survey')
 // Connections
 var developmentDb = 'mongodb://localhost/urbinsight';
-var productionDb = ' mongodb://heroku_app34283988:j6vcu0oo4229gsd581rm7u2meo@ds043991.mongolab.com:43991/heroku_app34283988'
-var developmentGraphDb = 'http://localhost:7474'
-var productionGraphDb = 'http://app34283988:WhOYge9xK8B8QrmgFB7J@app34283988.sb02.stations.graphenedb.com:24789'
-var usedDb;
+var productionDb = process.env.MONGOLAB_URI;
+var developmentGraphDb = 'http://localhost:7474';
+var productionGraphDb = process.env.GRAPHENEDB_URL;
 var nodeDB;
 
 // If we're in development...
@@ -33,9 +32,8 @@ if (process.env.NODE_ENV === 'production') {
   // set our database to the production one
   usedDb = productionDb;
   nodeDB = require("seraph")(productionGraphDb);
-  console.log(nodeDB)
   // connect to it via mongoose
-  mongoose.connect(usedDb);
+  mongoose.connect(usedDb, {user: process.env.MONGODB_USER, pass: process.env.MONGODB_PASS});
 }
 
 // get an instance of our connection to our database

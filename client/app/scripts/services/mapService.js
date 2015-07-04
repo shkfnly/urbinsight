@@ -20,7 +20,7 @@ angular.module('urbinsight.services')
       },
 
       createMap: function(){
-        map = L.mapbox.map('cityMap')
+        map = L.mapbox.map('cityMap');
         return map;
       },
 
@@ -40,7 +40,7 @@ angular.module('urbinsight.services')
         map.on('click', function(e) {
           if(map.hasLayer(marker)){
             map.removeLayer(marker);
-          };
+          }
           $scope[objName] = factory.setGeoCoordinates(e.latlng);
            marker = L.marker(e.latlng, {
             icon: L.mapbox.marker.icon({
@@ -48,19 +48,18 @@ angular.module('urbinsight.services')
               'marker-color' : '#FFE11A'
             }),
             draggable: true
-          })
+          });
           that.setCurrentMarker(marker);
-          marker.addTo(map)
+          marker.addTo(map);
           marker.on('move', function (e) {
             $scope.parcel = factory.setGeoCoordinates(e.latlng);
-          })
+          });
         });
       },
 
       removeCurrentMarker: function(){
-        var map = this.getMap()
-        debugger;
-        map.removeLayer(this.getCurrentMarker())
+        var map = this.getMap();
+        map.removeLayer(this.getCurrentMarker());
       },
 
       renderParcels: function(cityName){
@@ -77,9 +76,9 @@ angular.module('urbinsight.services')
                 })
               }).addTo(that.getMap())
               // Turn the html below into a directive.
-                .bindPopup("<div><h2 style='text-align: center'>Demand Summary - Water</h2><p>Toilets: " + consumption.Toilets + "</p><br /><p>Hygiene: " + consumption.Hygiene + "</p><br /><p>Kitchen: " + consumption.Kitchen + "</p><br /><p>Laundry: " + consumption.Laundry + "</p><br /><p>Drinking: " + consumption.Drinking + "</p><br /><p>Surface Cleaning: " + consumption['Surface Cleaning'] + "</p><br /><p>Evaporative Cooling: " + consumption['Evaporative Cooling'] + "</p><br /><p>Water Customers: " + consumption['Water Customers'] + "</p><br /><p><strong><em>Date Added: " + datum.date + "</em></strong></p></div>");
+                .bindPopup('<div><h2 style="text-align: center">Demand Summary - Water</h2><p>Toilets: ' + consumption.Toilets + '</p><br /><p>Hygiene: ' + consumption.Hygiene + '</p><br /><p>Kitchen: ' + consumption.Kitchen + '</p><br /><p>Laundry: ' + consumption.Laundry + '</p><br /><p>Drinking: ' + consumption.Drinking + '</p><br /><p>Surface Cleaning: ' + consumption['Surface Cleaning'] + '</p><br /><p>Evaporative Cooling: ' + consumption['Evaporative Cooling'] + '</p><br /><p>Water Customers: ' + consumption['Water Customers'] + '</p><br /><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
             }
-          })
+          });
         }
         ParcelFactory.fetchParcels(cityName, drawing);
       },
@@ -95,11 +94,11 @@ angular.module('urbinsight.services')
                   'marker-color' : '#F8F8F8'
                 })
               }).addTo(that.getMap())
-                .bindPopup("<h2>Survey Responses</h2><div><p><strong><em>Date Added: " + datum.date + "</em></strong></p></div>")
+                .bindPopup('<h2>Survey Responses</h2><div><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
             }
-          })
+          });
         }
         QOLFactory.fetchSurveys(cityName, drawing);
       }
-    }
+    };
   });

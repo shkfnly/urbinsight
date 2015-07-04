@@ -16,21 +16,21 @@ angular.module('urbinsight.services', [])
   return {
     fetchCity: function(cityName, callback){
       var request = $http.get('/data/city/' + cityName);
-      request.success(function(data, status){
+      request.success(function (data){
         return callback(data);
       });
     },
 
     createCity: function(cityName){
       var request = $http.post('/data/city/' + cityName);
-      request.success(function(res, status){
+      request.success(function(){
         console.log('createcity ran in service');
       });
     },
 
     getNodes: function(cityName, callback){
       var request = $http.get('/data/label/' + cityName);
-      request.success(function (data, status){
+      request.success(function (data){
         return callback(data);
       });
     },

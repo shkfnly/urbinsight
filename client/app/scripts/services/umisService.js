@@ -2,7 +2,7 @@
 
 angular.module('urbinsight.services')
   .factory('UMISFactory', function () {
-    function countProperties(obj) {
+    var countProperties = function(obj) {
       var count = 0;
 
       for(var prop in obj) {
@@ -10,11 +10,10 @@ angular.module('urbinsight.services')
           ++count;
         }
       }
-
-      return count
+      return count;
     };
 
-    function customForEach(collection, callback){
+    var customForEach = function (collection, callback){
 
       if(Array.isArray(collection)){
         for(var i = 0; i < collection.length; i++){
@@ -26,7 +25,7 @@ angular.module('urbinsight.services')
           callback(collection[item], item, collection);
         }
       }
-    }
+    };
 
     var UMIS = {};
     UMIS.DEFAULTS = {};
@@ -176,7 +175,7 @@ angular.module('urbinsight.services')
       var obj = workbook.estimateDemand
                         .demandJunctions
                         .toilets
-                        .activeToilets
+                        .activeToilets;
       return countProperties(obj);
     };
 
@@ -198,7 +197,7 @@ angular.module('urbinsight.services')
     UMIS.Water.totalConsumption.toilets = function(workbook, parcel){
       return UMIS.Water.averageFlush(workbook) * UMIS.Calculations.totalEffectiveOccupancy(parcel) *
         workbook.estimateDemand.demandJunctions.toilets.dailyPerPersonUsage;
-    }
+    };
     UMIS.Calculations.effectiveOccupancyByAge = function(parcel, ageType){
       var total = 0;
       customForEach(parcel.describeParcel.demographics[ageType], function(value, key){
@@ -227,12 +226,12 @@ angular.module('urbinsight.services')
         result.Hygiene = UMIS.Water.totalConsumption.hygiene(workbook);
         result.Kitchen = UMIS.Water.totalConsumption.kitchen(workbook);
         result.Laundry = UMIS.Water.totalConsumption.laundry(workbook);
-        result.Drinking/ = UMIS.Water.totalConsumption.drinking(workbook);
+        result.Drinking = UMIS.Water.totalConsumption.drinking(workbook);
         // result['Landscape'] = UMIS.Water.totalConsumption.landscape(workbook, parcel);
         result['Surface Cleaning'] = UMIS.Water.totalConsumption.surfaceCleaning(workbook);
         result['Evaporative Cooling'] = UMIS.Water.totalConsumption.evaporativeCooling(workbook);
         result['Water Customers'] = UMIS.Water.totalConsumption.waterCustomers(workbook);
         return result;
-      };
+      }
     };
-  })
+  });

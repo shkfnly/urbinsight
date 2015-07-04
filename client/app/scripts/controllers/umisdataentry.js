@@ -13,15 +13,15 @@ angular.module('urbinsight')
     var parcel;
 
     $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
-    $scope.parcel.cityName = $stateParams.city_name;
+    $scope.parcel.cityName = $stateParams.cityName;
 
-    MapFactory.renderParcels($stateParams.city_name);
+    MapFactory.renderParcels($stateParams.cityName);
 
     $scope.submit = function () {
-      ParcelFactory.saveParcel($stateParams.city_name, function(param){});
+      ParcelFactory.saveParcel($stateParams.cityName, function(){});
       MapFactory.getMap().removeLayer(ParcelFactory.getCurrentMarker());
-      MapFactory.renderParcels($stateParams.city_name);
-    }
+      MapFactory.renderParcels($stateParams.cityName);
+    };
 
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

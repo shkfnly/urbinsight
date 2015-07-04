@@ -108,7 +108,7 @@
         }
       })
       .state('app.city.pilot', {
-        url: '/dashboard/:city_name',
+        url: '/dashboard/:cityName',
         views: {
           'cityMap': {
             templateUrl: 'views/cities/cityMap.html',
@@ -284,7 +284,8 @@
     }
   });
 
-  $rootScope.$on('$routeChangeSuccess', function(event, nextRoute, currentRoute) {
+// event, nextRoute, currentRoute
+  $rootScope.$on('$routeChangeSuccess', function() {
     $rootScope.showMenu = AuthFactory.loggedStatus();
     $rootScope.role = AuthFactory.userRole;
 

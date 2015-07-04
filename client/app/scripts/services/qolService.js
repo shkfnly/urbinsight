@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('urbinsight.services')
   .factory('QOLFactory', function ($http) {
@@ -29,21 +29,21 @@ angular.module('urbinsight.services')
       saveCurrentSurvey: function(cityName, callback){
         var that = this;
         $http.post('/data/city/' + cityName + '/surveys/', {qol: that.getCurrentSurvey()}).
-          success(function(data, status, headers, config) {
+          success(function(data) {
             that.resetCurrentSurvey();
             callback(data);
           }).
-          error(function(data, status, headers, config ) {
+          error(function() {
 
-          })
+          });
       },
 
       fetchSurveys: function(cityName, callback) {
         $http.get('/data/city/' + cityName + '/surveys/').
-          success(function(data, status, headers, config){
-            callback(data)
+          success(function(data){
+            callback(data);
           }).
-          error(function(data, status, headers, config){
+          error(function(){
           });
       },
 
@@ -56,4 +56,4 @@ angular.module('urbinsight.services')
         return currentMarker;
       }
     };
-  })
+  });
