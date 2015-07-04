@@ -1,0 +1,18 @@
+<div style="height: 300px; width: 300px">
+  <ol>
+    <li ng-repeat="(scale, categories) in testLayers">
+      {{scale}}
+      <ol> 
+        <li ng-repeat="(category, layers) in categories">
+          {{category}}
+            <ol>
+              <li ng-repeat="layer in layers">
+                {{layer.name}}
+                {{layer.id}}
+              </li>
+            </ol>
+        </li>
+      </ol>
+    </li>  
+  </ol>
+</div>
