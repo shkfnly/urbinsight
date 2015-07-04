@@ -1,5 +1,4 @@
 // modules ===========================================
-var newrelic = require('newrelic');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,7 +10,7 @@ var methodOverride = require('method-override');
 var app = express();
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+//app.use(favicon(__dirname + '/dist/public/favicon.ico'));
 app.use(logger('dev'));
 
 // parse application/vnd.api+json as json ( Might not need to include)
@@ -73,9 +72,10 @@ if (app.get('env') === 'development') {
 if (app.get('env') === 'production') {
   require('newrelic');
   // changes it to use the optimized version for production
-  app.use(express.static(path.join(__dirname, '/dist')));
+  app.use(express.static(path.join(__dirname, '/dist/')));
   // production error handler
   // no stacktraces leaked to user
+  console.log('were in production')
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {

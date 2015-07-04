@@ -359,15 +359,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-    // react: {
-    //   files: {
-    //     expand: true,
-    //     cwd: '<%= yeoman.app %>/jsx',
-    //     src: ['**/*.jsx'],
-    //     dest: '.tmp/jsx',
-    //     ext: '.js'
-    //   }
-    // },
 
     // ng-annotate tries to make the code safe for minification automatically
     // by using the Angular long form for dependency injection.
@@ -498,15 +489,15 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    // 'concat',
+    'concat',
     'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',
-    // 'uglify',
+    'uglify',
     'filerev',
-    // 'usemin',
-    // 'htmlmin'
+    'usemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
@@ -516,6 +507,4 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy', ['buildcontrol']);
-
-
 };
