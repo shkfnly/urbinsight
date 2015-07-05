@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('ProcessCtrl', function ($scope) {
+  .controller('ProcessCtrl', ['$scope', function ($scope) {
 
     $scope.addMap = function(){
       var L = window.L;
@@ -25,4 +25,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

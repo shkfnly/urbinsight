@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('SignupCtrl', function ($scope, $location, $rootScope, $http, AuthFactory) {
+  .controller('SignupCtrl', ['$scope', '$location', '$rootScope', '$http', 'AuthFactory', function ($scope, $location, $rootScope, $http, AuthFactory) {
     
     // Create local references
     var user, signup;
@@ -58,4 +58,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

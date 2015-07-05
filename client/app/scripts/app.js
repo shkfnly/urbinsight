@@ -23,7 +23,7 @@
     'urbinsight.services'
   ]);
 
-  app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+  app.config(function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/#');
     // $httpProvider.interceptors.push('TokenIntercept');
@@ -210,6 +210,7 @@
         views: {
           'basedata': {
             templateUrl: 'views/cities/basedata.html',
+            controller: 'BasedataCtrl'
           }
         }
       })
@@ -265,7 +266,7 @@
           }
         }
       });
-  })
+  });
 
 angular.module('urbinsight.services', []);
 

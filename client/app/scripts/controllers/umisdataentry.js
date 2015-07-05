@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('umisDataEntryCtrl', function ($scope, $http, $stateParams, ParcelFactory, MapFactory) {
+  .controller('umisDataEntryCtrl', ['$scope', '$http', '$stateParams', 'ParcelFactory', 'MapFactory', function ($scope, $http, $stateParams, ParcelFactory, MapFactory) {
 
     var parcel;
 
@@ -28,4 +28,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

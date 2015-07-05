@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('umisResourceCtrl', function ($scope, $stateParams) {
+  .controller('umisResourceCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
 
         $scope.renderLine = function(data){
           var margin = {top: 20, right: 80, bottom: 30, left: 50},
@@ -176,4 +176,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

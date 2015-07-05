@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('LoginCtrl', function ($scope, $window, $rootScope, $location, UserAuthFactory, AuthFactory) {
+  .controller('LoginCtrl', ['$scope','$window','$rootScope','$location','UserAuthFactory','AuthFactory', function ($scope, $window, $rootScope, $location, UserAuthFactory, AuthFactory) {
       // Create local references
     var user, login;
 
@@ -44,4 +44,4 @@ angular.module('urbinsight')
       }
     };
 
-  });
+  }]);

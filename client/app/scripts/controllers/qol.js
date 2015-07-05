@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('qolCtrl', function ($scope, $http, $stateParams, MapFactory, QOLFactory) {
+  .controller('qolCtrl', ['$scope', '$http', '$stateParams', 'MapFactory', 'QOLFactory', function ($scope, $http, $stateParams, MapFactory, QOLFactory) {
 
     var L = window.L;
     var survey;
@@ -61,4 +61,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

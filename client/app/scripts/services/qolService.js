@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('QOLFactory', [function ($http) {
+  .factory('QOLFactory', ['$http', function ($http) {
     var qolSurvey = {};
 
     var currentMarker;

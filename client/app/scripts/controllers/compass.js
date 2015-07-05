@@ -8,10 +8,10 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('CompassCtrl', function ($scope) {
+  .controller('CompassCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

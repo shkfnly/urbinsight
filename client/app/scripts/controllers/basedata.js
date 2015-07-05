@@ -8,10 +8,9 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('BasedataCtrl', function ($scope, $stateParams, Cities) {
+  .controller('BasedataCtrl', ['$scope', '$stateParams', 'Cities', function ($scope, $stateParams, Cities) {
 
     Cities.fetchCity($stateParams.cityName, function(data){
-      console.log('this got called');
       $scope.layerDefs = data.layerDefinitions;
     });
     $scope.awesomeThings = [
@@ -19,4 +18,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

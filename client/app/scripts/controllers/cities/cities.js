@@ -5,11 +5,10 @@
  * @name urbinsight.controller:CitiesCtrl
  * @description
  * Controller of the individual Cities
- * THIS NEEDS TO BE REFACTORED SO THAT THE REQUESTS FOR DATA ARE COMING FROM A FACTORY AND THIS
- * IS SIMPLY MANIPULATING THEM INTO A TEMPLATE.
+
  */
 angular.module('urbinsight')
-  .controller('CitiesCtrl', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
+  .controller('CitiesCtrl', ['$scope', '$location', '$http', 'Cities', 'ParcelFactory', 'MapFactory', '$stateParams', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
     var L;
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -159,38 +158,4 @@ angular.module('urbinsight')
     Cities.fetchCity(cityName, $scope.renderMap);
     Cities.getNodes(cityName, $scope.renderNodes);
     // Cities.createCity(cityName);
-
-    // $scope.testLayers = {
-    //   'Region'  : {
-    //   },
-
-    //   'City'    : {
-    //     'Environmental' :  [
-    //       { 'name': 'Solid Waste Generation',
-    //         'mapboxID': 'placeholder'},
-    //       { 'name': 'Mining Concessions',
-    //         'mapboxID': 'placeholder'}
-    //     ]  
-    //   },
-
-    //   'Community'  : {
-    //     'Infrastructure' : [
-    //       { 'name': 'Community Resources',
-    //         'mapboxID': 'placeholder'},
-    //       { 'name': 'Jose Galvez - Zoning',
-    //         'mapboxID': 'placeholder'}
-    //     ],
-    //     'Social' : [
-    //       { 'name': 'Hillside Census',
-    //         'mapboxID': 'placeholder'},
-    //       { 'name': 'Public Health',
-    //         'mapboxID': 'placeholder'}
-    //     ],
-    //     'Geographic': [
-    //       { 'name': 'Topological',
-    //         'mapboxID': 'placeholder'}
-    //     ]
-    //   }
-    // };
-
-  });
+  }]);

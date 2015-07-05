@@ -8,7 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('urbinsight')
-  .controller('ResourceTabCtrl', function ($scope) {
+  .controller('ResourceTabCtrl', ['$scope', function ($scope) {
         
         $scope.renderLine = function(data){
           var margin = {top: 20, right: 80, bottom: 30, left: 50},
@@ -176,4 +176,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('describeParcelCtrl', function ($scope, ParcelFactory, MapFactory) {
+  .controller('describeParcelCtrl', ['$scope', 'ParcelFactory', 'MapFactory', function ($scope, ParcelFactory, MapFactory) {
     var L = window.L;
     var parcel;
     $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
@@ -36,4 +36,4 @@ angular.module('urbinsight')
         $scope.parcel = ParcelFactory.setGeoCoordinates(e.latlng);
       });
     });
-  });
+  }]);

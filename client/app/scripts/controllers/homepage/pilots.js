@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('PilotsCtrl', function ($scope) {
+  .controller('PilotsCtrl', ['$scope', function ($scope) {
     $scope.imgLoader = function() {
       window.$(document).ready(function(){
     window.$('#medellin').hover(function(){
@@ -43,4 +43,4 @@ angular.module('urbinsight')
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

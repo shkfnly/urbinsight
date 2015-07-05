@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('DashboardCtrl', function ($scope, $location, $stateParams) {
+  .controller('DashboardCtrl', ['$scope', '$location', '$stateParams', function ($scope, $location, $stateParams) {
     $scope.addMap = function(){
     var L = window.L;
       L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -18,4 +18,4 @@ angular.module('urbinsight')
 
     $scope.addMap();
     $scope.$stateParams = $stateParams;
-  });
+  }]);

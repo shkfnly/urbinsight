@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('ParcelFactory', [function ($http) {
+  .factory('ParcelFactory', ['$http', function ($http) {
     var currentParcel = {
       describeParcel : {
         parcelIdentification: {
