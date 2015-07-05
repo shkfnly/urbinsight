@@ -20,14 +20,13 @@
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'urbinsight.services',
-    // 'urbinsight.directives'
+    'urbinsight.services'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/#');
-    $httpProvider.interceptors.push('TokenIntercept');
+    // $httpProvider.interceptors.push('TokenIntercept');
     // Setup the states
     $stateProvider
       .state('app', {
@@ -268,29 +267,32 @@
       });
   })
 
-.run(function($rootScope, $window, $location, AuthFactory) {
-  AuthFactory.check();
+angular.module('urbinsight.services', []);
 
-  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
-    console.log('nextRoute:' + nextRoute);
-    console.log('currentRoute:' + currentRoute);
-    console.log('nextRoute.access:' + nextRoute.access);
-    console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin);
-    if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
-      $location.path('/login');
-    } else {
-      if (!AuthFactory.user) { AuthFactory.user = $window.sessionStorage.user;}
-      if (!AuthFactory.userRole) { AuthFactory.userRole = $window.sessionStorage.userRole;}
-    }
-  });
+// app.run(function($rootScope, $window, $location, AuthFactory) {
+//   AuthFactory.check();
 
-// event, nextRoute, currentRoute
-  $rootScope.$on('$routeChangeSuccess', function() {
-    $rootScope.showMenu = AuthFactory.loggedStatus();
-    $rootScope.role = AuthFactory.userRole;
+//   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+//     console.log('nextRoute:' + nextRoute);
+//     console.log('currentRoute:' + currentRoute);
+//     console.log('nextRoute.access:' + nextRoute.access);
+//     console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin);
+//     if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
+//       $location.path('/login');
+//     } else {
+//       if (!AuthFactory.user) { AuthFactory.user = $window.sessionStorage.user;}
+//       if (!AuthFactory.userRole) { AuthFactory.userRole = $window.sessionStorage.userRole;}
+//     }
+//   });
 
-    if (AuthFactory.isLogged === true && $location.path() === '/login') {
-      $location.path('/');
-    }
-  });
-});
+// // event, nextRoute, currentRoute
+//   $rootScope.$on('$routeChangeSuccess', function() {
+//     $rootScope.showMenu = AuthFactory.loggedStatus();
+//     $rootScope.role = AuthFactory.userRole;
+
+//     if (AuthFactory.isLogged === true && $location.path() === '/login') {
+//       $location.path('/');
+//     }
+//   })
+// })
+

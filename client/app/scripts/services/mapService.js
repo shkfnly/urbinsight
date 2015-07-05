@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('MapFactory', function ($http, $window, UMISFactory, ParcelFactory, QOLFactory) {
+  .factory('MapFactory', ['$http', '$window', 'UMISFactory', 'ParcelFactory', 'QOLFactory', function ($http, $window, UMISFactory, ParcelFactory, QOLFactory) {
     var L;
     L = $window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -101,4 +101,4 @@ angular.module('urbinsight.services')
         QOLFactory.fetchSurveys(cityName, drawing);
       }
     };
-  });
+  }]);

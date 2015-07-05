@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('QOLFactory', function ($http) {
+  .factory('QOLFactory', [function ($http) {
     var qolSurvey = {};
 
     var currentMarker;
@@ -56,4 +56,4 @@ angular.module('urbinsight.services')
         return currentMarker;
       }
     };
-  });
+  }]);

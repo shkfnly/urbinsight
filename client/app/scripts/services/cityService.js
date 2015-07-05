@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('urbinsight.services', [])
- .factory('Cities', function($http) {
+angular.module('urbinsight.services')
+ .factory('Cities', ['$http', function($http) {
   var colors = {
     'source': '#9c89cc',
     'upstream' : '#7ec9b1',
@@ -40,4 +40,4 @@ angular.module('urbinsight.services', [])
     }
 
   };
- });
+ }]);

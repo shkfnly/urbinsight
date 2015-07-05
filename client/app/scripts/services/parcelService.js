@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('ParcelFactory', function ($http) {
+  .factory('ParcelFactory', [function ($http) {
     var currentParcel = {
       describeParcel : {
         parcelIdentification: {
@@ -64,4 +64,4 @@ angular.module('urbinsight.services')
         return currentMarker;
       }
     };
-  });
+  }]);

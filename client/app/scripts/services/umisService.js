@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('UMISFactory', function () {
+  .factory('UMISFactory', [function () {
     var countProperties = function(obj) {
       var count = 0;
 
@@ -234,4 +234,4 @@ angular.module('urbinsight.services')
         return result;
       }
     };
-  });
+  }]);
