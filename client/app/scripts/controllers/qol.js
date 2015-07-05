@@ -19,7 +19,7 @@ angular.module('urbinsight')
     var marker;
     $scope.marker = marker;
 
-    console.log($scope.marker);
+    // console.log($scope.marker);
 
     // MapFactory.markerClickControl('survey', QOLFactory, $scope);
     MapFactory.getMap().on('click', function(e) {
@@ -51,7 +51,7 @@ angular.module('urbinsight')
 
       // MapFactory.removeCurrentMarker();
       //       debugger
-      console.log($scope.marker);
+      // console.log($scope.marker);
       MapFactory.getMap().removeLayer(QOLFactory.getCurrentMarker());
       MapFactory.renderSurveys($stateParams.cityName);
     };
