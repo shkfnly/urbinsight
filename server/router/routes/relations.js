@@ -38,8 +38,6 @@ var addRelations = function(node_id, res){
         })
       },
       function(err){
-        console.log('Final Relations');
-        console.log(relations);
         res.send(relations);
       }
     )
