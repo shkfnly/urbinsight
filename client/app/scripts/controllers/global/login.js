@@ -21,7 +21,7 @@ angular.module('urbinsight')
     login.submit = function () {
       var username = user.username,
         password = user.password;
-
+// Need to use typeof  
       if (username !== undefined && password !== undefined) {
         UserAuthFactory.login(username, password).success(function(data) {
           

@@ -37,6 +37,10 @@ angular.module('urbinsight.services')
 
     UMIS.Water.totalConsumption = {};
 
+    // var landscapce = function(workbook) {
+    //   return workbook.estimateDemand.demandJunctions.landscape
+    // }
+
     UMIS.Water.totalConsumption.landscape = function(workbook, parcel){
       var functions = UMIS.Water.totalConsumption.landscape;
       return functions.unmediatedRainfall(workbook, parcel) + functions.totalIrrigation(workbook) + functions.totalPotsPools(workbook);

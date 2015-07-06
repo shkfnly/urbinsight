@@ -8,7 +8,10 @@ var Schema = mongoose.Schema;
 // {
 //         "0": { type: Number, default: 0 },
 //         "1": { type: Number, default: 0 },
-//       }
+//
+
+// Refactor to include alternative schema.
+
 var parcelSchema = new Schema({
   "author": String,
   "date": { type: Date, default: Date.now },
