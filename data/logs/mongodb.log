@@ -2227,3 +2227,127 @@
 2015-07-02T01:05:22.298-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59447 #233 (3 connections now open)
 2015-07-02T01:05:22.309-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59448 #234 (4 connections now open)
 2015-07-02T01:05:22.319-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59449 #235 (5 connections now open)
+2015-07-07T01:36:06.128-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-07T01:36:06.300-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-07-07T01:36:06.356-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-07-07T01:36:06.356-0400 I JOURNAL  [initandlisten] recover begin
+2015-07-07T01:36:06.358-0400 I JOURNAL  [initandlisten] recover lsn: 359619552
+2015-07-07T01:36:06.358-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-07-07T01:36:06.385-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:359619552
+2015-07-07T01:36:06.401-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:12355420 < lsn:359619552
+2015-07-07T01:36:06.401-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:173115725 < lsn:359619552
+2015-07-07T01:36:06.402-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:176809015 < lsn:359619552
+2015-07-07T01:36:06.402-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:177372840 < lsn:359619552
+2015-07-07T01:36:06.403-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:177474500 < lsn:359619552
+2015-07-07T01:36:06.403-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:177525820 < lsn:359619552
+2015-07-07T01:36:06.403-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:177576955 < lsn:359619552
+2015-07-07T01:36:06.403-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:178656705 < lsn:359619552
+2015-07-07T01:36:06.403-0400 I JOURNAL  [initandlisten] recover skipping application of section more...
+2015-07-07T01:36:06.406-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-07-07T01:36:06.406-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-07-07T01:36:06.436-0400 I JOURNAL  [initandlisten] recover done
+2015-07-07T01:36:06.531-0400 I JOURNAL  [durability] Durability thread started
+2015-07-07T01:36:06.531-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-07T01:36:06.621-0400 I CONTROL  [initandlisten] MongoDB starting : pid=3473 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-07-07T01:36:06.621-0400 I CONTROL  [initandlisten] 
+2015-07-07T01:36:06.622-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-07-07T01:36:06.622-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-07-07T01:36:06.622-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-07-07T01:36:06.622-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-07T01:36:06.623-0400 I CONTROL  [initandlisten] allocator: system
+2015-07-07T01:36:06.623-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-07-07T01:36:08.608-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-07-07T01:37:08.581-0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 16ms
+2015-07-07T01:37:56.016-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52134 #1 (1 connection now open)
+2015-07-07T01:37:56.198-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52136 #2 (2 connections now open)
+2015-07-07T01:37:56.198-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52137 #3 (3 connections now open)
+2015-07-07T01:37:56.199-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52138 #4 (4 connections now open)
+2015-07-07T01:37:56.199-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52139 #5 (5 connections now open)
+2015-07-07T01:37:56.199-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52140 #6 (6 connections now open)
+2015-07-07T01:37:56.231-0400 I NETWORK  [conn1] end connection 127.0.0.1:52134 (5 connections now open)
+2015-07-07T01:45:52.998-0400 I NETWORK  [conn6] end connection 127.0.0.1:52140 (4 connections now open)
+2015-07-07T01:45:52.999-0400 I NETWORK  [conn5] end connection 127.0.0.1:52139 (4 connections now open)
+2015-07-07T01:45:52.999-0400 I NETWORK  [conn4] end connection 127.0.0.1:52138 (4 connections now open)
+2015-07-07T01:45:52.999-0400 I NETWORK  [conn3] end connection 127.0.0.1:52137 (4 connections now open)
+2015-07-07T01:45:52.999-0400 I NETWORK  [conn2] end connection 127.0.0.1:52136 (4 connections now open)
+2015-07-07T01:46:06.384-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52305 #7 (1 connection now open)
+2015-07-07T01:46:06.444-0400 I NETWORK  [conn7] end connection 127.0.0.1:52305 (0 connections now open)
+2015-07-07T01:46:06.448-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52307 #8 (1 connection now open)
+2015-07-07T01:46:06.448-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52308 #9 (2 connections now open)
+2015-07-07T01:46:06.448-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52309 #10 (3 connections now open)
+2015-07-07T01:46:06.448-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52310 #11 (4 connections now open)
+2015-07-07T01:46:06.449-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52311 #12 (5 connections now open)
+2015-07-07T01:46:42.214-0400 I NETWORK  [conn12] end connection 127.0.0.1:52311 (4 connections now open)
+2015-07-07T01:46:42.222-0400 I NETWORK  [conn11] end connection 127.0.0.1:52310 (3 connections now open)
+2015-07-07T01:46:42.233-0400 I NETWORK  [conn10] end connection 127.0.0.1:52309 (2 connections now open)
+2015-07-07T01:46:42.245-0400 I NETWORK  [conn9] end connection 127.0.0.1:52308 (1 connection now open)
+2015-07-07T01:46:42.246-0400 I NETWORK  [conn8] end connection 127.0.0.1:52307 (0 connections now open)
+2015-07-07T01:46:44.976-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52408 #13 (1 connection now open)
+2015-07-07T01:46:45.023-0400 I NETWORK  [conn13] end connection 127.0.0.1:52408 (0 connections now open)
+2015-07-07T01:46:45.036-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52410 #14 (1 connection now open)
+2015-07-07T01:46:45.036-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52411 #15 (2 connections now open)
+2015-07-07T01:46:45.046-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52412 #16 (3 connections now open)
+2015-07-07T01:46:45.046-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52413 #17 (4 connections now open)
+2015-07-07T01:46:45.057-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52414 #18 (5 connections now open)
+2015-07-07T01:51:48.100-0400 I NETWORK  [conn18] end connection 127.0.0.1:52414 (4 connections now open)
+2015-07-07T01:51:48.100-0400 I NETWORK  [conn17] end connection 127.0.0.1:52413 (4 connections now open)
+2015-07-07T01:51:48.100-0400 I NETWORK  [conn16] end connection 127.0.0.1:52412 (4 connections now open)
+2015-07-07T01:51:48.100-0400 I NETWORK  [conn15] end connection 127.0.0.1:52411 (4 connections now open)
+2015-07-07T01:51:48.100-0400 I NETWORK  [conn14] end connection 127.0.0.1:52410 (4 connections now open)
+2015-07-07T11:18:31.371-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52921 #19 (1 connection now open)
+2015-07-07T11:18:31.541-0400 I NETWORK  [conn19] end connection 127.0.0.1:52921 (0 connections now open)
+2015-07-07T11:18:31.546-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52923 #20 (1 connection now open)
+2015-07-07T11:18:31.546-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52924 #21 (2 connections now open)
+2015-07-07T11:18:31.546-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52925 #22 (3 connections now open)
+2015-07-07T11:18:31.547-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52926 #23 (4 connections now open)
+2015-07-07T11:18:31.547-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52927 #24 (5 connections now open)
+2015-07-07T11:22:05.166-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53035 #25 (6 connections now open)
+2015-07-07T11:24:31.612-0400 I COMMAND  [conn25] command urbinsight.$cmd command: insert { insert: "cities", documents: [ { _id: ObjectId('559bef2ff64d0f84fd915bf1'), name: "budapest", lat: "47.4925", lon: "19.0514", layerDefinitions: [], layers: {} } ], ordered: true } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 79 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { W: 1 } } } 210ms
+2015-07-07T11:26:43.075-0400 I NETWORK  [conn25] end connection 127.0.0.1:53035 (5 connections now open)
+2015-07-07T11:29:04.674-0400 I NETWORK  [conn23] end connection 127.0.0.1:52926 (4 connections now open)
+2015-07-07T11:29:04.675-0400 I NETWORK  [conn22] end connection 127.0.0.1:52925 (4 connections now open)
+2015-07-07T11:29:04.675-0400 I NETWORK  [conn21] end connection 127.0.0.1:52924 (4 connections now open)
+2015-07-07T11:29:04.675-0400 I NETWORK  [conn20] end connection 127.0.0.1:52923 (4 connections now open)
+2015-07-07T11:29:04.675-0400 I NETWORK  [conn24] end connection 127.0.0.1:52927 (4 connections now open)
+2015-07-07T11:29:13.399-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53262 #26 (1 connection now open)
+2015-07-07T11:29:13.427-0400 I NETWORK  [conn26] end connection 127.0.0.1:53262 (0 connections now open)
+2015-07-07T11:29:13.457-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53264 #27 (1 connection now open)
+2015-07-07T11:29:13.467-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53265 #28 (2 connections now open)
+2015-07-07T11:29:13.467-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53266 #29 (3 connections now open)
+2015-07-07T11:29:13.468-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53267 #30 (4 connections now open)
+2015-07-07T11:29:13.468-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53268 #31 (5 connections now open)
+2015-07-07T15:20:23.967-0400 I STORAGE  [DataFileSync] flushing mmaps took 2167171ms  for 4 files
+2015-07-07T17:09:54.317-0400 I STORAGE  [DataFileSync] flushing mmaps took 6409224ms  for 4 files
+2015-07-07T23:28:00.092-0400 I STORAGE  [DataFileSync] flushing mmaps took 20498558ms  for 4 files
+2015-07-08T02:06:01.583-0400 I COMMAND  [conn28] command urbinsight.$cmd command: insert { insert: "qols", documents: [ { cityName: "budapest", employment: "good", healthcare: "adequate", family: "good", stability: "insufficient", relationships: "good", recreation: "excellent", education: "adequate", vacation: "excellent", housing: "good", environment: "insufficient", discrimination: "good", religion: "good", mobility: "adequate", movement: "good", safety: "good", governance: "insufficient", _id: ObjectId('559cbdc96274bfc427eb34ea'), geoCoordinates: [ 47.47073287608362, 19.05484199523926 ], __v: 0 } ], ordered: true, writeConcern: { w: 1 } } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 2 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { W: 1 } } } 110ms
+2015-07-08T07:16:57.160-0400 I STORAGE  [DataFileSync] flushing mmaps took 18182989ms  for 4 files
+2015-07-08T11:10:19.897-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-08T11:10:21.220-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-07-08T11:10:21.238-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-07-08T11:10:21.238-0400 I JOURNAL  [initandlisten] recover begin
+2015-07-08T11:10:21.239-0400 I JOURNAL  [initandlisten] recover lsn: 13624591
+2015-07-08T11:10:21.239-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-07-08T11:10:21.318-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:13624591
+2015-07-08T11:10:21.319-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:2553455 < lsn:13624591
+2015-07-08T11:10:22.985-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-07-08T11:10:22.985-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-07-08T11:10:23.019-0400 I JOURNAL  [initandlisten] recover done
+2015-07-08T11:10:23.170-0400 I JOURNAL  [durability] Durability thread started
+2015-07-08T11:10:23.170-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] MongoDB starting : pid=4126 port=27017 dbpath=data/db/ 64-bit host=Saturn.local
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] 
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] db version v3.0.3
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-07-08T11:10:23.204-0400 I CONTROL  [initandlisten] allocator: system
+2015-07-08T11:10:23.205-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-07-08T11:10:24.999-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-07-08T11:21:39.103-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49778 #1 (1 connection now open)
+2015-07-08T11:21:39.204-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49780 #2 (2 connections now open)
+2015-07-08T11:21:39.211-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49781 #3 (3 connections now open)
+2015-07-08T11:21:39.211-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49782 #4 (4 connections now open)
+2015-07-08T11:21:39.222-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49783 #5 (5 connections now open)
+2015-07-08T11:21:39.227-0400 I NETWORK  [conn1] end connection 127.0.0.1:49778 (4 connections now open)
+2015-07-08T11:21:39.232-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49784 #6 (5 connections now open)
+2015-07-08T11:23:41.962-0400 I QUERY    [conn3] query urbinsight.cities query: { name: "budapest" } planSummary: COLLSCAN ntoskip:0 nscanned:0 nscannedObjects:5 keyUpdates:0 writeConflicts:0 numYields:1 nreturned:1 reslen:131 locks:{ Global: { acquireCount: { r: 2 } }, MMAPV1Journal: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { R: 2 } } } 208ms

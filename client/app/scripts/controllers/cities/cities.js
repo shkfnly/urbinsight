@@ -9,6 +9,20 @@
  */
 angular.module('urbinsight')
   .controller('CitiesCtrl', ['$scope', '$location', '$http', 'Cities', 'ParcelFactory', 'MapFactory', '$stateParams', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
+    var customForEach = function (collection, callback){
+
+      if(Array.isArray(collection)){
+        for(var i = 0; i < collection.length; i++){
+          callback(collection[i], i, collection);
+        }
+      }
+      else {
+        for(var item in collection){
+          callback(collection[item], item, collection);
+        }
+      }
+    };
+
     var L;
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -127,6 +141,14 @@ angular.module('urbinsight')
       });
     };
 
+    var popupgen = function(node, type){
+      var popupstring = '<div><h2 style="text-align: center;">Junction Information</h2><p>Stage: ' + type + '</p><br />';
+      customForEach(node, function(value, attrib){
+        popupstring += '<p>' + attrib + ': ' + value + '</p><br />'
+      })
+      return popupstring + '</div>';
+    }
+
     $scope.renderNodes = function (data) {     
       var map = $scope.map;
       angular.forEach(data, function(type, key){
@@ -138,6 +160,7 @@ angular.module('urbinsight')
             });
           }
         });
+        // '<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>'
         angular.forEach(type, function(node){
           var lat = parseFloat(node.lat);
           var lng = parseFloat(node.lng);
@@ -146,7 +169,7 @@ angular.module('urbinsight')
               'marker-size' : 'small',
               'marker-color' : Cities.allColors()[key]
             })
-          }).bindPopup('<p>Type: ' + key + '</p><p>Id: ' + node.id + '</p>')
+          }).bindPopup(popupgen(node, key))
           .on('click', function(){$scope.drawFlows(node);});
           markers.addLayer(mark);
           $scope.markers = markers;

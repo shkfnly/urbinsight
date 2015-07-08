@@ -76,7 +76,7 @@ angular.module('urbinsight.services')
                 })
               }).addTo(that.getMap())
               // Turn the html below into a directive.
-                .bindPopup('<div><h2 style="text-align: center">Demand Summary - Water</h2><p>Toilets: ' + consumption.Toilets + '</p><br /><p>Hygiene: ' + consumption.Hygiene + '</p><br /><p>Kitchen: ' + consumption.Kitchen + '</p><br /><p>Laundry: ' + consumption.Laundry + '</p><br /><p>Drinking: ' + consumption.Drinking + '</p><br /><p>Surface Cleaning: ' + consumption['Surface Cleaning'] + '</p><br /><p>Evaporative Cooling: ' + consumption['Evaporative Cooling'] + '</p><br /><p>Water Customers: ' + consumption['Water Customers'] + '</p><br /><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
+                .bindPopup('<div><h2 style="text-align: center;">Demand Summary - Water</h2><p>Toilets: ' + consumption.Toilets + '</p><br /><p>Hygiene: ' + consumption.Hygiene + '</p><br /><p>Kitchen: ' + consumption.Kitchen + '</p><br /><p>Laundry: ' + consumption.Laundry + '</p><br /><p>Drinking: ' + consumption.Drinking + '</p><br /><p>Surface Cleaning: ' + consumption['Surface Cleaning'] + '</p><br /><p>Evaporative Cooling: ' + consumption['Evaporative Cooling'] + '</p><br /><p>Water Customers: ' + consumption['Water Customers'] + '</p><br /><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
             }
           });
         }
@@ -94,7 +94,7 @@ angular.module('urbinsight.services')
                   'marker-color' : '#F8F8F8'
                 })
               }).addTo(that.getMap())
-                .bindPopup('<h2>Survey Responses</h2><div><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
+                .bindPopup('<div style="max-height: 500px; overflow: scroll;"><h2 style="text-align: center;">Survey Response</h2><p style="margin: 0 0 0 0;">Employment: ' + datum.employment + '</p><br /><p style="margin: 0 0 0 0;">Healthcare: ' + datum.healthcare + '</p><br /><p style="margin: 0 0 0 0;">Family: ' + datum.family + '</p><br /><p style="margin: 0 0 0 0;">Stability: ' + datum.stability + '</p><br /><p style="margin: 0 0 0 0;">Relationships: ' + datum.relationships + '</p><br /><p style="margin: 0 0 0 0;">Recreation: ' + datum.recreation + '</p><br /><p style="margin: 0 0 0 0;">Education: ' + datum.education + '</p><br /><p style="margin: 0 0 0 0;">Vacation: ' + datum.vacation + '</p><br /><p style="margin: 0 0 0 0;">Housing: ' + datum.housing + '</p><br /><p style="margin: 0 0 0 0;">Environment: ' + datum.environment + '</p><br /><p style="margin: 0 0 0 0;">Discrimination: ' + datum.discrimination + '</p><br /><p style="margin: 0 0 0 0;">Religion: ' + datum.religion + '</p><br /><p style="margin: 0 0 0 0;">Mobility: ' + datum.mobility + '</p><br /><p style="margin: 0 0 0 0;">Movement: ' + datum.movement + '</p><br /><p style="margin: 0 0 0 0;">Safety: ' + datum.safety + '</p><br /><p style="margin: 0 0 0 0;">Governance: ' + datum.governance + '</p><br /><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
             }
           });
         }
