@@ -29,12 +29,13 @@ angular.module('urbinsight.services')
       },
 
       setGeoCoordinates: function(latlngObject) {
-        currentParcel.describeParcel.parcelIdentification.geoCoordinates = [latlngObject.lat, latlngObject.lng];
+        currentParcel.describeParcel.parcelIdentification.geoCoordinates = [latlngObject.lng, latlngObject.lat];
         return currentParcel;
       },
 
-      fetchParcels: function(cityName, callback) {
-        $http.get('/data/city/' + cityName + '/parcels/').
+      fetchParcels: function(cityName, callback, options) {
+        options = options || {};
+        $http.get('/data/city/' + cityName + '/parcels/', options).
           success(function(data){
             callback(data);
           }).
@@ -62,6 +63,8 @@ angular.module('urbinsight.services')
 
       getCurrentMarker: function(){
         return currentMarker;
-      }
+      },
+
+      parcelsInArea: null
     };
   }]);

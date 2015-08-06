@@ -95,7 +95,7 @@ angular.module('urbinsight')
     $scope.renderMap = function(city) {
       // Create Map
         $scope.city = city;
-        $scope.map = L.mapbox.map('cityMap')
+        $scope.map = MapFactory.createMap()
         .setView([city.lat, city.lon], 12);
         MapFactory.setMap($scope.map);
         var featureGroup = L.featureGroup().addTo($scope.map);
@@ -110,8 +110,18 @@ angular.module('urbinsight')
               // console.log(layer);
         });
 
-        $scope.map.on('dragend', function(e) {
-          // console.log(e);
+        $scope.map.on('moveend', function(e) {
+          var SW, SE, NE, NW;
+          var boundObj = e.target.getBounds();
+          SW = MapFactory.flipToLngLatArray(boundObj.getSouthWest());
+          SE = MapFactory.flipToLngLatArray(boundObj.getSouthEast());
+          NE = MapFactory.flipToLngLatArray(boundObj.getNorthEast()); 
+          NW = MapFactory.flipToLngLatArray(boundObj.getNorthWest());
+          MapFactory.currentGeoJSONBounds = [SW, SE, NE, NW, SW];
+          ParcelFactory.fetchParcels(cityName, function(data){
+            ParcelFactory.parcelsInArea = data;
+            console.log(data);
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds}});
         });
 
         var drawControl = new L.Control.Draw({
@@ -144,10 +154,10 @@ angular.module('urbinsight')
     var popupgen = function(node, type){
       var popupstring = '<div><h2 style="text-align: center;">Junction Information</h2><p>Stage: ' + type + '</p><br />';
       customForEach(node, function(value, attrib){
-        popupstring += '<p>' + attrib + ': ' + value + '</p><br />'
-      })
+        popupstring += '<p>' + attrib + ': ' + value + '</p><br />';
+      });
       return popupstring + '</div>';
-    }
+    };
 
     $scope.renderNodes = function (data) {     
       var map = $scope.map;

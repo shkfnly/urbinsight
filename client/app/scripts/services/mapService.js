@@ -33,6 +33,13 @@ angular.module('urbinsight.services')
         return currentMarker;
       },
 
+      flipToLngLatArray: function(object){
+        return [object.lng, object.lat];
+      },
+
+      currentGeoJSONBounds: null,
+
+
       markerClickControl: function(objName, factory, $scope){
         var map = this.getMap();
         var marker = this.getCurrentMarker();
@@ -64,21 +71,24 @@ angular.module('urbinsight.services')
 
       renderParcels: function(cityName){
         var that = this;
+        that.currentParcels = L.layerGroup([]);
         function drawing(data){
           data.forEach(function(datum){
             if(datum.describeParcel.parcelIdentification.geoCoordinates.length > 1){
 
               var consumption = UMISFactory.totalConsumption(datum.workbooks.water, datum);
-              L.marker(datum.describeParcel.parcelIdentification.geoCoordinates, {
+              var mark = L.marker([datum.describeParcel.parcelIdentification.geoCoordinates[1], datum.describeParcel.parcelIdentification.geoCoordinates[0]], {
                 icon: L.mapbox.marker.icon({
                   'marker-size' : 'small',
                   'marker-color' : '#ff3366'
                 })
-              }).addTo(that.getMap())
+              })
               // Turn the html below into a directive.
                 .bindPopup('<div><h2 style="text-align: center;">Demand Summary - Water</h2><p>Toilets: ' + consumption.Toilets + '</p><br /><p>Hygiene: ' + consumption.Hygiene + '</p><br /><p>Kitchen: ' + consumption.Kitchen + '</p><br /><p>Laundry: ' + consumption.Laundry + '</p><br /><p>Drinking: ' + consumption.Drinking + '</p><br /><p>Surface Cleaning: ' + consumption['Surface Cleaning'] + '</p><br /><p>Evaporative Cooling: ' + consumption['Evaporative Cooling'] + '</p><br /><p>Water Customers: ' + consumption['Water Customers'] + '</p><br /><p><strong><em>Date Added: ' + datum.date + '</em></strong></p></div>');
+            that.currentParcels.addLayer(mark);
             }
           });
+        that.currentParcels.addTo(that.getMap());
         }
         ParcelFactory.fetchParcels(cityName, drawing);
       },
