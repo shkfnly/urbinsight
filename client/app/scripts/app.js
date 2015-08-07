@@ -20,7 +20,8 @@
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'urbinsight.services'
+    'urbinsight.services',
+    'urbinsight.directives'
   ]);
 
   app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -123,54 +124,10 @@
       .state('app.city.pilot.umis', {
         views: {
           'umisTabs': {
-            templateUrl: 'views/cities/umisTabs.html'
-          }
-        },
-      })
-
-      .state('app.city.pilot.umis.energy', {
-        views: {
-          'energy': {
-            templateUrl: 'views/cities/umisResource.html',
+            templateUrl: 'views/cities/umisTabs.html',
             controller: 'umisResourceCtrl'
           }
         },
-        params: {
-          type: 'energy'
-        }
-      })
-      .state('app.city.pilot.umis.water', {
-        views: {
-          'water': {
-            templateUrl: 'views/cities/umisResource.html',
-            controller: 'umisResourceCtrl'
-          }
-        },
-        params: {
-          type: 'water'
-        }
-      })
-      .state('app.city.pilot.umis.materials', {
-        views: {
-          'materials': {
-            templateUrl: 'views/cities/umisResource.html',
-            controller: 'umisResourceCtrl'
-          }
-        },
-        params: {
-          type: 'materials'
-        }
-      })
-      .state('app.city.pilot.umis.mobility', {
-        views: {
-          'mobility': {
-            templateUrl: 'views/cities/umisResource.html',
-            controller: 'umisResourceCtrl'
-          }
-        },
-        params: {
-          type: 'mobility'
-        }
       })
       .state('app.city.pilot.survey', {
         views: {
@@ -270,6 +227,7 @@
   }]);
 
 angular.module('urbinsight.services', []);
+angular.module('urbinsight.directives', []);
 
 app.run(['$rootScope', '$window', '$location', 'AuthFactory', function($rootScope, $window, $location, AuthFactory) {
   AuthFactory.check();

@@ -1,15 +1,15 @@
 <tabset justified="true" id='resourceType' type='pills'>
-  <tab ui-sref=".energy" ui-sref-active="active" heading="Energy">
-    <div ui-view='energy'></div>
+  <tab active="tab.active" heading="Energy">
+    <umis-visualization resourceData="resources.energy"
   </tab>
-  <tab ui-sref=".water" ui-sref-active="active" heading="Water">
-    <div ui-view='water'></div>
+  <tab active="tab.active" heading="Water">
+    <umis-visualization resourceData="resources.water">
   </tab>
-  <tab ui-sref=".materials" ui-sref-active="active" heading="Materials">
-    <div ui-view='materials'></div>
+  <tab active="tab.active" heading="Materials">
+    <umis-visualization resourceData="resources.materials">
   </tab>
-  <tab ui-sref=".mobility" ui-sref-active="active" heading="Mobility">
-    <div ui-view='mobility'></div>
+  <tab active="tab.active" heading="Mobility">
+    <umis-visualization resourceData="resources.mobility"> 
   </tab>
 </tabset>
 
