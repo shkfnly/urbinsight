@@ -1,6 +1,8 @@
+'use strict';
 angular.module('urbinsight.directives')
-.directive('umisResource',  function() {
-        $scope.renderLine = function(data){
+.directive('umisResource', function() {
+        var data;
+        var renderLine = function(data){
           var margin = {top: 20, right: 80, bottom: 30, left: 50},
               width = 430 - margin.left - margin.right,
               height = 250 - margin.top - margin.bottom;
@@ -89,7 +91,7 @@ angular.module('urbinsight.directives')
                 .text(function(d) { return d.name; });
         };
 
-        $scope.renderPie = function(root) {
+        var renderPie = function(root) {
                   var stash = function(d) {
                                d.x0 = d.x;
                                d.dx0 = d.dx;
@@ -139,7 +141,7 @@ angular.module('urbinsight.directives')
                   //       : function(d) { return d.size; };
 
                   //   path
-                  //       .data(partition.value(value).nodes)
+   //       .data(partition.value(value).nodes)
                   //     .transition()
                   //       .duration(1500)
                   //       .attrTween('d', arcTween);
@@ -147,27 +149,26 @@ angular.module('urbinsight.directives')
                 d3.select(self.frameElement).style('height', height + 'px');
                 };
 
-      $scope.fetchPieData = function(resourceUrl){
+      var fetchPieData = function(resourceUrl){
               d3.json(resourceUrl, function(error, root){
-                $scope.data = root;
-                $scope.renderPie(root);
+                data = root;
+                renderPie(root);
               });
             };
-      $scope.fetchLineData = function(resourceUrl){
+      var fetchLineData = function(resourceUrl){
        d3.tsv(resourceUrl, function(error, data){
-         $scope.data = data;
-         $scope.renderLine(data);
+         data = data;
+         renderLine(data);
        });
       };
-    $scope.fetchLineData('https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv'); 
-    $scope.fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
+    fetchLineData('https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv'); 
+    fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
   
   return {
     restrict: 'E',
     scope: {
       resourceData: '='
-      parcels:
     },
-    templateUrl: 'umisResource.html'
+    templateUrl: 'views/cities/umisResource.html'
   };
-]);
+});

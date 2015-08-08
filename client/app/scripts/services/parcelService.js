@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('ParcelFactory', ['$http', function ($http) {
+  .factory('ParcelFactory', ['$http', 'UMISFactory', function ($http, UMISFactory) {
     var currentParcel = {
       describeParcel : {
         parcelIdentification: {
@@ -10,8 +10,12 @@ angular.module('urbinsight.services')
       }
     };
 
+    String.prototype.capitalize = function(){
+      return this.charAt(0).toUpperCase() + this.slice(1);
+    }
+
     var currentMarker;
-    var parcelsInView;
+    var parcelsInView = {};
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -45,15 +49,28 @@ angular.module('urbinsight.services')
 
       saveParcel: function(cityName, callback){
         var that = this;
+        var parcel = that.getCurrentParcel();
+        UMISFactory.calculateTotals(parcel);
+        that.generateParcelPopUp(parcel)
         $http.post('/data/city/' + cityName + '/parcels/', {parcel: that.getCurrentParcel()}).
           success(function(data) {
             that.createNewParcel();
             callback(data);
-
           }).
           error(function() {
-
           });
+      },
+      generateParcelPopUp: function(parcel){
+        parcel.popUp = ''
+        _.forEach(parcel.totalDemand, function(demandObj, resource){
+          parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>'
+          _.forEach(demandObj, function(value, useCase) {
+            parcel.popUp += '<p>' + useCase.toString().capitalize() + ': ' + value + '</p><br/>';
+          })
+          parcel.popUp += '</div>'
+        })
+        parcel.popUp += '<p><strong><em>Date Added: ' + parcel.date + '</em></strong></p>';
+        return parcel;
       },
 
       setCurrentMarker: function(marker){

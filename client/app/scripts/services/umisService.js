@@ -223,19 +223,29 @@ angular.module('urbinsight.services')
       });
       return total;
     };
+      var totalConsumption = {
+        water: function(workbook, parcel){
+          var result = {};
+          result.Toilets = UMIS.Water.totalConsumption.toilets(workbook, parcel);
+          result.Hygiene = UMIS.Water.totalConsumption.hygiene(workbook);
+          result.Kitchen = UMIS.Water.totalConsumption.kitchen(workbook);
+          result.Laundry = UMIS.Water.totalConsumption.laundry(workbook);
+          result.Drinking = UMIS.Water.totalConsumption.drinking(workbook);
+          // result['Landscape'] = UMIS.Water.totalConsumption.landscape(workbook, parcel);
+          result['Surface Cleaning'] = UMIS.Water.totalConsumption.surfaceCleaning(workbook);
+          result['Evaporative Cooling'] = UMIS.Water.totalConsumption.evaporativeCooling(workbook);
+          result['Water Customers'] = UMIS.Water.totalConsumption.waterCustomers(workbook);
+          parcel.totalDemand.water = result;
+          return result;
+        }
+      }
     return {
-      totalConsumption: function(workbook, parcel){
-        var result = {};
-        result.Toilets = UMIS.Water.totalConsumption.toilets(workbook, parcel);
-        result.Hygiene = UMIS.Water.totalConsumption.hygiene(workbook);
-        result.Kitchen = UMIS.Water.totalConsumption.kitchen(workbook);
-        result.Laundry = UMIS.Water.totalConsumption.laundry(workbook);
-        result.Drinking = UMIS.Water.totalConsumption.drinking(workbook);
-        // result['Landscape'] = UMIS.Water.totalConsumption.landscape(workbook, parcel);
-        result['Surface Cleaning'] = UMIS.Water.totalConsumption.surfaceCleaning(workbook);
-        result['Evaporative Cooling'] = UMIS.Water.totalConsumption.evaporativeCooling(workbook);
-        result['Water Customers'] = UMIS.Water.totalConsumption.waterCustomers(workbook);
-        return result;
+      calculateTotals: function(parcel){
+        parcel.totalDemand = {};
+        _.forEach(totalConsumption, function(resourceCalcFunction, resource){
+          resourceCalcFunction(parcel.workbooks[resource], parcel);
+        })
+        return parcel;
       }
     };
   }]);
