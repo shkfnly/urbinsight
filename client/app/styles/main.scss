@@ -24,6 +24,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   display: none;
 }
 
+.label-line {
+    stroke-width: 1;
+    stroke: #393939;
+}
+.label-circle {
+    fill: #393939;
+}
+
 #viz{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;

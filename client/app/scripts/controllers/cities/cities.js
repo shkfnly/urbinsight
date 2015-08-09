@@ -119,8 +119,7 @@ angular.module('urbinsight')
           NW = MapFactory.flipToLngLatArray(boundObj.getNorthWest());
           MapFactory.currentGeoJSONBounds = [SW, SE, NE, NW, SW];
           ParcelFactory.fetchParcels(cityName, function(data){
-            ParcelFactory.setParcelsInView = data;
-            console.log(data);
+            ParcelFactory.setParcelsInView(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds}});
         });
 

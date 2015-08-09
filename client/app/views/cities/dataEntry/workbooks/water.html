@@ -58,7 +58,7 @@
   <h3>Portion of Parcel</h3>
   <h5>Enter percent of parcel that comprises each type. All values are in decimals and less than 1</h5>
   <label ng-repeat="(surfaceType, obj) in parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes">
-    <input type="number" ng-model="'parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.' + surfaceType + .portionOfParcel"/>{{obj.name}}</label><br />
+    <input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes[surfaceType].portionOfParcel" min="0"/>{{obj.name}}</label><br />
   </label>
 
   <!-- <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.turfGreen.portionOfParcel" /></label></br>

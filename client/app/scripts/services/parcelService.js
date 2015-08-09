@@ -15,7 +15,7 @@ angular.module('urbinsight.services')
     }
 
     var currentMarker;
-    var parcelsInView = {};
+    var parcelsInView = [];
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -83,11 +83,15 @@ angular.module('urbinsight.services')
       },
       
       getParcelsInView: function() {
-        return parcelsInView
+        var that = this;
+        return that.parcelsInView
       },
       setParcelsInView: function(listOfParcels) {
-        parcelsInView = listOfParcels;
-        return parcelsInView;
-      }
+        var that = this
+        that.parcelsInView = listOfParcels;
+        return that.parcelsInView;
+      },
+
+      parcelsInView: []
     };
   }]);
