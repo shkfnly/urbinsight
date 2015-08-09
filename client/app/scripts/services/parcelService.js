@@ -7,7 +7,8 @@ angular.module('urbinsight.services')
         parcelIdentification: {
           geoCoordinates: []
         }
-      }
+      },
+      workbooks: {}
     };
 
     String.prototype.capitalize = function(){
