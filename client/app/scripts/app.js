@@ -192,32 +192,6 @@
           }
         }
       })
-      // .state('app.city.pilot.dataEntry', {
-      //   views: {
-      //     'dataEntry': {
-      //       templateUrl: 'views/cities/dataEntry.html'
-      //     }
-      //   }
-      // })
-      // .state('app.city.pilot.dataEntry.qol', {
-      //   views: {
-      //     'qol': {
-      //       templateUrl: 'views/cities/dataEntry/qol_form.html',
-      //       controller: 'qolCtrl'
-      //     }
-      //   }
-      // })
-      // .state('app.city.pilot.dataEntry.umis', {
-      //   views: {
-      //     'umisForm': {
-      //       templateUrl: 'views/cities/dataEntry/umis_form.html',
-      //       controller: 'umisDataEntryCtrl'
-      //     }
-      //   }
-      // })
-      // .state('app.city.pilot.umis.addparcel', {
-
-      // })
       .state('app.dashboard', {
         url: '/dashboard',
         views: {
