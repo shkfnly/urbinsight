@@ -33,12 +33,13 @@ angular.module('urbinsight')
         });
       });
       return results;
+      
     };
 
 
 
 
-    $scope.resources = {}
+    $scope.resources = {};
 
     $scope.$watch('ParcelFactory.parcelsInView', function(newValue, oldVal, scope){
       scope.parcels = newValue;

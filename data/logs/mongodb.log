@@ -2375,3 +2375,41 @@
 2015-07-08T20:12:46.362-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54060 #16 (3 connections now open)
 2015-07-08T20:12:46.363-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54061 #17 (4 connections now open)
 2015-07-08T20:12:46.363-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54062 #18 (5 connections now open)
+2015-08-17T22:06:41.985-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-08-17T22:06:42.079-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-08-17T22:06:42.090-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-08-17T22:06:42.090-0400 I JOURNAL  [initandlisten] recover begin
+2015-08-17T22:06:42.091-0400 I JOURNAL  [initandlisten] recover lsn: 171034087
+2015-08-17T22:06:42.091-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-08-17T22:06:42.092-0400 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:171034087
+2015-08-17T22:06:42.092-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-08-17T22:06:42.092-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-08-17T22:06:42.094-0400 I JOURNAL  [initandlisten] recover done
+2015-08-17T22:06:42.118-0400 I JOURNAL  [durability] Durability thread started
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] MongoDB starting : pid=2676 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] db version v3.0.4
+2015-08-17T22:06:42.118-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] allocator: system
+2015-08-17T22:06:42.118-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-08-17T22:06:42.751-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-08-17T22:07:14.483-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52615 #1 (1 connection now open)
+2015-08-17T22:07:14.497-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52617 #2 (2 connections now open)
+2015-08-17T22:07:14.497-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52618 #3 (3 connections now open)
+2015-08-17T22:07:14.497-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52619 #4 (4 connections now open)
+2015-08-17T22:07:14.497-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52620 #5 (5 connections now open)
+2015-08-17T22:07:14.497-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52621 #6 (6 connections now open)
+2015-08-17T22:07:14.502-0400 I NETWORK  [conn1] end connection 127.0.0.1:52615 (5 connections now open)
+2015-08-18T00:00:03.510-0400 I NETWORK  [conn4] end connection 127.0.0.1:52619 (4 connections now open)
+2015-08-18T00:00:03.510-0400 I NETWORK  [conn5] end connection 127.0.0.1:52620 (4 connections now open)
+2015-08-18T00:00:03.510-0400 I NETWORK  [conn6] end connection 127.0.0.1:52621 (4 connections now open)
+2015-08-18T00:00:03.510-0400 I NETWORK  [conn2] end connection 127.0.0.1:52617 (4 connections now open)
+2015-08-18T00:00:03.510-0400 I NETWORK  [conn3] end connection 127.0.0.1:52618 (4 connections now open)
+2015-08-18T00:00:11.065-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55021 #7 (1 connection now open)
+2015-08-18T00:00:11.074-0400 I NETWORK  [conn7] end connection 127.0.0.1:55021 (0 connections now open)
+2015-08-18T00:00:11.078-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55023 #8 (1 connection now open)
+2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55024 #9 (2 connections now open)
+2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55025 #10 (3 connections now open)
+2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55026 #11 (4 connections now open)
+2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55027 #12 (5 connections now open)
