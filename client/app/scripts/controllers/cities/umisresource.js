@@ -35,10 +35,7 @@ angular.module('urbinsight')
       return results;
       
     };
-
-
-
-
+    
     $scope.resources = {};
 
     $scope.$watch('ParcelFactory.parcelsInView', function(newValue, oldVal, scope){

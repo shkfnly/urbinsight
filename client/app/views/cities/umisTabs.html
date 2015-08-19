@@ -1,6 +1,6 @@
 <tabset justified="true" id='resourceType' type='pills' style='min-width: 70vh; min-height: 35vh;'>
   <tab  heading="Water">
-    <umis-resource info="resources" resource="'water'" parcels="parcels"></umis-resource>
+    <umis-resource info="resources" resource="'water'" parcels="parcels" testFunc="testFunc"></umis-resource>
   </tab>
   <tab  heading="Energy" disable="true">
 <!--     <umis-resource info="resources" resource="'energy'" parcels="parcels"></umis-resource> -->
@@ -9,8 +9,8 @@
 <!--     <umis-resource info="resources" resource="'materials'" parcels="parcels"></umis-resource> -->
   </tab>
   <tab  heading="Mobility" disable="true">
-<!--     <umis-resource info="resources" resource="'mobility'" parcels="parcels"></umis-resource>
-  </tab> -->
+   <!--  <umis-resource info="resources" resource="'mobility'" parcels="parcels"></umis-resource> -->
+  </tab>
   <tab ui-sref=".dataEntry.addParcel" ui-sref-active="active" heading="Add Parcel">
     <div ui-view='umisForm'></div>
   </tab>

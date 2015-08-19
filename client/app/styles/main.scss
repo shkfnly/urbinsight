@@ -82,6 +82,11 @@ polyline{
   padding-right: 5px !important;
   font-size: 2em !important;
   margin: -5px !important;
+  -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
 }
 
  #modalbar > ul > li {

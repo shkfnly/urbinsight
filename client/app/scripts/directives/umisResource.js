@@ -1,7 +1,7 @@
 'use strict';
 angular.module('urbinsight.directives')
 .directive('umisResource', ['ParcelFactory', '$window', function(ParcelFactory, $window) {
-  var d3 = $window.d3;
+  var _ = $window._;
   var c3 = $window.c3;
 
   var dataXForm = function(obj){
@@ -11,7 +11,6 @@ angular.module('urbinsight.directives')
     });
     return results;
   };
-  var overallTotal;
   var calculateOverallTotal = function(obj){
     var results = 0;
     _.forEach(obj, function(value){
@@ -26,16 +25,14 @@ angular.module('urbinsight.directives')
     }
   };
 
-  var pieChart;
-
-  var urlLine = 'https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv';
+  //var urlLine = 'https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv';
   // fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
   function link(scope, element, attrs){
     element.children('#pie')[0].id = ('pie-' + scope.resource);
     scope.selectID = '#pie-' + scope.resource;
     scope.unit = defineUnit(scope.resource);
     scope.overallTotal = calculateOverallTotal(scope.info[scope.resource]);
-    pieChart = c3.generate({
+    scope.pieChart = c3.generate({
       bindto: scope.selectID,
       data: {
         columns: dataXForm(scope.info[scope.resource]),
@@ -54,17 +51,16 @@ angular.module('urbinsight.directives')
           }
         }
       }
-
     });
-    // setupD3(scope.selectID);
-    // updatePieChart(d3.entries(scope.info[scope.resource]));
+
+    scope.chartTransform = function(param){
+      scope.pieChart.transform(param);
+    };
     scope.$watch('info', function(newVal, oldVal, scope){
-      pieChart.load({
+      scope.pieChart.load({
         columns: dataXForm(newVal[scope.resource])
       });
       scope.overallTotal = calculateOverallTotal(newVal[scope.resource]);
-      // updatePieChart(d3.entries(newVal[scope.resource]), d3.entries(oldVal[scope.resource]));
-
     }, true);
   }
 
@@ -73,10 +69,9 @@ angular.module('urbinsight.directives')
     scope: {
       info: '=',
       resource: '=',
-      parcels: '='
+      parcels: '=',
     },
     link: link,
-    transclude: true,
     templateUrl: 'views/cities/umisResource.html'
   };
 }]);
