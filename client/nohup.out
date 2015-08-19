@@ -58,3 +58,3211 @@ Waiting...
 [36mCompleted in 0.001s at Tue Jun 02 2015 23:32:56 GMT-0400 (EDT)[39m - Waiting...
 [32m>> [39mFile ".tmp/styles/main.css" changed.
 [36mCompleted in 0.000s at Tue Jun 02 2015 23:33:08 GMT-0400 (EDT)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+Starting Neo4j Server...WARNING: not changing user
+process [1014]... waiting for server to be ready..    
+    [4mRunning "compass:server" (compass) task[24m
+    [32mdirectory[0m .tmp/styles
+    [32m    write[0m .tmp/styles/main.css (4.892s)
+    [32m    write[0m .tmp/styles/main.css.map
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2015-08-18 18:27:45 UTC)
+    compass:server  6.3s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 100%
+    Total 6.3s
+    
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+.File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://localhost:9000
+
+[4mRunning "watch" task[24m
+Waiting...
+....... OK.
+http://localhost:7474/ is ready.
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 201  col 13   Forgotten 'debugger' statement?
+  line 201  col 21   Missing semicolon.
+  line 353  col 7    'urlLine' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 355  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  28 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 19:23:09 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   23ms  ▇▇ 4%
+jshint:all        593ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 624ms
+
+[36mCompleted in 7.884s at Tue Aug 18 2015 15:23:10 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 202  col 13   Forgotten 'debugger' statement?
+  line 202  col 21   Missing semicolon.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  28 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 19:48:40 UTC)
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        505ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 525ms
+
+[36mCompleted in 5.284s at Tue Aug 18 2015 15:48:41 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 353  col 7    'urlLine' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 355  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  26 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 19:59:33 UTC)
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        497ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 519ms
+
+[36mCompleted in 6.012s at Tue Aug 18 2015 15:59:33 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  26 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:00:05 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   22ms  ▇▇ 4%
+jshint:all        533ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 564ms
+
+[36mCompleted in 4.586s at Tue Aug 18 2015 16:00:05 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 166  col 14   'relax' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:03:43 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        516ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 539ms
+
+[36mCompleted in 6.375s at Tue Aug 18 2015 16:03:44 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 166  col 14   'relax' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:07:03 UTC)
+loading tasks      11ms  ▇ 2%
+newer:jshint:all   21ms  ▇▇ 3%
+jshint:all        568ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 601ms
+
+[36mCompleted in 6.153s at Tue Aug 18 2015 16:07:03 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 166  col 14   'relax' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:07:38 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        566ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 589ms
+
+[36mCompleted in 5.860s at Tue Aug 18 2015 16:07:39 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 175  col 30   Expected '{' and instead saw 'return'.
+  line 179  col 46   Expected '!==' and instead saw '!='.
+  line 179  col 71   Expected '{' and instead saw 'return'.
+  line 187  col 49   Expected '{' and instead saw 'return'.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 166  col 14   'relax' is defined but never used.
+  line 168  col 38   'i' is defined but never used.
+  line 168  col 35   'd' is defined but never used.
+  line 172  col 42   'j' is defined but never used.
+  line 172  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:08:26 UTC)
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        583ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 606ms
+
+[36mCompleted in 4.705s at Tue Aug 18 2015 16:08:26 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 351  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 353  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:22:48 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        520ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 543ms
+
+[36mCompleted in 6.037s at Tue Aug 18 2015 16:22:49 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 216  col 33   Expected '}' to match '{' from line 216 and instead saw ';'.
+  line 216  col 35   Expected ')' and instead saw 'top'.
+  line 216  col 38   Missing semicolon.
+  line 216  col 38   Expected '}' to match '{' from line 211 and instead saw ':'.
+  line 216  col 39   Missing semicolon.
+  line 216  col 39   Expected an assignment or function call and instead saw an expression.
+  line 216  col 47   Label 'left' on 0 statement.
+  line 216  col 47   Expected an assignment or function call and instead saw an expression.
+  line 216  col 57   'height' is already defined.
+  line 216  col 57   Label 'height' on 100 statement.
+  line 216  col 61   Expected an identifier and instead saw ';'.
+  line 216  col 61   Expected an assignment or function call and instead saw an expression.
+  line 216  col 62   Missing semicolon.
+  line 216  col 69   'width' is already defined.
+  line 216  col 69   Label 'width' on 100 statement.
+  line 216  col 74   Expected an identifier and instead saw '}'.
+  line 216  col 74   Expected an assignment or function call and instead saw an expression.
+  line 216  col 75   Missing semicolon.
+  line 216  col 75   Expected an identifier and instead saw ')'.
+  line 217  col 11   Expected an operator and instead saw '.'.
+  line 217  col 11   Expected an assignment or function call and instead saw an expression.
+  line 217  col 12   Missing semicolon.
+  line 218  col 45   'width' is a statement label.
+  line 218  col 63   'height' is a statement label.
+  line 226  col 4    Expected ']' to match '[' from line 3 and instead saw ';'.
+  line 352  col 3    Expected ')' and instead saw 'var'.
+  line 352  col 6    Missing semicolon.
+  line 375  col 1    Unrecoverable syntax error. (99% scanned).
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ✖  8 errors
+  ⚠  40 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:31:38 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   22ms  ▇▇ 3%
+jshint:all        639ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 671ms
+
+[36mCompleted in 5.609s at Tue Aug 18 2015 16:31:39 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 216  col 61   Expected an identifier and instead saw ','.
+  line 216  col 63   Expected '}' to match '{' from line 216 and instead saw 'width'.
+  line 216  col 68   Expected ')' and instead saw ':'.
+  line 216  col 69   Missing semicolon.
+  line 216  col 74   Expected an identifier and instead saw '}'.
+  line 216  col 74   Expected an assignment or function call and instead saw an expression.
+  line 216  col 75   Missing semicolon.
+  line 216  col 75   Expected an identifier and instead saw ')'.
+  line 217  col 11   Expected an operator and instead saw '.'.
+  line 217  col 11   Expected an assignment or function call and instead saw an expression.
+  line 217  col 12   Missing semicolon.
+  line 216  col 28   'fixed' is not defined.
+  line 217  col 12   'append' is not defined.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ✖  5 errors
+  ⚠  35 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:33:48 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        519ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 542ms
+
+[36mCompleted in 5.464s at Tue Aug 18 2015 16:33:49 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 216  col 65   Expected an identifier and instead saw ','.
+  line 216  col 67   Expected '}' to match '{' from line 216 and instead saw 'width'.
+  line 216  col 72   Expected ')' and instead saw ':'.
+  line 216  col 73   Missing semicolon.
+  line 216  col 79   Expected an identifier and instead saw '}'.
+  line 216  col 79   Expected an assignment or function call and instead saw an expression.
+  line 216  col 80   Missing semicolon.
+  line 216  col 80   Expected an identifier and instead saw ')'.
+  line 217  col 11   Expected an operator and instead saw '.'.
+  line 217  col 11   Expected an assignment or function call and instead saw an expression.
+  line 217  col 12   Missing semicolon.
+  line 216  col 29   'fixed' is not defined.
+  line 217  col 12   'append' is not defined.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ✖  5 errors
+  ⚠  35 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:34:53 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   19ms  ▇▇ 3%
+jshint:all        599ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 626ms
+
+[36mCompleted in 4.556s at Tue Aug 18 2015 16:34:53 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:36:50 UTC)
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        513ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 535ms
+
+[36mCompleted in 4.744s at Tue Aug 18 2015 16:36:51 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 20:42:33 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        527ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 548ms
+
+[36mCompleted in 5.415s at Tue Aug 18 2015 16:42:34 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/styles/main.scss" changed.
+[4mRunning "compass:server" (compass) task[24m
+[32m    write[0m .tmp/styles/main.css (5.239s)
+[32m    write[0m .tmp/styles/main.css.map
+
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "autoprefixer:dist" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2015-08-18 20:49:21 UTC)
+compass:server        6.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 89%
+autoprefixer:server  732ms  ▇▇▇▇ 10%
+autoprefixer:dist    104ms  ▇ 1%
+Total 7.5s
+
+[36mCompleted in 12.365s at Tue Aug 18 2015 16:49:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[32m>> [39mFile "app/styles/main.scss" changed.
+[4mRunning "compass:server" (compass) task[24m
+[32m    write[0m .tmp/styles/main.css (5.579s)
+[32m    write[0m .tmp/styles/main.css.map
+
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "autoprefixer:dist" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2015-08-18 20:54:43 UTC)
+compass:server        6.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 90%
+autoprefixer:server  648ms  ▇▇▇▇ 9%
+autoprefixer:dist    110ms  ▇ 1%
+Total 7.5s
+
+[36mCompleted in 13.165s at Tue Aug 18 2015 16:54:50 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 22:27:46 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        612ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 637ms
+
+[36mCompleted in 6.840s at Tue Aug 18 2015 18:27:47 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 22:28:44 UTC)
+newer:jshint:all   13ms  ▇ 2%
+jshint:all        699ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 719ms
+
+[36mCompleted in 4.374s at Tue Aug 18 2015 18:28:45 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 22:40:38 UTC)
+newer:jshint:all  49ms  ▇ 2%
+jshint:all        2.4s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 2.5s
+
+[36mCompleted in 12.081s at Tue Aug 18 2015 18:40:41 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 35   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 22:41:27 UTC)
+loading tasks     24ms  ▇ 1%
+newer:jshint:all  65ms  ▇▇ 4%
+jshint:all        1.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 1.8s
+
+[36mCompleted in 13.245s at Tue Aug 18 2015 18:41:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 22:48:47 UTC)
+newer:jshint:all  39ms  ▇▇ 3%
+jshint:all        1.4s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 1.4s
+
+[36mCompleted in 12.823s at Tue Aug 18 2015 18:48:48 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 355  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 357  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:00:21 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        576ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 599ms
+
+[36mCompleted in 7.423s at Tue Aug 18 2015 19:00:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:02:43 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        556ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 578ms
+
+[36mCompleted in 5.026s at Tue Aug 18 2015 19:02:43 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:03:28 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        611ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 636ms
+
+[36mCompleted in 4.449s at Tue Aug 18 2015 19:03:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:04:46 UTC)
+loading tasks     18ms  ▇ 1%
+newer:jshint:all  43ms  ▇▇ 2%
+jshint:all        1.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 1.8s
+
+[36mCompleted in 10.371s at Tue Aug 18 2015 19:04:48 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:05:56 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   13ms  ▇▇ 2%
+jshint:all        504ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 524ms
+
+[36mCompleted in 4.873s at Tue Aug 18 2015 19:05:56 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:06:43 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        544ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 567ms
+
+[36mCompleted in 4.302s at Tue Aug 18 2015 19:06:44 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:08:34 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        561ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 584ms
+
+[36mCompleted in 4.890s at Tue Aug 18 2015 19:08:34 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:09:11 UTC)
+loading tasks       9ms  ▇ 1%
+newer:jshint:all   19ms  ▇▇ 3%
+jshint:all        602ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 630ms
+
+[36mCompleted in 4.578s at Tue Aug 18 2015 19:09:11 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:10:32 UTC)
+loading tasks       5ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        478ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 497ms
+
+[36mCompleted in 3.829s at Tue Aug 18 2015 19:10:32 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:11:17 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        530ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 552ms
+
+[36mCompleted in 4.761s at Tue Aug 18 2015 19:11:17 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 33   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:14:28 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   13ms  ▇▇ 2%
+jshint:all        519ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 538ms
+
+[36mCompleted in 4.666s at Tue Aug 18 2015 19:14:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 33   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:16:41 UTC)
+loading tasks      11ms  ▇ 2%
+newer:jshint:all   22ms  ▇▇ 4%
+jshint:all        578ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 612ms
+
+[36mCompleted in 4.753s at Tue Aug 18 2015 19:16:42 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:17:26 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   19ms  ▇▇ 3%
+jshint:all        569ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 596ms
+
+[36mCompleted in 5.154s at Tue Aug 18 2015 19:17:26 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:18:53 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   15ms  ▇ 2%
+jshint:all        651ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 674ms
+
+[36mCompleted in 4.923s at Tue Aug 18 2015 19:18:54 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:20:39 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 2%
+jshint:all        543ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 565ms
+
+[36mCompleted in 4.909s at Tue Aug 18 2015 19:20:40 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:21:22 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        479ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 502ms
+
+[36mCompleted in 4.533s at Tue Aug 18 2015 19:21:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:22:10 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        512ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 533ms
+
+[36mCompleted in 4.429s at Tue Aug 18 2015 19:22:11 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:23:47 UTC)
+loading tasks       9ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        528ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 554ms
+
+[36mCompleted in 5.138s at Tue Aug 18 2015 19:23:48 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:25:42 UTC)
+loading tasks       9ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        595ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 621ms
+
+[36mCompleted in 5.388s at Tue Aug 18 2015 19:25:43 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:26:42 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   13ms  ▇▇ 2%
+jshint:all        534ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 554ms
+
+[36mCompleted in 4.537s at Tue Aug 18 2015 19:26:43 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 177  col 30   Expected '{' and instead saw 'return'.
+  line 181  col 46   Expected '!==' and instead saw '!='.
+  line 181  col 71   Expected '{' and instead saw 'return'.
+  line 189  col 49   Expected '{' and instead saw 'return'.
+  line 217  col 29   Strings must use singlequote.
+  line 217  col 38   Strings must use singlequote.
+  line 218  col 24   Strings must use singlequote.
+  line 218  col 29   Strings must use singlequote.
+  line 219  col 25   Strings must use singlequote.
+  line 219  col 30   Strings must use singlequote.
+  line 220  col 27   Strings must use singlequote.
+  line 220  col 36   Strings must use singlequote.
+  line 221  col 26   Strings must use singlequote.
+  line 221  col 34   Strings must use singlequote.
+  line 357  col 7    'urlLine' is defined but never used.
+  line 168  col 14   'relax' is defined but never used.
+  line 170  col 38   'i' is defined but never used.
+  line 170  col 35   'd' is defined but never used.
+  line 174  col 42   'j' is defined but never used.
+  line 174  col 39   'd' is defined but never used.
+  line 359  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:27:33 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 2%
+jshint:all        667ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 693ms
+
+[36mCompleted in 4.714s at Tue Aug 18 2015 19:27:33 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 80   col 41   Missing semicolon.
+  line 178  col 30   Expected '{' and instead saw 'return'.
+  line 182  col 46   Expected '!==' and instead saw '!='.
+  line 182  col 71   Expected '{' and instead saw 'return'.
+  line 190  col 49   Expected '{' and instead saw 'return'.
+  line 218  col 29   Strings must use singlequote.
+  line 218  col 38   Strings must use singlequote.
+  line 219  col 24   Strings must use singlequote.
+  line 219  col 29   Strings must use singlequote.
+  line 220  col 25   Strings must use singlequote.
+  line 220  col 30   Strings must use singlequote.
+  line 221  col 27   Strings must use singlequote.
+  line 221  col 36   Strings must use singlequote.
+  line 222  col 26   Strings must use singlequote.
+  line 222  col 34   Strings must use singlequote.
+  line 358  col 7    'urlLine' is defined but never used.
+  line 169  col 14   'relax' is defined but never used.
+  line 80   col 13   'val' is defined but never used.
+  line 171  col 38   'i' is defined but never used.
+  line 171  col 35   'd' is defined but never used.
+  line 175  col 42   'j' is defined but never used.
+  line 175  col 39   'd' is defined but never used.
+  line 360  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  39 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:29:21 UTC)
+loading tasks       9ms  ▇ 1%
+newer:jshint:all   27ms  ▇▇ 4%
+jshint:all        585ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 622ms
+
+[36mCompleted in 4.317s at Tue Aug 18 2015 19:29:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:32:06 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   18ms  ▇▇ 3%
+jshint:all        668ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 695ms
+
+[36mCompleted in 4.787s at Tue Aug 18 2015 19:32:07 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:43:00 UTC)
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        496ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 515ms
+
+[36mCompleted in 4.234s at Tue Aug 18 2015 19:43:00 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 215  col 27   Strings must use singlequote.
+  line 215  col 36   Strings must use singlequote.
+  line 216  col 26   Strings must use singlequote.
+  line 216  col 34   Strings must use singlequote.
+  line 352  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 354  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  31 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:43:56 UTC)
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        547ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 570ms
+
+[36mCompleted in 4.677s at Tue Aug 18 2015 19:43:57 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:44:21 UTC)
+loading tasks       9ms  ▇ 1%
+newer:jshint:all   20ms  ▇▇ 3%
+jshint:all        593ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 623ms
+
+[36mCompleted in 4.436s at Tue Aug 18 2015 19:44:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:45:29 UTC)
+loading tasks       8ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        517ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 540ms
+
+[36mCompleted in 5.211s at Tue Aug 18 2015 19:45:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-18 23:46:00 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        530ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 554ms
+
+[36mCompleted in 5.032s at Tue Aug 18 2015 19:46:01 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 162  col 5    Forgotten 'debugger' statement?
+  line 162  col 13   Missing semicolon.
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 165  col 14   'relax' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  39 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 00:08:56 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        511ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 532ms
+
+[36mCompleted in 6.103s at Tue Aug 18 2015 20:08:56 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 162  col 5    Forgotten 'debugger' statement?
+  line 162  col 13   Missing semicolon.
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 167  col 38   'i' is defined but never used.
+  line 167  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  38 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 00:09:12 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   19ms  ▇▇ 4%
+jshint:all        484ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 510ms
+
+[36mCompleted in 4.071s at Tue Aug 18 2015 20:09:13 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 167  col 13   Forgotten 'debugger' statement?
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 166  col 38   'i' is defined but never used.
+  line 166  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  37 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 00:13:08 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        513ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 534ms
+
+[36mCompleted in 4.147s at Tue Aug 18 2015 20:13:09 GMT-0400 (EDT)[39m - Waiting...

@@ -24,6 +24,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   display: none;
 }
 
+
+polyline{
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
 .label-line {
     stroke-width: 1;
     stroke: #393939;
@@ -111,7 +119,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 #cityMap {
   min-height: 95.5vh;
   min-width: 100vw;
-  margin-top: 4.5vh;
+  margin-top: 6vh;
 
 }
 #citiesNav a{

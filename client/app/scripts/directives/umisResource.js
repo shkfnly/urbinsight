@@ -1,25 +1,21 @@
 'use strict';
 angular.module('urbinsight.directives')
 .directive('umisResource', ['ParcelFactory', '$window', function(ParcelFactory, $window) {
-  var data;
-  var updateLine;
-  var myChart;
-  // var options = {
-  //   margin : {top: 20, right: 80, bottom: 30, left: 50},
-  //   width : 430 - this.margin.left - this.margin.right,
-  //   height : 250 - margin.top - margin.bottom,
-  // };
   var d3 = $window.d3;
 
-// ordinal().range(['#98abc5', '#8a89a6', '#7b6888', '#6b486b', '#a05d56', '#d0743c', '#ff8c00']),
-  var width = 250,
-      height = 250,
-      radius = Math.min(width, height) / 2,
+  var width = 600,
+      height = 500,
+      radius = Math.min(width, height) / 3,
       color = d3.scale.category10(),
-      arc = d3.svg.arc().outerRadius(radius - 10).innerRadius(0),
+      arc = d3.svg.arc()
+            .outerRadius(radius * 0.8)
+            .innerRadius(0),
+      outerArc = d3.svg.arc()
+                  .innerRadius(radius * 0.9)
+                  .outerRadius(radius * 0.9),
       pie = d3.layout.pie().sort(null).value(function(d) { return d.value; });
-  var svg, selectID;
-  var key = function(d){ return d.data; };
+
+  var svg;
 
   var mergeWithFirstEqualZero = function(first, second){
     var secondSet = d3.set(); second.forEach(function(d) { 
@@ -50,7 +46,7 @@ angular.module('urbinsight.directives')
          .each(function(d) {
           this._current = d;
          });
-    slice = svg.selectAll('path.slice')
+    slice = svg.select('.slices').selectAll('path.slice')
         .data(pie(is));
 
     slice
@@ -81,7 +77,7 @@ angular.module('urbinsight.directives')
       .attr('dy', '.35em')
       .style('opacity', 0)
       .text(function(d) {
-        return d.data.key + ': ' + d.data.value;
+        return d.data.key + ': ' + d.data.value.toFixed(2);
       })
       .each(function(d) {
         this._current = d;
@@ -103,7 +99,7 @@ angular.module('urbinsight.directives')
         return function(t) {
           var d2 = interpolate(t);
           _this._current = d2;
-          var pos = arc.centroid(d2);
+          var pos = outerArc.centroid(d2);
           pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
           return 'translate(' + pos + ')';
         };
@@ -112,7 +108,7 @@ angular.module('urbinsight.directives')
         var interpolate = d3.interpolate(this._current, d);
         return function(t) {
           var d2 = interpolate(t);
-          return midAngle(d2) < Math.Pi ? 'start' : 'end';
+          return midAngle(d2) < Math.PI ? 'start' : 'end';
         };
       });
 
@@ -124,17 +120,104 @@ angular.module('urbinsight.directives')
       .remove();
 
     /* ------- SLICE TO TEXT POLYLINES --------*/
+    var polyline = svg.select('.lines').selectAll('polyline')
+      .data(pie(was));
 
+    polyline.enter()
+      .append('polyline')
+      .style('opacity', 0)
+      .each(function(d) {
+        this._current = d;
+      });
 
+    polyline = svg.select('.lines').selectAll('polyline')
+      .data(pie(is));
+
+    polyline.transition().duration(duration)
+      .style('opacity', function(d) {
+        return d.data.value === 0 ? 0 : 0.5;
+      })
+      .attrTween('points', function(d){
+        this._current = this._current;
+        var interpolate = d3.interpolate(this._current, d);
+        var _this = this;
+        return function(t) {
+          var d2 = interpolate(t);
+          _this._current = d2;
+          var pos = outerArc.centroid(d2);
+          pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+          return [arc.centroid(d2), outerArc.centroid(d2), pos];
+        };
+      });
+
+    polyline = svg.select('.lines').selectAll('polyline')
+      .data(pie(newData));
+
+    polyline
+      .exit().transition().delay(duration)
+      .remove();
+
+    var textLabels = svg.select('.labels').selectAll('text');
+    var textLines = svg.select('.lines').selectAll('polyline');
+    var alpha = 0.5;
+    var spacing = 12;
+    function relax() {
+        var again = false;
+        textLabels.each(function (d, i) {
+            debugger;
+            var a = this;
+            var da = d3.select(a);
+            var y1 = da.attr('y');
+            textLabels.each(function (d, j) {
+                var b = this;
+                // a & b are the same element and don't collide.
+                if (a === b) return;
+                var db = d3.select(b);
+                // a & b are on opposite sides of the chart and
+                // don't collide
+                if (da.attr('text-anchor') != db.attr('text-anchor')) return;
+                // Now let's calculate the distance between
+                // these elements. 
+                var y2 = db.attr('y');
+                var deltaY = y1 - y2;
+                
+                // Our spacing is greater than our specified spacing,
+                // so they don't collide.
+                if (Math.abs(deltaY) > spacing) return;
+                
+                // If the labels collide, we'll push each 
+                // of the two labels up and down a little bit.
+                again = true;
+                var sign = deltaY > 0 ? 1 : -1;
+                var adjust = sign * alpha;
+                da.attr('y',+y1 + adjust);
+                db.attr('y',+y2 - adjust);
+            });
+        });
+        // Adjust our line leaders here
+        // so that they follow the labels. 
+        if(again) {
+            var labelElements = textLabels[0];
+            textLines.attr('y2',function(d,i) {
+                var labelForLine = d3.select(labelElements[i]);
+                return labelForLine.attr('y');
+            });
+            setTimeout(relax,20);
+        }
+    }
+    relax();
   };
 
   var setupD3 = function(selectID) {
     svg = d3.select(selectID)
           .append('svg')
-          .attr('width', width)
-          .attr('height', height)
+          .attr({ "position": "fixed", 
+                  "top": "0", 
+                  "left": "0", 
+                  "height": "500px", 
+                  "width": "100%" })
           .append('g')
-          .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+          .attr('transform', 'translate(' + (width / 2 + 50) +  ',' + (height / 2 - 50) + ')');
 
       svg.append('g')
         .attr('class', 'slices');
@@ -143,99 +226,6 @@ angular.module('urbinsight.directives')
       svg.append('g')
         .attr('class', 'lines');
   };
-
-  var renderPie = function(data, resource){
-    var resourceData = data[resource];
-    data = d3.entries(resourceData);
-    // selectID = '#pie-' + resource.toString();
-
-    // svg = d3.select(selectID)
-    //       .append('svg')
-    //       .attr('width', width)
-    //       .attr('height', height)
-    //       .append('g')
-    //       .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
-
-      
-
-    //   svg.append('g')
-    //     .attr('class', 'slices');
-    //   svg.append('g')
-    //     .attr('class', 'labels');
-    //   svg.append('g')
-    //     .attr('class', 'lines');
-
-      // var g = svg.selectAll('.arc')
-      //            .data(pie(data))
-      //            .enter()
-      //            .append('g')
-      //            .attr('class', 'arc');
-
-      //     g.append('path')
-      //      .attr('d', arc)
-      //      .style('fill', function(d) { return color(d.data.key); });
-
-      var g = svg.select('.slices').selectAll('path.slice')
-                 .data(pie(data))
-                 .enter()
-                 .append('path')
-                 .attr('class', 'slice')
-                 .attr('d', arc)
-                 .style('fill', function(d) { return color(d.data.key); });
-
-     
-        // svg.select('g')
-        // .append('g')
-        // .attr('id', 'labels');
-      // g.append('text')
-      //       .attr('transform', function(d) { 
-      //           // return 'translate(' + arc.centroid(d) + ')'; 
-      //           var c = arc.centroid(d),
-      //               x = c[0],
-      //               y = c[1],
-      //               h = Math.sqrt(x*x + y*y);
-      //               return 'translate(' + (x/h * (radius)) + ',' + (y/h * (radius)) + ')';
-      //         })
-      //       .attr('dy', '.35em')
-      //       // .attr('dx', '.1em')
-      //       .attr('text-anchor', function(d){
-      //         return (d.endAngle + d.startAngle)/2 > Math.PI ? 'end' : 'start';
-      //       })
-      //       .text(function(d) { return Math.round(d.data.value, 3);  });
-  } ;
-
-  var updatePie = function(data, resource){
-    var resourceData = data[resource];
-    data = d3.entries(resourceData);
-    var selectID = '#pie-' + resource.toString();
-    var svg = d3.select(selectID)
-                .select('svg')
-                .select('g');
-
-    var g = svg.selectAll('.arc')
-               .data(pie(data));
-
-    g.enter()
-     .append('g')
-     .attr('class', 'arc');
-    g.append('path')
-     .attr('d', arc)
-     .transition()
-     .duration(2000)
-     .style('fill', function(d) { 
-          return color(d.data.key); });
-    // g.append('text')
-    //       .attr('transform', function(d) { return 'translate(' + arc.centroid(d) + ')'; })
-    //       .attr('x', 12)
-    //       .attr('dy', '1em')
-    //       .style('text-anchor', 'start')
-    //       .text(function(d) { return d.data.key + '( ' + d.data.value + ' )'; });
-    g.exit().remove();
-
-  };
-
-
-
 
     // var labels = svg.select('#labels');
     // var enteringLabels = labels.selectAll('.label').data(pie(data));
@@ -365,45 +355,15 @@ angular.module('urbinsight.directives')
   // fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
   function link(scope, element, attrs){
     element.children('#pie')[0].id = ('pie-' + scope.resource);
-    // element.children(('#pie-' + scope.resource))[0].attr;
     scope.selectID = '#pie-' + scope.resource;
     setupD3(scope.selectID);
     updatePieChart(d3.entries(scope.info[scope.resource]));
-
-
-    // update(d3.entries(scope.info[scope.resource]));
-    // element.children('#line')[0].id = ('line-' + scope.resource);
-    // fetchLineData(urlLine, scope.resource, renderLine);
-    // renderPie(scope.info, scope.resource);
-    // var pieData = [];
-    // _.forEach(scope.info, function(total, key){
-    //   pieData.push({ label: key, value: total});
-    // });
-    // var selectPieId = '#pie-' + scope.resource;
-    // debugger
-    // myChart = $(selectPieId).epoch({
-    //   type: 'pie',
-    //   data: pieData
-    // });
     scope.$watch('info', function(newVal, oldVal, scope){
-      updatePieChart(newVal[scope.resource], oldVal[scope.resource]);
-      // update(d3.entries(newVal[scope.resource]));
-      // renderPie(scope.info, scope.resource);
-      // fetchLineData(urlLine, scope.resource, updateLine);
-      // updatePie(newVal, scope.resource);
-      // var pieData = [];
-      // _.forEach(newVal[scope.resource], function(total, key){
-      //   pieData.push({ label: key, value: total});
-      // });
-      // myChart.update(pieData);
-      // scope.info = newVal;
+      updatePieChart(d3.entries(newVal[scope.resource]), d3.entries(oldVal[scope.resource]));
 
     }, true);
   }
 
-
-
-  
   return {
     restrict: 'E',
     scope: {

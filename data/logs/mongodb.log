@@ -2413,3 +2413,29 @@
 2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55025 #10 (3 connections now open)
 2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55026 #11 (4 connections now open)
 2015-08-18T00:00:11.079-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55027 #12 (5 connections now open)
+2015-08-18T11:37:35.017-0400 I STORAGE  [DataFileSync] flushing mmaps took 21895706ms  for 4 files
+2015-08-18T14:28:00.262-0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-08-18T14:28:00.291-0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-08-18T14:28:00.302-0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-08-18T14:28:00.302-0400 I JOURNAL  [initandlisten] recover begin
+2015-08-18T14:28:00.302-0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-08-18T14:28:00.302-0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-08-18T14:28:00.304-0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-08-18T14:28:00.305-0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-08-18T14:28:00.305-0400 I JOURNAL  [initandlisten] recover done
+2015-08-18T14:28:00.323-0400 I JOURNAL  [durability] Durability thread started
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] MongoDB starting : pid=1072 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] db version v3.0.4
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-08-18T14:28:00.323-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] allocator: system
+2015-08-18T14:28:00.323-0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-08-18T14:28:00.445-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-08-18T14:28:08.355-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50239 #1 (1 connection now open)
+2015-08-18T14:28:08.378-0400 I NETWORK  [conn1] end connection 127.0.0.1:50239 (0 connections now open)
+2015-08-18T14:28:08.387-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50241 #2 (1 connection now open)
+2015-08-18T14:28:08.387-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50242 #3 (2 connections now open)
+2015-08-18T14:28:08.388-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50243 #4 (3 connections now open)
+2015-08-18T14:28:08.388-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50244 #5 (4 connections now open)
+2015-08-18T14:28:08.388-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50245 #6 (5 connections now open)
