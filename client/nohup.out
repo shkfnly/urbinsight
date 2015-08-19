@@ -3266,3 +3266,1788 @@ jshint:all        513ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 Total 534ms
 
 [36mCompleted in 4.147s at Tue Aug 18 2015 20:13:09 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/index.html" changed.
+[36mCompleted in 0.000s at Tue Aug 18 2015 20:46:54 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/index.html" changed.
+[36mCompleted in 0.000s at Tue Aug 18 2015 20:48:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "bower.json" changed.
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2015-08-19 00:48:54 UTC)
+loading tasks    8ms  ▇▇ 2%
+wiredep:app    308ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 86%
+wiredep:test    18ms  ▇▇▇ 5%
+wiredep:sass    23ms  ▇▇▇▇ 6%
+Total 358ms
+
+[36mCompleted in 5.562s at Tue Aug 18 2015 20:48:54 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/index.html" changed.
+[36mCompleted in 0.000s at Tue Aug 18 2015 20:48:55 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 167  col 13   Forgotten 'debugger' statement?
+  line 174  col 30   Expected '{' and instead saw 'return'.
+  line 178  col 46   Expected '!==' and instead saw '!='.
+  line 178  col 71   Expected '{' and instead saw 'return'.
+  line 186  col 49   Expected '{' and instead saw 'return'.
+  line 214  col 29   Strings must use singlequote.
+  line 214  col 38   Strings must use singlequote.
+  line 215  col 24   Strings must use singlequote.
+  line 215  col 29   Strings must use singlequote.
+  line 216  col 25   Strings must use singlequote.
+  line 216  col 30   Strings must use singlequote.
+  line 217  col 27   Strings must use singlequote.
+  line 217  col 36   Strings must use singlequote.
+  line 218  col 26   Strings must use singlequote.
+  line 218  col 34   Strings must use singlequote.
+  line 5    col 7    'c3' is defined but never used.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 96   col 43   'i' is defined but never used.
+  line 166  col 38   'i' is defined but never used.
+  line 166  col 35   'd' is defined but never used.
+  line 171  col 42   'j' is defined but never used.
+  line 171  col 39   'd' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  39 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 00:50:19 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        522ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 544ms
+
+[36mCompleted in 5.354s at Tue Aug 18 2015 20:50:20 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 359  col 5    Forgotten 'debugger' statement?
+  line 359  col 13   Missing semicolon.
+  line 4    col 7    'd3' is defined but never used.
+  line 5    col 7    'c3' is defined but never used.
+  line 354  col 7    'urlLine' is defined but never used.
+  line 356  col 33   'attrs' is defined but never used.
+  line 362  col 51   'scope' is defined but never used.
+  line 362  col 43   'oldVal' is defined but never used.
+  line 362  col 35   'newVal' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  25 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 00:58:24 UTC)
+loading tasks      10ms  ▇ 2%
+newer:jshint:all   17ms  ▇▇ 4%
+jshint:all        432ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 460ms
+
+[36mCompleted in 5.808s at Tue Aug 18 2015 20:58:25 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/index.html" changed.
+[36mCompleted in 0.000s at Tue Aug 18 2015 21:00:51 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 356  col 7    Expected an assignment or function call and instead saw an expression.
+  line 356  col 11   Missing semicolon.
+  line 357  col 4    Missing semicolon.
+  line 364  col 5    Forgotten 'debugger' statement?
+  line 364  col 13   Missing semicolon.
+  line 356  col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 5    col 7    'c3' is defined but never used.
+  line 354  col 7    'dataXForm' is defined but never used.
+  line 359  col 7    'urlLine' is defined but never used.
+  line 355  col 9    'results' is defined but never used.
+  line 354  col 28   'obj' is defined but never used.
+  line 361  col 33   'attrs' is defined but never used.
+  line 367  col 51   'scope' is defined but never used.
+  line 367  col 43   'oldVal' is defined but never used.
+  line 367  col 35   'newVal' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  32 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:03:19 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        378ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 401ms
+
+[36mCompleted in 3.959s at Tue Aug 18 2015 21:03:19 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 360  col 4    Missing semicolon.
+  line 367  col 5    Forgotten 'debugger' statement?
+  line 367  col 13   Missing semicolon.
+  line 356  col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 5    col 7    'c3' is defined but never used.
+  line 354  col 7    'dataXForm' is defined but never used.
+  line 362  col 7    'urlLine' is defined but never used.
+  line 364  col 33   'attrs' is defined but never used.
+  line 370  col 51   'scope' is defined but never used.
+  line 370  col 43   'oldVal' is defined but never used.
+  line 370  col 35   'newVal' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  28 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:12:36 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        414ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 436ms
+
+[36mCompleted in 6.168s at Tue Aug 18 2015 21:12:37 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 360  col 4    Missing semicolon.
+  line 369  col 5    Forgotten 'debugger' statement?
+  line 369  col 13   Missing semicolon.
+  line 356  col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 5    col 7    'c3' is defined but never used.
+  line 354  col 7    'dataXForm' is defined but never used.
+  line 362  col 7    'chart' is defined but never used.
+  line 364  col 7    'urlLine' is defined but never used.
+  line 366  col 33   'attrs' is defined but never used.
+  line 372  col 51   'scope' is defined but never used.
+  line 372  col 43   'oldVal' is defined but never used.
+  line 372  col 35   'newVal' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  29 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:13:34 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        396ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 420ms
+
+[36mCompleted in 4.868s at Tue Aug 18 2015 21:13:35 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 360  col 4    Missing semicolon.
+  line 356  col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 364  col 7    'urlLine' is defined but never used.
+  line 366  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:22:10 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        422ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 445ms
+
+[36mCompleted in 5.832s at Tue Aug 18 2015 21:22:11 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 360  col 4    Missing semicolon.
+  line 356  col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 364  col 7    'urlLine' is defined but never used.
+  line 366  col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:23:10 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        380ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 401ms
+
+[36mCompleted in 3.984s at Tue Aug 18 2015 21:23:10 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 13   col 4    Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:24:09 UTC)
+loading tasks      10ms  ▇▇ 2%
+newer:jshint:all   18ms  ▇▇ 4%
+jshint:all        385ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 93%
+Total 414ms
+
+[36mCompleted in 4.522s at Tue Aug 18 2015 21:24:10 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:24:41 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        381ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 403ms
+
+[36mCompleted in 4.612s at Tue Aug 18 2015 21:24:41 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:28:51 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        476ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 501ms
+
+[36mCompleted in 5.791s at Tue Aug 18 2015 21:28:52 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:35:01 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   18ms  ▇▇ 4%
+jshint:all        482ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 509ms
+
+[36mCompleted in 4.745s at Tue Aug 18 2015 21:35:02 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:42:05 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   17ms  ▇▇ 4%
+jshint:all        417ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 442ms
+
+[36mCompleted in 5.135s at Tue Aug 18 2015 21:42:05 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:42:31 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        431ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 454ms
+
+[36mCompleted in 4.552s at Tue Aug 18 2015 21:42:31 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 36   col 20   Strings must use singlequote.
+  line 41   col 5    Expected ')' and instead saw '}'.
+  line 41   col 6    Missing semicolon.
+  line 41   col 6    Expected an identifier and instead saw ')'.
+  line 41   col 6    Expected an assignment or function call and instead saw an expression.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 35   col 36   'j' is defined but never used.
+  line 35   col 33   'i' is defined but never used.
+  line 35   col 29   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ✖  1 error
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:46:44 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 2%
+jshint:all        561ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 97%
+Total 581ms
+
+[36mCompleted in 5.133s at Tue Aug 18 2015 21:46:45 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 36   col 20   Strings must use singlequote.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 35   col 36   'j' is defined but never used.
+  line 35   col 33   'i' is defined but never used.
+  line 35   col 29   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  24 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:47:08 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   17ms  ▇▇ 4%
+jshint:all        401ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 426ms
+
+[36mCompleted in 5.702s at Tue Aug 18 2015 21:47:08 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 36   col 20   Strings must use singlequote.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 35   col 36   'j' is defined but never used.
+  line 35   col 33   'i' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  23 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:47:32 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        382ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 404ms
+
+[36mCompleted in 3.971s at Tue Aug 18 2015 21:47:32 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 36   col 20   Strings must use singlequote.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:47:56 UTC)
+loading tasks       8ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        409ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 434ms
+
+[36mCompleted in 4.466s at Tue Aug 18 2015 21:47:57 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 35   col 36   'j' is defined but never used.
+  line 35   col 33   'i' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  22 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:49:09 UTC)
+loading tasks       7ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        497ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 521ms
+
+[36mCompleted in 4.899s at Tue Aug 18 2015 21:49:09 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 38   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:54:35 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        438ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 462ms
+
+[36mCompleted in 5.811s at Tue Aug 18 2015 21:54:36 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 38   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:55:34 UTC)
+loading tasks      10ms  ▇ 2%
+newer:jshint:all   17ms  ▇▇ 3%
+jshint:all        491ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 519ms
+
+[36mCompleted in 4.628s at Tue Aug 18 2015 21:55:35 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 38   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:55:56 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        387ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 409ms
+
+[36mCompleted in 4.706s at Tue Aug 18 2015 21:55:56 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 38   'id' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:56:21 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   19ms  ▇▇ 4%
+jshint:all        424ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 449ms
+
+[36mCompleted in 5.008s at Tue Aug 18 2015 21:56:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 01:59:29 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        398ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 421ms
+
+[36mCompleted in 4.788s at Tue Aug 18 2015 21:59:29 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 36   col 32   Forgotten 'debugger' statement?
+  line 36   col 40   Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 27   'd' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  23 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:00:22 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   17ms  ▇▇ 4%
+jshint:all        434ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 458ms
+
+[36mCompleted in 5.208s at Tue Aug 18 2015 22:00:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 37   col 43   Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 37   col 32   'ration' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  22 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:03:10 UTC)
+loading tasks       8ms  ▇ 2%
+newer:jshint:all   22ms  ▇▇▇ 5%
+jshint:all        400ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 93%
+Total 431ms
+
+[36mCompleted in 4.851s at Tue Aug 18 2015 22:03:11 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 37   col 42   Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:03:33 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        377ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 400ms
+
+[36mCompleted in 4.605s at Tue Aug 18 2015 22:03:34 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:04:21 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        389ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 413ms
+
+[36mCompleted in 5.469s at Tue Aug 18 2015 22:04:22 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 41   'id' is defined but never used.
+  line 36   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  22 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:04:55 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   16ms  ▇▇ 3%
+jshint:all        484ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 507ms
+
+[36mCompleted in 4.424s at Tue Aug 18 2015 22:04:55 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 41   'id' is defined but never used.
+  line 36   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  22 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:05:15 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        391ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 415ms
+
+[36mCompleted in 4.916s at Tue Aug 18 2015 22:05:16 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 17   col 7    'urlLine' is defined but never used.
+  line 19   col 33   'attrs' is defined but never used.
+  line 36   col 41   'id' is defined but never used.
+  line 36   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  22 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:05:43 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 3%
+jshint:all        528ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 96%
+Total 550ms
+
+[36mCompleted in 4.579s at Tue Aug 18 2015 22:05:44 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 21   col 4    Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 17   col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 14   col 7    'overallTotal' is defined but never used.
+  line 15   col 7    'calculateOverallTotal' is defined but never used.
+  line 25   col 7    'urlLine' is defined but never used.
+  line 27   col 33   'attrs' is defined but never used.
+  line 44   col 41   'id' is defined but never used.
+  line 44   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  26 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:07:59 UTC)
+loading tasks       6ms  ▇ 2%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        374ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 395ms
+
+[36mCompleted in 4.416s at Tue Aug 18 2015 22:07:59 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 25   col 17   Missing semicolon.
+  line 27   col 4    Missing semicolon.
+  line 9    col 5    '_' is not defined.
+  line 17   col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 14   col 7    'overallTotal' is defined but never used.
+  line 23   col 7    'defineUnit' is defined but never used.
+  line 31   col 7    'urlLine' is defined but never used.
+  line 33   col 33   'attrs' is defined but never used.
+  line 51   col 41   'id' is defined but never used.
+  line 51   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  27 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:09:51 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   14ms  ▇▇ 3%
+jshint:all        386ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 406ms
+
+[36mCompleted in 3.974s at Tue Aug 18 2015 22:09:52 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 14   col 7    'overallTotal' is defined but never used.
+  line 23   col 7    'defineUnit' is defined but never used.
+  line 31   col 7    'urlLine' is defined but never used.
+  line 33   col 33   'attrs' is defined but never used.
+  line 51   col 41   'id' is defined but never used.
+  line 51   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  25 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:09:56 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   18ms  ▇▇ 4%
+jshint:all        391ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 416ms
+
+[36mCompleted in 4.064s at Tue Aug 18 2015 22:09:56 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 14   col 7    'overallTotal' is defined but never used.
+  line 31   col 7    'urlLine' is defined but never used.
+  line 33   col 33   'attrs' is defined but never used.
+  line 52   col 41   'id' is defined but never used.
+  line 52   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  24 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:10:21 UTC)
+loading tasks       6ms  ▇ 1%
+newer:jshint:all   15ms  ▇▇ 4%
+jshint:all        406ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 427ms
+
+[36mCompleted in 4.035s at Tue Aug 18 2015 22:10:21 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/directives/umisResource.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 9    col 5    '_' is not defined.
+  line 17   col 5    '_' is not defined.
+  line 4    col 7    'd3' is defined but never used.
+  line 14   col 7    'overallTotal' is defined but never used.
+  line 31   col 7    'urlLine' is defined but never used.
+  line 33   col 33   'attrs' is defined but never used.
+  line 52   col 41   'id' is defined but never used.
+  line 52   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 55   col 41   Missing semicolon.
+  line 65   col 26   Missing semicolon.
+  line 67   col 128  Missing semicolon.
+  line 70   col 13   Missing semicolon.
+  line 71   col 35   Missing semicolon.
+  line 72   col 11   Missing semicolon.
+  line 88   col 34   Missing semicolon.
+  line 91   col 24   Missing semicolon.
+  line 66   col 9    '_' is not defined.
+  line 68   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  24 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-19 02:12:22 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        407ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 431ms
+
+[36mCompleted in 4.330s at Tue Aug 18 2015 22:12:22 GMT-0400 (EDT)[39m - Waiting...
