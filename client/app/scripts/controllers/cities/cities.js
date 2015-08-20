@@ -95,6 +95,7 @@ angular.module('urbinsight')
     $scope.renderMap = function(city) {
       // Create Map
         $scope.city = city;
+        // This is weird I create the map and then set the map from the same object...change this implementation.
         $scope.map = MapFactory.createMap()
         .setView([city.lat, city.lon], 12);
         MapFactory.setMap($scope.map);
@@ -180,7 +181,7 @@ angular.module('urbinsight')
             })
           }).bindPopup(popupgen(node, key))
           .on('click', function(){$scope.drawFlows(node);});
-          markers.addLayer(mark);
+          if(markers) { markers.addLayer(mark) };
           $scope.markers = markers;
         });
          

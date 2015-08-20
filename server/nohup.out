@@ -138,6 +138,7 @@ Database Connection Successfully Opened at mongodb://localhost/urbinsight
 [0mGET /scripts/controllers/header.js [36m304 [0m21.734 ms - -[0m
 [0mGET /scripts/controllers/umisresource.js [36m304 [0m19.929 ms - -[0m
 2 Jun 23:34:30 - [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+<<<<<<< HEAD
 
 > urbinsight@0.0.0 test /Users/shokishoki/urbinsight/server
 > NODE_ENV=development nodemon ./bin/www

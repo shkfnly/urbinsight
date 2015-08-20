@@ -1,4 +1,6 @@
+
 LOAD CSV WITH HEADERS FROM "file:/Users/shokishoki/urbinsight/server/sample_data/demand.csv" AS csvLine
+
 CREATE (:demand:vancouver {     db_link: csvLine.DBLINK,
                     geodb_oid: csvLine.GEODB_OID,
                     object_id: csvLine.OBJECTID,
@@ -11,7 +13,9 @@ CREATE (:demand:vancouver {     db_link: csvLine.DBLINK,
                     });
 
 
+
 LOAD CSV WITH HEADERS FROM "file:/Users/shokishoki/urbinsight/server/sample_data/downstream.csv" AS csvLine
+
 CREATE (:downstream:vancouver { geodb_subt: csvLine.GEODB_SUBT,
                     geodb_oid: csvLine.GEODB_OID,
                     object_id: csvLine.OBJECTID,
