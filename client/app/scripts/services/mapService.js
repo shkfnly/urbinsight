@@ -39,6 +39,17 @@ angular.module('urbinsight.services')
 
       currentGeoJSONBounds: null,
 
+      transformBounds: function(boundsObject){
+        var that = this;
+        var SW, SE, NE, NW;
+        SW = that.flipToLngLatArray(boundsObject.getSouthWest());
+        SE = that.flipToLngLatArray(boundsObject.getSouthEast());
+        NE = that.flipToLngLatArray(boundsObject.getNorthEast()); 
+        NW = that.flipToLngLatArray(boundsObject.getNorthWest());
+
+        that.currentGeoJSONBounds = [SW, SE, NE, NW, SW];
+      },
+
 
       markerClickControl: function(objName, factory, $scope){
         var map = this.getMap();
@@ -70,7 +81,7 @@ angular.module('urbinsight.services')
       },
 
       renderLots: function(data){
-        console.log(data)
+        console.log(data);
       },
 
       renderParcels: function(cityName){

@@ -112,20 +112,18 @@ angular.module('urbinsight')
         });
 
         $scope.map.on('moveend', function(e) {
-          var SW, SE, NE, NW;
           var boundObj = e.target.getBounds();
-          SW = MapFactory.flipToLngLatArray(boundObj.getSouthWest());
-          SE = MapFactory.flipToLngLatArray(boundObj.getSouthEast());
-          NE = MapFactory.flipToLngLatArray(boundObj.getNorthEast()); 
-          NW = MapFactory.flipToLngLatArray(boundObj.getNorthWest());
-          MapFactory.currentGeoJSONBounds = [SW, SE, NE, NW, SW];
+          console.log(cityName);
+          MapFactory.transformBounds(boundObj);
           ParcelFactory.fetchLots(cityName, function(data){
+
             MapFactory.renderLots(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds}})
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
           
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds}});
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+        
         });
 
         var drawControl = new L.Control.Draw({
