@@ -7343,3 +7343,280 @@ jshint:all        374ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 Total 394ms
 
 [36mCompleted in 3.929s at Wed Aug 19 2015 01:40:44 GMT-0400 (EDT)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+Starting Neo4j Server...WARNING: not changing user
+process [1000]... waiting for server to be ready..    
+    [4mRunning "compass:server" (compass) task[24m
+    [32mdirectory[0m .tmp/styles
+    [32m    write[0m .tmp/styles/main.css (4.819s)
+    [32m    write[0m .tmp/styles/main.css.map
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2015-08-22 08:46:52 UTC)
+    compass:server  6s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 100%
+    Total 6s
+    
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://localhost:9000
+
+[4mRunning "watch" task[24m
+Waiting...
+....... OK.
+http://localhost:7474/ is ready.
+[32m>> [39mFile "app/scripts/services/parcelService.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 30   col 33   'attrs' is defined but never used.
+  line 49   col 41   'id' is defined but never used.
+  line 49   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 83   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 65   col 41   Missing semicolon.
+  line 75   col 26   Missing semicolon.
+  line 77   col 128  Missing semicolon.
+  line 80   col 13   Missing semicolon.
+  line 81   col 35   Missing semicolon.
+  line 82   col 11   Missing semicolon.
+  line 98   col 34   Missing semicolon.
+  line 101  col 24   Missing semicolon.
+  line 53   col 35   'cityName' is not defined.
+  line 76   col 9    '_' is not defined.
+  line 78   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-25 00:04:26 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        402ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 425ms
+
+[36mCompleted in 5.674s at Mon Aug 24 2015 20:04:27 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/services/mapService.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 30   col 33   'attrs' is defined but never used.
+  line 49   col 41   'id' is defined but never used.
+  line 49   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 73   col 26   Missing semicolon.
+  line 87   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 65   col 41   Missing semicolon.
+  line 75   col 26   Missing semicolon.
+  line 77   col 128  Missing semicolon.
+  line 80   col 13   Missing semicolon.
+  line 81   col 35   Missing semicolon.
+  line 82   col 11   Missing semicolon.
+  line 98   col 34   Missing semicolon.
+  line 101  col 24   Missing semicolon.
+  line 53   col 35   'cityName' is not defined.
+  line 76   col 9    '_' is not defined.
+  line 78   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-25 00:06:57 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        407ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 431ms
+
+[36mCompleted in 4.788s at Mon Aug 24 2015 20:06:57 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/services/parcelService.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 30   col 33   'attrs' is defined but never used.
+  line 49   col 41   'id' is defined but never used.
+  line 49   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 73   col 26   Missing semicolon.
+  line 87   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 65   col 41   Missing semicolon.
+  line 75   col 26   Missing semicolon.
+  line 77   col 128  Missing semicolon.
+  line 80   col 13   Missing semicolon.
+  line 81   col 35   Missing semicolon.
+  line 82   col 11   Missing semicolon.
+  line 98   col 34   Missing semicolon.
+  line 101  col 24   Missing semicolon.
+  line 53   col 35   'cityName' is not defined.
+  line 76   col 9    '_' is not defined.
+  line 78   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  21 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-25 00:23:30 UTC)
+loading tasks       7ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        399ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 95%
+Total 422ms
+
+[36mCompleted in 5.340s at Mon Aug 24 2015 20:23:31 GMT-0400 (EDT)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "wiredep:sass" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.000s at Mon Aug 24 2015 20:34:27 GMT-0400 (EDT)[39m - Waiting...
+    
+    [4mRunning "compass:server" (compass) task[24m
+    [32mdirectory[0m .tmp/styles
+    [32m    write[0m .tmp/styles/main.css (4.859s)
+    [32m    write[0m .tmp/styles/main.css.map
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2015-08-25 00:34:24 UTC)
+    compass:server  6s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 100%
+    Total 6s
+    
+[4mRunning "autoprefixer:server" (autoprefixer) task[24m
+Autoprefixer's process() method is deprecated and will removed in next major release. Use postcss([autoprefixer]).process() instead
+File .tmp/styles/main.css created.
+File .tmp/styles/main.css.map created (source map).
+
+[4mRunning "connect:livereload" (connect) task[24m
+[31mFatal error: Port 9000 is already in use by another process.[39m
+
+
+Execution Time (2015-08-25 00:34:20 UTC)
+wiredep:app          282ms  ▇▇ 3%
+concurrent:server     9.7s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 91%
+autoprefixer:server  596ms  ▇▇▇ 6%
+Total 10.7s
+
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.000s at Mon Aug 24 2015 20:34:30 GMT-0400 (EDT)[39m - Waiting...
+Another server-process is running with [1000], cannot start a new one. Exiting.
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.000s at Mon Aug 24 2015 20:37:28 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile ".tmp/styles/main.css" changed.
+[36mCompleted in 0.000s at Mon Aug 24 2015 20:37:31 GMT-0400 (EDT)[39m - Waiting...
+[32m>> [39mFile "app/scripts/services/parcelService.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/directives/umisResource.js
+  line 30   col 33   'attrs' is defined but never used.
+  line 49   col 41   'id' is defined but never used.
+  line 49   col 34   'ratio' is defined but never used.
+
+app/scripts/services/mapService.js
+  line 73   col 26   Missing semicolon.
+  line 87   col 17   Missing semicolon.
+
+app/scripts/services/parcelService.js
+  line 16   col 6    Missing semicolon.
+  line 65   col 41   Missing semicolon.
+  line 75   col 26   Missing semicolon.
+  line 77   col 128  Missing semicolon.
+  line 80   col 13   Missing semicolon.
+  line 81   col 35   Missing semicolon.
+  line 82   col 11   Missing semicolon.
+  line 98   col 34   Missing semicolon.
+  line 101  col 24   Missing semicolon.
+  line 76   col 9    '_' is not defined.
+  line 78   col 11   '_' is not defined.
+  line 19   col 9    'parcelsInView' is defined but never used.
+
+app/scripts/services/umisService.js
+  line 241  col 8    Missing semicolon.
+  line 247  col 11   Missing semicolon.
+  line 245  col 9    '_' is not defined.
+
+  ⚠  20 warnings
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2015-08-25 00:52:08 UTC)
+loading tasks       8ms  ▇ 2%
+newer:jshint:all   16ms  ▇▇ 4%
+jshint:all        411ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 94%
+Total 436ms
+
+[36mCompleted in 5.518s at Mon Aug 24 2015 20:52:08 GMT-0400 (EDT)[39m - Waiting...

@@ -48,6 +48,16 @@ angular.module('urbinsight.services')
           });
       },
 
+      fetchLots: function(cityName, callback, options) {
+        options = options || {};
+        $http.get('/data/city/' + cityName + '/lots/', options).
+          success(function(data){
+            callback(data);
+          }).
+          error(function(){
+          });
+      },
+
       saveParcel: function(cityName, callback){
         var that = this;
         var parcel = that.getCurrentParcel();

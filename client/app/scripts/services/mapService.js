@@ -69,6 +69,10 @@ angular.module('urbinsight.services')
         map.removeLayer(this.getCurrentMarker());
       },
 
+      renderLots: function(data){
+        console.log(data)
+      },
+
       renderParcels: function(cityName){
         var that = this;
         that.currentParcels = L.layerGroup([]);
