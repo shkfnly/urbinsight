@@ -3233,3 +3233,4 @@
 2015-08-25T19:40:03.182-0700 I NETWORK  [conn369] end connection 127.0.0.1:59553 (5 connections now open)
 2015-08-25T20:16:12.002-0700 I STORAGE  [DataFileSync] flushing mmaps took 1106528ms  for 4 files
 2015-08-26T11:59:02.070-0700 I STORAGE  [DataFileSync] flushing mmaps took 56328014ms  for 4 files
+2015-08-26T13:44:09.005-0700 I STORAGE  [DataFileSync] flushing mmaps took 300172ms  for 4 files
