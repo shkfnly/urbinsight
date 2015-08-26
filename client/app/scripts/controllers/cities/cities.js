@@ -113,7 +113,6 @@ angular.module('urbinsight')
 
         $scope.map.on('moveend', function(e) {
           var boundObj = e.target.getBounds();
-          console.log(cityName);
           MapFactory.transformBounds(boundObj);
           ParcelFactory.fetchLots(cityName, function(data){
 
