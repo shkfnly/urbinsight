@@ -24,6 +24,7 @@
     "gzippo": "^0.2.0",
     "jsonwebtoken": "^5.0.1",
     "jwt-simple": "^0.3.0",
+    "leaflet-mapbox-vector-tile": "^0.1.6",
     "less-middleware": "1.0.x",
     "method-override": "^2.3.3",
     "moment": "^2.10.3",
@@ -39,6 +40,7 @@
     "seraph-model": "^0.6.18",
     "serve-favicon": "^2.2.1",
     "shp2json": "^1.1.0",
+    "sphericalmercator": "^1.0.3",
     "type": "0.0.3",
     "underscore": "^1.8.2",
     "unzip": "^0.1.11"

@@ -102,6 +102,51 @@ angular.module('urbinsight')
         var featureGroup = L.featureGroup().addTo($scope.map);
         $scope.layerDefs = city.layerDefinitions;
         $scope.addLayerControl($scope.additonalLayers(city.layers));
+
+        // var lots = L.mapboxGL({
+        //   accessToken: L.mapbox.accessToken,
+        //   minZoom: 12,
+        //   style: {
+        //     "version" : 8,
+        //     "sources" : {
+        //       "lots": {
+        //         "type": "vector",
+        //         "url": 
+        //           "/data/city/" + $scope.city + "/lots/{z}/{x}/{y}.pbf",
+        //       } 
+        //     },
+        //     "layers" : [
+        //       {
+        //         "id": "lots",
+        //         "type": "fill",
+        //         "source": "lots",
+        //         "interactive": true,
+        //         "paint": {
+        //           "fill-color": '#0000FF'
+        //         }
+        //       }
+        //     ]
+        //   }
+        // });
+        var lots = new L.TileLayer.MVTSource({
+          url: '/data/city/' + cityName + '/lots/{z}/{x}/{y}.pbf',
+          clickableLayers: ['lots'],
+          getIDForLayerFeature: function(feature) {
+            return feature._id;
+          },
+          style: function(feature) {
+            return {color: 'rgba(255, 0, 0, 1)', 
+                    outline: { color: 'rgb(20,20,20)',
+                               size: 1},
+                  selected: {
+                    color: 'rgba(0, 255, 0, 1'}
+                  };
+          }
+          
+        });
+        $scope.map.addLayer(lots);
+
+        
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
 
@@ -114,11 +159,11 @@ angular.module('urbinsight')
         $scope.map.on('moveend', function(e) {
           var boundObj = e.target.getBounds();
           MapFactory.transformBounds(boundObj);
-          ParcelFactory.fetchLots(cityName, function(data){
+          /*ParcelFactory.fetchLots(cityName, function(data){
 
             MapFactory.renderLots(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
-          
+          */
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
@@ -182,7 +227,7 @@ angular.module('urbinsight')
             })
           }).bindPopup(popupgen(node, key))
           .on('click', function(){$scope.drawFlows(node);});
-          if(markers) { markers.addLayer(mark) };
+          if(markers) { markers.addLayer(mark); }
           $scope.markers = markers;
         });
          

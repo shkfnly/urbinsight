@@ -81,7 +81,16 @@ angular.module('urbinsight.services')
       },
 
       renderLots: function(data){
+        var that = this;
         console.log(data);
+        debugger;
+        /*if(!(_.isEqual(data, {}))){
+          L.geoJson(data, {
+            style: function(feature) {
+              return {color: '#0000FF'};
+            }
+          }).addTo(that.getMap());
+        }*/
       },
 
       renderParcels: function(cityName){
