@@ -27,8 +27,9 @@ router.get('/', function(req, res, next){
         res.send(result.rows[0].row_to_json);
       });
     });
+  } else {
+    res.send({});
   }
-  res.send({});
 });
 
 module.exports = router;
