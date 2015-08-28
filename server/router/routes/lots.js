@@ -6,7 +6,8 @@ var geojsonvt = require('../../../../development/vectorserver/geojson-vt/geojson
 var SphericalMercator = require('sphericalmercator');
 var mapnik = require('mapnik');
 var zlib = require('zlib');
-
+var VectorTile = require('vector-tile').VectorTile;
+var Protobuf = require('pbf');
 mapnik.register_default_fonts();
 mapnik.register_default_input_plugins();
 
@@ -39,8 +40,9 @@ router.get('/:z/:x/:y.pbf', function(req, res) {
       vtile.addGeoJSON(JSON.stringify(result.rows[0].row_to_json), 'lots');
       res.setHeader('Content-Encoding', 'deflate');
       res.setHeader('Content-Type', 'application/x-protobuf');
-      zlib.deflate(vtile.getData(), function(err, pbf) {
-        console.log('I deflated');
+      zlib.gunzip(vtile.getData(), function(err, pbf) {
+        var tile = new VectorTile(new Protobuf(pbf));
+        console.log(tile);
         res.send(pbf);
       });
     });
