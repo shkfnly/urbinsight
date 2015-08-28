@@ -3233,3 +3233,23 @@
 2015-08-25T19:40:03.182-0700 I NETWORK  [conn369] end connection 127.0.0.1:59553 (5 connections now open)
 2015-08-25T20:16:12.002-0700 I STORAGE  [DataFileSync] flushing mmaps took 1106528ms  for 4 files
 2015-08-26T11:59:02.070-0700 I STORAGE  [DataFileSync] flushing mmaps took 56328014ms  for 4 files
+2015-08-28T13:39:13.781-0700 I CONTROL  ***** SERVER RESTARTED *****
+2015-08-28T13:39:13.806-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-08-28T13:39:13.815-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-08-28T13:39:13.816-0700 I JOURNAL  [initandlisten] recover begin
+2015-08-28T13:39:13.817-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2015-08-28T13:39:13.817-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-08-28T13:39:13.819-0700 I JOURNAL  [initandlisten] recover cleaning up
+2015-08-28T13:39:13.819-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2015-08-28T13:39:13.820-0700 I JOURNAL  [initandlisten] recover done
+2015-08-28T13:39:13.840-0700 I JOURNAL  [durability] Durability thread started
+2015-08-28T13:39:13.841-0700 I JOURNAL  [journal writer] Journal writer thread started
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1433 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] 
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] db version v3.0.6
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] git version: nogitversion
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] allocator: system
+2015-08-28T13:39:13.841-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-08-28T13:39:13.981-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
