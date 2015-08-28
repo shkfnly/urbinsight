@@ -4,3 +4,4 @@ server/node_modules/*
 data/*
 data/
 data/logs/*
+npm-debug.log
