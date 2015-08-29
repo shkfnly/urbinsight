@@ -8,6 +8,11 @@
 
 </style>
 
+<tabset justified="true" id='resourceType' type='pills' style='min-width: 70vh; min-height: 35vh;'>
+<tab heading="Survey Data">
+  <survey-viz surveyData='surveyData'></survey-viz>
+</tab>
+<tab heading="Add Survey">
 <h3>Click on map to place marker at location</h3>
 
 <form novalidate class="parcel-form form-horizontal" id="surveyForm">
@@ -291,3 +296,5 @@
   </div>
   <button ng-click="submit()" class="btn btn-success btn-block">Add Survey</button>
 </form>
+</tab>
+</tabset>

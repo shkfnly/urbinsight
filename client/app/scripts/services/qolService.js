@@ -22,7 +22,7 @@ angular.module('urbinsight.services')
       },
 
       setGeoCoordinates: function(latlngObject) {
-        qolSurvey.geoCoordinates = [latlngObject.lat, latlngObject.lng];
+        qolSurvey.geoCoordinates = [latlngObject.lng, latlngObject.lat];
         return qolSurvey;
       },
 
@@ -38,8 +38,8 @@ angular.module('urbinsight.services')
           });
       },
 
-      fetchSurveys: function(cityName, callback) {
-        $http.get('/data/city/' + cityName + '/surveys/').
+      fetchSurveys: function(cityName, callback, options) {
+        $http.get('/data/city/' + cityName + '/surveys/', options).
           success(function(data){
             callback(data);
           }).
@@ -54,6 +54,19 @@ angular.module('urbinsight.services')
 
       getCurrentMarker: function(){
         return currentMarker;
-      }
+      },
+
+      getSurveysInView: function() {
+        var that = this;
+        return that.surveysInView;
+      },
+
+      setSurveysInView: function(listOfSurveys) {
+        var that = this;
+        that.surveysInView = listOfSurveys;
+        return that.surveysInView;
+      },
+
+      surveysInView: []
     };
   }]);

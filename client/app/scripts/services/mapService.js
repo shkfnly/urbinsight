@@ -95,7 +95,7 @@ angular.module('urbinsight.services')
                   'marker-size' : 'small',
                   'marker-color' : '#ff3366'
                 })
-              })
+              });
               if(datum.popUp) {
                 mark.bindPopup(datum.popUp);
               } else {
@@ -114,7 +114,7 @@ angular.module('urbinsight.services')
         function drawing(data){
           data.forEach(function(datum){
             if(datum.geoCoordinates.length> 1){
-              L.marker(datum.geoCoordinates, {
+              L.marker([datum.geoCoordinates[1], datum.geoCoordinates[0]], {
                 icon: L.mapbox.marker.icon({
                   'marker-size' : 'small',
                   'marker-color' : '#330099'
