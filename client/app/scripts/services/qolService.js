@@ -57,14 +57,12 @@ angular.module('urbinsight.services')
       },
 
       getSurveysInView: function() {
-        var that = this;
-        return that.surveysInView;
+        return this.surveysInView;
       },
 
       setSurveysInView: function(listOfSurveys) {
-        var that = this;
-        that.surveysInView = listOfSurveys;
-        return that.surveysInView;
+        this.surveysInView = listOfSurveys;
+        return this.surveysInView;
       },
 
       surveysInView: []

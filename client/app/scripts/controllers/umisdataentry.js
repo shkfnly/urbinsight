@@ -15,7 +15,7 @@ angular.module('urbinsight')
     $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
     $scope.parcel.cityName = $stateParams.cityName;
 
-    MapFactory.renderParcels($stateParams.cityName);
+    //MapFactory.renderParcels($stateParams.cityName);
 
     $scope.submit = function () {
       ParcelFactory.saveParcel($stateParams.cityName, function(){});

@@ -12,6 +12,7 @@ angular.module('urbinsight')
 
     var L = window.L;
     var survey;
+    $scope.QOLFactory = QOLFactory;
     $scope.survey = survey = QOLFactory.getCurrentSurvey();
     $scope.survey.cityName = $stateParams.cityName;
     $scope.cityName = $stateParams.cityName;
@@ -84,8 +85,8 @@ angular.module('urbinsight')
     $scope.surveyData = {};
 
     $scope.$watch('QOLFactory.surveysInView', function(newValue, oldValue, scope){
-      scope.surveys = QOLFactory.surveysInView;
-      scope.surveyData = QOLFactory.surveysInView;
+      scope.surveys = newValue;
+      scope.surveyData = generateSurveyTotals(newValue);
     }, true);
     
 

@@ -14,9 +14,12 @@ angular.module('urbinsight.directives')
 
   function link(scope, element, attrs) {
     scope.chart = c3.generate({
-      bindto: 'surveyViz',
+      bindto: '#survey',
       data: {
-        columns: dataXForm(scope.surveyData),
+        columns:[
+                      ['data1', 30, 200, 100, 400, 150, 250],
+                                  ['data2', 130, 100, 140, 200, 150, 50]
+                                          ],
         type: 'bar'
       },
       legend: {
@@ -34,9 +37,8 @@ angular.module('urbinsight.directives')
       }
     });
 
-    scope.$watch('surveyData', function(newVal, oldVal, scope){
-      console.log(newVal);
-      console.log(oldVal);
+    scope.$watch('info', function(newVal, oldVal, scope){
+      scope.surveyData = newVal;
       scope.chart.load({
         columns: dataXForm(newVal)
       });
@@ -46,9 +48,9 @@ angular.module('urbinsight.directives')
   return {
     restrict: 'E',
     scope: {
-      surveyData: '='
+      info: '='
     },
     link: link,
     templateUrl: 'views/cities/surveyVisualization.html'
-  }
+  };
 }]);
