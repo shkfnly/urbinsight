@@ -13,17 +13,21 @@ angular.module('urbinsight.directives')
   };
 
   function link(scope, element, attrs) {
+    console.log(Object.keys(scope.info));
     scope.chart = c3.generate({
       bindto: '#survey',
       data: {
-        columns:[
-                      ['data1', 30, 200, 100, 400, 150, 250],
-                                  ['data2', 130, 100, 140, 200, 150, 50]
-                                          ],
+        columns: dataXForm(scope.info),
         type: 'bar'
       },
       legend: {
         position: 'right'
+      },
+      axis: {
+        x: {
+          type: 'category',
+          categories: Object.keys(scope.info)
+        }
       },
       transitions: {
         duration: 1000

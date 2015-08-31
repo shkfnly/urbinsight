@@ -12,7 +12,12 @@
 <tab heading="Survey Data">
   <survey-viz info="surveyData"></survey-viz>
 </tab>
-<tab heading="Add Survey">
+
+<tab ui-sref=".dataEntry" ui-sref-active="active" heading="Add Survey">
+  <div ui-view='surveyForm'></div>
+</tab>
+
+<!-- <tab heading="Add Survey">
 <h3>Click on map to place marker at location</h3>
 
 <form novalidate class="parcel-form form-horizontal" id="surveyForm">
@@ -296,5 +301,5 @@
   </div>
   <button ng-click="submit()" class="btn btn-success btn-block">Add Survey</button>
 </form>
-</tab>
+</tab>-->
 </tabset>
