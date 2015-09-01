@@ -60,18 +60,18 @@ db.once('open', function callback () {
 // }
 
 
-nodeDB.save({ name: "Test-Man", age: 40 }, 'Person', function(err, node) {
-  if (err) {
-    console.log(err)
-    console.log(node);
-  };
-  console.log("Test-Man inserted.");
+// nodeDB.save({ name: "Test-Man", age: 40 }, 'Person', function(err, node) {
+//   if (err) {
+//     console.log(err)
+//     console.log(node);
+//   };
+//   console.log("Test-Man inserted.");
 
-  nodeDB.delete(node, function(err) {
-    if (err) console.log(err);
-    console.log("Test-Man away!");
-  });
-});
+//   nodeDB.delete(node, function(err) {
+//     if (err) console.log(err);
+//     console.log("Test-Man away!");
+//   });
+// });
 
 
 exports.nodeDB = nodeDB;
