@@ -27,7 +27,7 @@ var qolSchema = new Schema({
   "movement": String,
   "safety": String,
   "governance": String
-})
+});
 
 var QOL = mongoose.model('QOL', qolSchema);
 

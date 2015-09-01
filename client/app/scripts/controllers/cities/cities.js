@@ -8,7 +8,7 @@
 
  */
 angular.module('urbinsight')
-  .controller('CitiesCtrl', ['$scope', '$location', '$http', 'Cities', 'ParcelFactory', 'MapFactory', '$stateParams', function ($scope, $location, $http, Cities, ParcelFactory, MapFactory, $stateParams) {
+  .controller('CitiesCtrl', ['$scope', '$location', '$http', 'Cities', 'ParcelFactory', 'QOLFactory', 'MapFactory', '$stateParams', function ($scope, $location, $http, Cities, ParcelFactory, QOLFactory, MapFactory, $stateParams) {
     var customForEach = function (collection, callback){
 
       if(Array.isArray(collection)){
@@ -115,14 +115,17 @@ angular.module('urbinsight')
           var boundObj = e.target.getBounds();
           MapFactory.transformBounds(boundObj);
           ParcelFactory.fetchLots(cityName, function(data){
-
-            MapFactory.renderLots(data);
+          //I could make these queries using features at
+          MapFactory.renderLots(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
           
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
-        
+          
+          QOLFactory.fetchSurveys(cityName, function(data){
+            QOLFactory.setSurveysInView(data);
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
         });
 
         var drawControl = new L.Control.Draw({

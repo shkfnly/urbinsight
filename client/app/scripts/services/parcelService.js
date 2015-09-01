@@ -16,7 +16,6 @@ angular.module('urbinsight.services')
     }
 
     var currentMarker;
-    var parcelsInView = [];
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -95,14 +94,14 @@ angular.module('urbinsight.services')
       
       getParcelsInView: function() {
         var that = this;
-        return that.parcelsInView
+        return that.parcelsInView;
       },
       setParcelsInView: function(listOfParcels) {
-        var that = this
+        var that = this;
         that.parcelsInView = listOfParcels;
         return that.parcelsInView;
       },
-
+// I don't get why this is here
       parcelsInView: []
     };
   }]);

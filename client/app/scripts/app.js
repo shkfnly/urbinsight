@@ -156,6 +156,14 @@
           }
         }
       })
+      .state('app.city.pilot.survey.dataEntry', {
+        views: {
+          'surveyForm': {
+            templateUrl: 'views/cities/dataEntry/qol_form.html',
+            controller: 'qolDataEntryCtrl'
+          }
+        }
+      })
       .state('app.city.pilot.assessments', {
         views: {
           'assessments': {

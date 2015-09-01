@@ -12,6 +12,7 @@ angular.module('urbinsight')
     $scope.ParcelFactory = ParcelFactory;
     $scope.parcels = ParcelFactory.parcelsInView;
     var workbooks = ['water', 'energy', 'materials', 'mobility'];
+
     var generateUMISTotals = function(parcels){
       var results = {};
       workbooks.forEach(function(resource){
@@ -33,7 +34,6 @@ angular.module('urbinsight')
         });
       });
       return results;
-      
     };
     
     $scope.resources = {};
