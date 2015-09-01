@@ -12,7 +12,7 @@ angular.module('urbinsight')
 
     $scope.QOLFactory = QOLFactory;
     $scope.surveys = QOLFactory.surveysInView;
-    $scope.surveyData;
+    // $scope.surveyData;
     
     // console.log($scope.marker);
     // MapFactory.markerClickControl('survey', QOLFactory, $scope);

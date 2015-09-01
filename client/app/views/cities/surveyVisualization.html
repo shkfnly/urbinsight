@@ -1,2 +1,19 @@
-<div id='survey' style="min-width: 500px; height: 275px;">
+<div style="min-height: 60px;">
+	<div style="float: left;">
+		<h3 style="margin-top: 5px; margin-left: 10px;">
+			Average Response - Quality of Life
+		</h3>
+	</div>
+<!-- 	<form style="margin-top: 5px; margin-right: 20px; float: right;">
+	  <input type="radio" ng-checked="true" name="datasetTest" value="pie" ng-model="dataset.chartType"> Pie
+	  <input type="radio" ng-checked="false" name="datasetTest" value="bar" ng-model='dataset.chartType'> Bar
+	</form> -->
+	<div style="margin-top: 5px; margin-right: 20px; float: right;">
+		<h5 style="margin-top: 0px;">Change Chart Type:</h5>
+		<div id="pie-button"style="width: 40px;  height: 20px; margin-left: 25px; float: left; background-color: #4682B4; color: #FFF; text-align: center;" ng-click='chartTransform("bar")'>Bar</div>
+		<div id="bar-button" style="width: 40px;  height: 20px; margin-left: 5px; float: left; background-color: #4682B4; color: #FFF; text-align: center;" ng-click='chartTransform("line")'>Line</div>
+	</div>
+</div>
+
+<div id='survey' style="min-width: 400px; height: 275px; margin: 20px 25px 25px 10px;">
 </div>
