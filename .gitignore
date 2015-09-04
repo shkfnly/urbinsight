@@ -1,6 +1,7 @@
 server/dist/*
 node_modules/
 server/node_modules/*
+/data/
 data/*
 data/
 data/logs/*
