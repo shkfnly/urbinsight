@@ -100,7 +100,6 @@ angular.module('urbinsight')
         .setView([city.lat, city.lon], 12);
         MapFactory.setMap($scope.map);
         var featureGroup = L.featureGroup().addTo($scope.map);
-        $scope.layerDefs = city.layerDefinitions;
         $scope.addLayerControl($scope.additonalLayers(city.layers));
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
@@ -110,7 +109,14 @@ angular.module('urbinsight')
               layer = e.layer;
               // console.log(layer);
         });
-
+        $scope.map.on('load', function(e){
+          console.log('load event')
+          console.log(e)
+        })
+        $scope.map.on('viewreset', function(e){
+          console.log('view event')
+          console.log(e)
+        })
         $scope.map.on('moveend', function(e) {
           var boundObj = e.target.getBounds();
           MapFactory.transformBounds(boundObj);

@@ -81,7 +81,7 @@ angular.module('urbinsight.services')
       },
 
       renderLots: function(data){
-        console.log(data);
+        //console.log(data);
       },
 
       renderParcels: function(cityName){
