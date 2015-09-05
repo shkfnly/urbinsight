@@ -39,6 +39,7 @@ angular.module('urbinsight.directives')
   // };
 
   function link(scope, element, attrs) {
+    scope.showNoDataMessage = Object.keys(scope.info).length === 0;
     scope.chart = c3.generate({
       bindto: '#survey',
       data: {
@@ -88,6 +89,7 @@ angular.module('urbinsight.directives')
     };
 
     scope.$watch('info', function(newVal, oldVal, scope){
+      scope.showNoDataMessage = Object.keys(newVal).length === 0;
       scope.surveyData = newVal;
       scope.chart.load({
         columns: dataXForm(newVal)
