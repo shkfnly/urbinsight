@@ -67,6 +67,17 @@ angular.module('urbinsight.directives')
             rotate: 75,
             multiline: false
           }
+        },
+        y: {
+          max: 5.0,
+          padding: {
+            top:0
+          }
+         /* tick: {
+            format: function(d){ console.log(d);},
+            //values: ['Unknown', 'Absent', 'Insufficient', 'Adequate', 'Good', 'Excellent'],
+            count: 6
+          }*/
         }
       },
       legend: {
