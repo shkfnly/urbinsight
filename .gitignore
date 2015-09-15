@@ -1,8 +1,5 @@
-server/dist/*
+server/dist/
 node_modules/
-server/node_modules/*
-/data/
-data/*
+server/node_modules/
 data/
-data/logs/*
 npm-debug.log
