@@ -36,6 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   usedDb = productionDb;
   nodeDB = require("seraph")(productionGraphDb);
   // connect to it via mongoose
+  console.log(process.env.MONGODB_USER, process.env.MONGODB_PASS);
   mongoose.connect(usedDb, {user: process.env.MONGODB_USER, pass: process.env.MONGODB_PASS});
 }
 
