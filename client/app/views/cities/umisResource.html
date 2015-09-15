@@ -1,5 +1,6 @@
 <!-- <div id="line" width="300px" height="200px"></div> -->
-<div style="min-height: 60px;">
+<h2 ng-show="showNoDataMessage" style="text-align: center; margin-top: 150px; color:#D0D0D0">No Data to Display</h2>
+<div style="min-height: 60px;" ng-hide="showNoDataMessage">
 	<div style="float: left;">
 		<h3 style="margin-top: 5px; margin-left: 10px;">
 			Summary Demand Table - {{resource[0].toUpperCase() + resource.slice(1)}}
@@ -10,17 +11,10 @@
 			</em>
 		</h5>
 	</div>
-<!-- 	<form style="margin-top: 5px; margin-right: 20px; float: right;">
-	  <input type="radio" ng-checked="true" name="datasetTest" value="pie" ng-model="dataset.chartType"> Pie
-	  <input type="radio" ng-checked="false" name="datasetTest" value="bar" ng-model='dataset.chartType'> Bar
-	</form> -->
 	<div style="margin-top: 5px; margin-right: 20px; float: right;">
 		<h5>Change Chart Type:</h5>
 		<div id="pie-button"style="width: 40px;  height: 20px; margin-left: 25px; float: left; background-color: #4682B4; color: #FFF; text-align: center;" ng-click='chartTransform("pie")'>Pie</div>
 		<div id="bar-button" style="width: 40px;  height: 20px; margin-left: 5px; float: left; background-color: #4682B4; color: #FFF; text-align: center;" ng-click='chartTransform("bar")'>Bar</div>
 	</div>
 </div>
-<div id='pie' style="min-width: 500px; height: 275px;">
-	
-</div>
-<!-- <div style="height: 50%; clear: both;">This is archetype information</div> -->
+<div id='pie' style="min-width: 500px; height: 275px;" ng-hide="showNoDataMessage"></div>

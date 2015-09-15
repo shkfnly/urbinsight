@@ -28,6 +28,7 @@ angular.module('urbinsight.directives')
   //var urlLine = 'https://gist.githubusercontent.com/shkfnly/9ad173c4c972024521ec/raw/c4e8fc0369683d2706eebcaa28c75ff1a9206883/testdata.tsv';
   // fetchPieData('https://gist.githubusercontent.com/shkfnly/2da4667e9f654be9dfd0/raw/1e5746ae751bff323a8831a105f25fec3577b9fa/testdata.json');
   function link(scope, element, attrs){
+    scope.showNoDataMessage = Object.keys(scope.info[scope.resource]).length === 0;
     element.children('#pie')[0].id = ('pie-' + scope.resource);
     scope.selectID = '#pie-' + scope.resource;
     scope.unit = defineUnit(scope.resource);
@@ -57,6 +58,8 @@ angular.module('urbinsight.directives')
       scope.pieChart.transform(param);
     };
     scope.$watch('info', function(newVal, oldVal, scope){
+      scope.showNoDataMessage = Object.keys(newVal[scope.resource]).length === 0;
+
       scope.pieChart.load({
         columns: dataXForm(newVal[scope.resource])
       });

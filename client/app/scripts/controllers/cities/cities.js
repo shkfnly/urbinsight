@@ -97,10 +97,8 @@ angular.module('urbinsight')
         $scope.city = city;
         // This is weird I create the map and then set the map from the same object...change this implementation.
         $scope.map = MapFactory.createMap()
-        .setView([city.lat, city.lon], 12);
         MapFactory.setMap($scope.map);
         var featureGroup = L.featureGroup().addTo($scope.map);
-        $scope.layerDefs = city.layerDefinitions;
         $scope.addLayerControl($scope.additonalLayers(city.layers));
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
@@ -111,14 +109,35 @@ angular.module('urbinsight')
               // console.log(layer);
         });
 
-        $scope.map.on('moveend', function(e) {
+        var fetch 
+
+        $scope.map.on('viewreset', function(e){
           var boundObj = e.target.getBounds();
           MapFactory.transformBounds(boundObj);
-          ParcelFactory.fetchLots(cityName, function(data){
+          /*ParcelFactory.fetchLots(cityName, function(data){
           //I could make these queries using features at
           MapFactory.renderLots(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+          */
+          ParcelFactory.fetchParcels(cityName, function(data){
+            ParcelFactory.setParcelsInView(data);
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
           
+          QOLFactory.fetchSurveys(cityName, function(data){
+            QOLFactory.setSurveysInView(data);
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+        })
+        
+        $scope.map.setView([city.lat, city.lon], 12);
+        
+        $scope.map.on('moveend', function(e) {
+          var boundObj = e.target.getBounds();
+          MapFactory.transformBounds(boundObj);
+         /* ParcelFactory.fetchLots(cityName, function(data){
+          //I could make these queries using features at
+          MapFactory.renderLots(data);
+          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+          */
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
           }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
@@ -157,7 +176,7 @@ angular.module('urbinsight')
 
     var popupgen = function(node, type){
       var popupstring = '<div><h2 style="text-align: center;">Junction Information</h2><p>Stage: ' + type + '</p><br />';
-      customForEach(node, function(value, attrib){
+      _.forEach(node, function(value, attrib){
         popupstring += '<p>' + attrib + ': ' + value + '</p><br />';
       });
       return popupstring + '</div>';
