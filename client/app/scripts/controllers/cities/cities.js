@@ -208,7 +208,7 @@ angular.module('urbinsight')
           $scope.markers = markers;
         });
          
-        if($scope.map){$scope.map.addLayer(markers)};
+        $scope.map.addLayer(markers);
       });
     };
     Cities.fetchCity(cityName, $scope.renderMap);
