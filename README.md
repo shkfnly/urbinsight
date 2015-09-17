@@ -28,6 +28,14 @@ Creating a dynamic dashboard proved pretty challenging in that state across the 
 * Switching between cities is straigthforward and the user is provided feedback about missing data.
 
 ### Screenshots
+![Demand Summary Visualization](etc/umis_demand_summary.png "UMIS Demand Summary Table Visualization")
+*Demand Summary Table Visualization*
+![Quality of Life Survey Visualization](etc/qol_survey.png "Quality of Life Survey Visualization")
+*Quality of Life Survey Visualization*
+![Peru Zoning Map](etc/peru_zoning.png "Peru Zoning Map")
+*Peru Zoning Map*
+![Base Layer Information](etc/base_layer_info.png "Base Layer Information")
+*Base Layer Information*
 
 ## Improvements / Desired Functionality
 * Full UMIS implementation build out.
