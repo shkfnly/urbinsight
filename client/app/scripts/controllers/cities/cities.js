@@ -9,19 +9,6 @@
  */
 angular.module('urbinsight')
   .controller('CitiesCtrl', ['$scope', '$location', '$http', 'Cities', 'ParcelFactory', 'QOLFactory', 'MapFactory', '$stateParams', function ($scope, $location, $http, Cities, ParcelFactory, QOLFactory, MapFactory, $stateParams) {
-    var customForEach = function (collection, callback){
-
-      if(Array.isArray(collection)){
-        for(var i = 0; i < collection.length; i++){
-          callback(collection[i], i, collection);
-        }
-      }
-      else {
-        for(var item in collection){
-          callback(collection[item], item, collection);
-        }
-      }
-    };
 
     var L;
     $scope.L = L = window.L;
