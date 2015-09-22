@@ -113,7 +113,7 @@
         views: {
           'cityMap': {
             templateUrl: 'views/cities/cityMap.html',
-            controller: 'CitiesCtrl'
+            controller: 'MapCtrl'
           },
           'mapModal': {
             templateUrl: 'views/cities/mapmodal.html',
@@ -125,7 +125,7 @@
         views: {
           'umisTabs': {
             templateUrl: 'views/cities/umisTabs.html',
-            controller: 'umisResourceCtrl'
+            controller: 'UmisResourceCtrl'
           }
         },
       })
@@ -205,7 +205,7 @@
         views: {
           'container@' : {
             templateUrl: 'views/dashboard.html',
-            controller: 'DashboardCtrl'  
+            controller: 'UserDashboardCtrl'  
           }
         }
       })
@@ -223,30 +223,30 @@
 angular.module('urbinsight.services', []);
 angular.module('urbinsight.directives', []);
 
-app.run(['$rootScope', '$window', '$location', 'AuthFactory', function($rootScope, $window, $location, AuthFactory) {
-  AuthFactory.check();
+// app.run(['$rootScope', '$window', '$location', 'AuthFactory', function($rootScope, $window, $location, AuthFactory) {
+//   AuthFactory.check();
 
-  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
-    console.log('nextRoute:' + nextRoute);
-    console.log('currentRoute:' + currentRoute);
-    console.log('nextRoute.access:' + nextRoute.access);
-    console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin);
-    if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
-      $location.path('/login');
-    } else {
-      if (!AuthFactory.user) { AuthFactory.user = $window.sessionStorage.user;}
-      if (!AuthFactory.userRole) { AuthFactory.userRole = $window.sessionStorage.userRole;}
-    }
-  });
+//   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+//     console.log('nextRoute:' + nextRoute);
+//     console.log('currentRoute:' + currentRoute);
+//     console.log('nextRoute.access:' + nextRoute.access);
+//     console.log('nextRoute.access.requiredLogin:' + nextRoute.access.requiredLogin);
+//     if ((nextRoute.access && nextRoute.access.requiredLogin) && !AuthFactory.isLogged) {
+//       $location.path('/login');
+//     } else {
+//       if (!AuthFactory.user) { AuthFactory.user = $window.sessionStorage.user;}
+//       if (!AuthFactory.userRole) { AuthFactory.userRole = $window.sessionStorage.userRole;}
+//     }
+//   });
 
-// event, nextRoute, currentRoute
-  $rootScope.$on('$routeChangeSuccess', function() {
-    $rootScope.showMenu = AuthFactory.loggedStatus();
-    $rootScope.role = AuthFactory.userRole;
+// // event, nextRoute, currentRoute
+//   $rootScope.$on('$routeChangeSuccess', function() {
+//     $rootScope.showMenu = AuthFactory.loggedStatus();
+//     $rootScope.role = AuthFactory.userRole;
 
-    if (AuthFactory.isLogged === true && $location.path() === '/login') {
-      $location.path('/');
-    }
-  });
-}]);
+//     if (AuthFactory.isLogged === true && $location.path() === '/login') {
+//       $location.path('/');
+//     }
+//   });
+// }]);
 

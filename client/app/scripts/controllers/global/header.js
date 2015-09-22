@@ -15,7 +15,6 @@ angular.module('urbinsight')
     //   $rootScope.$broadcast('loginStateChange');
     //   $location.path('/');
     // };
-    var why = "why"
     // $rootScope.$on('loginStateChange', function(){
     //   $rootScope.showMenu = AuthFactory.loggedStatus(); 
     // });
