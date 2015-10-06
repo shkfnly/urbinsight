@@ -75,6 +75,6 @@ angular.module('urbinsight.directives')
       parcels: '=',
     },
     link: link,
-    templateUrl: 'views/cities/umisResource.html'
+    templateUrl: 'views/pilot_cities/umisResource.html'
   };
 }]);

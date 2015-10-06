@@ -104,7 +104,7 @@
       .state('app.city', {
         views: {
           'container@' : {
-            templateUrl: 'views/cities/cityDefault.html',
+            templateUrl: 'views/pilot_cities/cityDefault.html',
           }
         }
       })
@@ -112,11 +112,11 @@
         url: '/dashboard/:cityName',
         views: {
           'cityMap': {
-            templateUrl: 'views/cities/cityMap.html',
+            templateUrl: 'views/pilot_cities/cityMap.html',
             controller: 'MapCtrl'
           },
           'mapModal': {
-            templateUrl: 'views/cities/mapmodal.html',
+            templateUrl: 'views/pilot_cities/mapmodal.html',
             controller: 'MapModalCtrl'
           }
         }
@@ -124,7 +124,7 @@
       .state('app.city.pilot.umis', {
         views: {
           'umisTabs': {
-            templateUrl: 'views/cities/umisTabs.html',
+            templateUrl: 'views/pilot_cities/umisTabs.html',
             controller: 'UmisResourceCtrl'
           }
         },
@@ -132,7 +132,7 @@
       .state('app.city.pilot.umis.dataEntry', {
         views: {
           'umisForm': {
-            templateUrl: 'views/cities/dataEntry/umis_form.html',
+            templateUrl: 'views/pilot_cities/dataEntry/umis_form.html',
             controller: 'umisDataEntryCtrl'
           }
         }
@@ -140,62 +140,65 @@
       .state('app.city.pilot.umis.dataEntry.addParcel', {
           views: {
           'describeparcel': {
-            templateUrl: 'views/cities/dataEntry/describe_parcel.html',
+            templateUrl: 'views/pilot_cities/dataEntry/describe_parcel.html',
             controller: 'describeParcelCtrl'
           },
           'workbookwater':{
-            templateUrl: 'views/cities/dataEntry/workbooks/water.html'
+            templateurl: 'views/pilot_cities/dataentry/workbooks/water.html'
+          },
+          'workbookmaterial':{
+            templateurl: 'views/pilot_cities/dataentry/workbooks/material.html'
           }
         }
       })
       .state('app.city.pilot.survey', {
         views: {
           'survey': {
-            templateUrl: 'views/cities/survey.html',
-            controller: 'qolCtrl'
+            templateurl: 'views/pilot_cities/survey.html',
+            controller: 'qolctrl'
           }
         }
       })
-      .state('app.city.pilot.survey.dataEntry', {
+      .state('app.city.pilot.survey.dataentry', {
         views: {
-          'surveyForm': {
-            templateUrl: 'views/cities/dataEntry/qol_form.html',
-            controller: 'qolDataEntryCtrl'
+          'surveyform': {
+            templateurl: 'views/pilot_cities/dataentry/qol_form.html',
+            controller: 'qoldataentryctrl'
           }
         }
       })
       .state('app.city.pilot.assessments', {
         views: {
           'assessments': {
-            templateUrl: 'views/cities/assessments/assessments.html'
+            templateurl: 'views/pilot_cities/assessments/assessments.html'
           }
         }
       })
       .state('app.city.pilot.assessments.air', {
         views: {
           'air' : { 
-            templateUrl: 'views/cities/assessments/air.html'
+            templateurl: 'views/pilot_cities/assessments/air.html'
           }
         }
       })
       .state('app.city.pilot.assessments.water', {
         views: {
           'water' : { 
-            templateUrl: 'views/cities/assessments/water.html'
+            templateUrl: 'views/pilot_cities/assessments/water.html'
           }
         }
       })
       .state('app.city.pilot.assessments.soil', {
         views: {
           'soil' : { 
-            templateUrl: 'views/cities/assessments/soil.html'
+            templateUrl: 'views/pilot_cities/assessments/soil.html'
           }
         }
       })
       .state('app.city.pilot.basedata', {
         views: {
           'basedata': {
-            templateUrl: 'views/cities/basedata.html',
+            templateUrl: 'views/pilot_cities/basedata.html',
             controller: 'BasedataCtrl'
           }
         }

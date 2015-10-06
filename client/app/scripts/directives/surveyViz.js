@@ -114,6 +114,6 @@ angular.module('urbinsight.directives')
       info: '='
     },
     link: link,
-    templateUrl: 'views/cities/surveyVisualization.html'
+    templateUrl: 'views/pilot_cities/surveyVisualization.html'
   };
 }]);
