@@ -40,61 +40,61 @@ angular.module('urbinsight.services')
 
 
     UMIS.Materials.totalConsumption.paper = function(workbook){
-      if (workbook.option == 'A'){
-        return workbook.estimateDemand.optionA.totalWeight.amount *
+      if (workbook.option === 'A'){
+        return workbook.estimateDemand.optionA.totalWeight *
           (workbook.estimateDemand.optionA.demandJunctions.paper / 100 );
       }
     };
     UMIS.Materials.totalConsumption.organics = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.organics / 100 );
       }
     };
     UMIS.Materials.totalConsumption.plastics = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.plastics / 100 );
       }
     };
     UMIS.Materials.totalConsumption.textiles = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.textiles / 100 );
       }
     };
     UMIS.Materials.totalConsumption.metals = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.metals / 100 );
       }
     };
     UMIS.Materials.totalConsumption.glass = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.glass / 100 );
       }
     };
     UMIS.Materials.totalConsumption.trimmings = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.trimmings / 100 );
       }
     };
     UMIS.Materials.totalConsumption.appliances = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.appliances / 100 );
       }
     };
     UMIS.Materials.totalConsumption.hazardousWaste = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.hazardousWaste / 100 );
       }
     };
     UMIS.Materials.totalConsumption.inertsAndOthers = function(workbook){
-      if (workbook.option == 'A'){
+      if (workbook.option === 'A'){
         return workbook.estimateDemand.optionA.totalWeight.amount *
           (workbook.estimateDemand.optionA.demandJunctions.inertsAndOthers / 100 );
       }
@@ -153,8 +153,7 @@ angular.module('urbinsight.services')
       return ( obj.excessCapacityPerDay * obj.percentageOfExcessDistributed ) * 1000; 
     };
 
-    UMIS.Water.totalConsumption.evaporati
-      veCooling = function(workbook){
+    UMIS.Water.totalConsumption.evaporativeCooling = function(workbook){
       var obj = workbook.estimateDemand
                         .demandJunctions
                         .evaporativeCooling;
@@ -316,13 +315,13 @@ angular.module('urbinsight.services')
           parcel.totalDemand.materials = result;
           return result;
         }
-      }
+      };
     return {
       calculateTotals: function(parcel){
         parcel.totalDemand = {};
         _.forEach(totalConsumption, function(resourceCalcFunction, resource){
           resourceCalcFunction(parcel.workbooks[resource], parcel);
-        })
+        });
         return parcel;
       }
     };

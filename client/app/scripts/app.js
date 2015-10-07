@@ -146,8 +146,8 @@
           'workbookWater':{
             templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
           },
-          'workbookMaterial':{
-            templateUrl: 'views/pilot_cities/dataentry/workbooks/material.html'
+          'workbookMaterials':{
+            templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html'
           }
         }
       })

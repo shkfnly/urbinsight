@@ -38,7 +38,7 @@ angular.module('urbinsight.directives')
   //   return results;
   // };
 
-  function link(scope, element, attrs) {
+  function link(scope) {
     scope.showNoDataMessage = Object.keys(scope.info).length === 0;
     scope.chart = c3.generate({
       bindto: '#survey',

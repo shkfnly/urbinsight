@@ -13,7 +13,7 @@ angular.module('urbinsight.services')
 
     String.prototype.capitalize = function(){
       return this.charAt(0).toUpperCase() + this.slice(1);
-    }
+    };
 
     var currentMarker;
     return {
@@ -71,14 +71,14 @@ angular.module('urbinsight.services')
           });
       },
       generateParcelPopUp: function(parcel){
-        parcel.popUp = ''
+        parcel.popUp = '';
         _.forEach(parcel.totalDemand, function(demandObj, resource){
-          parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>'
+          parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>';
           _.forEach(demandObj, function(value, useCase) {
             parcel.popUp += '<p>' + useCase.toString().capitalize() + ': ' + value + '</p><br/>';
-          })
-          parcel.popUp += '</div>'
-        })
+          });
+          parcel.popUp += '</div>';
+        });
         parcel.popUp += '<p><strong><em>Date Added: ' + parcel.date + '</em></strong></p>';
         return parcel;
       },

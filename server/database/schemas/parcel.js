@@ -195,6 +195,26 @@ var parcelSchema = new Schema({
           }
         }
       }
+    },
+    "materials" : {
+      "option" : { type: String, default: "A" },
+      "estimateDemand": {
+        "optionA" : {
+          "totalWeight" : { type: Number, default: 0.0 },
+          "demandJunctions": {
+            "paper" : { type: Number, default: 0.0},
+            "organics" : { type: Number, default: 0.0},
+            "plastics" : { type: Number, default: 0.0},
+            "textiles" : { type: Number, default: 0.0},
+            "metals" : { type: Number, default: 0.0},
+            "glass" : { type: Number, default: 0.0},
+            "trimmings" : { type: Number, default: 0.0},
+            "appliances" : { type: Number, default: 0.0},
+            "hazardousWaste" : { type: Number, default: 0.0},
+            "inertsAndOthers" : { type: Number, default: 0.0}
+          }
+        }
+      }
     }
   }
 })
