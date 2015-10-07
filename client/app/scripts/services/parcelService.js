@@ -61,7 +61,7 @@ angular.module('urbinsight.services')
         var that = this;
         var parcel = that.getCurrentParcel();
         UMISFactory.calculateTotals(parcel);
-        that.generateParcelPopUp(parcel)
+        that.generateParcelPopUp(parcel);  
         $http.post('/data/city/' + cityName + '/parcels/', {parcel: that.getCurrentParcel()}).
           success(function(data) {
             that.createNewParcel();

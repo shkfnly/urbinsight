@@ -3307,3 +3307,4 @@
 2015-10-06T12:32:40.511+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58758 #4 (3 connections now open)
 2015-10-06T12:32:40.511+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58759 #5 (4 connections now open)
 2015-10-06T12:32:40.511+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58760 #6 (5 connections now open)
+2015-10-07T07:00:51.556+0400 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 118ms
