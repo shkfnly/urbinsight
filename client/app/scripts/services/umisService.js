@@ -300,8 +300,7 @@ angular.module('urbinsight.services')
           parcel.totalDemand.water = result;
           return result;
         },
-        materials: function(workbook, parcel){
-          var result = {};
+        materials: function(workbook, parcel){          var result = {};
           result.Paper = UMIS.Materials.totalConsumption.paper(workbook);
           result.Organics = UMIS.Materials.totalConsumption.organics(workbook);
           result.Plastics = UMIS.Materials.totalConsumption.plastics(workbook);

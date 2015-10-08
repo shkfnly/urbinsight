@@ -1,0 +1,45 @@
+
+<h3>Demographics - <h5>List number of residents</h5></h3> </br><h4>Seniors and Retired</h4>
+<div class="form-group">
+  <label>Living and Working on Parcel:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.seniors.livingWorking" min="0"/>
+  <label>Living on Parcel, Working/Studying Offsite:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.seniors.livingOffWorking" min="0"/>
+  <label>Visiting Parcel for Full-time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.seniors.visitingWork" min="0"/>
+  <label>Visiting Parcel for Part-Time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.seniors.visitingPartTimeWork" min="0"/><br />
+</div>
+<h4>Adults</h4>
+<div class="form-group">
+  <label>Living and Working on Parcel:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.adults.livingWorking" min="0"/>
+  <label>Living on Parcel, Working/Studying Offsite:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.adults.livingOffWorking" min="0"/>
+  <label>Visiting Parcel for Full-time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.adults.visitingWork" min="0"/>
+  <label>Visiting Parcel for Part-Time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.adults.visitingPartTimeWork" min="0"/>
+</div>
+<h4>Youth</h4>
+<div class="form-group">
+  <label>Living and Working on Parcel:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.youth.livingWorking" min="0"/>
+  <label>Living on Parcel, Working/Studying Offsite:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.youth.livingOffWorking" min="0"/>
+  <label>Visiting Parcel for Full-time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.youth.visitingWork" min="0"/>
+  <label>Visiting Parcel for Part-Time Work:</label>
+  <input class="form-control" type="number" ng-model="parcel.describeParcel.demographics.youth.visitingPartTimeWork" min="0"/>
+</div>
+</br>
+<div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.buildingData" class="btn btn-block btn-info">
+    <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+  </a>
+</div>
+<div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.buildingData" class="btn btn-block btn-success">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </a>
+</div>

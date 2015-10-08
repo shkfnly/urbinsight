@@ -129,28 +129,65 @@
           }
         },
       })
-      .state('app.city.pilot.umis.dataEntry', {
+      .state('app.city.pilot.umis.form', {
         views: {
           'umisForm': {
             templateUrl: 'views/pilot_cities/dataEntry/umis_form.html',
-            controller: 'umisDataEntryCtrl'
+            controller: 'umisFormCtrl'
           }
         }
       })
-      .state('app.city.pilot.umis.dataEntry.addParcel', {
+      .state('app.city.pilot.umis.form.startPage', {
+        views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/form_start.html'
+          }
+        }
+      })
+      .state('app.city.pilot.umis.form.addParcel', {
+        views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/add_parcel.html',
+            controller: 'addParcelCtrl'
+          }
+        }
+      })
+      .state('app.city.pilot.umis.form.sourceInfo', {
+        views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/source_info.html',
+          }
+        }
+      })
+      .state('app.city.pilot.umis.form.describeParcel', {
           views: {
-          'describeparcel': {
-            templateUrl: 'views/pilot_cities/dataEntry/describe_parcel.html',
-            controller: 'describeParcelCtrl'
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/describe_parcel.html'
           },
-          'workbookWater':{
-            templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
-          },
-          'workbookMaterials':{
-            templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html'
-          }
         }
       })
+      .state('app.city.pilot.umis.form.buildingData', {
+          views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/building_data.html'
+          },
+        }
+      })
+      .state('app.city.pilot.umis.form.demographics', {
+          views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/demographics.html'
+          },
+        }
+      })
+
+
+      // 'workbookWater':{
+      //   templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
+      // },
+      // 'workbookMaterials':{
+      //   templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html'
+      // }
       .state('app.city.pilot.survey', {
         views: {
           'survey': {

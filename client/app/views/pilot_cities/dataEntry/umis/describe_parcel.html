@@ -1,0 +1,52 @@
+
+  <h3>Describe Parcel</h3>
+  <div class="form-group">
+    <label for="parcel-type">Parcel Type:</label> 
+    <select class="form-control" ng-model="parcel.describeParcel.parcelIdentification.parcelType">
+      <option value="Generic Parcel">Generic Parcel</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="designated-land-use">Designated Land Use:</label> 
+    <select class="form-control" ng-model="parcel.describeParcel.parcelIdentification.designatedLandUse">
+      <option selected="selected" value=""></option>
+      <option value="Open Space">Open Space</option>
+      <option value="Residential">Residential</option>
+      <option value="Informal">Informal</option>
+      <option value="Commercial">Commercial</option>
+      <option value="Institutional">Institutional</option>
+      <option value="Industrial">Industrial</option>
+      <option value="Municipal">Municipal</option>           
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="actual-land-use">Actual Land Use:</label> 
+    <select class="form-control" ng-model="parcel.describeParcel.parcelIdentification.actualLandUse">
+      <option selected="selected" value=""></option>
+      <option value="Open Space">Open Space</option>
+      <option value="Residential">Residential</option>
+      <option value="Informal">Informal</option>
+      <option value="Commercial">Commercial</option>
+      <option value="Institutional">Institutional</option>
+      <option value="Industrial">Industrial</option>
+      <option value="Municipal">Municipal</option>           
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="parcel-area">Parcel Area (m<sup>2</sup>):</label> 
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.parcelIdentification.landArea" /><br />
+  </div>
+  <div class="form-group">
+    <label for="building-footprint">Building Footprint (m<sup>2</sup>):</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.parcelIdentification.buildingFootprint" /><br />
+  </div>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.sourceInfo" class="btn btn-block btn-info">
+      <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+    </a>
+  </div>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.buildingData" class="btn btn-block btn-success">
+      Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+  </div>

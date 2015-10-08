@@ -1,7 +1,9 @@
 <!-- cities have parcels -->
 <div class="row" style="margin-left: 30px; margin-right: 30px;">  
-  <div ui-view="describeparcel" ></div>
-  <button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
+  <form ng-submit="umisSubmit()">
+    <div ui-view></div>
+  </form>
+  <!--<button ng-click="submit()" class="btn btn-success btn-block">Add Parcel</button>
   <tabset justified="true" id="workbooks" >
     <tab heading="Water" ui-sref-active="active">
       <div ui-view="workbookWater" style="background-color: #F8F8F8;"></div>
@@ -19,5 +21,5 @@
     <tab heading="Mobility" disable="true">
       <div ui-view="workbookWater"></div>
     </tab>
-  </tabset>
+    </tabset>-->
 </div>

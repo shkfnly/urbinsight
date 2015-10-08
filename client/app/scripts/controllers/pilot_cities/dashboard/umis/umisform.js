@@ -8,7 +8,7 @@
  * Controller of the urbinsight data entry form
  */
 angular.module('urbinsight')
-  .controller('umisDataEntryCtrl', ['$scope', '$http', '$stateParams', 'ParcelFactory', 'MapFactory', function ($scope, $http, $stateParams, ParcelFactory, MapFactory) {
+  .controller('umisFormCtrl', ['$scope', '$http', '$stateParams', 'ParcelFactory', 'MapFactory', function ($scope, $http, $stateParams, ParcelFactory, MapFactory) {
 
     var parcel;
 
@@ -17,7 +17,7 @@ angular.module('urbinsight')
 
     //MapFactory.renderParcels($stateParams.cityName);
 
-    $scope.submit = function () {
+    $scope.umisSubmit = function () {
       ParcelFactory.saveParcel($stateParams.cityName, function(){});
       MapFactory.getMap().removeLayer(ParcelFactory.getCurrentMarker());
       MapFactory.renderParcels($stateParams.cityName);

@@ -8,15 +8,15 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('describeParcelCtrl', ['$scope', 'ParcelFactory', 'MapFactory', function ($scope, ParcelFactory, MapFactory) {
+  .controller('addParcelCtrl', ['$scope', 'ParcelFactory', 'MapFactory', function ($scope, ParcelFactory, MapFactory) {
     var L = window.L;
-    var parcel;
-    $scope.parcel = parcel = ParcelFactory.getCurrentParcel();
+
+    $scope.parcel = ParcelFactory.getCurrentParcel();
     
     var marker;
     $scope.marker = marker;
     
-    // MapFactory.markerClickControl('parcel', ParcelFactory, $scope);
+   // MapFactory.markerClickControl('parcel', ParcelFactory, $scope);
 
     MapFactory.getMap().on('click', function(e) {
       if(MapFactory.getMap().hasLayer($scope.marker)){
