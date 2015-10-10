@@ -1,0 +1,32 @@
+<h3>Select which workbooks you would like to complete</h3>
+<div>
+  <label>
+    <input type="checkbox" ng-model="selectedWorkbooks.water" ng-change="workbookGenerator()"> Water
+  </label>
+</div>
+<div>
+  <label>
+    <input type="checkbox" ng-model="selectedWorkbooks.materials" ng-change="workbookGenerator()"> Materials
+  </label>
+</div>
+<div>
+  <label>
+    <input type="checkbox" ng-model="selectedWorkbooks.energy" ng-change="workbookGenerator()" disabled> Energy
+  </label>
+</div>
+<div>
+  <label>
+    <input type="checkbox" ng-model="selectedWorkbooks.mobility" ng-change="workbookGenerator()" disabled> Mobility
+  </label>
+</div>
+</br>
+<div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.demographics" class="btn btn-block btn-info">
+    <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+  </a>
+</div>
+<div class="col-sm-6">
+  <a ng-href="{{workbookIterator()}}" class="btn btn-block btn-success">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </a>
+</div>

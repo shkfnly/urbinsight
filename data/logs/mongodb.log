@@ -3396,3 +3396,36 @@
 2015-10-07T17:14:24.162+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58390 #46 (3 connections now open)
 2015-10-07T17:14:24.162+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58391 #47 (4 connections now open)
 2015-10-07T17:14:24.162+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58392 #48 (5 connections now open)
+2015-10-08T21:42:34.560+0400 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 127ms
+2015-10-09T11:56:57.024+0400 I NETWORK  [conn44] end connection 127.0.0.1:58388 (4 connections now open)
+2015-10-09T11:56:57.024+0400 I NETWORK  [conn46] end connection 127.0.0.1:58390 (4 connections now open)
+2015-10-09T11:56:57.024+0400 I NETWORK  [conn45] end connection 127.0.0.1:58389 (4 connections now open)
+2015-10-09T11:56:57.024+0400 I NETWORK  [conn47] end connection 127.0.0.1:58391 (4 connections now open)
+2015-10-09T11:56:57.024+0400 I NETWORK  [conn48] end connection 127.0.0.1:58392 (4 connections now open)
+2015-10-10T04:51:53.508+0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-10-10T04:51:53.546+0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-10-10T04:51:53.556+0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-10-10T04:51:53.556+0400 I JOURNAL  [initandlisten] recover begin
+2015-10-10T04:51:53.557+0400 I JOURNAL  [initandlisten] recover lsn: 0
+2015-10-10T04:51:53.557+0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-10-10T04:51:53.628+0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-10-10T04:51:53.628+0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-10-10T04:51:53.630+0400 I JOURNAL  [initandlisten] recover done
+2015-10-10T04:51:53.647+0400 I JOURNAL  [durability] Durability thread started
+2015-10-10T04:51:53.647+0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] MongoDB starting : pid=2418 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] 
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] db version v3.0.6
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] allocator: system
+2015-10-10T04:51:53.648+0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-10-10T04:51:53.906+0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-10T05:03:35.969+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58504 #1 (1 connection now open)
+2015-10-10T05:03:35.979+0400 I NETWORK  [conn1] end connection 127.0.0.1:58504 (0 connections now open)
+2015-10-10T05:03:35.984+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58505 #2 (1 connection now open)
+2015-10-10T05:03:35.984+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58506 #3 (2 connections now open)
+2015-10-10T05:03:35.984+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58507 #4 (3 connections now open)
+2015-10-10T05:03:35.984+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58508 #5 (4 connections now open)
+2015-10-10T05:03:35.984+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58509 #6 (5 connections now open)

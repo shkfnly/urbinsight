@@ -180,11 +180,23 @@
           },
         }
       })
+      .state('app.city.pilot.umis.form.workbookSelection', {
+          views: {
+          '': {
+            templateUrl: 'views/pilot_cities/dataEntry/umis/workbookSelection.html',
+            controller: 'workbookSelectionCtrl'
+          },
+        }
+      })
+      .state('app.city.pilot.umis.form.waterWorkbook', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
+          },
+        }
+      })
 
 
-      // 'workbookWater':{
-      //   templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
-      // },
       // 'workbookMaterials':{
       //   templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html'
       // }
