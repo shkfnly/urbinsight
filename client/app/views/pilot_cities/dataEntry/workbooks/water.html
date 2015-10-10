@@ -136,4 +136,14 @@
   <h5>Water Customers</h5>
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.waterCustomers.excessCapacityPerDay" />Excess Capacity Per Day</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.waterCustomers.percentageOfExcessDistributed" />% of excess distributed</label><br />
-</form>
+    <br />
+    <div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.workbookSelection" class="btn btn-block btn-info">
+    <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+  </a>
+</div>
+<div class="col-sm-6">
+  <a class="btn btn-block btn-success" ng-click="workbookTest()">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </a>
+</div>

@@ -19,14 +19,20 @@
     <input type="checkbox" ng-model="selectedWorkbooks.mobility" ng-change="workbookGenerator()" disabled> Mobility
   </label>
 </div>
-</br>
+
+  <tt>value1 = {{selectedWorkbooks.water}}</tt><br/>
+  <tt>value2 = {{selectedWorkbooks.materials}}</tt><br/>
+  <tt>value1 = {{selectedWorkbooks.energy}}</tt><br/>
+    <tt>value2 = {{selectedWorkbooks.mobility}}</tt><br/>
+    <tt>workbookStore = {{workbookStore}}</tt><br/>
+<br />
 <div class="col-sm-6">
   <a ui-sref="app.city.pilot.umis.form.demographics" class="btn btn-block btn-info">
     <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
   </a>
 </div>
 <div class="col-sm-6">
-  <a ng-href="{{workbookIterator()}}" class="btn btn-block btn-success">
+  <a class="btn btn-block btn-success" ng-click="workbookTest()">
     Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
   </a>
 </div>

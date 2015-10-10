@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('workbookSelectionCtrl', ['$scope',  function ($scope) {
+  .controller('workbookSelectionCtrl', ['$scope', '$state', function ($scope, $state) {
     $scope.selectedWorkbooks = {
       'water': false,
       'materials': false,
@@ -16,6 +16,7 @@ angular.module('urbinsight')
       'mobility': false
     }
     $scope.workbookStore = ['app.city.pilot.umis.form.endPage'];
+    //$scope.currentPointer = $scope.workbookStore.shift();
 
     $scope.workbookGenerator = function(){
       $scope.workbookStore = [];
@@ -25,13 +26,20 @@ angular.module('urbinsight')
        }
       });
       $scope.workbookStore.push('app.city.pilot.umis.form.endPage');
+      //$scope.currentPointer = $scope.workbookStore.shift(); 
     };
 
     $scope.workbookIterator = function(){
+
       if ($scope.workbookStore.length != 0){
-        return $state.href($scope.workbookStore.shift());
+        var index = $scope.init;
+        $scope.init++;
       }
+      return $scope.workbookStore.shift();
     };
+    $scope.workbookTest = function(){
+     return $state.go($scope.workbookIterator())
+    }
     $scope.workbookValues = {
       water: 'app.city.pilot.umis.form.waterWorkbook',
       materials: 'app.city.pilot.umis.form.materialsWorkbook',
