@@ -1,22 +1,22 @@
 <h3>Select which workbooks you would like to complete</h3>
 <div>
   <label>
-    <input type="checkbox" ng-model="selectedWorkbooks.water" ng-change="workbookGenerator()"> Water
+    <input type="checkbox" ng-model="workbookSelection.selectedWorkbooks.water" ng-change="workbookSelection.workbookGenerator()"> Water
   </label>
 </div>
 <div>
   <label>
-    <input type="checkbox" ng-model="selectedWorkbooks.materials" ng-change="workbookGenerator()"> Materials
+    <input type="checkbox" ng-model="workbookSelection.selectedWorkbooks.materials" ng-change="workbookSelection.workbookGenerator()"> Materials
   </label>
 </div>
 <div>
   <label>
-    <input type="checkbox" ng-model="selectedWorkbooks.energy" ng-change="workbookGenerator()" disabled> Energy
+    <input type="checkbox" ng-model="workbookSelection.selectedWorkbooks.energy" ng-change="workbookSelection.workbookGenerator()" disabled> Energy
   </label>
 </div>
 <div>
   <label>
-    <input type="checkbox" ng-model="selectedWorkbooks.mobility" ng-change="workbookGenerator()" disabled> Mobility
+    <input type="checkbox" ng-model="workbookSelection.selectedWorkbooks.mobility" ng-change="workbookSelection.workbookGenerator()" disabled> Mobility
   </label>
 </div>
 <br />
@@ -26,7 +26,7 @@
   </a>
 </div>
 <div class="col-sm-6">
-  <a class="btn btn-block btn-success" ng-click="workbookIterator()">
+  <a class="btn btn-block btn-success" ng-click="workbookSelection.workbookIterator()">
     Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
   </a>
 </div>

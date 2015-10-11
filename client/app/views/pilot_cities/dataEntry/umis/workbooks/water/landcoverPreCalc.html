@@ -1,9 +1,8 @@
-  <h2>Estimate Demand</h2>
-  <h3>Land Cover Pre Calculation</h3>
+  <h4>Land Cover Pre Calculation</h4>
   <label>Percentage of parcel with rainwater catchement: <input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.percentageOfParcelWithRainwaterCatchment"></label>
-  <h4>Surface Types</h4>
+  <h5>Surface Types</h5>
 
-  <h5>Select the types that are present on the parcel.</h5>
+  <h6>Select the types that are present on the parcel.</h6>
   <div id="surface-type-selection">
     <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.turfGreen" ng-true-value="{name: 'Turf (Green)'}" />
       Turf (Green)
@@ -54,8 +53,8 @@
   
 
 
-  <h3>Portion of Parcel</h3>
-  <h5>Enter percent of parcel that comprises each type. All values are in decimals and less than 1</h5>
+  <h5>Portion of Parcel</h5>
+  <h6>Enter percent of parcel that comprises each type. All values are in decimals and less than 1</h6>
   <label ng-repeat="(surfaceType, obj) in parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes">
     <input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes[surfaceType].portionOfParcel" min="0"/>{{obj.name}}</label><br />
   </label>

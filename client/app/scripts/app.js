@@ -191,7 +191,8 @@
       .state('app.city.pilot.umis.form.waterWorkbook', {
           views: {
           '':{
-            templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html'
+            templateUrl: 'views/pilot_cities/dataentry/workbooks/water.html',
+            controller: 'waterWorkbookCtrl'
           },
         }
       })
@@ -209,11 +210,21 @@
           },
         }
       })
-
-
-      // 'workbookMaterials':{
-      //   templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html'
-      // }
+      .state('app.city.pilot.umis.form.materialsWorkbook', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/workbooks/materials.html',
+            controller: 'materialsWorkbookCtrl'
+          },
+        }
+      })
+      .state('app.city.pilot.umis.form.endPage', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/umis/form_end.html'
+          },
+        }
+      })
       .state('app.city.pilot.survey', {
         views: {
           'survey': {

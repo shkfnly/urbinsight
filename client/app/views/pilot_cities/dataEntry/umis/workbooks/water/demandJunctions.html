@@ -1,13 +1,13 @@
 
-<h3>Demand Junctions</h3>
+<h4>Demand Junctions</h4>
   <!--Add functionaility to add a toilet -->
-  <h4>Toilets - Flush Volume</h4>
+  <h5>Toilets - Flush Volume</h5>
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.toilets.activeToilets.regUsedToiletA.flushVolume"/>Flush Volume - Regularly Used Toilet A</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.toilets.activeToilets.regUsedToiletB.flushVolume"/>Flush Volume - Regularly Used Toilet B</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.toilets.numPersonsUsingToilets"/>Number of People Using Toilets</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.toilets.dailyPerPersonUsage"/>Daily Usage (per/Person)</label><br />
   <!-- Add functionality to add a shower -->
-  <h4>Hygiene</h4>
+  <h5>Hygiene</h5>
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.hygiene.activeShowers.showerA" />Shower Flow (L/min)</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.hygiene.typicalShowerDuration" />Typical Shower Duraction</label><br />
 
@@ -20,7 +20,7 @@
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.hygiene.numOccupantsUsingWashrooms" />Number of Occupant Using Washroom</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.hygiene.numVisitsToWashroomPerOccupant" />Number of Visits to Washroom Per Occupant</label><br />
 
-  <h4>Kitchen</h4>
+  <h5>Kitchen</h5>
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.kitchen.quantityOfMealsPerDay" />Quantity of Meals Prepared (daily)</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.kitchen.waterPerMeal" />Water Used per Meal</label><br />
     <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.demandJunctions.kitchen.dishwashingWaterPerLoad" />Dishwashing water used per load</label><br />
@@ -64,7 +64,7 @@
   </a>
 </div>
 <div class="col-sm-6">
-  <a class="btn btn-block btn-success" ng-click="workbookIterator()">
+  <a class="btn btn-block btn-success" ng-click="workbookSelection.workbookIterator()">
     Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
   </a>
 </div> 

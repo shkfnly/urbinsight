@@ -1,9 +1,9 @@
 <h3>Estimate Demand</h3>
-<label>Option A<input name="optionSelection" type="radio" checked="true" ng-model='parcel.workbooks.materials.option' value='A' /></label>
-<label>Option B<input name="optionSelection" type="radio" checked="true" ng-model='parcel.workbooks.materials.option' value='B' /></label>
-<label>Option C<input name="optionSelection" type="radio" checked="true" ng-model='parcel.workbooks.materials.option' value='C' /></label>
-
-  <h4>Option A:</h4>
+<label class="radio-inline"><input name="optionSelection" type="radio" ng-model='optionSelected' value='A' checked/>Option A</label>
+<label class="radio-inline"><input name="optionSelection" type="radio" ng-model='optionSelected' value='B'/>Option B</label>
+<label class="radio-inline"><input name="optionSelection" type="radio" ng-model='optionSelected' value='C'/>Option C</label>
+<div ng-show="optionSelected === 'A'">
+  <h3>Option A:</h3>
   <label>Total Weight (kg): <input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionA.totalWeight" /></label>
   <table>
     <tr>
@@ -51,8 +51,8 @@
       <td><input type="number" id="inertsAndOthers" ng-model="parcel.workbooks.materials.estimateDemand.optionA.demandJunctions.inertsAndOthers" /></td>
     </tr>
   </table>
-</form>
-<form>
+</div>
+<div ng-show="optionSelected === 'B'">
   <h3>Option B:</h3>
   <label>Kilograms:<input name="paperUnits" type="radio" checked="true" value="KG" /></label>
   <label>Percentage:<input name="paperUnits" type="radio" value="%" /></label>
@@ -101,10 +101,6 @@
       <td><label for="nonRecyclablePaper">Non-recyclable Paper</label></td>
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.paper.nonRecyclablePaper" id="nonRecyclablePaper" /></td>
       <td>Magazine, Loose (0.6 kg/cubic dm)</td>
-    </tr>
-    <tr>
-      <td><label for="paperTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.paper.totalWeight" id="paperTotalWeight" />
     </tr>
   </table>
   <br />
@@ -170,10 +166,6 @@
       <td><label for="foodWaste">Other - Food Waste</label></td>
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.organics.other.foodWaste" id="foodWaste" /></td>
       <td>Food waste, as animal feed (0.6 kg/cubic dm)</td>
-    </tr>
-    <tr>
-      <td><label for="organicTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.organics.totalWeight.amount" id="organicTotalWeight" /></td>
     </tr>
   </table>
   <br/>
@@ -244,10 +236,6 @@
       <td><label for="otherPlastics">Other plastics</label></td>
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.plastics.other.amount" id="otherPlastics" /></td>
       <td>Other plastics</td>
-    </tr>
-    <tr>
-      <td><label for="plasticsTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.plastics.totalWeight.amount" id="plasticsTotalWeight" /></td>
     </tr>
   </table>
   <br/>
@@ -324,10 +312,6 @@
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.textiles.mixedClothing.compactClothing" id="compactClothing" /></td>
       <td>Clothing, mixed compacted(0.1 kg/cubic dm)</td>
     </tr>
-    <tr>
-      <td><label for="textilesTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.textiles.totalWeight.amount" id="textilesTotalWeight:" /></td>
-    </tr>
   </table>
   <br/>
   <label>Kilograms:<input name="metalsUnits" type="radio" checked="true" value="KG"></label>
@@ -379,9 +363,6 @@
       <td>Remainder/Composite Metal (0.5 kg/cubic dm)</td>
     </tr>
     <tr>
-      <td><label for="metalTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.metals.totalWeight.amount" id="metalTotalWeight" /></td>
-    </tr>
   </table>
   <br/>
   <label>Kilograms:<input name="glassUnits" type="radio" checked="true" value="KG"></label>
@@ -416,10 +397,6 @@
       <td><label for="mixedGlass">Mixed Glass - Composite or Broken Glass</label></td>
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.glass.mixedGlass.compositeGlass" id="mixedGlass" /></td>
       <td>Composite or Broken Glass (1.3 kg/cubic dm)</td>
-    </tr>
-    <tr>
-      <td><label for="glassTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.glass.totalWeight.amount" id="glassTotalWeight" /></td>
     </tr>
   </table>
   <br/>
@@ -476,10 +453,6 @@
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.trimmings.gardenWaste.compost" id="compost" /></td>
       <td>Compost (0.6 kg/cubic dm)</td>
     </tr>
-    <tr>
-      <td><label for="trimmingsTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.trimmings.totalWeight.amount" id="trimmingsTotalWeight" /></td>
-    </tr>
   </table>
   <br/>
   <label>Kilograms:<input name="applianceUnits" type="radio" checked="true" value="KG"></label>
@@ -520,10 +493,6 @@
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.appliances.other.amount" id="otherAppliances" /></td>
       <td>Uncategorized Appliances</td>
     </tr>
-    <tr>
-      <td><label for="appliancesTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.appliances.totalWeight.amount" id="appliancesTotalWeight" /></td>
-    </tr>
   </table>
   <br/>
   <label>Kilograms:<input name="hazardousUnits" type="radio" checked="true" value="KG"></label>
@@ -558,10 +527,6 @@
       <td><label for="tires">Tire, passenger car</label></td>
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.harzardousWaste.tires.amount" id="tires" /></td>
       <td>Tire, passenger car (6.5 kg)</td>
-    </tr>
-    <tr>
-      <td><label for="hazardousTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.harzardousWaste.totalWeight.amount" id="hazardousTotalWeight" /></td>
     </tr>
   </table>
   <br/>
@@ -608,11 +573,54 @@
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.inerts.constructionmaterials.woodAshes" id="woodAshes" /></td>
       <td>Wood Ashes (0.8 kg/cubic dm)</td>
     </tr>
+  </table>
+</div>
+  <br />
+  <div ng-show="optionSelected === 'C'">
+    <h3>Option C:</h3>
+    <h4>Enter weight by category</h4>
+  <table>
     <tr>
-      <td><label for="inertTotalWeight">Total Weight</label></td>
-      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.inerts.totalWeight.amount" id="inertTotalWeight" /></td>
+      <td><label for="paperTotalWeight">Paper</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.paper.totalWeight" id="paperTotalWeight" />
+    </tr>
+    <tr>
+      <td><label for="organicTotalWeight">Organics</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.organics.totalWeight.amount" id="organicTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="plasticsTotalWeight">Plastics</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.plastics.totalWeight.amount" id="plasticsTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="textilesTotalWeight">Textiles</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.textiles.totalWeight.amount" id="textilesTotalWeight:" /></td>
+    </tr>
+      <td><label for="metalTotalWeight">Metals</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.metals.totalWeight.amount" id="metalTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="glassTotalWeight">Glass</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.glass.totalWeight.amount" id="glassTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="trimmingsTotalWeight">Trimmings</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.trimmings.totalWeight.amount" id="trimmingsTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="appliancesTotalWeight">Appliances</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.appliances.totalWeight.amount" id="appliancesTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="hazardousTotalWeight">Hazardous Waste</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.harzardousWaste.totalWeight.amount" id="hazardousTotalWeight" /></td>
+    </tr>
+    <tr>
+      <td><label for="inertTotalWeight">Inert and Others</label></td>
+      <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionC.demandJunctions.inerts.totalWeight.amount" id="inertTotalWeight" /></td>
     </tr>
   </table>
+  </div>
   <br />
     <div class="col-sm-6">
   <a ui-sref="app.city.pilot.umis.form.workbookSelection" class="btn btn-block btn-info">
@@ -620,7 +628,7 @@
   </a>
 </div>
 <div class="col-sm-6">
-  <a class="btn btn-block btn-success" ng-click="workbookIterator()">
+  <a class="btn btn-block btn-success" ng-click="workbookSelection.workbookIterator()">
     Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
   </a>
 </div>
