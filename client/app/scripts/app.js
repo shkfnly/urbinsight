@@ -195,6 +195,20 @@
           },
         }
       })
+      .state('app.city.pilot.umis.form.waterWorkbook.landCoverPreCalc', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/umis/workbooks/water/landcoverPreCalc.html'
+          },
+        }
+      })
+      .state('app.city.pilot.umis.form.waterWorkbook.demandJunctions', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/umis/workbooks/water/demandJunctions.html'
+          },
+        }
+      })
 
 
       // 'workbookMaterials':{

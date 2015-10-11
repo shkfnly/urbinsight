@@ -1,0 +1,90 @@
+  <h2>Estimate Demand</h2>
+  <h3>Land Cover Pre Calculation</h3>
+  <label>Percentage of parcel with rainwater catchement: <input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.percentageOfParcelWithRainwaterCatchment"></label>
+  <h4>Surface Types</h4>
+
+  <h5>Select the types that are present on the parcel.</h5>
+  <div id="surface-type-selection">
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.turfGreen" ng-true-value="{name: 'Turf (Green)'}" />
+      Turf (Green)
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.perennialGrassesAndShrubs" ng-true-value="{name: 'Perennial Grasses and Shrubs'}" />
+      Perennial Grasses and Shrubs
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.treeCanopyOverVegetatedGround" ng-true-value="{name: 'Tree Canopy Over Vegetated Ground'}" />
+      Tree Canopy Over Vegetated Ground
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.treeCanopyOverSealedSurfaces" ng-true-value="{name: 'Tree Canopy Over Sealed Surfaces'}" />
+      Tree Canopy Over Sealed Surfaces
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.wetOrDryPondsAndInfiltrationTrenches" ng-true-value="{name: 'Wet or Dry Ponds and Infiltration Trenches'}" />
+      Wet or Dry Ponds and Infiltration Trenches
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.vegetatedRoof" ng-true-value="{name: 'Vegetated Roofs'}" />
+      Vegetated Roofs
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.mainRoof" ng-true-value="{name: 'Main Roof'}" />
+      Main Roof
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.secondaryRoof" ng-true-value="{name: 'Secondary Roof'}" />
+      Secondary Roof
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.openDecking" ng-true-value="{name: 'Open Decking'}" />
+      Open Decking
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.sealedDecking" ng-true-value="{name: 'Sealed Decking'}" />
+      Sealed Decking
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.gravel" ng-true-value="{name: 'Gravel'}" />
+      Gravel
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.bareEarth" ng-true-value="{name: 'Bare Earth'}" />
+      Bare Earth
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.sealedPavement" ng-true-value="{name: 'Sealed Pavement'}" />
+      Sealed Pavement
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.paversAndBricks" ng-true-value="{name: 'Pavers and Bricks'}" />
+      Pavers and Bricks
+    </label></br>
+    <label><input type="checkbox" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.permeableAsphalt" ng-true-value="{name: 'Permeable Asphalt'}" />
+      Permeable Asphalt
+    </label></br>
+  </div>
+  
+
+
+  <h3>Portion of Parcel</h3>
+  <h5>Enter percent of parcel that comprises each type. All values are in decimals and less than 1</h5>
+  <label ng-repeat="(surfaceType, obj) in parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes">
+    <input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes[surfaceType].portionOfParcel" min="0"/>{{obj.name}}</label><br />
+  </label>
+
+  <!-- <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.turfGreen.portionOfParcel" /></label></br>
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.perennialsGrassesAndShrubs.portionOfParcel" /></label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.treeCanopyOverVegetagedGround.portionOfParcel" /></label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.treeCanopyOverSealedSurfaces.portionOfParcel" /></label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.wetOrDryPondsAndInfiltrationTrenches.portionOfParcel" /></label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.vegetatedRoof.portionOfParcel" />Vegetated Roof</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.mainRoof.portionOfParcel" />Main Roof</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.secondaryRoof.portionOfParcel" />Secondary Roof</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.openDecking.portionOfParcel" />Open Decking</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.sealedDecking.portionOfParcel" />Sealed Decking</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.gravel.portionOfParcel" />Gravel</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.bareEarth.portionOfParcel" />Bare Earth</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.sealedPavement.portionOfParcel" />Sealed Pavement</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.paversAndBricks.portionOfParcel" />Pavers and Bricks</label><br />
+  <label><input type="number" ng-model="parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes.permeableAsphalt.portionOfParcel" />Permeable Asphalt</label><br /> -->
+
+<br />
+    <div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.workbookSelection" class="btn btn-block btn-info">
+    <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+  </a>
+</div>
+<div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.waterWorkbook.demandJunctions" class="btn btn-block btn-success">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </a>
+</div> 
+

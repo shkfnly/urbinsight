@@ -16,7 +16,6 @@ angular.module('urbinsight')
       'mobility': false
     }
     $scope.workbookStore = ['app.city.pilot.umis.form.endPage'];
-    //$scope.currentPointer = $scope.workbookStore.shift();
 
     $scope.workbookGenerator = function(){
       $scope.workbookStore = [];
@@ -26,22 +25,13 @@ angular.module('urbinsight')
        }
       });
       $scope.workbookStore.push('app.city.pilot.umis.form.endPage');
-      //$scope.currentPointer = $scope.workbookStore.shift(); 
     };
-
     $scope.workbookIterator = function(){
-
-      if ($scope.workbookStore.length != 0){
-        var index = $scope.init;
-        $scope.init++;
-      }
-      return $scope.workbookStore.shift();
+      return $state.go($scope.workbookStore.shift());
     };
-    $scope.workbookTest = function(){
-     return $state.go($scope.workbookIterator())
-    }
+
     $scope.workbookValues = {
-      water: 'app.city.pilot.umis.form.waterWorkbook',
+      water: 'app.city.pilot.umis.form.waterWorkbook.landCoverPreCalc',
       materials: 'app.city.pilot.umis.form.materialsWorkbook',
     }
 

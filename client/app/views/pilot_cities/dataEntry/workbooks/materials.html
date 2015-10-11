@@ -3,7 +3,6 @@
 <label>Option B<input name="optionSelection" type="radio" checked="true" ng-model='parcel.workbooks.materials.option' value='B' /></label>
 <label>Option C<input name="optionSelection" type="radio" checked="true" ng-model='parcel.workbooks.materials.option' value='C' /></label>
 
-<form>
   <h4>Option A:</h4>
   <label>Total Weight (kg): <input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionA.totalWeight" /></label>
   <table>
@@ -614,4 +613,14 @@
       <td><input type="number" ng-model="parcel.workbooks.materials.estimateDemand.optionB.demandJunctions.inerts.totalWeight.amount" id="inertTotalWeight" /></td>
     </tr>
   </table>
-</form>
+  <br />
+    <div class="col-sm-6">
+  <a ui-sref="app.city.pilot.umis.form.workbookSelection" class="btn btn-block btn-info">
+    <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+  </a>
+</div>
+<div class="col-sm-6">
+  <a class="btn btn-block btn-success" ng-click="workbookIterator()">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </a>
+</div>
