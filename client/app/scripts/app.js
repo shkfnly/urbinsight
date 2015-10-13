@@ -218,6 +218,13 @@
           },
         }
       })
+      .state('app.city.pilot.umis.form.submit', {
+          views: {
+          '':{
+            templateUrl: 'views/pilot_cities/dataentry/umis/form_submit.html'
+          },
+        }
+      })
       .state('app.city.pilot.umis.form.endPage', {
           views: {
           '':{

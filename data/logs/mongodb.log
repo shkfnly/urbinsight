@@ -3461,3 +3461,4 @@
 2015-10-10T07:17:47.216+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49571 #4 (3 connections now open)
 2015-10-10T07:17:47.216+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49572 #5 (4 connections now open)
 2015-10-10T07:17:47.216+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49573 #6 (5 connections now open)
+2015-10-13T06:19:23.854+0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 290ms

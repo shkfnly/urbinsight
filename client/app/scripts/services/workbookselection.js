@@ -19,7 +19,7 @@ angular.module('urbinsight')
         that.workbookStore.push(that.workbookValues[key]);
        }
       });
-      this.workbookStore.push('app.city.pilot.umis.form.endPage');
+      this.workbookStore.push('app.city.pilot.umis.form.submit');
     },
     workbookIterator: function(){
       return $state.go(this.workbookStore.shift());
@@ -43,6 +43,6 @@ angular.module('urbinsight')
       water: 'app.city.pilot.umis.form.waterWorkbook.landCoverPreCalc',
       materials: 'app.city.pilot.umis.form.materialsWorkbook',
     },
-   workbookStore: ['app.city.pilot.umis.form.endPage']
+   workbookStore: ['app.city.pilot.umis.form.submit']
   }
   }]);
