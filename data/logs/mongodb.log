@@ -3462,3 +3462,56 @@
 2015-10-10T07:17:47.216+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49572 #5 (4 connections now open)
 2015-10-10T07:17:47.216+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49573 #6 (5 connections now open)
 2015-10-13T06:19:23.854+0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 290ms
+2015-10-13T08:22:34.425+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57954 #7 (6 connections now open)
+2015-10-13T08:26:48.129+0400 I NETWORK  [conn7] end connection 127.0.0.1:57954 (5 connections now open)
+2015-10-13T08:27:51.423+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:58210 #8 (6 connections now open)
+2015-10-13T09:31:56.870+0400 I NETWORK  [conn8] end connection 127.0.0.1:58210 (5 connections now open)
+2015-10-13T10:49:42.643+0400 I NETWORK  [conn2] end connection 127.0.0.1:49569 (4 connections now open)
+2015-10-13T10:49:42.643+0400 I NETWORK  [conn6] end connection 127.0.0.1:49573 (4 connections now open)
+2015-10-13T10:49:42.643+0400 I NETWORK  [conn3] end connection 127.0.0.1:49570 (4 connections now open)
+2015-10-13T10:49:42.643+0400 I NETWORK  [conn5] end connection 127.0.0.1:49572 (4 connections now open)
+2015-10-13T10:49:42.643+0400 I NETWORK  [conn4] end connection 127.0.0.1:49571 (4 connections now open)
+2015-10-13T14:26:35.993+0400 I CONTROL  ***** SERVER RESTARTED *****
+2015-10-13T14:26:36.024+0400 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-10-13T14:26:36.033+0400 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-10-13T14:26:36.033+0400 I JOURNAL  [initandlisten] recover begin
+2015-10-13T14:26:36.034+0400 I JOURNAL  [initandlisten] recover lsn: 95189808
+2015-10-13T14:26:36.034+0400 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-10-13T14:26:36.036+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:95189808
+2015-10-13T14:26:36.036+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:90916076 < lsn:95189808
+2015-10-13T14:26:36.036+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:91284517 < lsn:95189808
+2015-10-13T14:26:36.037+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:91336907 < lsn:95189808
+2015-10-13T14:26:36.037+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:94045638 < lsn:95189808
+2015-10-13T14:26:36.037+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:94149458 < lsn:95189808
+2015-10-13T14:26:36.037+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:94410098 < lsn:95189808
+2015-10-13T14:26:36.038+0400 I JOURNAL  [initandlisten] recover skipping application of section seq:94981668 < lsn:95189808
+2015-10-13T14:26:36.084+0400 I JOURNAL  [initandlisten] recover cleaning up
+2015-10-13T14:26:36.084+0400 I JOURNAL  [initandlisten] removeJournalFiles
+2015-10-13T14:26:36.086+0400 I JOURNAL  [initandlisten] recover done
+2015-10-13T14:26:36.102+0400 I JOURNAL  [durability] Durability thread started
+2015-10-13T14:26:36.102+0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] MongoDB starting : pid=1212 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] 
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] db version v3.0.6
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] git version: nogitversion
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] allocator: system
+2015-10-13T14:26:36.103+0400 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-10-13T14:26:36.248+0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-13T14:26:51.841+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49810 #1 (1 connection now open)
+2015-10-13T14:26:51.850+0400 I NETWORK  [conn1] end connection 127.0.0.1:49810 (0 connections now open)
+2015-10-13T14:26:51.851+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49811 #2 (1 connection now open)
+2015-10-13T14:26:51.851+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49812 #3 (2 connections now open)
+2015-10-13T14:26:51.851+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49813 #4 (3 connections now open)
+2015-10-13T14:26:51.851+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49814 #5 (4 connections now open)
+2015-10-13T14:26:51.851+0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49815 #6 (5 connections now open)
+2015-10-14T00:15:49.595+0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 132ms
+2015-10-14T17:05:39.669+0400 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 255ms
+2015-10-15T16:39:07.956+0400 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 206ms
+2015-10-16T03:35:20.397-0500 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 414ms
+2015-10-17T07:34:44.564-0500 I NETWORK  [conn3] end connection 127.0.0.1:49812 (4 connections now open)
+2015-10-17T07:34:44.564-0500 I NETWORK  [conn5] end connection 127.0.0.1:49814 (4 connections now open)
+2015-10-17T07:34:44.564-0500 I NETWORK  [conn6] end connection 127.0.0.1:49815 (4 connections now open)
+2015-10-17T07:34:44.564-0500 I NETWORK  [conn4] end connection 127.0.0.1:49813 (4 connections now open)
+2015-10-17T07:34:44.564-0500 I NETWORK  [conn2] end connection 127.0.0.1:49811 (4 connections now open)
