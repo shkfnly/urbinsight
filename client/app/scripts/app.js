@@ -62,9 +62,9 @@
             templateUrl: 'views/homepage/pilots.html',
             controller: 'PilotsCtrl'
           },
-          'layerIntro': {
+          /*'layerIntro': {
             templateUrl: 'views/homepage/layerIntro.html'
-          },
+          },*/
 
           'contact': {
             templateUrl: 'views/homepage/contact.html'

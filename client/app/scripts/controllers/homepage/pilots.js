@@ -8,7 +8,7 @@
  * Controller of the urbinsight
  */
 angular.module('urbinsight')
-  .controller('PilotsCtrl', ['$scope', function ($scope) {
+  .controller('PilotsCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.imgLoader = function() {
       window.$(document).ready(function(){
     window.$('#medellin').hover(function(){
@@ -37,6 +37,9 @@ angular.module('urbinsight')
   });
   
     };
+    $scope.go = function(place){
+     $location.path('/dashboard/' + place);
+    }
   $scope.imgLoader();
   $scope.awesomeThings = [
       'HTML5 Boilerplate',
