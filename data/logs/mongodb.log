@@ -3515,3 +3515,48 @@
 2015-10-17T07:34:44.564-0500 I NETWORK  [conn6] end connection 127.0.0.1:49815 (4 connections now open)
 2015-10-17T07:34:44.564-0500 I NETWORK  [conn4] end connection 127.0.0.1:49813 (4 connections now open)
 2015-10-17T07:34:44.564-0500 I NETWORK  [conn2] end connection 127.0.0.1:49811 (4 connections now open)
+2015-10-21T08:52:05.795-0500 I CONTROL  ***** SERVER RESTARTED *****
+2015-10-21T08:52:05.839-0500 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-10-21T08:52:05.852-0500 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-10-21T08:52:05.853-0500 I JOURNAL  [initandlisten] recover begin
+2015-10-21T08:52:05.854-0500 I JOURNAL  [initandlisten] recover lsn: 0
+2015-10-21T08:52:05.854-0500 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-10-21T08:52:05.918-0500 I JOURNAL  [initandlisten] recover cleaning up
+2015-10-21T08:52:05.918-0500 I JOURNAL  [initandlisten] removeJournalFiles
+2015-10-21T08:52:05.920-0500 I JOURNAL  [initandlisten] recover done
+2015-10-21T08:52:05.935-0500 I JOURNAL  [durability] Durability thread started
+2015-10-21T08:52:05.935-0500 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] MongoDB starting : pid=3406 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] 
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] db version v3.0.6
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] git version: nogitversion
+2015-10-21T08:52:05.935-0500 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-10-21T08:52:05.936-0500 I CONTROL  [initandlisten] allocator: system
+2015-10-21T08:52:05.936-0500 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-10-21T08:52:06.178-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-21T08:52:06.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61643 #1 (1 connection now open)
+2015-10-21T08:52:06.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61644 #2 (2 connections now open)
+2015-10-21T08:52:06.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61645 #3 (3 connections now open)
+2015-10-21T08:52:06.609-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61646 #4 (4 connections now open)
+2015-10-21T08:52:06.620-0500 I NETWORK  [conn4] end connection 127.0.0.1:61646 (3 connections now open)
+2015-10-21T08:52:06.622-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61647 #5 (4 connections now open)
+2015-10-21T08:52:06.622-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61648 #6 (5 connections now open)
+2015-10-21T08:52:06.622-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61649 #7 (6 connections now open)
+2015-10-21T08:52:06.622-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61650 #8 (7 connections now open)
+2015-10-21T08:52:06.622-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61651 #9 (8 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn7] end connection 127.0.0.1:61649 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn6] end connection 127.0.0.1:61648 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn5] end connection 127.0.0.1:61647 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn8] end connection 127.0.0.1:61650 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn9] end connection 127.0.0.1:61651 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn3] end connection 127.0.0.1:61645 (7 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn2] end connection 127.0.0.1:61644 (6 connections now open)
+2015-10-21T08:52:48.049-0500 I NETWORK  [conn1] end connection 127.0.0.1:61643 (6 connections now open)
+2015-10-21T08:52:52.339-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61704 #10 (1 connection now open)
+2015-10-21T08:52:52.346-0500 I NETWORK  [conn10] end connection 127.0.0.1:61704 (0 connections now open)
+2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61705 #11 (1 connection now open)
+2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61706 #12 (2 connections now open)
+2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61707 #13 (3 connections now open)
+2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61708 #14 (4 connections now open)
+2015-10-21T08:52:52.351-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61709 #15 (5 connections now open)

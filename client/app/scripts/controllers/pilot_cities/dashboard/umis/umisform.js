@@ -19,7 +19,8 @@ angular.module('urbinsight')
 
     $scope.umisSubmit = function () {
       ParcelFactory.saveParcel($stateParams.cityName, function(){});
-      MapFactory.getMap().removeLayer(ParcelFactory.getCurrentMarker());
+      if(typeof ParcelFactory.getCurrentMarker() != 'undefined'){
+        MapFactory.getMap().removeLayer(ParcelFactory.getCurrentMarker());}
       MapFactory.renderParcels($stateParams.cityName);
     };
 

@@ -2,7 +2,6 @@
 
 angular.module('urbinsight')
   .controller('qolDataEntryCtrl', ['$scope', '$http', '$stateParams', 'MapFactory', 'QOLFactory', function($scope, $http, $stateParams, MapFactory, QOLFactory){
-  	var L = window.L;
   	var survey;
   	$scope.QOLFactory = QOLFactory;
   	$scope.survey = survey = QOLFactory.getCurrentSurvey();
@@ -11,8 +10,8 @@ angular.module('urbinsight')
 
   	var marker;
     $scope.marker = marker;
-
-    MapFactory.getMap().on('click', function(e) {
+    
+    var markerAdd = function(e) {
       if(MapFactory.getMap().hasLayer($scope.marker)){
         MapFactory.getMap().removeLayer($scope.marker);
       }
@@ -29,19 +28,17 @@ angular.module('urbinsight')
       $scope.marker.on('move', function (e) {
         $scope.parcel = QOLFactory.setGeoCoordinates(e.latlng);
       });
-
-    });
+    }
+    MapFactory.getMap().on('click', markerAdd);
 
     MapFactory.renderSurveys($stateParams.cityName);
-
     $scope.submit = function(){
-
       QOLFactory.saveCurrentSurvey($scope.cityName, function(){});
-
       // MapFactory.removeCurrentMarker();
-      //       debugger
-      // console.log($scope.marker);
-      MapFactory.getMap().removeLayer(QOLFactory.getCurrentMarker());
+      if(typeof QOLFactory.getCurrentMarker() != 'undefined'){
+        MapFactory.getMap().removeLayer(QOLFactory.getCurrentMarker());
+      }
+      MapFactory.getMap().off('click', markerAdd);
       MapFactory.renderSurveys($stateParams.cityName);
     };
 

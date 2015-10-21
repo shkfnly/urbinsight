@@ -17,8 +17,7 @@ angular.module('urbinsight')
     $scope.marker = marker;
     
    // MapFactory.markerClickControl('parcel', ParcelFactory, $scope);
-
-    MapFactory.getMap().on('click', function(e) {
+    var markerAdd = function(e) {
       if(MapFactory.getMap().hasLayer($scope.marker)){
         MapFactory.getMap().removeLayer($scope.marker);
       }
@@ -35,5 +34,10 @@ angular.module('urbinsight')
       $scope.marker.on('move', function (e) {
         $scope.parcel = ParcelFactory.setGeoCoordinates(e.latlng);
       });
-    });
+    }
+    MapFactory.getMap().on('click', markerAdd);
+    $scope.$on("$destroy", function(){
+      MapFactory.getMap().off('click', markerAdd);
+    })
+    // on exit need to remove a
   }]);
