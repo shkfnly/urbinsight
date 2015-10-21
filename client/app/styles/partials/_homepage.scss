@@ -135,14 +135,14 @@
       -webkit-filter: saturate(0.02) contrast(0.85) brightness(0.5);
       filter: saturate(0.02) contrast(0.85) brightness(0.5);
     }
-    a:link{
+    .pilot-links a:link{
       color: #fff;
       text-decoration: none;
     }
     body a:hover{
       text-decoration: none !important;
     }
-    a:visited{
+    .pilot-links a:visited{
       color: #f8f8f8;
     }
     #layer-title{
