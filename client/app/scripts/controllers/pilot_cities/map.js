@@ -64,8 +64,8 @@ angular.module('urbinsight')
 // urbinsight.150c04d2
     $scope.addLayerControl = function(addtLayers){
       L.control.layers({
-        'Base Map': L.mapbox.tileLayer('urbinsight.1114602d').addTo($scope.map),
-        'Satellite Map' : L.mapbox.tileLayer('urbinsight.l906cd2j'),
+        'Satellite Map' : L.mapbox.tileLayer('urbinsight.l906cd2j').addTo($scope.map),
+        'Urbinsight Map': L.mapbox.tileLayer('urbinsight.1114602d'),
         'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
         }),
