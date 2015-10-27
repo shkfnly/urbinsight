@@ -3560,3 +3560,42 @@
 2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61707 #13 (3 connections now open)
 2015-10-21T08:52:52.350-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61708 #14 (4 connections now open)
 2015-10-21T08:52:52.351-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61709 #15 (5 connections now open)
+2015-10-27T14:51:26.119-0600 I CONTROL  ***** SERVER RESTARTED *****
+2015-10-27T14:51:26.147-0600 E NETWORK  [initandlisten] listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:27017
+2015-10-27T14:51:26.147-0600 E NETWORK  [initandlisten]   addr already in use
+2015-10-27T14:51:26.148-0600 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2015-10-27T14:51:26.158-0600 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2015-10-27T14:51:26.158-0600 I JOURNAL  [initandlisten] recover begin
+2015-10-27T14:51:26.159-0600 I JOURNAL  [initandlisten] recover lsn: 1202705
+2015-10-27T14:51:26.159-0600 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2015-10-27T14:51:26.163-0600 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:1202705
+2015-10-27T14:51:26.163-0600 I JOURNAL  [initandlisten] recover skipping application of section seq:52395 < lsn:1202705
+2015-10-27T14:51:26.163-0600 I JOURNAL  [initandlisten] recover skipping application of section seq:783215 < lsn:1202705
+2015-10-27T14:51:26.253-0600 I JOURNAL  [initandlisten] recover cleaning up
+2015-10-27T14:51:26.253-0600 I JOURNAL  [initandlisten] removeJournalFiles
+2015-10-27T14:51:26.255-0600 I JOURNAL  [initandlisten] recover done
+2015-10-27T14:51:26.270-0600 I JOURNAL  [durability] Durability thread started
+2015-10-27T14:51:26.270-0600 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] MongoDB starting : pid=11553 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MBP.lan
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] 
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] db version v3.0.6
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] git version: nogitversion
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] allocator: system
+2015-10-27T14:51:26.271-0600 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2015-10-27T14:51:26.562-0600 I CONTROL  [initandlisten] now exiting
+2015-10-27T14:51:26.562-0600 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2015-10-27T14:51:26.563-0600 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2015-10-27T14:51:26.563-0600 I NETWORK  [initandlisten] shutdown: going to close sockets...
+2015-10-27T14:51:26.563-0600 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...
+2015-10-27T14:51:26.563-0600 I STORAGE  [initandlisten] shutdown: final commit...
+2015-10-27T14:51:26.567-0600 I JOURNAL  [initandlisten] journalCleanup...
+2015-10-27T14:51:26.567-0600 I JOURNAL  [initandlisten] removeJournalFiles
+2015-10-27T14:51:26.567-0600 I JOURNAL  [initandlisten] Terminating durability thread ...
+2015-10-27T14:51:26.670-0600 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-10-27T14:51:26.671-0600 I JOURNAL  [durability] Durability thread stopped
+2015-10-27T14:51:26.671-0600 I STORAGE  [initandlisten] shutdown: closing all files...
+2015-10-27T14:51:26.672-0600 I STORAGE  [initandlisten] closeAllFiles() finished
+2015-10-27T14:51:26.672-0600 I STORAGE  [initandlisten] shutdown: removing fs lock...
+2015-10-27T14:51:26.672-0600 I CONTROL  [initandlisten] dbexit:  rc: 48
