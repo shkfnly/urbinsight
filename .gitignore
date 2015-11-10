@@ -4,4 +4,7 @@ server/node_modules/
 npm-debug.log
 data
 data/*
-
+data/db/local.0
+data/db/local.ns
+data/db/mongod.lock
+data/logs/mongodb.log
