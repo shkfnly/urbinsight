@@ -1,0 +1,7 @@
+<h2 ng-show="showNoLayerMessage" style="text-align: center; margin-top: 150px; color:#D0D0D0">No Base Layer Information</h2>
+<ul style="overflow-y: scroll; min-height: 250px !important;">
+  <li ng-repeat="layer in layerDefs" style="padding-left: 20px; padding-right: 20px; margin-top: 15px padding-bottom: 15px;">
+    <div style="background-color: #90EE90;"><strong>{{layer.name}}</strong></div> 
+    <div style="margin-bottom: 15px;">{{layer.description}}</div>
+  </li>
+</ul>

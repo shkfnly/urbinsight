@@ -1,0 +1,94 @@
+
+  <h3>Building Data</h3>
+  <div class="form-group">
+    <label for="building-attachment">Building Attachment Type:</label>
+    <select class="form-control" ng-model="parcel.describeParcel.buildingData.buildingAttachmentType">
+      <option selected="selected" value=""></option>
+      <option value="No Building">No Building</option>
+      <option value="Single Family">Single Family</option>
+      <option value="Multi Family (Low Rise)">Multi Family (4 stories and under)</option>
+      <option value="Multi Family (High Rise)">Multi Family (5 stories and over)</option>
+      <option value="Row House">Row House</option>
+      <option value="Mobile">Mobile</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="occupied-dwelling-units">Number of Occupied Dwelling Units:</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.numberOccupiedDwellingUnits">
+      <!--<option selected="selected" value=""></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      </select>-->
+  </div>
+  <div class="form-group">
+    <label for="building-age">Building Age:</label>
+    <input  class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.buildingAge" />
+  </div>
+  <div class="form-group">
+    <label>Above Ground Stories:</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.aboveGroundStories" />
+  </div>
+  <div class="form-group">
+    <label>Below Ground Stories:</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.belowGroundStories" />
+  </div>
+  <div class="form-group">
+    <label>Interior Floor Space:</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.interiorFloorSpace" />
+  </div>
+  <div class="form-group">
+    <label>Separate Dwelling Units:</label>
+    <input class="form-control" type="number" ng-model="parcel.describeParcel.buildingData.separateDwellingUnits" />
+  </div>
+  <div class="form-group">
+    <label>Foundation Type:</label>
+    <select class="form-control" ng-model="parcel.describeParcel.buildingData.foundationType">
+      <option value="" selected="selected"></option>
+      <option value="Slab-on-Grade">Slab-on-Grade</option>
+      <option value="Crawl Space">Crawl Space</option>
+      <option value="Earth Floor">Earth Floor</option>
+      <option value="Unconditioned Parking">Unconditioned Parking</option>
+      <option value="Full Basement">Full Basement</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Wall Type:</label>
+    <select class="form-control" ng-model="parcel.describeParcel.buildingData.wallType">
+      <option value="" selected="selected"></option>
+      <option value="Solid Masonry">Solid Masonry</option>
+      <option value="Concrete">Concrete</option>
+      <option value="Hollow Core Brick">Hollow Core Brick</option>
+      <option value="Steel Frame">Steel Frame</option>
+      <option value="Wood Frame">Wood Frame</option>
+      <option value="Mud">Mud</option>
+      <option value="Glass">Glass</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Roof Type:</label>
+    <select class="form-control" ng-model="parcel.describeParcel.buildingData.roofType">
+      <option value="" selected="selected"></option>
+      <option value="Flat">Flat</option>
+      <option value="Peaked Hard Surface">Peaked Hard Surface</option>
+      <option value="Thatch">Thatch</option>
+    </select>
+  </div>
+  <br/>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.describeParcel" class="btn btn-block btn-info">
+      <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+    </a>
+  </div>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.demographics" class="btn btn-block btn-success">
+      Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+  </div>

@@ -52,10 +52,4 @@ angular.module('urbinsight')
         console.log('error');
       });
     };
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   }]);

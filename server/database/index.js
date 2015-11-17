@@ -36,6 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   usedDb = productionDb;
   nodeDB = require("seraph")(productionGraphDb);
   // connect to it via mongoose
+  console.log(process.env.MONGODB_USER, process.env.MONGODB_PASS);
   mongoose.connect(usedDb, {user: process.env.MONGODB_USER, pass: process.env.MONGODB_PASS});
 }
 
@@ -60,18 +61,18 @@ db.once('open', function callback () {
 // }
 
 
-nodeDB.save({ name: "Test-Man", age: 40 }, 'Person', function(err, node) {
-  if (err) {
-    console.log(err)
-    console.log(node);
-  };
-  console.log("Test-Man inserted.");
+// nodeDB.save({ name: "Test-Man", age: 40 }, 'Person', function(err, node) {
+//   if (err) {
+//     console.log(err)
+//     console.log(node);
+//   };
+//   console.log("Test-Man inserted.");
 
-  nodeDB.delete(node, function(err) {
-    if (err) console.log(err);
-    console.log("Test-Man away!");
-  });
-});
+//   nodeDB.delete(node, function(err) {
+//     if (err) console.log(err);
+//     console.log("Test-Man away!");
+//   });
+// });
 
 
 exports.nodeDB = nodeDB;

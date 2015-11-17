@@ -71,6 +71,8 @@ router.get('/', function(req, res, next){
         res.send(geojsonvt(result.rows[0].row_to_json));
       });
     });
+  } else {
+    res.send({});
   }
 });
 */

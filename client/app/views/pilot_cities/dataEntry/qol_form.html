@@ -1,0 +1,263 @@
+<style type="text/css">
+    .control-label {
+      text-align: left;
+    }
+    h3 {
+      text-align: center;
+    }
+
+</style>
+
+<h3>Welcome to the Citizen Survey</h3>
+
+<h4>Begin by clicking the map to add a marker at your location, or the location the survey was taken.</h4>
+
+<form novalidate id="surveyForm" style="padding-left: 20px; padding-right: 20px;">
+  
+  <div class="form-group">
+    <label for="survey-employment">
+    1. How would you describe your level of access to adequate employment?
+    </label>
+      <select class="form-control" ng-model="survey.employment" id="survey-employment">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-healthcare">
+    2. How would you describe your level of access to healthcare and health services?
+    </label>
+      <select class="form-control" ng-model="survey.healthcare" id="survey-healthcare">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-family-care">
+    3. How would you describe your ability to provide care for family members as needed?
+    </label>
+      <select class="form-control" ng-model="survey.family" id="survey-family-care">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-stability">
+    4. How would you describe stability in your daily life?
+    </label>
+      <select class="form-control" ng-model="survey.stability" id="survey-stability">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-relationships">
+    5. How do you describes your level of access to opportunities to develop healthy social relations?<br />
+    <h6>(for example, places to meet and socialize with others)</h6>
+    </label>
+      <select class="form-control" ng-model="survey.relationships" id="survey-relationships">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-recreation">
+    6. How do you descrive your level of access to recreational opportunities and activities?
+    </label>
+      <select class="form-control" ng-model="survey.recreation" id="survey-recreation">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-education">
+    7. How would you describe your level of access to knowledge for futhering<br />
+    your intellectual development?
+    </label>
+      <select class="form-control" ng-model="survey.education" id="survey-education">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-vacation">
+    8. How would you describe your level of vacation(time-off) time you have?
+    </label>
+      <select class="form-control" ng-model="survey.vacation" id="survey-vacation">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-housing">
+    9. How would you describe your shelter/housing?
+    </label>
+      <select class="form-control" ng-model="survey.housing" id="survey-housing">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-environment">
+    10. How do you describe your living environment?<br />
+    <h6>(this can include your access to clean air, water and surfaces free of dangerous substances and heavy traffic)</h6>
+    </label>
+      <select class="form-control" ng-model="survey.environment" id="survey-environment">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-discrimination">
+      11. How would you describe the level of respect and non-discrimination you experience in your daily life?
+    </label>
+      <select class="form-control" ng-model="survey.discrimination" id="survey-discrimination">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-religion">
+      12. How would you describe your level of freedom to practice your religion?
+    </label>
+      <select class="form-control" ng-model="survey.religion" id="survey-religion">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-mobility">
+      13. How would you describe your level of access to mobility?<br />
+      <h6>(the ability to move from place to place without losing too much time
+          on congested roads or being faced with poor service</h6>
+    </label>
+      <select class="form-control" ng-model="survey.mobility" id="survey-mobility">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-movement">
+      14. How do you describe your level of freedom of movement?
+      <h6>(the ability to move from place to place within your community and between neighboring communities</h6>
+    </label>
+      <select class="form-control" ng-model="survey.movement" id="survey-movement">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-safety">
+      15. How do you describe your level of safety and the absence of physical violence or criminality in your daily life?
+    </label>
+      <select class="form-control" ng-model="survey.safety" id="survey-safety">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="survey-governance">
+      16. How do you describe your ability to participate in your community's political, governance-based and decision-making processes?
+    </label>
+      <select class="form-control" ng-model="survey.governance" id="survey-governance">
+        <option value="" selected="selected"></option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="adequate">Adequate</option>
+        <option value="insufficient">Insufficient</option>
+        <option value="absent">Absent</option>
+        <option value="unknown">Unknown</option>
+      </select>
+  </div>
+  <button ng-click="submit()" class="btn btn-success btn-block">Add Survey</button>
+</form>

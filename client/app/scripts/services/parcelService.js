@@ -13,10 +13,9 @@ angular.module('urbinsight.services')
 
     String.prototype.capitalize = function(){
       return this.charAt(0).toUpperCase() + this.slice(1);
-    }
+    };
 
     var currentMarker;
-    var parcelsInView = [];
     return {
       getCurrentParcel: function(){
         return currentParcel;
@@ -62,7 +61,7 @@ angular.module('urbinsight.services')
         var that = this;
         var parcel = that.getCurrentParcel();
         UMISFactory.calculateTotals(parcel);
-        that.generateParcelPopUp(parcel)
+        that.generateParcelPopUp(parcel);  
         $http.post('/data/city/' + cityName + '/parcels/', {parcel: that.getCurrentParcel()}).
           success(function(data) {
             that.createNewParcel();
@@ -72,14 +71,14 @@ angular.module('urbinsight.services')
           });
       },
       generateParcelPopUp: function(parcel){
-        parcel.popUp = ''
+        parcel.popUp = '';
         _.forEach(parcel.totalDemand, function(demandObj, resource){
-          parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>'
+          parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>';
           _.forEach(demandObj, function(value, useCase) {
             parcel.popUp += '<p>' + useCase.toString().capitalize() + ': ' + value + '</p><br/>';
-          })
-          parcel.popUp += '</div>'
-        })
+          });
+          parcel.popUp += '</div>';
+        });
         parcel.popUp += '<p><strong><em>Date Added: ' + parcel.date + '</em></strong></p>';
         return parcel;
       },
@@ -95,14 +94,14 @@ angular.module('urbinsight.services')
       
       getParcelsInView: function() {
         var that = this;
-        return that.parcelsInView
+        return that.parcelsInView;
       },
       setParcelsInView: function(listOfParcels) {
-        var that = this
+        var that = this;
         that.parcelsInView = listOfParcels;
         return that.parcelsInView;
       },
-
+// I don't get why this is here
       parcelsInView: []
     };
   }]);

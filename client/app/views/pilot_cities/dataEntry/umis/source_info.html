@@ -1,0 +1,42 @@
+  <!-- Add form authencity token -->
+  <h3>Source Information</h3>
+  <div class="form-group">
+    <label for="umis-form-author">Author: </label>
+    <input class="form-control" type="text" id="umis-form-author" ng-model="parcel.author" />
+  </div>
+  <div class="form-group">
+    <label for="umis-form-date">Parcel Audit Date: </label>
+    <p class="input-group">
+    <input type="date" class="form-control" id="umis-form-date" is-open=false ng-model="parcel.date" datepicker-popup close-tet="Close" />
+    <!--<span class="input-group-btn">
+      <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+    -->
+    </p>
+  </div>
+  <!-- These would be populated for valid values -->
+  <div class="form-group">
+    <label for="neighborhood-id">Neighborhood ID:</label>
+    <input class="form-control" type="number" min='1' ng-model="parcel.neighborhoodID" />
+  </div>
+
+  <!-- Time Horizon: <select ng-model="parcel.timeHorizon">
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  </select>-->
+<!-- <h4>Location:</h4>
+<p>Please click on the map to place marker.</p>
+--> 
+    <br/>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.addParcel" class="btn btn-block btn-info">
+      <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+    </a>
+  </div>
+  <div class="col-sm-6">
+    <a ui-sref="app.city.pilot.umis.form.describeParcel" class="btn btn-block btn-success">
+      Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+  </div>
+

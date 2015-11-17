@@ -1,0 +1,21 @@
+
+<tabset justified="true" id='resourceType' type='pills' style='min-width: 70vh; min-height: 35vh;'>
+  <tab  heading="Water" ui-sref-active="active">
+    <umis-resource info="resources" resource="'water'" parcels="parcels"></umis-resource>
+  </tab>
+  <tab  heading="Materials"> 
+    <umis-resource info="resources" resource="'materials'" parcels="parcels"></umis-resource>
+  </tab>
+  <tab  heading="Energy" disable="true">
+<!--     <umis-resource info="resources" resource="'energy'" parcels="parcels"></umis-resource> -->
+  </tab>
+  <tab  heading="Mobility" disable="true">
+   <!--  <umis-resource info="resources" resource="'mobility'" parcels="parcels"></umis-resource> -->
+  </tab>
+  <tab ui-sref="app.city.pilot.umis.form.startPage" ui-sref-active="active" heading="Add Parcel Audit">
+    <div ui-view='umisForm'></div>
+  </tab>
+</tabset>
+
+
+<!-- .resource({type: 'energy'}) -->
