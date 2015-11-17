@@ -10,6 +10,7 @@
 angular.module('urbinsight')
   .controller('HeaderCtrl', ['$scope','$rootScope','$state','$location', function ($scope, $rootScope, $state, $location) {
 
+    // Logout function
     // $scope.logout = function () {
     //   UserAuthFactory.logout();
     //   $rootScope.$broadcast('loginStateChange');
@@ -19,10 +20,3 @@ angular.module('urbinsight')
     //   $rootScope.showMenu = AuthFactory.loggedStatus(); 
     // });
   }]);
-
-
-//   .directive('urbHeader', function() {
-//   return {
-//     templateUrl: 'views/partials/_header.html'
-//   };
-// });

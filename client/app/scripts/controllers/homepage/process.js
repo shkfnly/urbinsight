@@ -20,9 +20,4 @@ angular.module('urbinsight')
       map.scrollWheelZoom.disable();
     };
     $scope.addMap();
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   }]);

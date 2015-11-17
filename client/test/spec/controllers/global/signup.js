@@ -19,4 +19,8 @@ describe('Controller: SignupCtrl', function () {
   it('should attach a list of awesomeThings to the scope', function () {
     expect(scope.awesomeThings.length).toBe(3);
   });
+  it('should create a signup and user object', function () {
+    expect(scope.signup).toBe({});
+    expect(scope.user).toBe({});
+  });
 });

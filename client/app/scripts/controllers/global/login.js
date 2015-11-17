@@ -9,7 +9,7 @@
  */
 angular.module('urbinsight')
   .controller('LoginCtrl', ['$scope','$window','$rootScope','$location','UserAuthFactory','AuthFactory', function ($scope, $window, $rootScope, $location, UserAuthFactory, AuthFactory) {
-      // Create local references
+    // Create local references
     var user, login;
 
     // Create a scope for the Signup page.
@@ -21,17 +21,13 @@ angular.module('urbinsight')
     login.submit = function () {
       var username = user.username,
         password = user.password;
-// Need to use typeof  
-      if (username !== undefined && password !== undefined) {
+      if (typeof( username) !== 'undefined' && typeof(password) !== 'undefined') {
         UserAuthFactory.login(username, password).success(function(data) {
-          
           $rootScope.showMenu = true;
           AuthFactory.changeLoggedStatus();
           AuthFactory.user = data.user.username;
           AuthFactory.userRole = data.user.role;
-
           // $rootScope.$broadcast('loginStateChange');
-
           $window.sessionStorage.token = data.token;
           $window.sessionStorage.user = data.user.username;
           $window.sessionStorage.userRole = data.user.role;
@@ -43,5 +39,4 @@ angular.module('urbinsight')
         $window.alert('Invalid credentials');
       }
     };
-
   }]);

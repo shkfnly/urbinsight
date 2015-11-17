@@ -3618,3 +3618,6 @@
 2015-11-10T14:27:17.604-0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52849 #4 (3 connections now open)
 2015-11-10T14:27:17.604-0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52850 #5 (4 connections now open)
 2015-11-10T14:27:17.604-0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52851 #6 (5 connections now open)
+2015-11-13T11:25:04.015-0800 I STORAGE  [DataFileSync] flushing mmaps took 9839347ms  for 4 files
+2015-11-14T10:30:22.298-0800 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 458ms
+2015-11-15T10:01:39.317-0800 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 228ms
