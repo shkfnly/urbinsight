@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var conString = require('../../database').conString;
 var pg = require('pg');
-var geojsonvt = require('../../../../development/vectorserver/geojson-vt/geojson-vt-dev.js');
+var geojsonvt = require('geojson-vt');
 var SphericalMercator = require('sphericalmercator');
 var mapnik = require('mapnik');
 var zlib = require('zlib');
@@ -33,16 +33,23 @@ router.get('/:z/:x/:y.pbf', function(req, res) {
       return console.error('error fetching client from pool', err);
     }
       client.query("select row_to_json(fc) from (select 'FeatureCollection' as type, array_to_json(array_agg(f)) as features from (select 'Feature' as type, st_asgeojson(lg.wkb_geometry)::json as geometry, row_to_json((select l from (select tags) as l )) as properties from budapest as lg where st_intersects(wkb_geometry, st_makeenvelope(" + bbox.toString() + ", 4326))) as f) as fc", function(err, result) {
+      //client.query("select st_asgeojson(wkb_geometry) as feature from budapest where st_intersects(wkb_geometry, st_makeenvelope(" + bbox.toString() + ", 4326)) limit 1", function(err, result){
       if (err) {
         return console.error('error running query', err);
+        
       }
+      console.log('im being called');
       var vtile = new mapnik.VectorTile(+req.params.z, +req.params.x, +req.params.y);
-      vtile.addGeoJSON(JSON.stringify(result.rows[0].row_to_json), 'lots');
+      try {
+        vtile.addGeoJSON(JSON.stringify(result.rows[0].row_to_json), 'lots');
+      }
+      catch (e) {
+        console.log(JSON.stringify(result.rows[0].row_to_json));
+      }
       res.setHeader('Content-Encoding', 'deflate');
       res.setHeader('Content-Type', 'application/x-protobuf');
-      zlib.gunzip(vtile.getData(), function(err, pbf) {
-        var tile = new VectorTile(new Protobuf(pbf));
-        console.log(tile);
+      zlib.deflate(vtile.getData(), function(err, pbf) {
+        //var tile = new VectorTile(new Protobuf(pbf));
         res.send(pbf);
       });
     });

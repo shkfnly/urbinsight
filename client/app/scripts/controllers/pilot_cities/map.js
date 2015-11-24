@@ -20,6 +20,21 @@ angular.module('urbinsight')
     var cityName = $location.path().split('/')[2];
     var firstHalf ='http://52.25.79.157/geoserver/wfs?request=GetFeature&typeName='
     var secondHalf = '&outputformat=json'
+    var lots = new L.TileLayer.MVTSource({
+          url: '/data/city/' + cityName + '/lots/{z}/{x}/{y}.pbf',
+          clickableLayers: ['lots'],
+          getIDForLayerFeature: function(feature) {
+            return feature._id;
+          },
+          style: function(feature) {
+            return {color: 'rgba(255, 0, 0, 1)', 
+                    outline: { color: 'rgb(20,20,20)',
+                               size: 1},
+                    selected: {
+                    color: 'rgba(0, 255, 0, 1'}
+                  };
+          }
+        });
     
     
     $scope.overlayAddCtrl = function(e){
@@ -110,22 +125,20 @@ angular.module('urbinsight')
         MapFactory.setMap($scope.map);
         var featureGroup = L.featureGroup().addTo($scope.map);
         $scope.addLayerControl($scope.additonalLayers(city.layers));
-
-        // var lots = L.mapboxGL({
-        //   accessToken: L.mapbox.accessToken,
-        //   minZoom: 12,
-        //   style: {
+        //   mapboxgl.accessToken = L.mapbox.accessToken
+        //   var lots = {
         //     "version" : 8,
         //     "sources" : {
         //       "lots": {
         //         "type": "vector",
         //         "url": 
         //           "/data/city/" + $scope.city + "/lots/{z}/{x}/{y}.pbf",
+        //   minZoom: 12
         //       } 
         //     },
         //     "layers" : [
         //       {
-        //         "id": "lots",
+        //         "id": "parcels",
         //         "type": "fill",
         //         "source": "lots",
         //         "interactive": true,
@@ -135,26 +148,16 @@ angular.module('urbinsight')
         //       }
         //     ]
         //   }
-        // });
-        var lots = new L.TileLayer.MVTSource({
-          url: '/data/city/' + cityName + '/lots/{z}/{x}/{y}.pbf',
-          clickableLayers: ['lots'],
-          getIDForLayerFeature: function(feature) {
-            return feature._id;
-          },
-          style: function(feature) {
-            return {color: 'rgba(255, 0, 0, 1)', 
-                    outline: { color: 'rgb(20,20,20)',
-                               size: 1},
-                  selected: {
-                    color: 'rgba(0, 255, 0, 1'}
-                  };
-          }
-          
-        });
-        $scope.map.addLayer(lots);
+        //   $scope.map = new mapboxgl.Map({
+        //      container: 'map',
+        //      style: simple,
+        //      zoom: 1,
+        //      center: [-14, 35]
+        //      })
 
         
+        $scope.map.addLayer(lots);
+        //lots.bringToFront();
         $scope.map.on('overlayadd', $scope.overlayAddCtrl);
         $scope.map.on('overlayremove', $scope.overlayRmvCtrl);
 
@@ -206,6 +209,10 @@ angular.module('urbinsight')
         $scope.map.on('draw:created', function(e) {
           featureGroup.addLayer(e.layer);
         });
+        //$scope.map.addLayer(lots);
+        //lots.addTo($scope.map).bringToFront();
+        //debugger;
+        window.map = $scope.map
     };
 
     $scope.linesAdded = [];
@@ -264,6 +271,6 @@ angular.module('urbinsight')
     };
     Cities.fetchCity(cityName, $scope.renderMap);
     Cities.getNodes(cityName, $scope.renderNodes);
-    MapFactory.renderParcels(cityName);
-    MapFactory.renderSurveys(cityName);
+    //MapFactory.renderParcels(cityName);
+    //MapFactory.renderSurveys(cityName);
   }]);
