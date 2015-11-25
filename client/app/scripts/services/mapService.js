@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('urbinsight.services')
-  .factory('MapFactory', ['$http', '$window', 'Cities', 'UMISFactory', 'ParcelFactory', 'QOLFactory', function ($http, $window, Cities, UMISFactory, ParcelFactory, QOLFactory) {
+  .factory('MapFactory', ['$http', '$window', 'Cities', 'UMISFactory', 'ParcelFactory', 'QOLFactory', 'abuDhabiStyles', function ($http, $window, Cities, UMISFactory, ParcelFactory, QOLFactory, abuDhabiStyles) {
     var L;
     L = $window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
@@ -14,8 +14,9 @@ angular.module('urbinsight.services')
       gridLayers: [],
       gridControls: [],
       linesAdded: [],
+      // Get and Set City actually return the name rather than the city object
       getCity: function(){
-        return city
+        return city;
       },
       setCity: function(newCity){
        city = newCity; 
@@ -92,7 +93,6 @@ angular.module('urbinsight.services')
       },
 
       renderLots: function(data){
-        var that = this;
         console.log(data);
         /*if(!(_.isEqual(data, {}))){
           L.geoJson(data, {
@@ -127,7 +127,6 @@ angular.module('urbinsight.services')
         }
         ParcelFactory.fetchParcels(cityName, drawing);
       },
-
       renderSurveys: function(cityName){
         var that = this;
         function drawing(data){
@@ -146,36 +145,38 @@ angular.module('urbinsight.services')
         QOLFactory.fetchSurveys(cityName, drawing);
       },
       overlayAddCtrl: function(e){
-        gridLayer = L.mapbox.gridLayer(e.layer._tilejson.id);
+        debugger;
+        var gridLayer = L.mapbox.gridLayer(e.layer._tilejson.id);
         this.getMap().addLayer(gridLayer);
-        gridControl = L.mapbox.gridControl(gridLayer);
+        var gridControl = L.mapbox.gridControl(gridLayer);
         this.getMap().addControl(gridControl);
       },
       overlayRmvCtrl: function(e){
         for (var i = 0; i < this.gridLayers.length; i++){
           if(this.gridLayers[i]._tilejson.id === e.layer._tilejson.id){
             this.getMap().removeLayer(this.gridLayers[i]);
-            this.getMap()removeControl(this.gridControls[i]);
+            this.getMap().removeControl(this.gridControls[i]);
             this.gridLayers.splice(i, 1);
             this.gridControls.splice(i, 1);
             break;
           }
         }
       },
-      additonalLayers = function(cityLayers){
+      additonalLayers: function(cityLayers){
         var first = true;
         var layers = {};
+        var that = this;
         angular.forEach(cityLayers, function(layer, name){
           if(first){
-            layers[name] = L.mapbox.tileLayer(layer).addTo($scope.map);
+            layers[name] = L.mapbox.tileLayer(layer).addTo(map);
             // Create a Grid Layer
-            gridLayer = L.mapbox.gridLayer(layer);
-            this.gridLayers.push(gridLayer);
-            this.getMap().addLayer(gridLayer);
+            var gridLayer = L.mapbox.gridLayer(layer);
+            that.gridLayers.push(gridLayer);
+            that.getMap().addLayer(gridLayer);
             // Create a Grid Control
-            gridControl = L.mapbox.gridControl(gridLayer);
-            this.gridControls.push(gridControl);
-            this.getMap().addControl(gridControl);
+            var gridControl = L.mapbox.gridControl(gridLayer);
+            that.gridControls.push(gridControl);
+            that.getMap().addControl(gridControl);
             first = false;
           } else {
             layers[name] = L.mapbox.tileLayer(layer);
@@ -183,15 +184,17 @@ angular.module('urbinsight.services')
         });
         return layers;
       },
-      addLayerControl = function(addtLayers){
+      addLayerControl: function(addtLayers){
         var map = this.getMap();
-        var firstHalf ='http://52.25.79.157/geoserver/wfs?request=GetFeature&typeName='
-        var secondHalf = '&outputformat=json'
-        if (cityName == 'abudhabi') {
+        var firstHalf ='http://52.25.79.157/geoserver/wfs?request=GetFeature&typeName=';
+        var secondHalf = '&outputformat=json';
+        if (this.cityName === 'abudhabi') {
          var abuDhabiLayerNames = ['parking', 'buildingplinth', 'buildingoverhang', 'buildingmiscconstruction', 'buildingcourtyard', 'building', 'plot', 'albateen_district', 'community', 'district'].reverse();
-         var  addtLayers = {};
-          _.forEach(abuDhabiLayerNames, function(layerName){
-              addtLayers[layerName] = L.mapbox.featureLayer(null, {style: abuDhabiStyles.getStyle(layerName)}).loadURL(firstHalf + layerName + secondHalf).on('ready', function(layer){ this.eachLayer(function(polygon){
+         addtLayers = addtLayers || {};
+          angular.forEach(abuDhabiLayerNames, function(layerName){
+              addtLayers[layerName] = L.mapbox.featureLayer(null, {style: abuDhabiStyles.getStyle(layerName)})
+                                              .loadURL(firstHalf + layerName + secondHalf)
+                                              .on('ready', function(){ this.eachLayer(function(polygon){ // could add layer
                 /*var content = '';
                 _.forEach(polygon.feature.properties, function(value, key){
                   content += key + ' : ' + value + '<br />'
@@ -200,7 +203,7 @@ angular.module('urbinsight.services')
               });
             });
           });
-          _.forEach(addtLayers, function(layer){
+          angular.forEach(addtLayers, function(layer){
             layer.on('mouseover', function(e) {
               e.layer.openPopup();
             });
@@ -212,7 +215,7 @@ angular.module('urbinsight.services')
         
         L.control.layers({
           'Satellite Map' : L.mapbox.tileLayer('mapbox.streets-satellite'),
-          'Streets Map' : L.mapbox.tileLayer('mapbox.streets').addTo($scope.map),
+          'Streets Map' : L.mapbox.tileLayer('mapbox.streets').addTo(map),
           'Urbinsight Map': L.mapbox.tileLayer('urbinsight.1114602d'),
           'Toner Map': L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
           attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
@@ -227,27 +230,30 @@ angular.module('urbinsight.services')
       
       renderMap: function(cityObj) {
         var map = this.getMap();
-        var cityName = this.getCity();
-        map = MapFactory.createMap()
-        var featureGroup = L.featureGroup().addTo(map);
+        // REMOVE
+        //var cityName = this.getCity();
+        map = this.createMap();
         this.addLayerControl(this.additonalLayers(cityObj.layers));
+        // REMOVE
         // This is a test implementation of lots
-        map.addLayer(lots);
+        //map.addLayer(lots);
         // Add events on map
         this.addMapEvents();
         map.setView([cityObj.lat, cityObj.lon], 12);
-        window.map = map
+        // REMOVE
+        window.map = map;
       },
 
       addDrawEvents: function(){
-        var drawControl = new L.Control.Draw({
+        var featureGroup = L.featureGroup().addTo(map);
+        new L.Control.Draw({
           edit: {
           featureGroup: featureGroup
           }
         }).addTo(map);
-        map.on('draw:created', function(e) {
-          var type = e.layerType,
-              layer = e.layer;
+        map.on('draw:created', function() { // takes an e
+          //var type = e.layerType,
+           //   layer = e.layer;
         });
         map.on('draw:created', function(e) {
           featureGroup.addLayer(e.layer);
@@ -255,28 +261,30 @@ angular.module('urbinsight.services')
       },
 
       addMapEvents: function(){
+        var that = this;
         var map = this.getMap();
-        map.on('overlayadd', this.overlayAddCtrl);
-        map.on('overlayremove', this.overlayRmvCtrl);
+        var cityName = that.getCity();
+        map.on('overlayadd', this.overlayAddCtrl.bind(this));
+        map.on('overlayremove', this.overlayRmvCtrl.bind(this));
         map.on('viewreset', function(e){
           var boundObj = e.target.getBounds();
-          MapFactory.transformBounds(boundObj);
+          that.transformBounds(boundObj);
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+          }, {params: {bounds: that.currentGeoJSONBounds, cityName: cityName}});
           QOLFactory.fetchSurveys(cityName, function(data){
             QOLFactory.setSurveysInView(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
-        })
+          }, {params: {bounds: that.currentGeoJSONBounds, cityName: cityName}});
+        });
         map.on('moveend', function(e) {
           var boundObj = e.target.getBounds();
-          this.transformBounds(boundObj);
+          that.transformBounds(boundObj);
           ParcelFactory.fetchParcels(cityName, function(data){
             ParcelFactory.setParcelsInView(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+          }, {params: {bounds: that.currentGeoJSONBounds, cityName: cityName}});
           QOLFactory.fetchSurveys(cityName, function(data){
             QOLFactory.setSurveysInView(data);
-          }, {params: {bounds: MapFactory.currentGeoJSONBounds, cityName: cityName}});
+          }, {params: {bounds: that.currentGeoJSONBounds, cityName: cityName}});
         });
       },
       renderNodes: function(data) {     
@@ -309,10 +317,9 @@ angular.module('urbinsight.services')
         });
       },
       drawFlows: function(node) {
-        var that = this;
         var map = this.getMap();
         var request = $http.get('/data/relation/' + node.id);
-        request.success(function (data, status) {
+        request.success(function (data) {
          angular.forEach(this.linesAdded, function(line){
            map.removeLayer(line);
          });
@@ -320,12 +327,12 @@ angular.module('urbinsight.services')
            this.linesAdded.push(L.polyline(relation, {color: 'teal', opacity: 1, weight: 10}).addTo(map));
          });
         });
-        request.error( function (data, status) {
+        request.error( function () {
         });
       },
       popupgen: function(node, type){
         var popupstring = '<div><h2 style="text-align: center;">Junction Information</h2><p>Stage: ' + type + '</p><br />';
-        _.forEach(node, function(value, attrib){
+        angular.forEach(node, function(value, attrib){
           popupstring += '<p>' + attrib + ': ' + value + '</p><br />';
         });
         return popupstring + '</div>';

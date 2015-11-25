@@ -14,7 +14,7 @@ angular.module('urbinsight')
     workbookGenerator: function(){
       var that = this;
       this.workbookStore = [];
-      _.forEach(this.selectedWorkbooks, function(value, key){
+      angular.forEach(this.selectedWorkbooks, function(value, key){
        if(value === true){
         that.workbookStore.push(that.workbookValues[key]);
        }
@@ -25,13 +25,12 @@ angular.module('urbinsight')
       return $state.go(this.workbookStore.shift());
     },
     resetSelections: function(){
-      debugger;
       this.selectedWorkbooks = {
       'water': false,
       'materials': false,
       'energy': false,
       'mobility': false
-      }
+      };
     },
     selectedWorkbooks: {
     'water': false,
@@ -44,5 +43,5 @@ angular.module('urbinsight')
       materials: 'app.city.pilot.umis.form.materialsWorkbook',
     },
    workbookStore: ['app.city.pilot.umis.form.submit']
-  }
+  };
   }]);

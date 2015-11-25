@@ -72,9 +72,9 @@ angular.module('urbinsight.services')
       },
       generateParcelPopUp: function(parcel){
         parcel.popUp = '';
-        _.forEach(parcel.totalDemand, function(demandObj, resource){
+        angular.forEach(parcel.totalDemand, function(demandObj, resource){
           parcel.popUp += '<div><h2 style="text-align: center;">Demand Summary - ' + resource.toString().capitalize() + '</h2>';
-          _.forEach(demandObj, function(value, useCase) {
+          angular.forEach(demandObj, function(value, useCase) {
             parcel.popUp += '<p>' + useCase.toString().capitalize() + ': ' + value + '</p><br/>';
           });
           parcel.popUp += '</div>';

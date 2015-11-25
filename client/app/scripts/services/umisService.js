@@ -318,8 +318,8 @@ angular.module('urbinsight.services')
     return {
       calculateTotals: function(parcel){
         parcel.totalDemand = {};
-        _.forEach(totalConsumption, function(resourceCalcFunction, resource){
-          if (typeof parcel.workbooks[resource] != 'undefined'){
+        angular.forEach(totalConsumption, function(resourceCalcFunction, resource){
+          if (typeof parcel.workbooks[resource] !== 'undefined'){
             resourceCalcFunction(parcel.workbooks[resource], parcel);
           }
         });

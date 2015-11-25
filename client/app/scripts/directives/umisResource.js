@@ -48,7 +48,7 @@ angular.module('urbinsight.directives')
       },
       tooltip: {
         format: {
-          value: function(value, ratio, id) { 
+          value: function(value) { // could add id and/or ratio
             return value.toFixed(2) + ' Litres';
           }
         }

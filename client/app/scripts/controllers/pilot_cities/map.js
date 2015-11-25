@@ -8,7 +8,7 @@
 
  */
 angular.module('urbinsight')
-  .controller('MapCtrl', ['$scope', '$location', 'Cities', 'MapFactory', 'abuDhabiStyles', function ($scope, $location, Cities, MapFactory, abuDhabiStyles) {
+  .controller('MapCtrl', ['$scope', '$location', 'Cities', 'MapFactory', function ($scope, $location, Cities, MapFactory) {
 
     var L;
     $scope.L = L = window.L;
@@ -18,7 +18,7 @@ angular.module('urbinsight')
     $scope.cityName = MapFactory.getCity();
 
     var lots = new L.TileLayer.MVTSource({
-        url: '/data/city/' + cityName + '/lots/{z}/{x}/{y}.pbf',
+        url: '/data/city/' + $scope.cityName + '/lots/{z}/{x}/{y}.pbf',
         clickableLayers: ['lots'],
         getIDForLayerFeature: function(feature) {
           return feature._id;
@@ -37,8 +37,8 @@ angular.module('urbinsight')
         }
     });
 
-    Cities.fetchCity(cityName, MapFactory.renderMap);
-    Cities.getNodes(cityName, MapFactory.renderNodes);
+    Cities.fetchCity($scope.cityName, MapFactory.renderMap.bind(MapFactory));
+    Cities.getNodes($scope.cityName, MapFactory.renderNodes.bind(MapFactory));
     //MapFactory.renderParcels(cityName);
     //MapFactory.renderSurveys(cityName);
   }]);

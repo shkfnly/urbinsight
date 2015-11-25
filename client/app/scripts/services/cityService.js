@@ -17,7 +17,7 @@ angular.module('urbinsight.services')
     fetchCity: function(cityName, callback){
       var request = $http.get('/data/city/' + cityName);
       request.success(function (data){
-        return callback(data);
+        callback(data);
       });
     },
 
