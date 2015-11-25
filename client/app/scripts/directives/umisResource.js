@@ -33,7 +33,6 @@ angular.module('urbinsight.directives')
     scope.selectID = '#pie-' + scope.resource;
     scope.unit = defineUnit(scope.resource);
     scope.overallTotal = calculateOverallTotal(scope.info[scope.resource]);
-    console.log(scope.info[scope.resource]);
     scope.pieChart = c3.generate({
       bindto: scope.selectID,
       data: {

@@ -145,7 +145,6 @@ angular.module('urbinsight.services')
         QOLFactory.fetchSurveys(cityName, drawing);
       },
       overlayAddCtrl: function(e){
-        debugger;
         var gridLayer = L.mapbox.gridLayer(e.layer._tilejson.id);
         this.getMap().addLayer(gridLayer);
         var gridControl = L.mapbox.gridControl(gridLayer);
