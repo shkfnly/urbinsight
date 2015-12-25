@@ -228,19 +228,50 @@ angular.module('urbinsight.services')
       },
       
       renderMap: function(cityObj) {
-        var map = this.getMap();
-        // REMOVE
-        //var cityName = this.getCity();
-        map = this.createMap();
+        // var map = this.getMap();
+        var map = this.createMap();
         this.addLayerControl(this.additonalLayers(cityObj.layers));
-        // REMOVE
-        // This is a test implementation of lots
-        //map.addLayer(lots);
         // Add events on map
         this.addMapEvents();
         map.setView([cityObj.lat, cityObj.lon], 12);
         // REMOVE
         window.map = map;
+        
+        var lots = new L.TileLayer.MVTSource({
+            url: '/data/city/lots/' + this.getCity() + '/{z}/{x}/{y}.pbf',
+            clickableLayers: ['lots'],
+            getIDForLayerFeature: function(feature) {
+              return feature._id;
+            },
+            style: function(feature) {
+              return {
+                color: 'rgba(255, 0, 0, 1)', 
+                outline: { 
+                   color: 'rgb(20,20,20)',
+                   size: 1
+                },
+                selected: {
+                   color: 'rgba(0, 255, 0, 1)'
+                }
+              };
+            },
+            layerOrdering: function(feature) {
+              if (feature && feature.properties) {
+                feature.properties.zIndex = 5;
+              }
+            }
+        });
+        map.addLayer(lots);
+        lots.on('tileload', function(e){
+          e.target.layers['lots'].bringToFront();
+        });
+
+        // (function(parcels, callback){
+        //   map.addLayer(parcels);
+        //   callback(parcels);
+        // })(lots, function(param){
+        //   param.layers['lots'].bringToFront();
+        // });
       },
 
       addDrawEvents: function(){

@@ -17,25 +17,25 @@ angular.module('urbinsight')
     MapFactory.setCity($location.path().split('/')[2]);
     $scope.cityName = MapFactory.getCity();
 
-    var lots = new L.TileLayer.MVTSource({
-        url: '/data/city/' + $scope.cityName + '/lots/{z}/{x}/{y}.pbf',
-        clickableLayers: ['lots'],
-        getIDForLayerFeature: function(feature) {
-          return feature._id;
-        },
-        style: function(feature) {
-          return {
-            color: 'rgba(255, 0, 0, 1)', 
-            outline: { 
-               color: 'rgb(20,20,20)',
-               size: 1
-            },
-            selected: {
-               color: 'rgba(0, 255, 0, 1'
-            }
-          };
-        }
-    });
+    // var lots = new L.TileLayer.MVTSource({
+    //     url: '/data/city/' + $scope.cityName + '/lots/{z}/{x}/{y}.pbf',
+    //     clickableLayers: ['lots'],
+    //     getIDForLayerFeature: function(feature) {
+    //       return feature._id;
+    //     },
+    //     style: function(feature) {
+    //       return {
+    //         color: 'rgba(255, 0, 0, 1)', 
+    //         outline: { 
+    //            color: 'rgb(20,20,20)',
+    //            size: 1
+    //         },
+    //         selected: {
+    //            color: 'rgba(0, 255, 0, 1'
+    //         }
+    //       };
+    //     }
+    // });
 
     Cities.fetchCity($scope.cityName, MapFactory.renderMap.bind(MapFactory));
     Cities.getNodes($scope.cityName, MapFactory.renderNodes.bind(MapFactory));

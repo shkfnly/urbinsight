@@ -38,7 +38,7 @@ module.exports = function (app) {
   app.use('/data/city/:city_name/parcels', require('./routes/parcels.js'));
 
   // Lots Route
-  app.use('/data/city/:city_name/lots', require('./routes/lots.js'));
+  app.use('/data/city/lots', require('./routes/lots.js'));
 
   // QOL-Survey Route
   app.use('/data/city/:city_name/surveys', require('./routes/qol.js'));

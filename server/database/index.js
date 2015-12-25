@@ -4,10 +4,10 @@
 */
 var mongoose = require('mongoose');
 // Schemas export models
-var UserModel = require('./schemas/user')
-var CityModel = require('./schemas/city')
-var ParcelModel = require('./schemas/parcel')
-var QOLModel = require('./schemas/qol_survey')
+var UserModel = require('./schemas/user');
+var CityModel = require('./schemas/city');
+var ParcelModel = require('./schemas/parcel');
+var QOLModel = require('./schemas/qol_survey');
 // Connections
 var developmentDb = 'mongodb://localhost/urbinsight';
 var productionDb = process.env.MONGOLAB_URI;
@@ -15,8 +15,8 @@ var developmentGraphDb = 'http://localhost:7474';
 var productionGraphDb = process.env.GRAPHENEDB_URL;
 var nodeDB;
 var pg = require('pg');
-var conString =  process.env.CONNECT_STRING || "postgres://shokishoki:shadow1@localhost/urbinsight-data";
-
+var conString =  process.env.CONNECT_STRING || "postgres://shokishoki:shadow1@localhost/urbinsight";
+var pgClient;
 // If we're in development...
 if (process.env.NODE_ENV === 'development') {
   // set our database to the development one
@@ -27,6 +27,14 @@ if (process.env.NODE_ENV === 'development') {
                                 pass: 'password'});
   // connect to it via mongoose
   mongoose.connect(usedDb);
+
+   pgClient = new pg.Client(conString);
+  //pgClient.connect(function(err, client, done){
+  //  if(err) {
+  //     return console.error('error fetching client from pool', err);
+  //  }
+   console.log('pg connected');
+  // })
 
 }
 
@@ -77,8 +85,9 @@ db.once('open', function callback () {
 
 exports.nodeDB = nodeDB;
 exports.db = db;
-exports.conString = conString;
 exports.users = UserModel;
 exports.cities = CityModel;
 exports.parcels = ParcelModel;
 exports.qol = QOLModel;
+exports.pgClient = pgClient;
+exports.conString = conString;

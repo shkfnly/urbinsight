@@ -1,0 +1,8 @@
+Running in verbose mode
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Dec 24 19:05:29 2015
+-----------------------------------------------------------------
+
+check for "/usr/local/var/base" failed: No such file or directory
+
