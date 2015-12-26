@@ -248,14 +248,16 @@ angular.module('urbinsight.services')
         map.addControl(new mapboxgl.Navigation({position: 'top-left'}));
         map.on('style.load', function(){
           map.addSource('parcels', {
-            'type': 'vector',
-            'tiles': ['http://localhost:5001/data/city/lots/' + city + '/{z}/{x}/{y}.pbf']
-          });
+            type: 'vector',
+            url: 'mapbox://thissaysnothing.bwiul1r3'   
+            });    
+            // 'tiles': ['http://localhost:5001/data/city/lots/' + city + '/{z}/{x}/{y}.pbf']
 
           map.addLayer({
             'id': 'parcels-fill',
             'type': 'fill',
             'source': 'parcels',
+            'source-layer': 'combined',
             'interactive': true,
             'paint': {
               'fill-color': '#000000',
@@ -305,10 +307,11 @@ angular.module('urbinsight.services')
       'Roads': {
         'visible': true,
         layers: [
-          "tunnel_path_bg",
-          "tunnel_motorway_link_casing",
-          "tunnel_service_casing",
-          "tunnel_street_casing",
+          "road-oneway-arrows-motorway",
+          "road-construction",
+          "road-rail-tracks",
+          "road-rail",
+          "road-main",
           "tunnel_main_casing",
           "tunnel_motorway_casing",
           "tunnel_motorway_link",
@@ -356,7 +359,7 @@ angular.module('urbinsight.services')
         ]
       },
       'Hillshade': {
-        visible: true,
+        visible: false,
         layers: [
           "hillshade_highlight_bright",
           "hillshade_highlight_med",
@@ -367,8 +370,8 @@ angular.module('urbinsight.services')
         ]
       }
     };
-    var ctrl = new mapboxgl.LayerControl({groups: groups});
-    map.addControl(ctrl);
+    // var ctrl = new mapboxgl.LayerControl({groups: groups});
+    // map.addControl(ctrl);
 
         // var simple = {
         //   'version': 1,
