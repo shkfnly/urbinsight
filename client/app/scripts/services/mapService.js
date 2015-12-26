@@ -243,7 +243,8 @@ angular.module('urbinsight.services')
             getIDForLayerFeature: function(feature) {
               return feature._id;
             },
-            style: function(feature) {
+            //takes a feature
+            style: function() {
               return {
                 color: 'rgba(255, 0, 0, 1)', 
                 outline: { 
@@ -263,7 +264,17 @@ angular.module('urbinsight.services')
         });
         map.addLayer(lots);
         lots.on('tileload', function(e){
-          e.target.layers['lots'].bringToFront();
+          if (typeof e.target.layers.lots !== 'undefined'){
+                      e.target.layers.lots.bringToFront();
+          }
+        });
+        // lots.on('click', function(e){
+        //   console.log('im the click');
+        //   console.log(e);
+        // });
+        var city = this.getCity();
+        map.on('click', function(e){
+          $http.get('/data/city/lots/lot/' +  city, {params: {'lat': e.latlng.lat, 'lng': e.latlng.lng}});
         });
 
         // (function(parcels, callback){
