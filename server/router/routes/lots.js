@@ -53,8 +53,8 @@ router.get('/:city_name/:z/:x/:y.pbf', function(req, res) {
       }
       console.log("i'm the error");
       console.log(err);
-      // res.writeHead(500, {'content-type': 'text/plain'});
-      // res.end('An error occurred');
+      res.writeHead(500, {'content-type': 'text/plain'});
+      res.end('An error occurred');
       return true;
     };
 

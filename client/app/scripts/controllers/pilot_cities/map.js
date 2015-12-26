@@ -38,7 +38,7 @@ angular.module('urbinsight')
     // });
 
     Cities.fetchCity($scope.cityName, MapFactory.renderMap.bind(MapFactory));
-    Cities.getNodes($scope.cityName, MapFactory.renderNodes.bind(MapFactory));
+    // Cities.getNodes($scope.cityName, MapFactory.renderNodes.bind(MapFactory));
     //MapFactory.renderParcels(cityName);
     //MapFactory.renderSurveys(cityName);
   }]);
