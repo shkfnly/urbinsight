@@ -13,7 +13,7 @@ mapnik.register_default_fonts();
 mapnik.register_default_input_plugins();
 
 var mercator = new SphericalMercator({
-  size: 256
+  size: 512
 });
 
 router.get('/:city_name/:z/:x/:y.pbf', function(req, res) {
@@ -60,6 +60,7 @@ router.get('/:city_name/:z/:x/:y.pbf', function(req, res) {
 
     // handle an error from the connection
     if(handleError(err)) return;
+    if(city_name === 'medellin' || city_name === 'lima' || city_name === 'budapest'){
     client.query("SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.wkb_geometry)::json As geometry, row_to_json((SELECT l FROM (SELECT " + config_object[city_name]['attributes'].join(', ') + " ) As l )) As properties FROM " + city_name + "_parcels As lg WHERE st_intersects(lg.wkb_geometry, st_makeenvelope(" + bbox.toString() + ", 4326) ) ) As f )  As fc", function(err, result){
       if (err) {
         console.log("error in the query");
@@ -71,6 +72,7 @@ router.get('/:city_name/:z/:x/:y.pbf', function(req, res) {
       var vtile = new mapnik.VectorTile(+req.params.z, +req.params.x, +req.params.y);
       if( (typeof result.rows[0] !== 'undefined')  && (result.rows[0].row_to_json.features !== null )){
           try {
+
             vtile.addGeoJSON(JSON.stringify(result.rows[0].row_to_json), 'lots');
           } catch (e) {
             console.log("came back with an error");
@@ -85,6 +87,7 @@ router.get('/:city_name/:z/:x/:y.pbf', function(req, res) {
         res.send(pbf);
       });    
     });
+    }
   });
 });
 
