@@ -23,6 +23,7 @@ var toGeoJSON = function(json) {
     var obj = {
       "type": "Feature",
       "properties": JSON.parse(JSON.stringify(feature.properties)),
+      // "properties": {},
       "geometry": JSON.parse(feature.geojson),
     }
     geojson.features.push(obj)
@@ -100,14 +101,14 @@ router.get('/:city_name/:z/:x/:y.mvt', function(req, res) {
         res.setHeader('Content-Type', 'application/x-protobuf');
         zlib.gzip(vtile.getData(), function(err, pbf) {
           res.send(pbf);
-        });    
+        });
       });
     }
   })
 });
 
 router.get('/lot/:city_name/', function(req, res){
-  client.query("select * from " + city_name + "-parcels WHERE ST_CONTAINS(wkb_geometry, ST_SetSRID(ST_MakePoint(" + req.query.lng + 
+  client.query("select * from " + city_name + "-parcels WHERE ST_CONTAINS(wkb_geometry, ST_SetSRID(ST_MakePoint(" + req.query.lng +
     "," + req.query.lat + "), 4326)", function(err, result){
     if (err){
       console.log('there has been an error');
