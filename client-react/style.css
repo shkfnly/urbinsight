@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+/*.container {
+  height: 95vh;
+  display: flex;
+}*/
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  height: 7vh;
+  text-align: justify;
+  /*letter-spacing: 1px;*/
+  background-color: rgba(248, 248, 248, 1);
+  color: #040404;
+  display: flex;
+}
+
+#header-logo {
+  padding-top: .5vh;
+  padding-left: 3vh;
+  height: 6vh;
+  /*flex-shrink: 1;*/
+}
+
+#header-nav {
+  flex-grow: 2;
+  height: 7vh;
+  /*padding: 5px;*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-nav-option {
+  margin: 10px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  height: 6vh;
+}
+
+.header-nav-option:visited {
+  color: #333;
+}
+
+.header-nav-option:hover {
+  color: #eee;
+  background-color: #333;
+  text-decoration: none;
+  font-weight:300;
+
+}
+
+#map {
+  position: fixed;
+  top: 6vh;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#mapDashboard {
+  height: 50px;
+  width: 50px;
+  margin-top: 70vh;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+#dashboardToggle {
+  padding-left: 12.5px;
+  padding-top: 10px;
+  font-size: 2em;
+  display: block;
+}
+
+.dashboard-opened {
+  margin-top: 45vh !important;
+  min-height: 80vh !important;
+  width: 80vw !important;
+  overflow: auto;
+}
+
+.dashboard-opened-tabs {
+
+}
+.dashboard-closed-tabs {
+  display: none;
+}
+
+.dashboard-opened-glyph {
+  float: right;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  /*font-size: 2em !important;*/
+  /*margin: -5px !important;*/
+}
+
+/*.nav .nav-tabs {
+  display: flex !important;
+
+}
+
+.nav .nav-tabs li {
+  order: 1 !important;
+
+}*/
