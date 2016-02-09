@@ -4589,3 +4589,25 @@ see: http://dochub.mongodb.org/core/repair for more information
 *************
 2016-01-27T15:32:42.110-0800 I STORAGE  [initandlisten] exception in initAndListen: 12596 old lock file, terminating
 2016-01-27T15:32:42.110-0800 I CONTROL  [initandlisten] dbexit:  rc: 100
+2016-02-08T22:15:23.881-0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] MongoDB starting : pid=5329 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] allocator: system
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] modules: none
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten] build environment:
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-08T22:15:23.930-0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-08T22:15:23.931-0800 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-02-08T22:15:23.933-0800 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-08T22:15:23.933-0800 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-02-08T22:15:23.943-0800 I STORAGE  [initandlisten] ************** 
+old lock file: data/db/mongod.lock.  probably means unclean shutdown,
+but there are no journal files to recover.
+this is likely human error or filesystem corruption.
+please make sure that your journal directory is mounted.
+found 2 dbs.
+see: http://dochub.mongodb.org/core/repair for more information
+*************
+2016-02-08T22:15:23.948-0800 I STORAGE  [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+2016-02-08T22:15:23.948-0800 I CONTROL  [initandlisten] dbexit:  rc: 100
