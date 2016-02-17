@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import { Input } from 'react-bootstrap';
 
 class LoginModal extends React.Component {
   constructor(){
@@ -19,18 +20,28 @@ class LoginModal extends React.Component {
       <div>
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
-            <Modal.Title>Login</Modal.Title>
+            <Modal.Title id="login-modal-title"><img id="header-logo" src="./urbinsight_logo_v1.png"></img></Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Please Login</h4>
+            <form>
+              <Input type="email" placeholder="Email"/>
+              <Input type="password" placeholder="Password" />
+            </form>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
+          <Modal.Footer id="login-modal-footer">
+            <div className="login-button-helper">
+              <Button className="auth-buttons" bsStyle="primary" bsSize="large" block>LOGIN</Button>
+            </div>
+            <div className="login-button-helper">
+              <Button className="auth-buttons" bsStyle="success" bsSize="large" block>SIGN UP</Button>
+            </div>
           </Modal.Footer>
         </Modal>
       </div>
     )
   }
 }
+
+
 
 export default LoginModal

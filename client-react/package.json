@@ -23,7 +23,9 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "c3": "^0.4.10",
     "classnames": "^2.2.3",
+    "d3": "^3.5.15",
     "history": "^1.17.0",
     "react": "^0.14.7",
     "react-bootstrap": "^0.28.2",
