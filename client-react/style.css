@@ -102,12 +102,7 @@ header {
   display: none;
 }
 
-/*.dashboard-tab-resources {
-  background-color: rgb(2, 214, 151);
-  size: 1.5em;
-  font-weight: bold;
 
-}*/
 
 .dashboard-opened-glyph {
   float: right;
@@ -140,7 +135,6 @@ header {
   /*order: 1;*/
   width: 50%;
   height: 40vh;
-  background-color: red;
   margin: 0 !important;
 }
 
@@ -162,6 +156,20 @@ header {
 #archetype-library {
   min-height: 60vh;
 }
+
+.nav-pills{
+  background-color: rgb(2, 214, 151);
+  size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-pills > li > a {
+  color: #fafafa !important;
+}
+
+/*.dashboard-tabs-resources > li > a {
+      color: #fafafa !important;
+}*/
 /*.nav .nav-tabs {
   display: flex !important;
 
