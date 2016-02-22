@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { Tabs } from 'react-bootstrap';
 import { Tab } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
 import DashboardResourcePane from './DashboardResource';
 
 
@@ -30,6 +29,11 @@ class Dashboard extends React.Component {
     let dashboardTabClass = classNames({
       'dashboard-tab-resources': true
     })
+    let dashboardSocioeconomicTabClass = classNames({
+      'dashboard-tab-resources': true,
+      'dashboard-socioeconomic-tab': true,
+      'nav-pills': true
+    })
     let dashboardGlyphClass = classNames({
       'glyphicon': true,
       'glyphicon-chevron-right': !this.state.opened,
@@ -40,29 +44,40 @@ class Dashboard extends React.Component {
       <div id="mapDashboard" className={dashboardClass}>
         <span id="dashboardToggle" className={dashboardGlyphClass} onClick={this.update}></span>
         <Tabs bsStyle="tabs" defaultActiveKey={1} className={dashboardTabsClass}>
-          <Tab className="dashboard-tab" eventKey={1} title='Resource Flows'>
+          <Tab eventKey={1} title='Urban Metabolism'>
             <Tabs bsStyle="pills" defaultActiveKey={1} className={dashboardTabsClass}>
-              <Tab className="dashboard-tab" eventKey={1} title='Energy' className={dashboardTabClass}>
-                <DashboardResourcePane />
+              <Tab  eventKey={1} title='Energy' className={dashboardTabClass}>
+                <DashboardResourcePane resource="energy"/>
               </Tab>
-              <Tab className="dashboard-tab" eventKey={2} title='Water' className={dashboardTabClass}>
-                <DashboardResourcePane />
+              <Tab  eventKey={2} title='Water' className={dashboardTabClass}>
+                <DashboardResourcePane resource="water"/>
               </Tab>
-              <Tab className="dashboard-tab" eventKey={3} title='Materials' className={dashboardTabClass}>
-                <DashboardResourcePane></DashboardResourcePane>
+              <Tab  eventKey={3} title='Materials' className={dashboardTabClass}>
+                <DashboardResourcePane resource="materials"/>
               </Tab>
-              <Tab className="dashboard-tab" eventKey={4} title='Food' className={dashboardTabClass}>
-                <DashboardResourcePane />
+              <Tab  eventKey={4} title='Food' className={dashboardTabClass}>
+                <DashboardResourcePane resource="food"/>
               </Tab>
-              <Tab className="dashboard-tab" eventKey={5} title='Mobility' className={dashboardTabClass}>
-                <DashboardResourcePane />
+              <Tab  eventKey={5} title='Mobility' className={dashboardTabClass}>
+                <DashboardResourcePane resource="mobility"/>
               </Tab>
             </Tabs>
           </Tab>
-          <Tab className="dashboard-tab" eventKey={2} title='Citizen Surveys'>Tab 2 content</Tab>
-          <Tab className="dashboard-tab" eventKey={3} title='Environmental'>Tab 3 content</Tab>
-          <Tab className="dashboard-tab" eventKey={4} title='Socioeconomic'>Tab 4 content</Tab>
-          <Tab className="dashboard-tab" eventKey={5} title='Projects'>Tab 5 content</Tab>
+          {/*The tab below may not be necessary since the data can be embedded within Socioeconomic*/}
+          <Tab  eventKey={2} title='Citizen Surveys'>Tab 2 content</Tab>
+
+          <Tab  eventKey={3} title='Environmental'>Tab 3 content</Tab>
+          <Tab  eventKey={4} title='Socioeconomic'>
+            <Tabs bsStyle='pills' defaultActiveKey={1} className={dashboardTabsClass}>
+              <Tab eventKey={1} title='Demographics' className={dashboardSocioeconomicTabClass}></Tab>
+              <Tab eventKey={2} title='Education' className={dashboardSocioeconomicTabClass}></Tab>
+              <Tab eventKey={3} title='Employment' className={dashboardSocioeconomicTabClass}></Tab>
+              {/*<Tab eventKey={4} title='Healthcare' className={dashboardSocioeconomicTabClass}></Tab>*/}
+              <Tab eventKey={4} title='Housing' className={dashboardSocioeconomicTabClass}></Tab>
+              <Tab eventKey={5} title='Quality of Life' className={dashboardSocioeconomicTabClass}></Tab>
+            </Tabs>
+          </Tab>
+          <Tab  eventKey={5} title='Projects'>Tab 5 content</Tab>
         </Tabs>
       </div>
     )

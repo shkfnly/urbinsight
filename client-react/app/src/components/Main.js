@@ -44,7 +44,7 @@ class Main extends React.Component {
   render(){
     return (
       <div>
-        <LoginModal/>
+        {/*<LoginModal/>*/}
         <AppHeader/>
         <GLMap />
       </div>

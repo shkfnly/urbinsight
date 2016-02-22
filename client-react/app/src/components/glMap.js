@@ -1,5 +1,7 @@
 import React from 'react';
 import Dashboard from './Dashboard';
+import DataInput from './DataInput';
+
 class GLMap extends React.Component {
   constructor(){
     super();
@@ -48,6 +50,7 @@ class GLMap extends React.Component {
         <div id='mapContainer'>
           <div id='map'>
             <Dashboard/>
+            <DataInput/>
           </div>
         </div>
     )
