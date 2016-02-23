@@ -112,6 +112,7 @@ header {
   float: left;
   padding-left: 5px !important;
   padding-right: 5px !important;
+  padding-left: 5px !important;
 }
 
 #dashboardToggle {
@@ -129,6 +130,7 @@ header {
   overflow: auto;
 }
 
+
 .dashboard-closed-tabs {
   display: none;
 }
@@ -145,6 +147,17 @@ header {
   padding-top: 5px !important;
   /*font-size: 2em !important;*/
   /*margin: -5px !important;*/
+}
+
+#drag {
+  cursor: ew-resize;
+  float: right;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  height: 100%;
+  position: absol
 }
 .dashboard-pane {
   display: flex;
@@ -201,8 +214,6 @@ header {
   font-weight: bold;*/
 }
 
-
-
 .nav-tabs > li > a {
   background-color: rgb(113, 196, 237);
   color: #fafafa;
@@ -211,10 +222,17 @@ header {
   border-radius: 0 !important;
 }
 
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover{
+    background-color: rgb(113, 196, 237) !important;
+    color: #fafafa;
+}
+
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover{
-    background-color: rgb(14, 94, 134);
+    background-color: rgb(14, 94, 134) !important;
     color: #fafafa;
 }
 
@@ -226,17 +244,17 @@ header {
   border-radius: 0;
 }
 
-/*.nav-pills > li > a:hover {
-  background-color: rgb(73, 224, 129);
-}*/
+.nav-pills > li > a,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover{
+  background-color: rgb(73, 224, 129) !important;
+}
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover{
-  background-color: rgb(48, 148, 85);
+  background-color: rgb(48, 148, 85) !important;
 }
-
-
 
 #archetype-selection {
   float: right;
@@ -258,8 +276,6 @@ header {
   display: flex !important;
 
 }
-
-#
 
 .nav .nav-tabs li {
   order: 1 !important;
