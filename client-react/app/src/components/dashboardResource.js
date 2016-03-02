@@ -1,5 +1,6 @@
 import React from 'react';
 import c3 from 'c3';
+import { Tab } from 'react-bootstrap';
 
 // To Be Replaced with Actual Function Data
 let exampleData = {

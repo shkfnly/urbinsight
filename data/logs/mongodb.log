@@ -4611,3 +4611,285 @@ see: http://dochub.mongodb.org/core/repair for more information
 *************
 2016-02-08T22:15:23.948-0800 I STORAGE  [initandlisten] exception in initAndListen: 12596 old lock file, terminating
 2016-02-08T22:15:23.948-0800 I CONTROL  [initandlisten] dbexit:  rc: 100
+2016-02-29T10:45:17.871-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1150 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:45:17.913-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:45:17.914-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-02-29T10:45:17.917-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:45:17.917-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-02-29T10:45:17.926-0700 I STORAGE  [initandlisten] ************** 
+old lock file: data/db/mongod.lock.  probably means unclean shutdown,
+but there are no journal files to recover.
+this is likely human error or filesystem corruption.
+please make sure that your journal directory is mounted.
+found 2 dbs.
+see: http://dochub.mongodb.org/core/repair for more information
+*************
+2016-02-29T10:45:17.932-0700 I STORAGE  [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+2016-02-29T10:45:17.932-0700 I CONTROL  [initandlisten] dbexit:  rc: 100
+2016-02-29T10:46:34.681-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1398 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:46:34.697-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log", verbosity: 1 } }
+2016-02-29T10:46:34.697-0700 D NETWORK  [initandlisten] fd limit hard:9223372036854775807 soft:256 max conn: 204
+2016-02-29T10:46:34.698-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:46:34.698-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-02-29T10:46:34.706-0700 I STORAGE  [initandlisten] ************** 
+old lock file: data/db/mongod.lock.  probably means unclean shutdown,
+but there are no journal files to recover.
+this is likely human error or filesystem corruption.
+please make sure that your journal directory is mounted.
+found 2 dbs.
+see: http://dochub.mongodb.org/core/repair for more information
+*************
+2016-02-29T10:46:34.706-0700 D -        [initandlisten] User Assertion: 12596:old lock file
+2016-02-29T10:46:34.707-0700 I STORAGE  [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+2016-02-29T10:46:34.707-0700 I CONTROL  [initandlisten] dbexit:  rc: 100
+2016-02-29T10:52:23.345-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1475 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:52:23.361-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log", verbosity: 1 } }
+2016-02-29T10:52:23.361-0700 D NETWORK  [initandlisten] fd limit hard:9223372036854775807 soft:256 max conn: 204
+2016-02-29T10:52:23.361-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:52:23.370-0700 D COMMAND  [DataFileSync] BackgroundJob starting: DataFileSync
+2016-02-29T10:52:23.370-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-02-29T10:52:23.371-0700 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2016-02-29T10:52:23.385-0700 I JOURNAL  [durability] Durability thread started
+2016-02-29T10:52:23.385-0700 I CONTROL  [initandlisten] 
+2016-02-29T10:52:23.385-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-02-29T10:52:23.385-0700 D STORAGE  [initandlisten] enter repairDatabases (to check pdfile version #)
+2016-02-29T10:52:23.385-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-02-29T10:52:23.385-0700 D STORAGE  [initandlisten]     Recovering database: local
+2016-02-29T10:52:23.385-0700 I CONTROL  [initandlisten] couldn't open data/db/local.ns errno:13 Permission denied
+2016-02-29T10:52:23.385-0700 F INDEX    [initandlisten] error couldn't open file data/db/local.ns terminating
+2016-02-29T10:52:23.385-0700 I -        [initandlisten] Invariant failure false src/mongo/db/storage/mmap_v1/catalog/namespace_index.cpp 234
+2016-02-29T10:52:23.385-0700 I -        [initandlisten] 
+
+***aborting after invariant() failure
+
+
+2016-02-29T10:52:23.397-0700 F -        [initandlisten] Got signal: 6 (Abort trap: 6).
+
+ 0x10fde3449 0x10fde2ddf 0x7fff8dfeeeaa 0x7fff8a31ca36 0x7fff96e916e7 0x10fd82f96 0x10fb3aa7b 0x10fb68c43 0x10fb6a3ec 0x10fb70f4d 0x10f6354ac 0x10f501622 0x10f4fe1b4 0x10f4fc893 0x10f500aac 0x7fff9b3e55ad 0x7
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"10F4FB000","o":"8E8449"},{"b":"10F4FB000","o":"8E7DDF"},{"b":"7FFF8DFEA000","o":"4EAA"},{"b":"7FFF8A31A000","o":"2A36"},{"b":"7FFF96E33000","o":"5E6E7"},{"b":"10F4FB000","o":"887F96"},{"b":"10F4FB000","o":"63FA7B"},{"b":"10F4FB000","o":"66DC43"},{"b":"10F4FB000","o":"66F3EC"},{"b":"10F4FB000","o":"675F4D"},{"b":"10F4FB000","o":"13A4AC"},{"b":"10F4FB000","o":"6622"},{"b":"10F4FB000","o":"31B4"},{"b":"10F4FB000","o":"1893"},{"b":"10F4FB000","o":"5AAC"},{"b":"7FFF9B3E2000","o":"35AD"},{"b":"0","o":"7"}],"processInfo":{ "mongodbVersion" : "3.2.0", "gitVersion" : "45d947729a0315accb6d4f15a6b06be6d9c19fe7", "compiledModules" : [], "uname" : { "sysname" : "Darwin", "release" : "15.3.0", "version" : "Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64", "machine" : "x86_64" }, "somap" : [ { "path" : "/usr/local/bin/mongod", "machType" : 2, "b" : "10F4FB000", "buildId" : "A553ECE2755B341A850927E8DEE071E3" }, { "path" : "/usr/lib/libSystem.B.dylib", "machType" : 6, "b" : "7FFF9386E000", "buildId" : "5A4257EF31453BB387A40D2404A9462D" }, { "path" : "/usr/lib/libc++.1.dylib", "machType" : 6, "b" : "7FFF9456C000", "buildId" : "8FC3D139805534989AC56467CB7F4D14" }, { "path" : "/usr/lib/system/libcache.dylib", "machType" : 6, "b" : "7FFF9DBB0000", "buildId" : "6B245C0AF3EA383BA5425B0D0456A41B" }, { "path" : "/usr/lib/system/libcommonCrypto.dylib", "machType" : 6, "b" : "7FFF8C483000", "buildId" : "766BC3F541F33315BABC72718A98EA92" }, { "path" : "/usr/lib/system/libcompiler_rt.dylib", "machType" : 6, "b" : "7FFF8B502000", "buildId" : "D3C4AB4023B43BC68C385B8758D14E80" }, { "path" : "/usr/lib/system/libcopyfile.dylib", "machType" : 6, "b" : "7FFF8A4A3000", "buildId" : "F51332690B22388CA57C079667B6291E" }, { "path" : "/usr/lib/system/libcorecrypto.dylib", "machType" : 6, "b" : "7FFF8DF72000", "buildId" : "C6BD205F4ECE37EEBCABA76F39CDCFFA" }, { "path" : "/usr/lib/system/libdispatch.dylib", "machType" : 6, "b" : "7FFF93DF2000", "buildId" : "324C91892AF33356847F6F4CE1C6E901" }, { "path" : "/usr/lib/system/libdyld.dylib", "machType" : 6, "b" : "7FFF9B3E2000", "buildId" : "AA629043C6F632FE8007E3478E99ACA7" }, { "path" : "/usr/lib/system/libkeymgr.dylib", "machType" : 6, "b" : "7FFF9B2C8000", "buildId" : "09397E0160663179A50C2CE666FDA929" }, { "path" : "/usr/lib/system/liblaunch.dylib", "machType" : 6, "b" : "7FFF95254000", "buildId" : "EDF719D6D2BB38DD8C944272BEFDA2CD" }, { "path" : "/usr/lib/system/libmacho.dylib", "machType" : 6, "b" : "7FFF9D3A3000", "buildId" : "CB745E1F48853F96B38B2093DF488FD5" }, { "path" : "/usr/lib/system/libquarantine.dylib", "machType" : 6, "b" : "7FFF8C4F4000", "buildId" : "163CF63A74553D1FAE578C4475A9204C" }, { "path" : "/usr/lib/system/libremovefile.dylib", "machType" : 6, "b" : "7FFF9042C000", "buildId" : "B8D1A5FCCFD53AAB8A1014DDC129710A" }, { "path" : "/usr/lib/system/libsystem_asl.dylib", "machType" : 6, "b" : "7FFF8B513000", "buildId" : "9B500E4EE462321E828E5524DC984C1B" }, { "path" : "/usr/lib/system/libsystem_blocks.dylib", "machType" : 6, "b" : "7FFF9BECC000", "buildId" : "49D423297DE9341392C3A473A7E9CF35" }, { "path" : "/usr/lib/system/libsystem_c.dylib", "machType" : 6, "b" : "7FFF96E33000", "buildId" : "EAB38A6C86713B13B50090EC1B912063" }, { "path" : "/usr/lib/system/libsystem_configuration.dylib", "machType" : 6, "b" : "7FFF974A4000", "buildId" : "5FD7907036CC3D02BEA7BB5D2AE97D5D" }, { "path" : "/usr/lib/system/libsystem_coreservices.dylib", "machType" : 6, "b" : "7FFF9EECE000", "buildId" : "1B3F5AFCFFCD3ECB8B9A5538366FB20D" }, { "path" : "/usr/lib/system/libsystem_coretls.dylib", "machType" : 6, "b" : "7FFF9344F000", "buildId" : "75C97D880A633093AE83DE33EB7405CE" }, { "path" : "/usr/lib/system/libsystem_dnssd.dylib", "machType" : 6, "b" : "7FFF99DDC000", "buildId" : "945B5FB1DA913D45A961A8FAD53C1E7E" }, { "path" : "/usr/lib/system/libsystem_info.dylib", "machType" : 6, "b" : "7FFF9DB86000", "buildId" : "6513635B4ADE3B45BF63ED7AC565B0C9" }, { "path" : "/usr/lib/system/libsystem_kernel.dylib", "machType" : 6, "b" : "7FFF8FE7A000", "buildId" : "9CEB6C3B1CAF3C32A9FD93BC72CBCEA1" }, { "path" : "/usr/lib/system/libsystem_m.dylib", "machType" : 6, "b" : "7FFF93D3E000", "buildId" : "26655445CA97321EB221801CB378D1AA" }, { "path" : "/usr/lib/system/libsystem_malloc.dylib", "machType" : 6, "b" : "7FFF8A31A000", "buildId" : "9EECAB18F02534C48E327EFFA6720EFC" }, { "path" : "/usr/lib/system/libsystem_network.dylib", "machType" : 6, "b" : "7FFF92B3A000", "buildId" : "865FE79AA22D3733A14FFC7B37F3AECD" }, { "path" : "/usr/lib/system/libsystem_networkextension.dylib", "machType" : 6, "b" : "7FFF9DC23000", "buildId" : "DC8A102ABF0231A4891465C34DF6B592" }, { "path" : "/usr/lib/system/libsystem_notify.dylib", "machType" : 6, "b" : "7FFF9C25F000", "buildId" : "243FADE1255A3B788033F336CD64B817" }, { "path" : "/usr/lib/system/libsystem_platform.dylib", "machType" : 6, "b" : "7FFF8DFEA000", "buildId" : "D3A27E107F083603ACC87A92B2C04BAB" }, { "path" : "/usr/lib/system/libsystem_pthread.dylib", "machType" : 6, "b" : "7FFF9FF53000", "buildId" : "327CECD0B88131538FCC4FD4818B7F16" }, { "path" : "/usr/lib/system/libsystem_sandbox.dylib", "machType" : 6, "b" : "7FFF945F3000", "buildId" : "3E0036AFFC6433528DA46B550C2C2562" }, { "path" : "/usr/lib/system/libsystem_secinit.dylib", "machType" : 6, "b" : "7FFF8F0EC000", "buildId" : "FD6ECF2C148932CA981B9045B5EB1FAA" }, { "path" : "/usr/lib/system/libsystem_trace.dylib", "machType" : 6, "b" : "7FFF92FAA000", "buildId" : "B485369FE3A1319E998C89AAF606079E" }, { "path" : "/usr/lib/system/libunc.dylib", "machType" : 6, "b" : "7FFF9C2FA000", "buildId" : "1D0F8265F0263CBD93D3F8DF14FFCE68" }, { "path" : "/usr/lib/system/libunwind.dylib", "machType" : 6, "b" : "7FFF945C0000", "buildId" : "124E0F0523503774A32C7F5BF38EDE73" }, { "path" : "/usr/lib/system/libxpc.dylib", "machType" : 6, "b" : "7FFF9F98A000", "buildId" : "61AB46109304354C9E9BD57198AE9866" }, { "path" : "/usr/lib/libobjc.A.dylib", "machType" : 6, "b" : "7FFF9F3D2000", "buildId" : "9F45830DF1D53CDF94611A5477ED7D1E" }, { "path" : "/usr/lib/libauto.dylib", "machType" : 6, "b" : "7FFF92F31000", "buildId" : "999E610F41FC32A3ADCA5EC049B65DFB" }, { "path" : "/usr/lib/libc++abi.dylib", "machType" : 6, "b" : "7FFF9CA29000", "buildId" : "DCCC81773D0935BC97842A04FEC4C71B" }, { "path" : "/usr/lib/libDiagnosticMessagesClient.dylib", "machType" : 6, "b" : "7FFF8E6C3000", "buildId" : "4243B6B421E9355B9C5A95A216233B96" } ] }}
+ mongod(_ZN5mongo15printStackTraceERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEE+0x39) [0x10fde3449]
+ mongod(_ZN5mongo12_GLOBAL__N_110abruptQuitEi+0xAF) [0x10fde2ddf]
+ libsystem_platform.dylib(_sigtramp+0x1A) [0x7fff8dfeeeaa]
+ libsystem_malloc.dylib(szone_malloc_should_clear+0x445) [0x7fff8a31ca36]
+ libsystem_c.dylib(abort+0x81) [0x7fff96e916e7]
+ mongod(_ZN5mongo15invariantFailedEPKcS1_j+0x2F6) [0x10fd82f96]
+ mongod(_ZN5mongo14NamespaceIndex4initEPNS_16OperationContextE+0xD1B) [0x10fb3aa7b]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC2EPNS_16OperationContextENS_10StringDataES3_bb+0x153) [0x10fb68c43]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC1EPNS_16OperationContextENS_10StringDataES3_bb+0x1C) [0x10fb6a3ec]
+ mongod(_ZN5mongo12MMAPV1Engine23getDatabaseCatalogEntryEPNS_16OperationContextENS_10StringDataE+0xED) [0x10fb70f4d]
+ mongod(_ZN5mongo14DatabaseHolder6openDbEPNS_16OperationContextENS_10StringDataEPb+0x11C) [0x10f6354ac]
+ mongod(_ZN5mongoL30repairDatabasesAndCheckVersionEPNS_16OperationContextE+0x652) [0x10f501622]
+ mongod(_ZN5mongoL14_initAndListenEi+0x12E4) [0x10f4fe1b4]
+ mongod(_ZN5mongo13initAndListenEi+0x13) [0x10f4fc893]
+ mongod(main+0x3FC) [0x10f500aac]
+ libdyld.dylib(start+0x1) [0x7fff9b3e55ad]
+ ??? [0x7]
+-----  END BACKTRACE  -----
+2016-02-29T10:52:31.106-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:52:31.122-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1486 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:52:31.123-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-02-29T10:52:31.123-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:52:31.123-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] recover begin
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-02-29T10:52:31.132-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-02-29T10:52:31.133-0700 I JOURNAL  [initandlisten] recover done
+2016-02-29T10:52:31.147-0700 I JOURNAL  [durability] Durability thread started
+2016-02-29T10:52:31.147-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-02-29T10:52:31.147-0700 I CONTROL  [initandlisten] 
+2016-02-29T10:52:31.147-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-02-29T10:52:31.147-0700 I CONTROL  [initandlisten] couldn't open data/db/local.ns errno:13 Permission denied
+2016-02-29T10:52:31.147-0700 F INDEX    [initandlisten] error couldn't open file data/db/local.ns terminating
+2016-02-29T10:52:31.147-0700 I -        [initandlisten] Invariant failure false src/mongo/db/storage/mmap_v1/catalog/namespace_index.cpp 234
+2016-02-29T10:52:31.147-0700 I -        [initandlisten] 
+
+***aborting after invariant() failure
+
+
+2016-02-29T10:52:31.152-0700 F -        [initandlisten] Got signal: 6 (Abort trap: 6).
+
+ 0x10e9cb449 0x10e9caddf 0x7fff8dfeeeaa 0x7fff8a31ca36 0x7fff96e916e7 0x10e96af96 0x10e722a7b 0x10e750c43 0x10e7523ec 0x10e758f4d 0x10e21d4ac 0x10e0e9622 0x10e0e61b4 0x10e0e4893 0x10e0e8aac 0x7fff9b3e55ad
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"10E0E3000","o":"8E8449"},{"b":"10E0E3000","o":"8E7DDF"},{"b":"7FFF8DFEA000","o":"4EAA"},{"b":"7FFF8A31A000","o":"2A36"},{"b":"7FFF96E33000","o":"5E6E7"},{"b":"10E0E3000","o":"887F96"},{"b":"10E0E3000","o":"63FA7B"},{"b":"10E0E3000","o":"66DC43"},{"b":"10E0E3000","o":"66F3EC"},{"b":"10E0E3000","o":"675F4D"},{"b":"10E0E3000","o":"13A4AC"},{"b":"10E0E3000","o":"6622"},{"b":"10E0E3000","o":"31B4"},{"b":"10E0E3000","o":"1893"},{"b":"10E0E3000","o":"5AAC"},{"b":"7FFF9B3E2000","o":"35AD"}],"processInfo":{ "mongodbVersion" : "3.2.0", "gitVersion" : "45d947729a0315accb6d4f15a6b06be6d9c19fe7", "compiledModules" : [], "uname" : { "sysname" : "Darwin", "release" : "15.3.0", "version" : "Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64", "machine" : "x86_64" }, "somap" : [ { "path" : "/usr/local/bin/mongod", "machType" : 2, "b" : "10E0E3000", "buildId" : "A553ECE2755B341A850927E8DEE071E3" }, { "path" : "/usr/lib/libSystem.B.dylib", "machType" : 6, "b" : "7FFF9386E000", "buildId" : "5A4257EF31453BB387A40D2404A9462D" }, { "path" : "/usr/lib/libc++.1.dylib", "machType" : 6, "b" : "7FFF9456C000", "buildId" : "8FC3D139805534989AC56467CB7F4D14" }, { "path" : "/usr/lib/system/libcache.dylib", "machType" : 6, "b" : "7FFF9DBB0000", "buildId" : "6B245C0AF3EA383BA5425B0D0456A41B" }, { "path" : "/usr/lib/system/libcommonCrypto.dylib", "machType" : 6, "b" : "7FFF8C483000", "buildId" : "766BC3F541F33315BABC72718A98EA92" }, { "path" : "/usr/lib/system/libcompiler_rt.dylib", "machType" : 6, "b" : "7FFF8B502000", "buildId" : "D3C4AB4023B43BC68C385B8758D14E80" }, { "path" : "/usr/lib/system/libcopyfile.dylib", "machType" : 6, "b" : "7FFF8A4A3000", "buildId" : "F51332690B22388CA57C079667B6291E" }, { "path" : "/usr/lib/system/libcorecrypto.dylib", "machType" : 6, "b" : "7FFF8DF72000", "buildId" : "C6BD205F4ECE37EEBCABA76F39CDCFFA" }, { "path" : "/usr/lib/system/libdispatch.dylib", "machType" : 6, "b" : "7FFF93DF2000", "buildId" : "324C91892AF33356847F6F4CE1C6E901" }, { "path" : "/usr/lib/system/libdyld.dylib", "machType" : 6, "b" : "7FFF9B3E2000", "buildId" : "AA629043C6F632FE8007E3478E99ACA7" }, { "path" : "/usr/lib/system/libkeymgr.dylib", "machType" : 6, "b" : "7FFF9B2C8000", "buildId" : "09397E0160663179A50C2CE666FDA929" }, { "path" : "/usr/lib/system/liblaunch.dylib", "machType" : 6, "b" : "7FFF95254000", "buildId" : "EDF719D6D2BB38DD8C944272BEFDA2CD" }, { "path" : "/usr/lib/system/libmacho.dylib", "machType" : 6, "b" : "7FFF9D3A3000", "buildId" : "CB745E1F48853F96B38B2093DF488FD5" }, { "path" : "/usr/lib/system/libquarantine.dylib", "machType" : 6, "b" : "7FFF8C4F4000", "buildId" : "163CF63A74553D1FAE578C4475A9204C" }, { "path" : "/usr/lib/system/libremovefile.dylib", "machType" : 6, "b" : "7FFF9042C000", "buildId" : "B8D1A5FCCFD53AAB8A1014DDC129710A" }, { "path" : "/usr/lib/system/libsystem_asl.dylib", "machType" : 6, "b" : "7FFF8B513000", "buildId" : "9B500E4EE462321E828E5524DC984C1B" }, { "path" : "/usr/lib/system/libsystem_blocks.dylib", "machType" : 6, "b" : "7FFF9BECC000", "buildId" : "49D423297DE9341392C3A473A7E9CF35" }, { "path" : "/usr/lib/system/libsystem_c.dylib", "machType" : 6, "b" : "7FFF96E33000", "buildId" : "EAB38A6C86713B13B50090EC1B912063" }, { "path" : "/usr/lib/system/libsystem_configuration.dylib", "machType" : 6, "b" : "7FFF974A4000", "buildId" : "5FD7907036CC3D02BEA7BB5D2AE97D5D" }, { "path" : "/usr/lib/system/libsystem_coreservices.dylib", "machType" : 6, "b" : "7FFF9EECE000", "buildId" : "1B3F5AFCFFCD3ECB8B9A5538366FB20D" }, { "path" : "/usr/lib/system/libsystem_coretls.dylib", "machType" : 6, "b" : "7FFF9344F000", "buildId" : "75C97D880A633093AE83DE33EB7405CE" }, { "path" : "/usr/lib/system/libsystem_dnssd.dylib", "machType" : 6, "b" : "7FFF99DDC000", "buildId" : "945B5FB1DA913D45A961A8FAD53C1E7E" }, { "path" : "/usr/lib/system/libsystem_info.dylib", "machType" : 6, "b" : "7FFF9DB86000", "buildId" : "6513635B4ADE3B45BF63ED7AC565B0C9" }, { "path" : "/usr/lib/system/libsystem_kernel.dylib", "machType" : 6, "b" : "7FFF8FE7A000", "buildId" : "9CEB6C3B1CAF3C32A9FD93BC72CBCEA1" }, { "path" : "/usr/lib/system/libsystem_m.dylib", "machType" : 6, "b" : "7FFF93D3E000", "buildId" : "26655445CA97321EB221801CB378D1AA" }, { "path" : "/usr/lib/system/libsystem_malloc.dylib", "machType" : 6, "b" : "7FFF8A31A000", "buildId" : "9EECAB18F02534C48E327EFFA6720EFC" }, { "path" : "/usr/lib/system/libsystem_network.dylib", "machType" : 6, "b" : "7FFF92B3A000", "buildId" : "865FE79AA22D3733A14FFC7B37F3AECD" }, { "path" : "/usr/lib/system/libsystem_networkextension.dylib", "machType" : 6, "b" : "7FFF9DC23000", "buildId" : "DC8A102ABF0231A4891465C34DF6B592" }, { "path" : "/usr/lib/system/libsystem_notify.dylib", "machType" : 6, "b" : "7FFF9C25F000", "buildId" : "243FADE1255A3B788033F336CD64B817" }, { "path" : "/usr/lib/system/libsystem_platform.dylib", "machType" : 6, "b" : "7FFF8DFEA000", "buildId" : "D3A27E107F083603ACC87A92B2C04BAB" }, { "path" : "/usr/lib/system/libsystem_pthread.dylib", "machType" : 6, "b" : "7FFF9FF53000", "buildId" : "327CECD0B88131538FCC4FD4818B7F16" }, { "path" : "/usr/lib/system/libsystem_sandbox.dylib", "machType" : 6, "b" : "7FFF945F3000", "buildId" : "3E0036AFFC6433528DA46B550C2C2562" }, { "path" : "/usr/lib/system/libsystem_secinit.dylib", "machType" : 6, "b" : "7FFF8F0EC000", "buildId" : "FD6ECF2C148932CA981B9045B5EB1FAA" }, { "path" : "/usr/lib/system/libsystem_trace.dylib", "machType" : 6, "b" : "7FFF92FAA000", "buildId" : "B485369FE3A1319E998C89AAF606079E" }, { "path" : "/usr/lib/system/libunc.dylib", "machType" : 6, "b" : "7FFF9C2FA000", "buildId" : "1D0F8265F0263CBD93D3F8DF14FFCE68" }, { "path" : "/usr/lib/system/libunwind.dylib", "machType" : 6, "b" : "7FFF945C0000", "buildId" : "124E0F0523503774A32C7F5BF38EDE73" }, { "path" : "/usr/lib/system/libxpc.dylib", "machType" : 6, "b" : "7FFF9F98A000", "buildId" : "61AB46109304354C9E9BD57198AE9866" }, { "path" : "/usr/lib/libobjc.A.dylib", "machType" : 6, "b" : "7FFF9F3D2000", "buildId" : "9F45830DF1D53CDF94611A5477ED7D1E" }, { "path" : "/usr/lib/libauto.dylib", "machType" : 6, "b" : "7FFF92F31000", "buildId" : "999E610F41FC32A3ADCA5EC049B65DFB" }, { "path" : "/usr/lib/libc++abi.dylib", "machType" : 6, "b" : "7FFF9CA29000", "buildId" : "DCCC81773D0935BC97842A04FEC4C71B" }, { "path" : "/usr/lib/libDiagnosticMessagesClient.dylib", "machType" : 6, "b" : "7FFF8E6C3000", "buildId" : "4243B6B421E9355B9C5A95A216233B96" } ] }}
+ mongod(_ZN5mongo15printStackTraceERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEE+0x39) [0x10e9cb449]
+ mongod(_ZN5mongo12_GLOBAL__N_110abruptQuitEi+0xAF) [0x10e9caddf]
+ libsystem_platform.dylib(_sigtramp+0x1A) [0x7fff8dfeeeaa]
+ libsystem_malloc.dylib(szone_malloc_should_clear+0x445) [0x7fff8a31ca36]
+ libsystem_c.dylib(abort+0x81) [0x7fff96e916e7]
+ mongod(_ZN5mongo15invariantFailedEPKcS1_j+0x2F6) [0x10e96af96]
+ mongod(_ZN5mongo14NamespaceIndex4initEPNS_16OperationContextE+0xD1B) [0x10e722a7b]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC2EPNS_16OperationContextENS_10StringDataES3_bb+0x153) [0x10e750c43]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC1EPNS_16OperationContextENS_10StringDataES3_bb+0x1C) [0x10e7523ec]
+ mongod(_ZN5mongo12MMAPV1Engine23getDatabaseCatalogEntryEPNS_16OperationContextENS_10StringDataE+0xED) [0x10e758f4d]
+ mongod(_ZN5mongo14DatabaseHolder6openDbEPNS_16OperationContextENS_10StringDataEPb+0x11C) [0x10e21d4ac]
+ mongod(_ZN5mongoL30repairDatabasesAndCheckVersionEPNS_16OperationContextE+0x652) [0x10e0e9622]
+ mongod(_ZN5mongoL14_initAndListenEi+0x12E4) [0x10e0e61b4]
+ mongod(_ZN5mongo13initAndListenEi+0x13) [0x10e0e4893]
+ mongod(main+0x3FC) [0x10e0e8aac]
+ libdyld.dylib(start+0x1) [0x7fff9b3e55ad]
+-----  END BACKTRACE  -----
+2016-02-29T10:53:22.510-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1540 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:53:22.526-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-02-29T10:53:22.526-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:53:22.537-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-02-29T10:53:22.537-0700 I JOURNAL  [initandlisten] recover begin
+2016-02-29T10:53:22.537-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-02-29T10:53:22.537-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-02-29T10:53:22.537-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-02-29T10:53:22.538-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-02-29T10:53:22.538-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-02-29T10:53:22.538-0700 I JOURNAL  [initandlisten] recover done
+2016-02-29T10:53:22.556-0700 I JOURNAL  [durability] Durability thread started
+2016-02-29T10:53:22.556-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-02-29T10:53:22.556-0700 I CONTROL  [initandlisten] 
+2016-02-29T10:53:22.556-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-02-29T10:53:22.557-0700 I CONTROL  [initandlisten] couldn't open data/db/local.ns errno:13 Permission denied
+2016-02-29T10:53:22.557-0700 F INDEX    [initandlisten] error couldn't open file data/db/local.ns terminating
+2016-02-29T10:53:22.557-0700 I -        [initandlisten] Invariant failure false src/mongo/db/storage/mmap_v1/catalog/namespace_index.cpp 234
+2016-02-29T10:53:22.557-0700 I -        [initandlisten] 
+
+***aborting after invariant() failure
+
+
+2016-02-29T10:53:22.561-0700 F -        [initandlisten] Got signal: 6 (Abort trap: 6).
+
+ 0x10f2bd449 0x10f2bcddf 0x7fff8dfeeeaa 0x7fff8a31ca36 0x7fff96e916e7 0x10f25cf96 0x10f014a7b 0x10f042c43 0x10f0443ec 0x10f04af4d 0x10eb0f4ac 0x10e9db622 0x10e9d81b4 0x10e9d6893 0x10e9daaac 0x7fff9b3e55ad
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"10E9D5000","o":"8E8449"},{"b":"10E9D5000","o":"8E7DDF"},{"b":"7FFF8DFEA000","o":"4EAA"},{"b":"7FFF8A31A000","o":"2A36"},{"b":"7FFF96E33000","o":"5E6E7"},{"b":"10E9D5000","o":"887F96"},{"b":"10E9D5000","o":"63FA7B"},{"b":"10E9D5000","o":"66DC43"},{"b":"10E9D5000","o":"66F3EC"},{"b":"10E9D5000","o":"675F4D"},{"b":"10E9D5000","o":"13A4AC"},{"b":"10E9D5000","o":"6622"},{"b":"10E9D5000","o":"31B4"},{"b":"10E9D5000","o":"1893"},{"b":"10E9D5000","o":"5AAC"},{"b":"7FFF9B3E2000","o":"35AD"}],"processInfo":{ "mongodbVersion" : "3.2.0", "gitVersion" : "45d947729a0315accb6d4f15a6b06be6d9c19fe7", "compiledModules" : [], "uname" : { "sysname" : "Darwin", "release" : "15.3.0", "version" : "Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64", "machine" : "x86_64" }, "somap" : [ { "path" : "/usr/local/bin/mongod", "machType" : 2, "b" : "10E9D5000", "buildId" : "A553ECE2755B341A850927E8DEE071E3" }, { "path" : "/usr/lib/libSystem.B.dylib", "machType" : 6, "b" : "7FFF9386E000", "buildId" : "5A4257EF31453BB387A40D2404A9462D" }, { "path" : "/usr/lib/libc++.1.dylib", "machType" : 6, "b" : "7FFF9456C000", "buildId" : "8FC3D139805534989AC56467CB7F4D14" }, { "path" : "/usr/lib/system/libcache.dylib", "machType" : 6, "b" : "7FFF9DBB0000", "buildId" : "6B245C0AF3EA383BA5425B0D0456A41B" }, { "path" : "/usr/lib/system/libcommonCrypto.dylib", "machType" : 6, "b" : "7FFF8C483000", "buildId" : "766BC3F541F33315BABC72718A98EA92" }, { "path" : "/usr/lib/system/libcompiler_rt.dylib", "machType" : 6, "b" : "7FFF8B502000", "buildId" : "D3C4AB4023B43BC68C385B8758D14E80" }, { "path" : "/usr/lib/system/libcopyfile.dylib", "machType" : 6, "b" : "7FFF8A4A3000", "buildId" : "F51332690B22388CA57C079667B6291E" }, { "path" : "/usr/lib/system/libcorecrypto.dylib", "machType" : 6, "b" : "7FFF8DF72000", "buildId" : "C6BD205F4ECE37EEBCABA76F39CDCFFA" }, { "path" : "/usr/lib/system/libdispatch.dylib", "machType" : 6, "b" : "7FFF93DF2000", "buildId" : "324C91892AF33356847F6F4CE1C6E901" }, { "path" : "/usr/lib/system/libdyld.dylib", "machType" : 6, "b" : "7FFF9B3E2000", "buildId" : "AA629043C6F632FE8007E3478E99ACA7" }, { "path" : "/usr/lib/system/libkeymgr.dylib", "machType" : 6, "b" : "7FFF9B2C8000", "buildId" : "09397E0160663179A50C2CE666FDA929" }, { "path" : "/usr/lib/system/liblaunch.dylib", "machType" : 6, "b" : "7FFF95254000", "buildId" : "EDF719D6D2BB38DD8C944272BEFDA2CD" }, { "path" : "/usr/lib/system/libmacho.dylib", "machType" : 6, "b" : "7FFF9D3A3000", "buildId" : "CB745E1F48853F96B38B2093DF488FD5" }, { "path" : "/usr/lib/system/libquarantine.dylib", "machType" : 6, "b" : "7FFF8C4F4000", "buildId" : "163CF63A74553D1FAE578C4475A9204C" }, { "path" : "/usr/lib/system/libremovefile.dylib", "machType" : 6, "b" : "7FFF9042C000", "buildId" : "B8D1A5FCCFD53AAB8A1014DDC129710A" }, { "path" : "/usr/lib/system/libsystem_asl.dylib", "machType" : 6, "b" : "7FFF8B513000", "buildId" : "9B500E4EE462321E828E5524DC984C1B" }, { "path" : "/usr/lib/system/libsystem_blocks.dylib", "machType" : 6, "b" : "7FFF9BECC000", "buildId" : "49D423297DE9341392C3A473A7E9CF35" }, { "path" : "/usr/lib/system/libsystem_c.dylib", "machType" : 6, "b" : "7FFF96E33000", "buildId" : "EAB38A6C86713B13B50090EC1B912063" }, { "path" : "/usr/lib/system/libsystem_configuration.dylib", "machType" : 6, "b" : "7FFF974A4000", "buildId" : "5FD7907036CC3D02BEA7BB5D2AE97D5D" }, { "path" : "/usr/lib/system/libsystem_coreservices.dylib", "machType" : 6, "b" : "7FFF9EECE000", "buildId" : "1B3F5AFCFFCD3ECB8B9A5538366FB20D" }, { "path" : "/usr/lib/system/libsystem_coretls.dylib", "machType" : 6, "b" : "7FFF9344F000", "buildId" : "75C97D880A633093AE83DE33EB7405CE" }, { "path" : "/usr/lib/system/libsystem_dnssd.dylib", "machType" : 6, "b" : "7FFF99DDC000", "buildId" : "945B5FB1DA913D45A961A8FAD53C1E7E" }, { "path" : "/usr/lib/system/libsystem_info.dylib", "machType" : 6, "b" : "7FFF9DB86000", "buildId" : "6513635B4ADE3B45BF63ED7AC565B0C9" }, { "path" : "/usr/lib/system/libsystem_kernel.dylib", "machType" : 6, "b" : "7FFF8FE7A000", "buildId" : "9CEB6C3B1CAF3C32A9FD93BC72CBCEA1" }, { "path" : "/usr/lib/system/libsystem_m.dylib", "machType" : 6, "b" : "7FFF93D3E000", "buildId" : "26655445CA97321EB221801CB378D1AA" }, { "path" : "/usr/lib/system/libsystem_malloc.dylib", "machType" : 6, "b" : "7FFF8A31A000", "buildId" : "9EECAB18F02534C48E327EFFA6720EFC" }, { "path" : "/usr/lib/system/libsystem_network.dylib", "machType" : 6, "b" : "7FFF92B3A000", "buildId" : "865FE79AA22D3733A14FFC7B37F3AECD" }, { "path" : "/usr/lib/system/libsystem_networkextension.dylib", "machType" : 6, "b" : "7FFF9DC23000", "buildId" : "DC8A102ABF0231A4891465C34DF6B592" }, { "path" : "/usr/lib/system/libsystem_notify.dylib", "machType" : 6, "b" : "7FFF9C25F000", "buildId" : "243FADE1255A3B788033F336CD64B817" }, { "path" : "/usr/lib/system/libsystem_platform.dylib", "machType" : 6, "b" : "7FFF8DFEA000", "buildId" : "D3A27E107F083603ACC87A92B2C04BAB" }, { "path" : "/usr/lib/system/libsystem_pthread.dylib", "machType" : 6, "b" : "7FFF9FF53000", "buildId" : "327CECD0B88131538FCC4FD4818B7F16" }, { "path" : "/usr/lib/system/libsystem_sandbox.dylib", "machType" : 6, "b" : "7FFF945F3000", "buildId" : "3E0036AFFC6433528DA46B550C2C2562" }, { "path" : "/usr/lib/system/libsystem_secinit.dylib", "machType" : 6, "b" : "7FFF8F0EC000", "buildId" : "FD6ECF2C148932CA981B9045B5EB1FAA" }, { "path" : "/usr/lib/system/libsystem_trace.dylib", "machType" : 6, "b" : "7FFF92FAA000", "buildId" : "B485369FE3A1319E998C89AAF606079E" }, { "path" : "/usr/lib/system/libunc.dylib", "machType" : 6, "b" : "7FFF9C2FA000", "buildId" : "1D0F8265F0263CBD93D3F8DF14FFCE68" }, { "path" : "/usr/lib/system/libunwind.dylib", "machType" : 6, "b" : "7FFF945C0000", "buildId" : "124E0F0523503774A32C7F5BF38EDE73" }, { "path" : "/usr/lib/system/libxpc.dylib", "machType" : 6, "b" : "7FFF9F98A000", "buildId" : "61AB46109304354C9E9BD57198AE9866" }, { "path" : "/usr/lib/libobjc.A.dylib", "machType" : 6, "b" : "7FFF9F3D2000", "buildId" : "9F45830DF1D53CDF94611A5477ED7D1E" }, { "path" : "/usr/lib/libauto.dylib", "machType" : 6, "b" : "7FFF92F31000", "buildId" : "999E610F41FC32A3ADCA5EC049B65DFB" }, { "path" : "/usr/lib/libc++abi.dylib", "machType" : 6, "b" : "7FFF9CA29000", "buildId" : "DCCC81773D0935BC97842A04FEC4C71B" }, { "path" : "/usr/lib/libDiagnosticMessagesClient.dylib", "machType" : 6, "b" : "7FFF8E6C3000", "buildId" : "4243B6B421E9355B9C5A95A216233B96" } ] }}
+ mongod(_ZN5mongo15printStackTraceERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEE+0x39) [0x10f2bd449]
+ mongod(_ZN5mongo12_GLOBAL__N_110abruptQuitEi+0xAF) [0x10f2bcddf]
+ libsystem_platform.dylib(_sigtramp+0x1A) [0x7fff8dfeeeaa]
+ libsystem_malloc.dylib(szone_malloc_should_clear+0x445) [0x7fff8a31ca36]
+ libsystem_c.dylib(abort+0x81) [0x7fff96e916e7]
+ mongod(_ZN5mongo15invariantFailedEPKcS1_j+0x2F6) [0x10f25cf96]
+ mongod(_ZN5mongo14NamespaceIndex4initEPNS_16OperationContextE+0xD1B) [0x10f014a7b]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC2EPNS_16OperationContextENS_10StringDataES3_bb+0x153) [0x10f042c43]
+ mongod(_ZN5mongo26MMAPV1DatabaseCatalogEntryC1EPNS_16OperationContextENS_10StringDataES3_bb+0x1C) [0x10f0443ec]
+ mongod(_ZN5mongo12MMAPV1Engine23getDatabaseCatalogEntryEPNS_16OperationContextENS_10StringDataE+0xED) [0x10f04af4d]
+ mongod(_ZN5mongo14DatabaseHolder6openDbEPNS_16OperationContextENS_10StringDataEPb+0x11C) [0x10eb0f4ac]
+ mongod(_ZN5mongoL30repairDatabasesAndCheckVersionEPNS_16OperationContextE+0x652) [0x10e9db622]
+ mongod(_ZN5mongoL14_initAndListenEi+0x12E4) [0x10e9d81b4]
+ mongod(_ZN5mongo13initAndListenEi+0x13) [0x10e9d6893]
+ mongod(main+0x3FC) [0x10e9daaac]
+ libdyld.dylib(start+0x1) [0x7fff9b3e55ad]
+-----  END BACKTRACE  -----
+2016-02-29T10:56:20.162-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1606 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] db version v3.2.0
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] allocator: system
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] modules: none
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] build environment:
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-02-29T10:56:20.178-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-02-29T10:56:20.180-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-02-29T10:56:20.180-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] recover begin
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-02-29T10:56:20.189-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-02-29T10:56:20.190-0700 I JOURNAL  [initandlisten] recover done
+2016-02-29T10:56:20.211-0700 I JOURNAL  [durability] Durability thread started
+2016-02-29T10:56:20.211-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-02-29T10:56:20.211-0700 I CONTROL  [initandlisten] 
+2016-02-29T10:56:20.211-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-02-29T10:56:20.237-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/db/diagnostic.data'
+2016-02-29T10:56:20.237-0700 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-02-29T10:56:20.239-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-02-29T11:18:16.627-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.86, "nodename nor servname provided, or not known"), (10.85.32.86, "nodename nor servname provided, or not known") ]
+2016-02-29T11:33:23.997-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain address information for hostname shokishokis-MacBook-Pro.local: nodename nor servname provided, or not known
+2016-02-29T11:37:24.326-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.86, "nodename nor servname provided, or not known"), (10.85.32.86, "nodename nor servname provided, or not known") ]
+2016-02-29T11:55:39.890-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T12:10:42.352-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T12:25:44.217-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T12:40:46.554-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T12:55:48.598-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T14:31:05.271-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.32, "nodename nor servname provided, or not known"), (10.85.32.32, "nodename nor servname provided, or not known") ]
+2016-02-29T14:46:05.396-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T15:01:05.563-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T15:16:05.684-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T15:31:05.605-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T15:46:08.739-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T16:01:12.856-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T16:16:17.620-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T16:31:21.731-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T16:46:25.994-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T17:01:30.088-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T17:16:34.647-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (172.20.10.2, "nodename nor servname provided, or not known"), (172.20.10.2, "nodename nor servname provided, or not known") ]
+2016-02-29T20:36:39.740-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T20:51:44.483-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T21:06:50.230-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T21:21:56.670-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T21:37:01.020-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T21:52:07.937-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T22:07:13.626-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-02-29T22:22:18.031-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T08:40:11.906-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T08:55:16.367-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T09:10:20.966-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T09:25:25.669-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T09:40:29.850-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T09:55:34.088-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T10:10:43.404-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T10:25:49.203-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T10:41:02.325-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T10:56:09.016-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T11:11:29.337-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T11:26:39.435-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.85.32.28, "nodename nor servname provided, or not known"), (10.85.32.28, "nodename nor servname provided, or not known") ]
+2016-03-01T19:54:59.708-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T20:10:04.520-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T20:25:09.035-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T20:40:14.624-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T20:55:20.427-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T21:10:25.059-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T21:25:34.194-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T21:40:38.703-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T21:55:43.760-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]
+2016-03-01T22:10:48.249-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (10.0.0.247, "nodename nor servname provided, or not known"), (10.0.0.247, "nodename nor servname provided, or not known") ]

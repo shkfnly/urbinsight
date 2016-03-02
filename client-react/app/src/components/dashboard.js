@@ -4,6 +4,8 @@ import { Tabs } from 'react-bootstrap';
 import { Tab } from 'react-bootstrap';
 import DashboardResourcePane from './DashboardResource';
 import DashboardSocioeconomicPane from './DashboardSocioeconomic';
+import { Button } from 'react-bootstrap'
+
 
 class Dashboard extends React.Component {
 
@@ -20,6 +22,9 @@ class Dashboard extends React.Component {
     this.setState({opened: !this.state.opened})
   }
 //onSelect={this.handleSelect}
+  handleClick(){
+    return;
+  }
   render(){
     let dashboardClass = classNames({'dashboard-opened': this.state.opened})
     let dashboardTabsClass = classNames({
@@ -32,15 +37,17 @@ class Dashboard extends React.Component {
       'glyphicon-chevron-right': !this.state.opened,
       'glyphicon-remove': this.state.opened,
       'dashboard-opened-glyph': this.state.opened});
+    const mountId = "air-quality-graph"
 
     return(
+
       <div id="mapDashboard" className={dashboardClass}>
         <span id="dashboardToggle" className={dashboardGlyphClass} onClick={this.update}></span>
-        <Tabs bsStyle="tabs" defaultActiveKey={1} className={dashboardTabsClass}>
+        <Tabs bsStyle="tabs" defaultActiveKey={1} className={dashboardTabsClass} justified>
           <Tab eventKey={1} title='Urban Metabolism'>
-            <Tabs bsStyle="pills" defaultActiveKey={1} className={dashboardTabsClass}>
+            <Tabs bsStyle="pills" defaultActiveKey={1} className={dashboardTabsClass} justified>
               <Tab  eventKey={1} title='Energy'>
-                <DashboardResourcePane resource="energy"/>
+                <DashboardResourcePane resource="energy" />
               </Tab>
               <Tab  eventKey={2} title='Water'>
                 <DashboardResourcePane resource="water"/>
@@ -58,10 +65,54 @@ class Dashboard extends React.Component {
           </Tab>
           {/*The tab below may not be necessary since the data can be embedded within Socioeconomic*/}
           <Tab  eventKey={2} title='Citizen Surveys'>Tab 2 content</Tab>
-
-          <Tab  eventKey={3} title='Environmental'>Tab 3 content</Tab>
+          <Tab  eventKey={3} title='Environmental'>
+            <Tabs bsStyle='pills' defaultActiveKey={1} className={dashboardTabsClass} justified>
+              <Tab eventKey={1} title='Air'>
+              <div className="environmental-pane">
+                <div className="air-quality-data-viz">
+                  <div className="air-quality-graph" id={mountId}></div>
+                  {/* This is actually a custom graph legend*/}
+                  <div className="aq-button-list">
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> SO2</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> PM10</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> PM2.5</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> CO</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> O3</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> NOx</Button>
+                    <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> Pb</Button>
+                  </div>
+                </div>
+                <div className="pollutant-description">
+                  <div>
+                    <img />
+                    <div>
+                      <h5>Pollutant</h5>
+                      <h5>Type</h5>
+                      <h5>Standard</h5>
+                      <h5>Averaging Time</h5>
+                    </div>
+                    <h3>Chemical Structure</h3>
+                    <h6>
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                      Lots of Information Lots of Information Lots of Information
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              </Tab>
+              <Tab eventKey={2} title='Water'></Tab>
+              <Tab eventKey={3} title='Soil'></Tab>
+            </Tabs>
+          </Tab>
           <Tab  eventKey={4} title='Socioeconomic'>
-            <Tabs bsStyle='pills' defaultActiveKey={1} className={dashboardTabsClass}>
+            <Tabs bsStyle='pills' defaultActiveKey={1} className={dashboardTabsClass} justified>
               <Tab eventKey={1} title='Demographics'>
                 <DashboardSocioeconomicPane indicator="demographics"/>
               </Tab>
