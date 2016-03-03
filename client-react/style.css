@@ -13,48 +13,8 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
-/*header {
-  height: 7vh;
-  text-align: justify;
-  /*letter-spacing: 1px;
-  background-color: rgb(248, 248, 248);
-  background-color: rgba(248, 248, 248, 1);
-  color: #040404;
-  display: flex;
-  /*position: fixed;
-}*/
-
-/*#header-logo {
-  padding-top: .5vh;
-  padding-left: 3vh;
-  height: 6vh;
-  /*flex-shrink: 1;
-}*/
 #header-logo {
   margin-top: -.8em;
-}
-
-#header-nav {
-  flex-grow: 2;
-  height: 7vh;
-  /*padding: 5px;*/
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
-
-}
-.header-nav-option {
-  margin: .55em;
-  color: #333;
-  font-family: sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-  height: 100%;
-}
-
-.header-nav-option:visited {
-  color: #333;
 }
 
 .header-nav-option:hover {
@@ -73,66 +33,33 @@ a {
   z-index: 1;
 }
 
-#mapDashboard {
+.visualization-dashboard {
   height: 50px;
   width: 50px;
-  margin-top: 80vh;
+  margin-top: 50%;
   position: absolute;
   background-color: white;
   border-radius: 10px;
   opacity: 0.9;
   z-index: 2;
 }
-#data-input {
-  height: 50px;
-  width: 50px;
-  margin-top: 80vh;
-  background-color: white;
-  border-radius: 10px;
-  opacity: 0.9;
-  z-index: 2;
-  position: relative;
+
+.dashboard-opened-glyph {
   float: right;
-  /*position: fixed;*/
+  margin: -1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  background-color: rgb(113, 196, 237);
+  height: 36px;
 }
 
-#data-input-toggle  {
+.dashboard-glyph-closed {
   padding-left: 12.5px;
   padding-top: 10px;
   font-size: 2em;
   display: block;
 }
-
-.data-input-opened {
-  margin-top: 25vh !important;
-  /*min-height: 90vh !important;*/
-  width: 50vw !important;
-  min-height: 90vh !important;
-  overflow: auto;
-}
-
-.data-input-opened-glyph {
-  float: left;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-  padding-top: 5px !important;
-}
-
-#dashboardToggle {
-  padding-left: 12.5px;
-  padding-top: 10px;
-  font-size: 2em;
-  display: block;
-}
-
-.dashboard-opened {
-  margin-top: 25vh !important;
-  /*min-height: 90vh !important;*/
-  width: 50vw !important;
-  min-height: 90vh !important;
-  overflow: auto;
-}
-
 
 .dashboard-closed-tabs {
   display: none;
@@ -142,14 +69,51 @@ a {
   display: none;
 }
 
-.dashboard-opened-glyph {
+.dashboard-opened {
+  margin-top: 25vh !important;
+  /*min-height: 90vh !important;*/
+  width: 50% !important;
+  height: 75% !important;
+  overflow: auto;
+}
+
+#data-input {
+  height: 50px;
+  width: 50px;
+  margin-top: 50%;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+  z-index: 2;
+  position: relative;
   float: right;
-  margin: 0;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-  padding-top: 5px !important;
-  /*font-size: 2em !important;*/
-  /*margin: -5px !important;*/
+  /*position: fixed;*/
+}
+
+.data-input-toggle  {
+  padding-left: 12.5px;
+  padding-top: 10px;
+  font-size: 2em;
+  display: block;
+}
+
+.data-input-opened {
+  margin-top: 25vh !important;
+  width: 50% !important;
+  height: 75% !important;
+  overflow: auto;
+}
+
+.data-input-opened-glyph {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  height: 36px;
+  margin: -1px;
+  font-size: 1em !important;
+  background-color: rgb(113, 196, 237);
+
 }
 
 #drag {
@@ -211,10 +175,8 @@ a {
   min-height: 60vh;
 }
 
-.nav-pills {
-  /*background-color: rgb(2, 214, 151);*/
-  /*size: 1.5em;
-  font-weight: bold;*/
+.nav-tabs > li {
+  border: none !important;
 }
 
 .nav-tabs > li > a {
@@ -223,6 +185,7 @@ a {
   font-weight: bold;
   font-size: .95em;
   border-radius: 0 !important;
+  border-bottom-width: 0 !important;
 }
 
 .nav-tabs > li > a,
@@ -275,13 +238,15 @@ a {
 
 .air-quality-data-viz {
   display: flex;
-  height: 45vh;
+  min-height: 45vh;
+  width: 100%;
 }
+
 .air-quality-graph {
+  margin-top: 2em;
   width: 80%;
-  height: 45vh;
-  background-color: teal;
 }
+
 .aq-button-list {
   display: flex;
   flex-direction: column;
@@ -297,20 +262,12 @@ a {
   flex-grow: 1;
 }
 
-.environmental-pane {
-  overflow: auto;
+#surveyForm {
+  margin-bottom: 5vh;
 }
 
-
-/*.dashboard-tabs-resources > li > a {
-      color: #fafafa !important;
-}*/
-/*.nav .nav-tabs {
-  display: flex !important;
-
+#survey-form-container {
+  margin: 10 auto;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
-
-.nav .nav-tabs li {
-  order: 1 !important;
-
-}*/
