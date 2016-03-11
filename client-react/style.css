@@ -36,7 +36,7 @@ a {
 .visualization-dashboard {
   height: 50px;
   width: 50px;
-  margin-top: 50%;
+  margin-top: 45%;
   position: absolute;
   background-color: white;
   border-radius: 10px;
@@ -80,7 +80,7 @@ a {
 #data-input {
   height: 50px;
   width: 50px;
-  margin-top: 50%;
+  margin-top: 45%;
   background-color: white;
   border-radius: 10px;
   opacity: 0.9;
