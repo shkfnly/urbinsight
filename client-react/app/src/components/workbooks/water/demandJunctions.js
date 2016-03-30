@@ -11,6 +11,7 @@ class WaterDemandJunctions extends React.Component {
     super();
   }
   render(){
+    return(
     <div>
       <h4>Demand Junctions</h4>
         {/*Add functionaility to add a toilet*/}
@@ -90,6 +91,7 @@ class WaterDemandJunctions extends React.Component {
         </Button>
       </Col>
     </div>
+  )
   }
 }
 
