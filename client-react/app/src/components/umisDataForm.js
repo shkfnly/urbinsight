@@ -280,6 +280,19 @@ class UmisDataForm extends React.Component {
           <MaterialsOptionA/>
           <MaterialsOptionB/>
           <MaterialsOptionC/>
+          <h3>Submit Parcel Audit</h3>
+          <br />
+          <Col sm={6} offset={3}>
+            <Button id="submit-button" ng-click="umisSubmit()" type="submit" class="btn btn-danger btn-lg btn-block" ui-sref="app.city.pilot.umis.form.endPage">Submit</Button>
+          </Col>
+          <h2 style="text-align: center;">Congratulations you've finished a parcel audit</h2>
+          <br />
+          <Col sm={6} offset={3}>
+            <Button class="btn btn-block btn-info" ng-click="workbookSelection.resetSelections()">
+              <span class="glyphicon glyphicon-circle-arrow-left"></span>Return to Beginning
+            </Button>
+          </Col>
+
         </div>
     )
   }
