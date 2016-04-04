@@ -54,7 +54,7 @@ class MaterialsOptionA extends React.Component {
     let stateString = "parcel.workbooks.materials.estimateDemand.optionA.demandJunctions."
     let materialsList = materials.map(function(material, key){
       return (
-        <tr>
+        <tr key={key}>
           <td><label htmlFor={material.name}>{material.label}</label></td>
           <td><Input type="number" id={material.name} /></td>
       </tr>

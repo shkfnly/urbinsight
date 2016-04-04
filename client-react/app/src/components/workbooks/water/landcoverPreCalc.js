@@ -72,11 +72,11 @@ class LandcoverPreCalc extends React.Component {
       },
     ]
     let stateString = "parcel.workbooks.water.estimateDemand.landCoverPreCalculation.surfaceTypes."
-    let listItems = surfaceTypes.map(function(surfaceType){
-      return <Input label={surfaceType.label} type="checkbox" model={stateString + surfaceType.stateName} />
+    let listItems = surfaceTypes.map(function(surfaceType, key){
+      return <Input key={key} label={surfaceType.label} type="checkbox" model={stateString + surfaceType.stateName} />
     });
-    let listValues = surfaceTypes.map(function(surfaceType){
-      return <Input label={surfaceType.label} type="number" model={stateString + surfaceType.stateName + '.portionOfParcel'} />
+    let listValues = surfaceTypes.map(function(surfaceType, key){
+      return <Input key={key} label={surfaceType.label} type="number" model={stateString + surfaceType.stateName + '.portionOfParcel'} />
     });
     return(
       <div>
