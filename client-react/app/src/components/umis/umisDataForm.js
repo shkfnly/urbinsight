@@ -295,20 +295,46 @@ class UmisDemographics extends React.Component {
 }
 
 class UmisWorkbookSelection extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      water: false,
+      materials: false,
+      queue: ['submit', 'complete']
+    }
+  }
   handleClick(panel, e){
     e.preventDefault();
     this.props.handleClick(panel);
+  }
+  handlerClick(value, e){
+    let current = this.state.queue
+    // Add the workbook selection
+    let pos = current.indexOf(value)
+    if (pos === -1) {
+      current.unshift(value)
+    } else {
+      let nextpos = pos + 1
+      if (pos === 0) {
+        current = current.slice(1)
+      } else {
+        current = current.slice(0, pos).concat(current.slice(nextpos))
+      }
+    }
+    this.setState({queue: current})
   }
   render(){
     return(
       <div>
         <h3>Select which workbooks you would like to complete</h3>
         {/*ng-model="workbookSelection.selectedWorkbooks.water" ng-change="workbookSelection.workbookGenerator()"*/}
-        <Input label="Water" type="checkbox" />
-        <Input label="Materials" type="checkbox" />
-        <Input label="Energy" type="checkbox" />
-        <Input label="Mobility" type="checkbox" />
+        <Input label="Water" type="checkbox" onClick={this.handlerClick.bind(this, "water")}/>
+        <Input label="Materials" type="checkbox" onClick={this.handlerClick.bind(this, "materials")}/>
+        <Input label="Energy" type="checkbox" disabled="true"/>
+        <Input label="Mobility" type="checkbox" disabled="true"/>
         <br />
+        <UmisWaterWorkbook />
+        <UmisMaterialsWorkbook />
         <Col sm={6}>
           <Button bsStyle="info" onClick={this.handleClick.bind(this, 'DEMOGRAPHICS')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
@@ -386,7 +412,7 @@ class UmisMaterialsWorkbook extends React.Component {
 
 class UmisSubmit extends React.Component {
   handleClick(panel, e){
-    e.preventDefault();
+    // e.preventDefault();
     this.props.handleClick(panel);
   }
   render(){
@@ -398,16 +424,16 @@ class UmisSubmit extends React.Component {
           <Button id="submit-button" ng-click="umisSubmit()" type="submit" className="btn btn-danger btn-lg btn-block" ui-sref="app.city.pilot.umis.form.endPage">Submit</Button>
 
         </Col>*/}
-        <Col sm={6}>
+        {/*<Col sm={6}>*/}
           <Button bsStyle="info" onClick={this.handleClick.bind(this, 'MATERIALS')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
           </Button>
-        </Col>
-        <Col sm={6}>
+        {/*</Col>*/}
+        {/*<Col sm={6}>*/}
           <Button bsStyle="success" onClick={this.handleClick.bind(this, 'COMPLETE')}>
             Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
           </Button>
-        </Col>
+        {/*</Col>*/}
       </div>
     )
   }
@@ -422,12 +448,11 @@ class UmisComplete extends React.Component {
     return(
       <div>
         <h2 style={{"textAlign": "center"}}>Congratulations you've finished a parcel audit</h2>
-        <br />
-        <Col sm={6} offset={3}>
-          <Button  bsStyle="info" onClick={this.handleClick.bind(this, 'INTRO')}>
+        {/*<Col sm={6} offset={6}>*/}
+          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'INTRO')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span>Return to Beginning
           </Button>
-        </Col>
+        {/*</Col>*/}
       </div>
     )
   }
@@ -436,7 +461,7 @@ class UmisDataForm extends React.Component {
   constructor(){
     super();
     this.state = {
-      active: 'INTRO'
+      active: 'SELECTION'
     }
   }
   handleClick(panel){
@@ -464,15 +489,17 @@ class UmisDataForm extends React.Component {
         ) : active === 'DEMOGRAPHICS' ? (
           <UmisDemographics handleClick={this.handleClick.bind(this)} />
         ) : active === 'SELECTION' ? (
-          <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} />
-        ) : active === 'WATER' ? (
-          <UmisWaterWorkbook handleClick={this.handleClick.bind(this)} />
-        ) : active === 'MATERIALS' ? (
-          <UmisMaterialsWorkbook handleClick={this.handleClick.bind(this)} />
+          <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} testing="hello">
+
+          </UmisWorkbookSelection>
+        // ) : active === 'WATER' ? (
+        //   <UmisWaterWorkbook handleClick={this.handleClick.bind(this)}/>
+        // ) : active === 'MATERIALS' ? (
+        //   <UmisMaterialsWorkbook handleClick={this.handleClick.bind(this)}/>
         ) : active === 'SUBMIT' ? (
-          <UmisSubmit handleClick={this.handleClick.bind(this)} />
+          <UmisSubmit handleClick={this.handleClick.bind(this)}/>
         ) : active === 'COMPLETE' ? (
-          <UmisComplete handleClick={this.handleClick.bind(this)} />
+          <UmisComplete handleClick={this.handleClick.bind(this)}/>
         ) : null}
       </div>
     )

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LoginModal from './Login';
-import GLMap from './GLMap';
-import AppHeader from './AppHeader';
-import Dashboard from './Dashboard';
+import GLMap from './layouts/GLMap';
+import AppHeader from './layouts/AppHeader';
+import Dashboard from './dashboard/Dashboard';
 // import mapboxgl from 'mapbox-gl'
 // var MapGL = require('react-map-gl');
 // import scriptLoader from 'script-loader';

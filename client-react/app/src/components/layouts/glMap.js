@@ -1,6 +1,6 @@
 import React from 'react';
-import Dashboard from './Dashboard';
-import DataInput from './DataInput';
+import Dashboard from '../dashboard/Dashboard';
+import DataInput from '../citizen_data/DataInput';
 
 class GLMap extends React.Component {
   constructor(){

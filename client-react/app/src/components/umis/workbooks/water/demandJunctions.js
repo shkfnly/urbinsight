@@ -80,7 +80,7 @@ class WaterDemandJunctions extends React.Component {
           Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </a>
       </div>*/}
-      <Col sm={6}>
+      {/*<Col sm={6}>
         <Button bsStyle="info">
           <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
         </Button>
@@ -89,7 +89,7 @@ class WaterDemandJunctions extends React.Component {
         <Button bsStyle="success">
           Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
         </Button>
-      </Col>
+      </Col>*/}
     </div>
   )
   }
