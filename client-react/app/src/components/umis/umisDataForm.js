@@ -285,63 +285,112 @@ class UmisDemographics extends React.Component {
           </Button>
         </Col>
         <Col sm={6}>
-          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'SELECTION')}>
+          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'WBCONTAINER')}>
             Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
           </Button>
         </Col>
+      </div>
+    )
+  }
+}
+
+class UmisWorkbookContainer extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      available: ['selection','water','materials','submit'],
+      active: 'selection',
+      queue: [0, 3],
+      pos: 0,
+    }
+  }
+  selectionHandler(value, e){
+    let queue = this.state.available;
+    // Add the workbook selection
+    let position = queue.indexOf(value)
+    let current = this.state.queue
+    if (current.indexOf(position) === -1) {
+      current =  current.slice(0, (current.length-1)).concat(position).concat(current.slice((current.length-1)))
+    } else {
+      let avail_position = (current.indexOf(position))
+      current = current.slice(0, avail_position).concat(current.slice(avail_position+1))
+    }
+    this.setState({queue: current})
+  }
+  handleClick(panel, e){
+    // e.preventDefault();
+    this.props.handleClick(panel);
+  }
+  handleNavigation(nextSection){
+    let currPos = this.state.pos;
+    let currQueue = this.state.queue;
+    let newLocation, newActive;
+    if(nextSection === "forward"){
+      currPos++;
+      newLocation = currQueue[currPos]
+      newActive = this.state.available[newLocation]
+    } else if (nextSection === "back") {
+      currPos--;
+      newLocation = currQueue[currPos];
+      newActive = this.state.available[newLocation]
+      if(newActive === 'selection'){
+        currQueue = [0, 3]
+      }
+    }
+    this.setState({active: newActive,
+                   pos: currPos,
+                   queue: currQueue})
+  }
+  render(){
+    let active = this.state.active;
+    return(
+      <div>
+        {active === 'selection' ? (
+          <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} handleNavigation={this.handleNavigation.bind(this)} selectionHandler={this.selectionHandler.bind(this)}/>
+        ) : active === 'water' ? (
+          <UmisWaterWorkbook handleNavigation={this.handleNavigation.bind(this)}/>
+        ) : active === 'materials' ? (
+          <UmisMaterialsWorkbook handleNavigation={this.handleNavigation.bind(this)}/>
+        ) : active === 'submit' ? (
+          <UmisSubmit handleNavigation={this.handleNavigation.bind(this)} handleClick={this.handleClick.bind(this)}/>
+        ) : null}
       </div>
     )
   }
 }
 
 class UmisWorkbookSelection extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      water: false,
-      materials: false,
-      queue: ['submit', 'complete']
-    }
+  selectionHandler(value, e){
+    // e.preventDefault();
+    this.props.selectionHandler(value);
+  }
+  handleNavigation(value){
+    // e.preventDefault();
+    this.props.handleNavigation(value);
   }
   handleClick(panel, e){
     e.preventDefault();
     this.props.handleClick(panel);
   }
-  handlerClick(value, e){
-    let current = this.state.queue
-    // Add the workbook selection
-    let pos = current.indexOf(value)
-    if (pos === -1) {
-      current.unshift(value)
-    } else {
-      let nextpos = pos + 1
-      if (pos === 0) {
-        current = current.slice(1)
-      } else {
-        current = current.slice(0, pos).concat(current.slice(nextpos))
-      }
-    }
-    this.setState({queue: current})
-  }
+
   render(){
     return(
       <div>
         <h3>Select which workbooks you would like to complete</h3>
         {/*ng-model="workbookSelection.selectedWorkbooks.water" ng-change="workbookSelection.workbookGenerator()"*/}
-        <Input label="Water" type="checkbox" onClick={this.handlerClick.bind(this, "water")}/>
-        <Input label="Materials" type="checkbox" onClick={this.handlerClick.bind(this, "materials")}/>
+        <Input label="Water" type="checkbox" onClick={this.selectionHandler.bind(this, "water")}/>
+        <Input label="Materials" type="checkbox" onClick={this.selectionHandler.bind(this, "materials")}/>
         <Input label="Energy" type="checkbox" disabled="true"/>
         <Input label="Mobility" type="checkbox" disabled="true"/>
         <br />
-        <UmisWaterWorkbook />
-        <UmisMaterialsWorkbook />
+          <Col sm={6}>
+            <Button bsStyle="info" onClick={this.handleClick.bind(this, 'DEMOGRAPHICS')}>
+              <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
+            </Button>
+          </Col>
+
         <Col sm={6}>
-          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'DEMOGRAPHICS')}>
-            <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
-          </Button>
-        </Col>
-        <Col sm={6}>
-          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'WATER')}>
+          <Button bsStyle="success" onClick={this.handleNavigation.bind(this, 'forward')}>
             Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
           </Button>
         </Col>
@@ -350,10 +399,12 @@ class UmisWorkbookSelection extends React.Component {
   }
 }
 
+
+
 class UmisWaterWorkbook extends React.Component {
   handleClick(panel, e){
     e.preventDefault();
-    this.props.handleClick(panel);
+    this.props.handleNavigation(panel);
   }
   render(){
     return(
@@ -362,12 +413,12 @@ class UmisWaterWorkbook extends React.Component {
         <LandcoverPreCalc />
         <WaterDemandJunctions />
         <Col sm={6}>
-          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'SELECTION')}>
+          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'back')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
           </Button>
         </Col>
         <Col sm={6}>
-          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'MATERIALS')}>
+          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'forward')}>
             Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
           </Button>
         </Col>
@@ -379,7 +430,7 @@ class UmisWaterWorkbook extends React.Component {
 class UmisMaterialsWorkbook extends React.Component {
   handleClick(panel, e){
     e.preventDefault();
-    this.props.handleClick(panel);
+    this.props.handleNavigation(panel);
   }
   render(){
     return(
@@ -396,12 +447,12 @@ class UmisMaterialsWorkbook extends React.Component {
         <MaterialsOptionB/>
         <MaterialsOptionC/>
         <Col sm={6}>
-          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'WATER')}>
+          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'back')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
           </Button>
         </Col>
         <Col sm={6}>
-          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'SUBMIT')}>
+          <Button bsStyle="success" onClick={this.handleClick.bind(this, 'forward')}>
             Next Section <span className="glyphicon glyphicon-circle-arrow-right"></span>
           </Button>
         </Col>
@@ -412,8 +463,12 @@ class UmisMaterialsWorkbook extends React.Component {
 
 class UmisSubmit extends React.Component {
   handleClick(panel, e){
-    // e.preventDefault();
+    e.preventDefault();
     this.props.handleClick(panel);
+  }
+  handleNavigation(panel, e){
+    e.preventDefault();
+    this.props.handleNavigation(panel);
   }
   render(){
     return(
@@ -425,7 +480,7 @@ class UmisSubmit extends React.Component {
 
         </Col>*/}
         {/*<Col sm={6}>*/}
-          <Button bsStyle="info" onClick={this.handleClick.bind(this, 'MATERIALS')}>
+          <Button bsStyle="info" onClick={this.handleNavigation.bind(this, 'back')}>
             <span className="glyphicon glyphicon-circle-arrow-left"></span> Previous Section
           </Button>
         {/*</Col>*/}
@@ -461,7 +516,7 @@ class UmisDataForm extends React.Component {
   constructor(){
     super();
     this.state = {
-      active: 'SELECTION'
+      active: 'WBCONTAINER'
     }
   }
   handleClick(panel){
@@ -488,10 +543,10 @@ class UmisDataForm extends React.Component {
           <UmisBuildingData handleClick={this.handleClick.bind(this)} />
         ) : active === 'DEMOGRAPHICS' ? (
           <UmisDemographics handleClick={this.handleClick.bind(this)} />
-        ) : active === 'SELECTION' ? (
-          <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} testing="hello">
-
-          </UmisWorkbookSelection>
+        // ) : active === 'SELECTION' ? (
+        //   <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} />
+        ) : active === 'WBCONTAINER' ? (
+          <UmisWorkbookContainer handleClick={this.handleClick.bind(this)} />
         // ) : active === 'WATER' ? (
         //   <UmisWaterWorkbook handleClick={this.handleClick.bind(this)}/>
         // ) : active === 'MATERIALS' ? (
