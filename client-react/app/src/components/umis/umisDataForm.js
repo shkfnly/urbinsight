@@ -39,16 +39,8 @@ class UmisDataForm extends React.Component {
           <UmisBuildingData handleClick={this.handleClick.bind(this)} />
         ) : active === 'DEMOGRAPHICS' ? (
           <UmisDemographics handleClick={this.handleClick.bind(this)} />
-        // ) : active === 'SELECTION' ? (
-        //   <UmisWorkbookSelection handleClick={this.handleClick.bind(this)} />
         ) : active === 'WBCONTAINER' ? (
           <UmisWorkbookContainer handleClick={this.handleClick.bind(this)} />
-        // ) : active === 'WATER' ? (
-        //   <UmisWaterWorkbook handleClick={this.handleClick.bind(this)}/>
-        // ) : active === 'MATERIALS' ? (
-        //   <UmisMaterialsWorkbook handleClick={this.handleClick.bind(this)}/>
-        // ) : active === 'SUBMIT' ? (
-        //   <UmisSubmit handleClick={this.handleClick.bind(this)}/>
         ) : active === 'COMPLETE' ? (
           <UmisComplete handleClick={this.handleClick.bind(this)}/>
         ) : null}
