@@ -45,7 +45,7 @@ class DashboardSocioeconomicPane extends React.Component {
         </select>
 
         <div id="archetype-holder">
-          <div id="archetype-image-holder"><img id="archetype-image" src="./playground.jpg"></img></div>
+          <div id="archetype-image-holder"><img id="archetype-image" src="./app/images/playground.jpg"></img></div>
           <div id="archetype-text-holder">
             <h5>
               Feeling safe and secure in our homes, communities and

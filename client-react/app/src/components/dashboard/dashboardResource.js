@@ -54,7 +54,7 @@ class DashboardResourcePane extends React.Component {
           </select>
 
           <div id="archetype-holder">
-            <div id="archetype-image-holder"><img id="archetype-image" src="./House-In-Monasterios_1.jpg"></img></div>
+            <div id="archetype-image-holder"><img id="archetype-image" src="./app/images/House-In-Monasterios_1.jpg"></img></div>
             <div id="archetype-text-holder">
               <h5><strong>Type:</strong> Two Story Detached</h5>
               <h5><strong>Zoning:</strong> Residential</h5>

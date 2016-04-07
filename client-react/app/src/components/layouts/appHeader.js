@@ -34,16 +34,16 @@ class AppHeader extends React.Component {
               <MenuItem eventKey={1.3}>Abu Dhabi</MenuItem>
               <MenuItem eventKey={1.3}>Lima</MenuItem>
             </NavDropdown>
-            <NavDropdown eventKey={2} title="Geonode" id="basic-nav-dropdown">
-              <MenuItem eventKey={2.1}>Medellin</MenuItem>
-              <MenuItem eventKey={2.2}>Cusco</MenuItem>
-              <MenuItem eventKey={2.3}>Abu Dhabi</MenuItem>
-              <MenuItem eventKey={2.3}>Lima</MenuItem>
+            <NavDropdown eventKey={2} title="Data" id="basic-nav-dropdown">
+              <MenuItem eventKey={2.1} href="http://medellin.urbinsight.com">Medellin</MenuItem>
+              <MenuItem eventKey={2.2} href="http://cusco.urbinsight.com">Cusco</MenuItem>
+              <MenuItem eventKey={2.3} href="http://abudhabi.urbinsight.com">Abu Dhabi</MenuItem>
+              <MenuItem eventKey={2.3} href="http://lima.urbinsight.com">Lima</MenuItem>
             </NavDropdown>
-            <NavItem eventKey={3} href="#">Wiki</NavItem>
+            <NavItem eventKey={3} href="http://wiki.urbinsight.com">Wiki</NavItem>
             <NavItem eventKey={4} href="#">About</NavItem>
             <NavItem eventKey={5} href="#">Help</NavItem>
-            <NavItem eventKey={6} href="#">Login</NavItem>
+            <NavItem eventKey={6}>Login</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

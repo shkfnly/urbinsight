@@ -5,6 +5,8 @@ import { Tab } from 'react-bootstrap';
 import DashboardResourcePane from './DashboardResource';
 import DashboardSocioeconomicPane from './DashboardSocioeconomic';
 import DashboardEnvironmentalAirPane from './DashboardEnvironmentalAir';
+import DashboardEnvironmentalWaterPane from './DashboardEnvironmentalWater';
+import DashboardEnvironmentalSoilPane from './DashboardEnvironmentalSoil';
 
 
 class Dashboard extends React.Component {
@@ -70,8 +72,12 @@ class Dashboard extends React.Component {
               <Tab eventKey={1} title='Air'>
                 <DashboardEnvironmentalAirPane />
               </Tab>
-              <Tab eventKey={2} title='Water'></Tab>
-              <Tab eventKey={3} title='Soil'></Tab>
+              <Tab eventKey={2} title='Water'>
+                <DashboardEnvironmentalWaterPane />
+              </Tab>
+              <Tab eventKey={3} title='Soil'>
+                <DashboardEnvironmentalSoilPane />
+              </Tab>
             </Tabs>
           </Tab>
           <Tab  eventKey={3} title='Socioeconomic'>

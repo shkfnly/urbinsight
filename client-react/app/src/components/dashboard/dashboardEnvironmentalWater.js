@@ -12,32 +12,34 @@ let exampleData = {
     },
 }
 
-class DashboardEnvironmentalAirPane extends React.Component {
+class DashboardEnvironmentalWaterPane extends React.Component {
   handleClick(){
     return;
   }
   componentDidMount(){
     exampleData.size = {width: (screen.width/2.7)};
-    exampleData.bindto = ".air-quality-graph";
+    exampleData.bindto = ".water-quality-graph";
     // When done as exampleData.bindto += this.props.resource it becomes additive!?!? What?
     c3.generate(exampleData);
   }
   render(){
-    const mountId = "air-quality-graph"
+    const mountId = "water-quality-graph"
     return(
       <div className="environmental-pane">
         <div className="environmental-quality-data-viz">
-          <div className="air-quality-graph environmental-quality-graph" id={mountId}></div>
+          <div className="water-quality-graph environmental-quality-graph" id={mountId}></div>
           {/* This is actually a custom graph legend*/}
           <div className="eq-button-list">
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> Overall</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> SO2</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> PM10</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> PM2.5</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> CO</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> O3</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> NOx</Button>
-            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block> Pb</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Overall</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Dissolved Oxygen</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Turbidity</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Total Solids</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>PH Level</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Temperature</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Nitrates</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Coliform</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>BOD</Button>
+            <Button className="pollutant" onClick={this.handleClick} bsStyle='warning' block>Phosphorous</Button>
           </div>
         </div>
         <div className="pollutant-description">
@@ -68,4 +70,4 @@ class DashboardEnvironmentalAirPane extends React.Component {
   }
 }
 
-export default DashboardEnvironmentalAirPane
+export default DashboardEnvironmentalWaterPane
