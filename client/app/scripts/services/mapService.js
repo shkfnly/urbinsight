@@ -21,7 +21,7 @@ angular.module('urbinsight.services')
         return city;
       },
       setCity: function(newCity){
-       city = newCity; 
+       city = newCity;
        return city;
       },
       getMap: function(){
@@ -34,12 +34,12 @@ angular.module('urbinsight.services')
       },
 
       createMap: function(){
-        // map = L.mapbox.map('cityMap');
-        map = new mapboxgl.Map({
-          container: 'cityMap',
-          style: 'mapbox://styles/mapbox/streets-v8',
-          zoom: 12
-        });
+        map = L.mapbox.map('cityMap');
+        // map = new mapboxgl.Map({
+        //   container: 'cityMap',
+        //   style: 'mapbox://styles/mapbox/streets-v8',
+        //   zoom: 12
+        // });
         return map;
       },
 
@@ -63,7 +63,7 @@ angular.module('urbinsight.services')
         var SW, SE, NE, NW;
         SW = that.flipToLngLatArray(boundsObject.getSouthWest());
         SE = that.flipToLngLatArray(boundsObject.getSouthEast());
-        NE = that.flipToLngLatArray(boundsObject.getNorthEast()); 
+        NE = that.flipToLngLatArray(boundsObject.getNorthEast());
         NW = that.flipToLngLatArray(boundsObject.getNorthWest());
 
         that.currentGeoJSONBounds = [SW, SE, NE, NW, SW];
@@ -218,7 +218,7 @@ angular.module('urbinsight.services')
             });
           });
         }
-        
+
         L.control.layers({
           'Satellite Map' : L.mapbox.tileLayer('mapbox.streets-satellite'),
           'Streets Map' : L.mapbox.tileLayer('mapbox.streets').addTo(map),
@@ -231,145 +231,145 @@ angular.module('urbinsight.services')
           })
         },
         addtLayers
-        ).addTo(map); 
+        ).addTo(map);
       },
-      
+
       renderMap: function(cityObj) {
         var map = this.createMap();
-        // this.addLayerControl(this.additonalLayers(cityObj.layers));
+        this.addLayerControl(this.additonalLayers(cityObj.layers));
         // Add events on map
-        // this.addMapEvents();
-        // map.setView([cityObj.lat, cityObj.lon], 12);
+        this.addMapEvents();
+        map.setView([cityObj.lat, cityObj.lon], 12);
 
-        map.jumpTo({
-          center: [cityObj.lon, cityObj.lat]
-        });
+        // map.jumpTo({
+        //   center: [cityObj.lon, cityObj.lat]
+        // });
         var city= this.getCity();
-        map.addControl(new mapboxgl.Navigation({position: 'top-left'}));
-        map.on('style.load', function(){
-          map.addSource('parcels', {
-            type: 'vector',
-            url: 'mapbox://thissaysnothing.bwiul1r3'   
-            });    
-            // 'tiles': ['http://localhost:5001/data/city/lots/' + city + '/{z}/{x}/{y}.pbf']
-
-          map.addLayer({
-            'id': 'parcels-fill',
-            'type': 'fill',
-            'source': 'parcels',
-            'source-layer': 'combined',
-            'interactive': true,
-            'paint': {
-              'fill-color': '#000000',
-              'fill-opacity': 1.0
-            }
-            // 'paint.testing': {
-            //   'fill-color': '#FF00FF'
-            // }
-          });
-        });
-        var groups = {
-      'Land Cover': {
-        visible: true,
-        layers: [
-          'landcover_snow',
-          'landcover_crop',
-          'landcover_grass',
-          'landcover_scrub',
-          'landcover_wood'
-        ]
-      },
-      'Land Use': {
-        visible: true,
-        layers: [
-          'landuse_snow',
-          'landuse_crop',
-          'landuse_grass',
-          'landuse_scrub',
-          'landuse_wood',
-          'landuse_rock',
-          'landuse_industrial',
-          'landuse_school',
-          'landuse_parking',
-          'landuse_sand',
-          'landuse_park',
-          'landuse_pitch',
-          'landuse_cemetery'
-        ]
-      },
-      'Buildings': {
-        visible: true,
-        layers: [
-          "building_shadow",
-          "building"
-        ]
-      },
-      'Roads': {
-        'visible': true,
-        layers: [
-          "road-oneway-arrows-motorway",
-          "road-construction",
-          "road-rail-tracks",
-          "road-rail",
-          "road-main",
-          "tunnel_main_casing",
-          "tunnel_motorway_casing",
-          "tunnel_motorway_link",
-          "tunnel_service",
-          "tunnel_street",
-          "tunnel_main",
-          "tunnel_motorway",
-          "tunnel_major_rail",
-          "tunnel_major_rail_hatching",
-          "road_pedestrian",
-          "road_motorway_link_casing",
-          "road_service_casing",
-          "road_street_casing",
-          "road_main_casing",
-          "road_motorway_casing_high",
-          "road_motorway_link",
-          "road_service",
-          "road_street",
-          "road_main",
-          "road_motorway_casing_low",
-          "road_motorway",
-          "road_major_rail",
-          "road_major_rail_hatching",
-          "bridge_motorway_link_casing",
-          "bridge_service_casing",
-          "bridge_street_casing",
-          "bridge_main_casing",
-          "bridge_motorway_casing",
-          "bridge_motorway_link",
-          "bridge_service",
-          "bridge_street",
-          "bridge_main",
-          "bridge_motorway",
-          "bridge_aerialway_casing",
-          "bridge_aerialway",
-          "bridge_aerialway_hatching",
-          "bridge_major_rail",
-          "bridge_major_rail_hatching",
-          "aeroway_runway",
-          "aeroway_taxiway",
-          "aeroway_fill",
-          "road_label_1",
-          "road_label_2",
-          "road_label_3",
-        ]
-      },
-      'Hillshade': {
-        visible: false,
-        layers: [
-          "hillshade_highlight_bright",
-          "hillshade_highlight_med",
-          "hillshade_shadow_faint",
-          "hillshade_shadow_med",
-          "hillshade_shadow_dark",
-          "hillshade_shadow_extreme"
-        ]
-      }
-    };
+    //     map.addControl(new mapboxgl.Navigation({position: 'top-left'}));
+    //     map.on('style.load', function(){
+    //       map.addSource('parcels', {
+    //         type: 'vector',
+    //         url: 'mapbox://thissaysnothing.bwiul1r3'
+    //         });
+    //         // 'tiles': ['http://localhost:5001/data/city/lots/' + city + '/{z}/{x}/{y}.pbf']
+    //
+    //       map.addLayer({
+    //         'id': 'parcels-fill',
+    //         'type': 'fill',
+    //         'source': 'parcels',
+    //         'source-layer': 'combined',
+    //         'interactive': true,
+    //         'paint': {
+    //           'fill-color': '#000000',
+    //           'fill-opacity': 1.0
+    //         }
+    //         // 'paint.testing': {
+    //         //   'fill-color': '#FF00FF'
+    //         // }
+    //       });
+    //     });
+    //     var groups = {
+    //   'Land Cover': {
+    //     visible: true,
+    //     layers: [
+    //       'landcover_snow',
+    //       'landcover_crop',
+    //       'landcover_grass',
+    //       'landcover_scrub',
+    //       'landcover_wood'
+    //     ]
+    //   },
+    //   'Land Use': {
+    //     visible: true,
+    //     layers: [
+    //       'landuse_snow',
+    //       'landuse_crop',
+    //       'landuse_grass',
+    //       'landuse_scrub',
+    //       'landuse_wood',
+    //       'landuse_rock',
+    //       'landuse_industrial',
+    //       'landuse_school',
+    //       'landuse_parking',
+    //       'landuse_sand',
+    //       'landuse_park',
+    //       'landuse_pitch',
+    //       'landuse_cemetery'
+    //     ]
+    //   },
+    //   'Buildings': {
+    //     visible: true,
+    //     layers: [
+    //       "building_shadow",
+    //       "building"
+    //     ]
+    //   },
+    //   'Roads': {
+    //     'visible': true,
+    //     layers: [
+    //       "road-oneway-arrows-motorway",
+    //       "road-construction",
+    //       "road-rail-tracks",
+    //       "road-rail",
+    //       "road-main",
+    //       "tunnel_main_casing",
+    //       "tunnel_motorway_casing",
+    //       "tunnel_motorway_link",
+    //       "tunnel_service",
+    //       "tunnel_street",
+    //       "tunnel_main",
+    //       "tunnel_motorway",
+    //       "tunnel_major_rail",
+    //       "tunnel_major_rail_hatching",
+    //       "road_pedestrian",
+    //       "road_motorway_link_casing",
+    //       "road_service_casing",
+    //       "road_street_casing",
+    //       "road_main_casing",
+    //       "road_motorway_casing_high",
+    //       "road_motorway_link",
+    //       "road_service",
+    //       "road_street",
+    //       "road_main",
+    //       "road_motorway_casing_low",
+    //       "road_motorway",
+    //       "road_major_rail",
+    //       "road_major_rail_hatching",
+    //       "bridge_motorway_link_casing",
+    //       "bridge_service_casing",
+    //       "bridge_street_casing",
+    //       "bridge_main_casing",
+    //       "bridge_motorway_casing",
+    //       "bridge_motorway_link",
+    //       "bridge_service",
+    //       "bridge_street",
+    //       "bridge_main",
+    //       "bridge_motorway",
+    //       "bridge_aerialway_casing",
+    //       "bridge_aerialway",
+    //       "bridge_aerialway_hatching",
+    //       "bridge_major_rail",
+    //       "bridge_major_rail_hatching",
+    //       "aeroway_runway",
+    //       "aeroway_taxiway",
+    //       "aeroway_fill",
+    //       "road_label_1",
+    //       "road_label_2",
+    //       "road_label_3",
+    //     ]
+    //   },
+    //   'Hillshade': {
+    //     visible: false,
+    //     layers: [
+    //       "hillshade_highlight_bright",
+    //       "hillshade_highlight_med",
+    //       "hillshade_shadow_faint",
+    //       "hillshade_shadow_med",
+    //       "hillshade_shadow_dark",
+    //       "hillshade_shadow_extreme"
+    //     ]
+    //   }
+    // };
     // var ctrl = new mapboxgl.LayerControl({groups: groups});
     // map.addControl(ctrl);
 
@@ -378,37 +378,37 @@ angular.module('urbinsight.services')
         //   'sources': {
         //     'parcels': {
         //       'type': 'vector',
-        //       'tiles': ['http://localhost:5001/data/city/lots/' + this.getCity() + '/{z}/{x}/{y}.pbf'] 
+        //       'tiles': ['http://localhost:5001/data/city/lots/' + this.getCity() + '/{z}/{x}/{y}.pbf']
         //     }
         //   }
         // }
 
 
-        var lots = new L.TileLayer.MVTSource({
-            url: '/data/city/lots/' + this.getCity() + '/{z}/{x}/{y}.pbf',
-            clickableLayers: ['lots'],
-            getIDForLayerFeature: function(feature) {
-              return feature._id;
-            },
-            //takes a feature
-            style: function() {
-              return {
-                color: 'rgba(255, 0, 0, 1)', 
-                outline: { 
-                   color: 'rgb(20,20,20)',
-                   size: 1
-                },
-                selected: {
-                   color: 'rgba(0, 255, 0, 1)'
-                }
-              };
-            },
-            layerOrdering: function(feature) {
-              if (feature && feature.properties) {
-                feature.properties.zIndex = 5;
-              }
-            }
-        });
+        // var lots = new L.TileLayer.MVTSource({
+        //     url: '/data/city/lots/' + this.getCity() + '/{z}/{x}/{y}.pbf',
+        //     clickableLayers: ['lots'],
+        //     getIDForLayerFeature: function(feature) {
+        //       return feature._id;
+        //     },
+        //     //takes a feature
+        //     style: function() {
+        //       return {
+        //         color: 'rgba(255, 0, 0, 1)',
+        //         outline: {
+        //            color: 'rgb(20,20,20)',
+        //            size: 1
+        //         },
+        //         selected: {
+        //            color: 'rgba(0, 255, 0, 1)'
+        //         }
+        //       };
+        //     },
+        //     layerOrdering: function(feature) {
+        //       if (feature && feature.properties) {
+        //         feature.properties.zIndex = 5;
+        //       }
+        //     }
+        // });
         // map.addLayer(lots);
         // lots.on('tileload', function(e){
         //   if (typeof e.target.layers.lots !== 'undefined'){
@@ -475,7 +475,7 @@ angular.module('urbinsight.services')
           }, {params: {bounds: that.currentGeoJSONBounds, cityName: cityName}});
         });
       },
-      renderNodes: function(data) {     
+      renderNodes: function(data) {
         var map = this.getMap();
         var that = this;
         var markers;

@@ -5529,3 +5529,48 @@ see: http://dochub.mongodb.org/core/repair for more information
 2016-03-29T19:00:02.869-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
 2016-03-29T19:15:09.191-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
 2016-03-29T19:30:15.125-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T18:50:26.765-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1810 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] db version v3.2.4
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] git version: e2ee9ffcf9f5a94fad76802e28cc978718bb7a30
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] allocator: system
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] modules: none
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] build environment:
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-07T18:50:26.783-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-04-07T18:50:26.784-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-04-07T18:50:26.784-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-04-07T18:50:26.795-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-04-07T18:50:26.796-0700 I JOURNAL  [initandlisten] recover begin
+2016-04-07T18:50:26.796-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-04-07T18:50:26.796-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-04-07T18:50:26.798-0700 I JOURNAL  [initandlisten] recover applying initial journal section with sequence number 0
+2016-04-07T18:50:26.800-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-04-07T18:50:26.800-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-04-07T18:50:26.801-0700 I JOURNAL  [initandlisten] recover done
+2016-04-07T18:50:26.818-0700 I JOURNAL  [durability] Durability thread started
+2016-04-07T18:50:26.819-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-04-07T18:50:26.819-0700 I CONTROL  [initandlisten] 
+2016-04-07T18:50:26.819-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-04-07T18:50:26.989-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/db/diagnostic.data'
+2016-04-07T18:50:26.989-0700 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-04-07T18:50:26.989-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-04-07T18:50:27.009-0700 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2016-04-07T19:05:29.639-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T19:20:34.758-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T19:35:39.505-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T19:50:44.020-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T20:05:50.167-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-07T20:23:59.462-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T20:39:09.428-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T20:54:18.213-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T21:09:27.318-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T21:24:35.666-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T21:39:44.144-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T21:54:53.956-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T22:10:10.542-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T22:36:49.828-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T23:00:47.519-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T23:15:56.079-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]
+2016-04-07T23:31:03.846-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.11, "nodename nor servname provided, or not known"), (192.168.2.11, "nodename nor servname provided, or not known") ]

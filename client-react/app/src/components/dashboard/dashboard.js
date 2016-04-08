@@ -7,7 +7,8 @@ import DashboardSocioeconomicPane from './DashboardSocioeconomic';
 import DashboardEnvironmentalAirPane from './DashboardEnvironmentalAir';
 import DashboardEnvironmentalWaterPane from './DashboardEnvironmentalWater';
 import DashboardEnvironmentalSoilPane from './DashboardEnvironmentalSoil';
-
+import DashboardProjects from './DashboardProjects';
+import DashboardQualitative from './DashboardQualitative';
 
 class Dashboard extends React.Component {
 
@@ -97,8 +98,16 @@ class Dashboard extends React.Component {
               </Tab>
             </Tabs>
           </Tab>
-          <Tab eventKey={4} title='Qualitative'>Qualitative</Tab>
-          <Tab  eventKey={5} title='Projects'>Projects</Tab>
+          <Tab eventKey={4} title='Qualitative'>
+            <h3>
+              Average Response - Quality of Life
+            </h3>
+            <DashboardQualitative />
+          </Tab>
+          <Tab  eventKey={5} title='Projects'>
+            <h2 style={{textAlign: "center"}}>Community Based Projects</h2>
+            <DashboardProjects />
+          </Tab>
         </Tabs>
       </div>
     )
