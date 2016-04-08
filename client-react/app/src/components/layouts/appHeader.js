@@ -29,10 +29,10 @@ class AppHeader extends React.Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavDropdown eventKey={1} title="Partner Cities" id="basic-nav-dropdown">
-              <MenuItem eventKey={1.1}>Medellin</MenuItem>
-              <MenuItem eventKey={1.2}>Cusco</MenuItem>
-              <MenuItem eventKey={1.3}>Abu Dhabi</MenuItem>
-              <MenuItem eventKey={1.3}>Lima</MenuItem>
+              <MenuItem eventKey={1.1} href="/medellin">Medellin</MenuItem>
+              <MenuItem eventKey={1.2} href="/cusco">Cusco</MenuItem>
+              <MenuItem eventKey={1.3} href="/abudhabi">Abu Dhabi</MenuItem>
+              <MenuItem eventKey={1.3} href="/lima">Lima</MenuItem>
             </NavDropdown>
             <NavDropdown eventKey={2} title="Data" id="basic-nav-dropdown">
               <MenuItem eventKey={2.1} href="http://medellin.urbinsight.com">Medellin</MenuItem>
