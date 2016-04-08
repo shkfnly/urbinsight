@@ -6,6 +6,7 @@ import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
 export default (
   <Route path="/" component={Main}>
-      <IndexRoute component={GLMap} />
+    <IndexRoute component={GLMap} />
+    <Route path="/:city" component={GLMap} />
   </Route>
 )

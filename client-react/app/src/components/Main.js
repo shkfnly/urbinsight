@@ -46,7 +46,7 @@ class Main extends React.Component {
       <div>
         {/*<LoginModal/>*/}
         <AppHeader/>
-        <GLMap />
+        {this.props.children}
       </div>
     )
   }

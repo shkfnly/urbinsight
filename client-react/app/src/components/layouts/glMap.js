@@ -2,25 +2,34 @@ import React from 'react';
 import Dashboard from '../dashboard/Dashboard';
 import DataInput from '../citizen_data/DataInput';
 
+
+const cityObject = {
+  cusco: [-71.9675, -13.5320],
+  medellin: [-75.5812, 6.2442],
+  abudhabi: [54.6973, 24.2992],
+  lima: [-77.0428, -12.0464]
+}
+function cityObjectFunc(city){
+  if (Object.keys(cityObject).indexOf(city) != -1){
+    return cityObject[city]
+  } else {
+    return [19.0402, 47.4979]
+  }
+}
 class GLMap extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    console.log(window.location.pathname)
     this.state = {
-      //mapStyle: {
-        // position: 'relative',
-      //  top:15,
-      //  bottom:0,
-      //  width: '100%'
-      //},
       mapToken: 'pk.eyJ1IjoidGhpc3NheXNub3RoaW5nIiwiYSI6IjFNbHllT2MifQ.5F7AhW2FxnpENc8eiE-HUA',
       mapView: {
         container: 'map',
         style: 'mapbox://styles/thissaysnothing/cijever1v00098xm3zso2fvk7',
-        center: [19.2500, 47.4333],
+        center: cityObjectFunc(window.location.pathname.slice(1)),
         zoom: 15
-    },
+      },
+    }
   }
-}
   render(){
     // style={this.mapStyle}
     if(this.state.map){
