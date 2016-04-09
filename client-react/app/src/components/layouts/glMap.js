@@ -7,19 +7,25 @@ const cityObject = {
   cusco: [-71.9675, -13.5320],
   medellin: [-75.5812, 6.2442],
   abudhabi: [54.6973, 24.2992],
-  lima: [-77.0428, -12.0464]
+  lima: [-77.0428, -12.0464],
+  budapest: [19.0402, 47.4979]
+}
+const cityList = ['cusco', 'medellin', 'abudhabi', 'lima', 'budapest'];
+
+function getRandomInt(min, max){
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 function cityObjectFunc(city){
   if (Object.keys(cityObject).indexOf(city) != -1){
-    return cityObject[city]
+    return cityObject[city];
   } else {
-    return [19.0402, 47.4979]
+    return cityObject[cityList[getRandomInt(0, 5)]];
   }
 }
+// [19.0402, 47.4979]
 class GLMap extends React.Component {
   constructor(props){
     super(props);
-    console.log(window.location.pathname)
     this.state = {
       mapToken: 'pk.eyJ1IjoidGhpc3NheXNub3RoaW5nIiwiYSI6IjFNbHllT2MifQ.5F7AhW2FxnpENc8eiE-HUA',
       mapView: {

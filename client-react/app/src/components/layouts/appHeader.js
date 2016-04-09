@@ -28,13 +28,13 @@ class AppHeader extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavDropdown eventKey={1} title="Partner Cities" id="basic-nav-dropdown">
+            <NavDropdown eventKey={1} title="Explore Data" id="basic-nav-dropdown">
               <MenuItem eventKey={1.1} href="/medellin">Medellin</MenuItem>
               <MenuItem eventKey={1.2} href="/cusco">Cusco</MenuItem>
               <MenuItem eventKey={1.3} href="/abudhabi">Abu Dhabi</MenuItem>
               <MenuItem eventKey={1.3} href="/lima">Lima</MenuItem>
             </NavDropdown>
-            <NavDropdown eventKey={2} title="Data" id="basic-nav-dropdown">
+            <NavDropdown eventKey={2} title="Partner Cities" id="basic-nav-dropdown">
               <MenuItem eventKey={2.1} href="http://medellin.urbinsight.com">Medellin</MenuItem>
               <MenuItem eventKey={2.2} href="http://cusco.urbinsight.com">Cusco</MenuItem>
               <MenuItem eventKey={2.3} href="http://abudhabi.urbinsight.com">Abu Dhabi</MenuItem>
