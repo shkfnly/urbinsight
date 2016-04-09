@@ -5608,3 +5608,38 @@ see: http://dochub.mongodb.org/core/repair for more information
 2016-04-08T16:28:45.601-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
 2016-04-08T16:43:50.249-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
 2016-04-08T16:58:54.916-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T17:13:59.468-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T17:29:03.691-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T17:44:09.217-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T17:59:13.801-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T18:14:19.494-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T18:29:23.742-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T18:44:28.770-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2601:643:8401:2303:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known"), (10.0.0.21, "nodename nor servname provided, or not known") ]
+2016-04-08T18:58:28.429-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] MongoDB starting : pid=1080 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] db version v3.2.4
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] git version: e2ee9ffcf9f5a94fad76802e28cc978718bb7a30
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] allocator: system
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] modules: none
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] build environment:
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-08T18:58:28.470-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-04-08T18:58:28.471-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-04-08T18:58:28.471-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-04-08T18:58:28.481-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-04-08T18:58:28.482-0700 I JOURNAL  [initandlisten] recover begin
+2016-04-08T18:58:28.482-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-04-08T18:58:28.482-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-04-08T18:58:28.482-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-04-08T18:58:28.483-0700 I JOURNAL  [initandlisten] recover applying initial journal section with sequence number 90
+2016-04-08T18:58:28.485-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-04-08T18:58:28.485-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-04-08T18:58:28.485-0700 I JOURNAL  [initandlisten] recover done
+2016-04-08T18:58:28.501-0700 I JOURNAL  [durability] Durability thread started
+2016-04-08T18:58:28.501-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-04-08T18:58:28.501-0700 I CONTROL  [initandlisten] 
+2016-04-08T18:58:28.501-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-04-08T18:58:28.663-0700 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-04-08T18:58:28.663-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/db/diagnostic.data'
+2016-04-08T18:58:28.664-0700 I NETWORK  [initandlisten] waiting for connections on port 27017

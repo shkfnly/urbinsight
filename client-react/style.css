@@ -275,3 +275,7 @@ a {
 .radio-survey {
   margin-left: 10px !important;
 }
+
+login-modal-hide {
+  display: none !important;
+}

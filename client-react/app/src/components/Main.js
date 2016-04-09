@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LoginModal from './Login';
 import GLMap from './layouts/GLMap';
 import AppHeader from './layouts/AppHeader';
 import Dashboard from './dashboard/Dashboard';
@@ -44,8 +43,8 @@ class Main extends React.Component {
   render(){
     return (
       <div>
-        {/*<LoginModal/>*/}
         <AppHeader/>
+        {/*<LoginModal/>*/}
         {this.props.children}
       </div>
     )
