@@ -1,5 +1,4 @@
 import React from 'react';
-import GLMap from './GLMap';
 import LoginModal from '../Login';
 import classNames from 'classnames';
 import { Navbar } from 'react-bootstrap';
