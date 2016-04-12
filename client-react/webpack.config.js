@@ -1,3 +1,6 @@
+var webpack = require('webpack');
+var path = require('path');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
@@ -5,6 +8,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 module.exports = {
+  devtool: 'source-map',
   entry: './app/index.js',
   output: {
     path: __dirname + '/dist',
@@ -12,13 +16,16 @@ module.exports = {
   },
   devServer: {
     inline: true,
-    port: 3333
+    port: 3333,
+    hot: true,
+    historyApiFallback: true,
+    progress: true
   },
   module: {
     loaders: [
       { test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: ['babel'],
         query: {
           presets: ['es2015', 'react']
         }
@@ -29,5 +36,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
 }
