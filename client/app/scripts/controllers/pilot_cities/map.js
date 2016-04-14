@@ -11,11 +11,12 @@ angular.module('urbinsight')
   .controller('MapCtrl', ['$scope', '$location', 'Cities', 'MapFactory', function ($scope, $location, Cities, MapFactory) {
 
     var L;
+    var cityName
     $scope.L = L = window.L;
     L.mapbox.accessToken='pk.eyJ1IjoidXJiaW5zaWdodCIsImEiOiJIbG1xUDBBIn0.o2RgJkl1-wCO7yyG7Khlzg';
 
     MapFactory.setCity($location.path().split('/')[2]);
-    $scope.cityName = MapFactory.getCity();
+    $scope.cityName = cityName = MapFactory.getCity();
 
     // var lots = new L.TileLayer.MVTSource({
     //     url: '/data/city/' + $scope.cityName + '/lots/{z}/{x}/{y}.pbf',
@@ -25,8 +26,8 @@ angular.module('urbinsight')
     //     },
     //     style: function(feature) {
     //       return {
-    //         color: 'rgba(255, 0, 0, 1)', 
-    //         outline: { 
+    //         color: 'rgba(255, 0, 0, 1)',
+    //         outline: {
     //            color: 'rgb(20,20,20)',
     //            size: 1
     //         },
@@ -39,7 +40,7 @@ angular.module('urbinsight')
 
     Cities.fetchCity($scope.cityName, MapFactory.renderMap.bind(MapFactory));
     Cities.getNodes($scope.cityName, MapFactory.renderNodes.bind(MapFactory));
-    MapFactory.renderParcels(cityName);
+    MapFactory.renderParcels($scope.cityName);
     MapFactory.renderSurveys(cityName);
   }]);
         //   mapboxgl.accessToken = L.mapbox.accessToken
@@ -48,10 +49,10 @@ angular.module('urbinsight')
         //     "sources" : {
         //       "lots": {
         //         "type": "vector",
-        //         "url": 
+        //         "url":
         //           "/data/city/" + $scope.city + "/lots/{z}/{x}/{y}.pbf",
         //   minZoom: 12
-        //       } 
+        //       }
         //     },
         //     "layers" : [
         //       {
@@ -71,4 +72,3 @@ angular.module('urbinsight')
         //      zoom: 1,
         //      center: [-14, 35]
         //      })
-

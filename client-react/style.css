@@ -236,18 +236,18 @@ a {
   background-color: black;
 }
 
-.air-quality-data-viz {
+.environmental-quality-data-viz {
   display: flex;
   min-height: 45vh;
   width: 100%;
 }
 
-.air-quality-graph {
+.environmental-quality-graph {
   margin-top: 2em;
   width: 80%;
 }
 
-.aq-button-list {
+.eq-button-list {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -274,4 +274,8 @@ a {
 
 .radio-survey {
   margin-left: 10px !important;
+}
+
+login-modal-hide {
+  display: none !important;
 }

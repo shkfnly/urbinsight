@@ -4,9 +4,9 @@ angular.module('urbinsight.directives')
   var _ = $window._;
   var c3 = $window.c3;
 
-  var colors = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', 
-                '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', 
-                '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', 
+  var colors = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c',
+                '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
+                '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
                 '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'];
   var dataXForm = function(obj){
     var results = ['Average Response'];
@@ -15,6 +15,8 @@ angular.module('urbinsight.directives')
         results.push(value);
       }
     });
+    console.log('Im results')
+    console.log(results)
     return [results];
   };
 
@@ -107,7 +109,7 @@ angular.module('urbinsight.directives')
       });
     }, true);
   }
-  
+
   return {
     restrict: 'E',
     scope: {
