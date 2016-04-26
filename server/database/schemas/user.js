@@ -23,21 +23,17 @@ userSchema.pre('save', function(next){
   if (!user.isModified('password')) {
     return next();
   }
-
 // generate salt
   bcrypt.genSalt(10, function(err, salt){
-
     if (err) {
       return next(err);
     }
-
     // Create a Hash and store it
     bcrypt.hash(user.password, salt, function(err, hash){
       if (err) {
         return next(err);
       }
       user.password = hash;
-      // Why the call to the next
       next();
     });
   });

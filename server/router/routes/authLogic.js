@@ -60,7 +60,6 @@ var auth = {
         Users.findOne({
           'username' : username
         }, function (err, user) {
-          debugger;
         // If there's an error, log it and return to user
           if (err) {
             console.log('User not found')
@@ -74,17 +73,17 @@ var auth = {
             // return done(null, false, { message: 'Incorrect username.' });
             callback(false);
           }
-          bcrypt.compare(password, user.password, function(err, isMatch){ 
+          bcrypt.compare(password, user.password, function(err, isMatch){
             if(isMatch){
               console.log('success')
-              callback(user); 
+              callback(user);
             }
             else{
               console.log('Incorrect password')
               callback(false);
             }
           });
-            
+
             // return done(null, false, { message: 'Incorrect password.' });
         });
     //   }

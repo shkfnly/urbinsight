@@ -30,15 +30,23 @@ var toGeoJSON = function(json) {
   })
   return geojson;
 };
+// 'attributes': ['cobama', 'subtipo_lo', 'tipo_lote', 'estrato', 'zona', 'usopredial', 'npisos', 'calificacion']
+
     var config_object = {
       'medellin' : {
-        'attributes': ['cobama', 'subtipo_lote', 'tipo_lote', 'estrato', 'zona', 'usopredial', 'npisos', 'calificacion']
+        'attributes': ['cobama']
       },
       'lima' : {
         'attributes': ['objectid', 'id_lote', 'tip_uso', 'id_dist', 'estado']
       },
       'budapest': {
         'attributes': ['id', 'tags']
+      },
+      'cusco': {
+        'attributes': ['gid', 'id_lote_ca', 'area']
+      },
+      'abudhabi' : {
+        'attributes': ['plotid', 'calculated']
       }
     };
 
@@ -56,6 +64,7 @@ router.get('/:city_name/:z/:x/:y.mvt', function(req, res) {
     var bounds = 'ST_SetSRID(ST_GeomFromGeoJSON(\'' + poly + '\'), 4326)'
     var sql = 'select st_asgeojson(wkb_geometry) as geojson, row_to_json((select l from (select ' + config_object[city_name]['attributes'].join(', ') + ' ) as l )) as properties from ' + city_name + "_parcels";
     sql += ' where st_intersects(wkb_geometry, ' + bounds + ')';
+    // console.log(sql)
     //client.query("SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.wkb_geometry)::json As geometry, row_to_json((SELECT l FROM (SELECT " + config_object[city_name]['attributes'].join(', ') + " ) As l )) As properties FROM " + city_name + "_parcels As lg WHERE st_intersects(lg.wkb_geometry, st_makeenvelope(" + bbox.toString() + ", 4326) ) ) As f )  As fc", function(err, result){
 
   pg.connect(conString, function(err, client, done){
@@ -78,7 +87,7 @@ router.get('/:city_name/:z/:x/:y.mvt', function(req, res) {
     };
     // handle an error from the connection
     //if(handleError(err)) return console.error('error running query', err);
-    if(city_name === 'medellin' || city_name === 'lima' || city_name === 'budapest'){
+    if(city_name === 'medellin' || city_name === 'lima' || city_name === 'budapest' || city_name === 'cusco' || city_name === 'abudhabi'){
       client.query(sql, [], function(err, result) {
         done()
         if(err) {

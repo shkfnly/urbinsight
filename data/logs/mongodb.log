@@ -5813,3 +5813,57 @@ see: http://dochub.mongodb.org/core/repair for more information
 2016-04-13T18:47:17.202-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known") ]
 2016-04-13T19:02:21.461-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known") ]
 2016-04-13T19:17:26.326-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0::38, "nodename nor servname provided, or not known"), (2602:306:3620:12c0:82e6:50ff:fe28:f4da, "nodename nor servname provided, or not known") ]
+2016-04-25T02:00:31.889-0700 I CONTROL  [main] ***** SERVER RESTARTED *****
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] MongoDB starting : pid=2536 port=27017 dbpath=data/db/ 64-bit host=shokishokis-MacBook-Pro.local
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] db version v3.2.4
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] git version: e2ee9ffcf9f5a94fad76802e28cc978718bb7a30
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] allocator: system
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] modules: none
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] build environment:
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-25T02:00:31.933-0700 I CONTROL  [initandlisten] options: { storage: { dbPath: "data/db/" }, systemLog: { destination: "file", logAppend: true, path: "data/logs/mongodb.log" } }
+2016-04-25T02:00:31.935-0700 I -        [initandlisten] Detected data files in data/db/ created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
+2016-04-25T02:00:31.935-0700 W -        [initandlisten] Detected unclean shutdown - data/db/mongod.lock is not empty.
+2016-04-25T02:00:31.945-0700 I JOURNAL  [initandlisten] journal dir=data/db/journal
+2016-04-25T02:00:31.945-0700 I JOURNAL  [initandlisten] recover begin
+2016-04-25T02:00:31.945-0700 I JOURNAL  [initandlisten] info no lsn file in journal/ directory
+2016-04-25T02:00:31.945-0700 I JOURNAL  [initandlisten] recover lsn: 0
+2016-04-25T02:00:31.945-0700 I JOURNAL  [initandlisten] recover data/db/journal/j._0
+2016-04-25T02:00:31.946-0700 I JOURNAL  [initandlisten] recover applying initial journal section with sequence number 90
+2016-04-25T02:00:31.949-0700 I JOURNAL  [initandlisten] recover cleaning up
+2016-04-25T02:00:31.949-0700 I JOURNAL  [initandlisten] removeJournalFiles
+2016-04-25T02:00:31.949-0700 I JOURNAL  [initandlisten] recover done
+2016-04-25T02:00:31.963-0700 I JOURNAL  [durability] Durability thread started
+2016-04-25T02:00:31.963-0700 I JOURNAL  [journal writer] Journal writer thread started
+2016-04-25T02:00:31.963-0700 I CONTROL  [initandlisten] 
+2016-04-25T02:00:31.963-0700 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-04-25T02:00:32.132-0700 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-04-25T02:00:32.132-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/db/diagnostic.data'
+2016-04-25T02:00:32.133-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-04-25T02:00:33.011-0700 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2016-04-25T02:15:34.576-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T02:30:36.623-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T02:45:39.048-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T03:00:40.895-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T03:15:43.423-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T03:30:45.372-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T03:45:45.424-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T04:00:45.479-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T04:15:51.353-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T04:31:00.222-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T04:46:08.338-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T13:27:04.340-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T13:42:12.376-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T13:57:55.732-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T14:13:34.494-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T14:29:26.300-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T14:44:47.492-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T15:00:39.104-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T15:16:18.215-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T15:32:10.448-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T15:47:33.636-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T16:03:25.297-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T16:19:03.883-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T16:34:55.069-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
+2016-04-25T16:50:15.780-0700 W NETWORK  [HostnameCanonicalizationWorker] Failed to obtain name info for: [ (192.168.2.15, "nodename nor servname provided, or not known"), (192.168.2.15, "nodename nor servname provided, or not known") ]
