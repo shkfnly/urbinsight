@@ -13,7 +13,7 @@ angular.module('urbinsight')
     $scope.QOLFactory = QOLFactory;
     $scope.surveys = QOLFactory.surveysInView;
     // $scope.surveyData;
-    
+
     // console.log($scope.marker);
     // MapFactory.markerClickControl('survey', QOLFactory, $scope);
 
@@ -44,8 +44,8 @@ angular.module('urbinsight')
               results[question] += 0;
               break;
             default:
-        
-          }  
+
+          }
         });
       });
       totalNumber = totalNumber || 1;
@@ -59,6 +59,7 @@ angular.module('urbinsight')
     $scope.$watch('QOLFactory.surveysInView', function(newValue, oldValue, scope){
       scope.surveys = newValue;
       scope.surveyData = generateSurveyTotals(newValue);
+      console.log(scope.surveyData)
     }, true);
 
     $scope.awesomeThings = [

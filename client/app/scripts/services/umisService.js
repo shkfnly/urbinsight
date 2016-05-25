@@ -125,7 +125,7 @@ angular.module('urbinsight.services')
       return ( obj.hoursPerWeek * obj.avgFlowRate ) * 60 / 7;
     };
     UMIS.Water.runOffLitersPerDay = function(workbook){
-      return UMIS.Water.unmediatedRainfall(workbook) * 
+      return UMIS.Water.unmediatedRainfall(workbook) *
               UMIS.Water.totalAveragePermeability;
     };
 
@@ -140,7 +140,7 @@ angular.module('urbinsight.services')
                          .landscape;
       var obj2 = parcel.describeParcel;
       return ( obj1.weather.seasonTotal / obj1.weather.seasonLength ) *
-                obj2.parcelIndetification.landArea * 
+                obj2.parcelIndetification.landArea *
                   workbook.estimateDemand
                           .landCoverPreCalculation
                           .percentageOfParcelWithRainwaterCatchment;
@@ -150,7 +150,7 @@ angular.module('urbinsight.services')
       var obj = workbook.estimateDemand
                         .demandJunctions
                         .waterCustomers;
-      return ( obj.excessCapacityPerDay * obj.percentageOfExcessDistributed ) * 1000; 
+      return ( obj.excessCapacityPerDay * obj.percentageOfExcessDistributed ) * 1000;
     };
 
     UMIS.Water.totalConsumption.evaporativeCooling = function(workbook){
@@ -195,10 +195,10 @@ angular.module('urbinsight.services')
                         .hygiene;
       return  ( UMIS.Water.totalConsumption.hygiene.avgShowerConsumption(workbook) * obj.typicalShowerDuration *
                 obj.weeklyShowersPerPerson )+
-              ( obj.bathVolume * obj.bathsPerWeek ) / 7 + 
-              ( obj.minutesOfTapFlowPerVisit * obj.ablutionDuration * 
+              ( obj.bathVolume * obj.bathsPerWeek ) / 7 +
+              ( obj.minutesOfTapFlowPerVisit * obj.ablutionDuration *
                 obj.numOccupantsUsingWashrooms * obj.numVisitsToWashroomPerOccupant );
-              
+
     };
 
 
