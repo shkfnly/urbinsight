@@ -3,6 +3,7 @@ var router = express.Router();
 var pgClient = require('../../database').pgClient;
 var conString = require('../../database').conString;
 var pg = require('pg');
+var geojsonvt = require('geojson-vt');
 var SphericalMercator = require('sphericalmercator');
 var mapnik = require('mapnik');
 var zlib = require('zlib');
@@ -127,14 +128,3 @@ router.get('/lot/:city_name/', function(req, res){
 });
 
 module.exports = router;
-      // handle an error from the connection
-      /*if( (typeof result.rows[0] !== 'undefined')  && (result.rows[0].row_to_json.features !== null )){
-          try {
-
-          } catch (e) {
-            console.log("came back with an error");
-            console.log(e);
-          }
-      }*/
-// "select st_asgeojson(wkb_geometry) as feature from budapest2 where st_intersects(wkb_geometry, st_makeenvelope(" +
-// bbox.toString() + ", 4326)) LIMIT 1", function(err, result){
